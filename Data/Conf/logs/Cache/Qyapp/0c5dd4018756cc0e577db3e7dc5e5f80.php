@@ -1,0 +1,66 @@
+<?php if (!defined('THINK_PATH')) exit();?><section class="entity-panel-wrapper" id="user<?php echo ($data["id"]); ?>">
+
+	<header class="entity-panel-header header">
+		<p>应用详情</p>
+		<button type="button" class="close m-t" data-dismiss="entity" onclick="panelClose();">&times;</button>
+	</header>
+	<div class="entity-panel-body form-horizontal">
+	   
+		<div class="form-group">
+			<label class="col-sm-3 control-label">应用名称</label>
+			<div class="col-sm-9">
+				<p class="form-control-static"><?php echo ($data["name"]); ?></p>
+								</div>
+		</div>
+		<div class="line line-dashed line-lg pull-in"></div>
+		<div class="form-group">
+			<label class="col-sm-3 control-label">应用logo</label>
+			<div class="col-sm-9">
+				<p class="form-control-static">
+				<img class="app-item-img" src="<?php echo ($data["logo"]); ?>" alt="<?php echo ($data["name"]); ?>"></p>
+			</div>
+		</div>
+		<div class="line line-dashed line-lg pull-in"></div>
+		<div class="form-group">
+			<label class="col-sm-3 control-label">应用描述</label>
+			<div class="col-sm-9">
+				<p class="form-control-static"><?php echo ($data["desc"]); ?></p>
+			</div>
+		</div>		
+		<div class="line line-dashed line-lg pull-in"></div>
+
+	</div>
+	<footer class="entity-panel-footer footer  text-right">
+		<button type="button" class="btn btn-default" data-confirm="true"  onclick='del("<?php echo ($data["id"]); ?>")' data-toggle="ajaxPost" data-msg="确定删除吗？" >卸载</button>	
+	</footer>
+
+</section>
+<script type="text/javascript">	
+function panelClose(){
+	$('.entity-panel').addClass('hd');
+}
+//卸载操作
+function del(id){
+	$.ajax({
+		type:"POST",
+		url:"index.php?g=Qyapp&m=Appslist&a=delApps&id="+id,
+		data:"id="+id,
+		dataType:'json',
+		success:function(json){
+		var status = json.status;
+		  if(status==1)
+		  {
+			alert('卸载成功');location.reload();
+			  $('#cont').html('卸载成功');
+			  $('#delMember').model();
+		  }
+		  else
+		  {
+			alert('卸载失败');location.reload();
+			  $('#cont').html('卸载失败');
+			  $('#delMember').model();
+		  }
+		}
+	});       	
+}	
+</script>

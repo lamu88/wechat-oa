@@ -1,0 +1,1 @@
+<?php	return array ( 'type' => 'text', 'usertype' => '', 'users' => '', 'content' => '3262', 'agentid' => '37', 'departid' => '1743,1744', ); ?>

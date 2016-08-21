@@ -1,0 +1,1 @@
+<?php	return array ( 'access_token' => 'ch42Fs6vK2wRK3n6GFErzkUV58qKhufy8UBAxLZNG69QRZLxdaflDOhZqK4sENAhKJE6kG2I0N3vG_TR2ddxKQ', 'expires_in' => 7200, ); ?>

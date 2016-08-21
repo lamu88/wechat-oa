@@ -1,0 +1,97 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="cn" class="app fadeInUp animated">
+<head>
+    <meta charset="utf-8" />
+    <title>微易科技</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta content="" name="Keywords" />
+    <meta content="" name="Description" />
+	<link href="./Tpl/Qyapp/Static/Js/bootstrap/3.1.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./Tpl/Qyapp/Static/Css/animate.min.css" rel="stylesheet">
+    <link href="./Tpl/Qyapp/Static/Css/font-awesome.min.css" rel="stylesheet">
+    <link href="./Tpl/Qyapp/Static/Css/style.min.css" rel="stylesheet">
+	<script src="./Tpl/Qyapp/Static/Js/jquery-1.9.1.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <section class="vbox">
+<header class="header bg-white b-b b-light">
+<p>个人中心</p>
+<a class="text-muted pull-right m-t pointer" href="javascript:history.go(-1)" title="返回" data-toggle="back">
+<i class="fa fa-reply"></i>
+</a>
+</header>		
+        <section class="scrollable wrapper">
+            <section class="panel panel-default">
+                <div class="panel-body">
+                    <div class="form-horizontal form-validate" >
+                        <div class="form-group">
+						
+					<form action="" method="post">
+                            <label class="col-sm-2 control-label must">原始密码</label>
+                            <div class="col-sm-3">
+                                <input type="password" name="old_password" id="old_password" class="form-control" data-rule-required="true" data-rule-rangelength="[1,16]" />
+                            </div>
+                            <div class="col-sm-3"><p class="form-control-static"></p></div>
+                        </div>
+                        <div class="line line-dashed line-lg pull-in"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label must">新密码</label>
+                            <div class="col-sm-3">
+                                <input type="password" id="new_password" name="new_password" class="form-control" data-rule-required="true" data-rule-rangelength="[6,16]" />
+                            </div>
+                            <div class="col-sm-3"><p class="form-control-static"></p></div>
+                        </div>
+                        <div class="line line-dashed line-lg pull-in"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label must">确认密码</label>
+                            <div class="col-sm-3">
+                                <input type="password" name="new_password_verify" id="new_password_verify" class="form-control" data-rule-equalTo="#new_password" />
+                            </div>
+                            <div class="col-sm-3"><p class="form-control-static"></p></div>
+                        </div>
+                        <div class="line line-dashed line-lg pull-in"></div>
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-2">
+								<button type="submit" class="btn btn-primary" id="submit" data-loading-text="保存中..." >保存</button>
+                                <button type="button" class="btn btn-default" data-toggle="back">取消</button>
+                            </div>
+							</form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+<script>
+$(function(){
+  $("#submit").click(function() {
+	var btn = $(this);
+    var old_password = $("#old_password").val();
+    var new_password 	  = $("#new_password").val();
+	var new_password_verify 	  = $("#new_password_verify").val();
+	if(new_password_verify!=new_password){
+	  alert('新密码输入不相同，请重试！');
+	}
+	  
+	$.ajax({
+			type: "post",  
+			url:"<?php echo U('Userinfo/edit');?>",
+			dataType:'json',
+			data:'new_password='+new_password,
+			success:function(json){
+				var status = json.status;
+				if(status==0){
+					alert('修改成功');
+					window.location.reload();
+				}else if(status==2){
+					alert('新旧密码不能相同');
+				}else{
+				   alert('修改失败');
+				}
+			}
+		});
+  });
+  
+})
+</script>
+</html>

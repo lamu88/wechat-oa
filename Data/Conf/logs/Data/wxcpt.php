@@ -1,0 +1,1 @@
+<?php	return WXBizMsgCrypt::__set_state(array( 'm_sToken' => 'QVKcXC1416800879', 'm_sEncodingAesKey' => 'Csn95VACorwDelHhQv29Ve3lIoGrVkpyMTbfYouELHi', 'm_sCorpid' => 'wxbc139a11baf4348a', )); ?>
