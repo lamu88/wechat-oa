@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="cn" class="app fadeInUp animated js no-touch no-android chrome no-firefox no-iemobile no-ie no-ie10 no-ie11 no-ios"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+	 <title>审核详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta content=" " name="Keywords">
+    <meta content="" name="Description">
+	<link href="./Tpl/Qyapp/Workflow/css/m.css" rel="stylesheet" type="text/css" />
+	<link href="./Tpl/Qyapp/Workflow/css/cate24_0.css" rel="stylesheet" type="text/css" />
+	<link href="./Tpl/Qyapp/Workflow/css/index.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="./Tpl/Qyapp/Workflow/css/m2265.css">
+		<link rel="stylesheet" type="text/css" href="./Tpl/Qyapp/Aftersale/css/act_inf.css?v=<?php echo time();?>">
+		<script src="./Tpl/static/scroll/dev/jquery-1.9.1.js"></script>	
+<script src="./Tpl/Qyapp/Aftersale/js/layer.m/layer.m.js"></script>			
+	</head>
+	<body id="cate12" style="background-color:#fff;" >
+<div>
+<div class="dsmyxm">
+<p class="rz_xq">售后详情</p>
+<dl>
+		<dt>[申请人员]</dt>
+        <dd>{lanrain:$data.username}</dd>
+	</dl>
+ <dl>
+		<dt>[申请事由]</dt>
+        <dd>{lanrain:$data.title}</dd>
+	</dl>
+	<dl>
+		<dt>[售后类型]</dt>
+        <dd>{lanrain:$data.type}</dd>
+	</dl>
+	<dl>
+		<dt>[提交时间]</dt>
+        <dd>{lanrain:$data.time|date="Y-m-d H:i:s",###}</dd>
+	</dl> 
+     
+	<dl>
+		<dt>[售后状态]</dt>
+        <dd 
+		<if condition="$data['status'] eq 3">style="color:#35aa47">
+		已通过审核
+		</if>
+		<if condition="$data['status'] eq 2">style="color:red">
+		未通过审核
+		</if>
+		<if condition="$data['status'] eq 1">style="color:orange">
+		正在审核
+		</if>
+		
+		</dd>
+	</dl>	
+	<dl>
+		<dt>[售后详情]</dt>
+        <dd style="width:100%;">
+			<div class="sp_xq">
+				<p class="sp_tl">描述：</p>
+				<p class="sp_nr">{lanrain:$data.content}</p>
+				<p class="sp_tl">图片：</p>
+				<ul class="sp_pic">
+				<volist name="img" id="v" key="k">
+					<li><img src="{lanrain:$v}" id="picInfo_{lanrain:$k}" onclick="checkImg({lanrain:$k});" /></li>
+				</volist>
+				</ul>
+			</div>
+        </dd>
+	</dl>
+</div>
+<div id="content" style="margin-top:10px;">
+<h4 class="con_title">审批记录</h4> 
+<div class="softload"> 
+<ul style="background-color:#fff;">
+<volist name="aduit" id="vo">
+	<li class="hightli">
+		<span class="icon_cont" style="margin-top:10px;"> 
+			<a class="sh_nm">
+				<img width="48px" height="48px" src="{lanrain:$vo.pic}" alt="" />
+				<span style="margin-bottom:10px;color:#333;display:block;"><label>{lanrain:$vo.name}</label></span>
+			</a> 
+			
+			<span class="icon_dis"> 
+		<img src="Tpl/Qyapp/Task/images/123.png" style="width:40px;height:40px;position:absolute;left:-23px;top:-7px;">
+			 
+			
+				
+				<span style="margin:10px 0px;color:#333; display:block"><label>审核理由：</label></span>
+				<span class="down" style="color:#999;display:block;">
+					{lanrain:$vo.comment}
+				</span>
+				<if condition="$vo['status'] eq 0">
+					<span class="down sh_zt" id="id_{lanrain:$vo.wecha_id}" style="color:orange;">
+					审批中
+					</span> 
+				</if>
+				<if condition="$vo['status'] eq 1">
+					<span class="down sh_zt" id="id_{lanrain:$vo.wecha_id}" style="color:green;">
+					通过
+					</span> 
+				</if>
+				<if condition="$vo['status'] eq 2">
+					<span class="down sh_zt" id="id_{lanrain:$vo.wecha_id}" style="color:red;">
+					驳回
+					</span> 
+				</if>
+		</span>
+				
+		</span>	
+		<span class="clear"></span>
+		<div>
+	</li>
+</volist>
+</ul> 
+</div> 
+</div> 
+<div id="menu">
+
+    <ul id="wd_ul">
+    <li class=" half_li fll">
+         <div style="background:#de5054" id="refuse">拒绝</div>
+        </li>
+    	<li class=" half_li flr">
+            <div style="background:#35aa47;" id="pass">通过</div>
+        </li>
+        
+    </ul>
+</div>	
+</body>
+<script>
+function checkImg(n){
+	var url = $('#picInfo_'+n).attr('src');
+	layer.open({					
+		type: 0,
+		content: '<img width="100%" height="auto" src="'+url+'" />',
+	});
+	
+}
+</script>
+<script>
+$('#refuse').click(function(){
+	var id = "{lanrain:$data.id}";
+	var token = "{lanrain::$_GET['token']}";
+	var wecha_id = "{lanrain::$_GET['wecha_id']}";
+	var status=2;
+	$.ajax({
+			type: "post",  
+			url:"{lanrain::U('wap_act_info',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}",
+			dataType:'json',
+			data:{'token':token,'wecha_id':wecha_id,'id':id,'status':status},
+			success:function(json){
+				if(json==1){
+					if(confirm('你拒绝了该申请,是否填写理由')){
+						layer.open({					
+							type: 1,
+							content: '<div style="width:200px;height:156px;border-radius:6px;border-radius:5px;overflow:hidden;"><textarea style="padding:6px;line-height:20px;font-size:12px;width:188px;height:100px;color:#666;border:none;" placeholder="请输入内容。。。" id="layContent"></textarea><div style="width:100%;height:40px;line-height:40px;border:1px solid #ccc;text-align:center;"><input style="color:#666;height:40px;width:99px;border:none;background:#fff;border-right:1px solid #ccc;border-radius:0px;-webkit-appearance:none;vertical-align:top;" onclick="closeLay();" type="button" value="取消"><input style="color:#666;height:40px;width:100px;line-height30px;border:none;background:#fff;-webkit-appearance:none;border-radius:none;" type="button" onclick="submitLay({lanrain:$data.id},2);" value="发表"/></div></div>',
+						});
+						$('#id_'+wecha_id).css('color','red');
+						$('#id_'+wecha_id).html('驳回');
+					}else{
+						$('#id_'+wecha_id).css('color','red');
+						$('#id_'+wecha_id).html('驳回');
+					}
+					
+					
+				}
+				if(json==2){
+					alert('审核失败或者您已经审核过了');
+				}				
+			}
+		});
+});
+$('#pass').click(function(){
+	var id = "{lanrain:$data.id}";
+	var token = "{lanrain::$_GET['token']}";
+	var wecha_id = "{lanrain::$_GET['wecha_id']}";
+	var status=1;
+	$.ajax({
+			type: "post",  
+			url:"{lanrain::U('wap_act_info',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}",
+			dataType:'json',
+			data:{'token':token,'wecha_id':wecha_id,'id':id,'status':status},
+			success:function(json){
+				if(json==1){
+					if(json==1){
+					if(confirm('审核成功,是否填写理由')){
+						layer.open({					
+							type: 1,
+							content: '<div style="width:200px;height:156px;border-radius:6px;border-radius:5px;overflow:hidden;"><textarea style="padding:6px;line-height:20px;font-size:12px;width:188px;height:100px;color:#666;border:none;" placeholder="请输入内容。。。" id="layContent"></textarea><div style="width:100%;height:40px;line-height:40px;border:1px solid #ccc;text-align:center;"><input style="color:#666;height:40px;width:99px;border:none;background:#fff;border-right:1px solid #ccc;border-radius:0px;-webkit-appearance:none;vertical-align:top;" onclick="closeLay();" type="button" value="取消"><input style="color:#666;height:40px;width:100px;line-height30px;border:none;background:#fff;-webkit-appearance:none;border-radius:none;" type="button" onclick="submitLay({lanrain:$data.id},1);" value="发表"/></div></div>',
+						});
+						$('#id_'+wecha_id).css('color','green');
+						$('#id_'+wecha_id).html('通过');
+					}else{
+						$('#id_'+wecha_id).css('color','green');
+						$('#id_'+wecha_id).html('通过');
+					}
+					
+					
+				}
+					
+				}
+				if(json==2){
+					alert('审核失败或者您已经审核过了');
+				}				
+			}
+		});
+});
+
+function closeLay(){
+window.location.reload();
+}
+function submitLay(m,n){
+	var token = "{lanrain::$_GET['token']}";
+	var wecha_id = "{lanrain::$_GET['wecha_id']}";
+	var content = $('#layContent').val();
+	$.ajax({
+		type: "post",  
+		url:"{lanrain::U('wap_comment',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}",
+		dataType:'json',
+		data:{'token':token,'wecha_id':wecha_id,'id':m,'status':n,'content':content},
+		success:function(json){
+			if(json==1){
+				alert('修改成功');
+				window.location.reload();
+			}
+			if(json==2){
+				alert('修改失败');
+				window.location.reload();
+			}
+			if(json==3){
+				alert('发表成功');
+				window.location.reload();
+			}
+			if(json==4){
+				alert('发表失败');
+				window.location.reload();
+			}
+		}
+	});
+}
+</script>

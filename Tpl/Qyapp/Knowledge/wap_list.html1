@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+<title>艺术</title>
+</head>
+
+<link href="./Tpl/Qyapp/Knowledge/css/newstyle.css" rel="stylesheet" type="text/css" />
+  <link href="./Tpl/Qyapp/Knowledge/css/banji.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="./Tpl/Qyapp/Knowledge/css/swiper.min.css">
+  <script type="text/javascript" src="./Tpl/Qyapp/Knowledge/js/jquery.min.js"></script>
+  <script type="text/javascript" src="./Tpl/Qyapp/Knowledge/js/swiper.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+   
+<body class="bg">
+<div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide home_slide"><a href="#"><img src="./Tpl/Qyapp/Knowledge/images/banner1.jpg"></a></div>
+            <div class="swiper-slide home_slide"><a href="#"><img src="./Tpl/Qyapp/Knowledge/images/banner2.jpg"></a></div>
+            <div class="swiper-slide home_slide"><a href="#"><img src="./Tpl/Qyapp/Knowledge/images/banner1.jpg"></a></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+</div>
+
+<section class="home_mid bg4">
+        <form action="" method="post">
+            <input type="text" name="search" placeholder="请输入您要搜索的内容名称" class="text_sr">
+        <input type="hidden" name="token" value="{lanrain:$_GET['token']}"/> 
+        <input type="submit" value="" class="search fr"/>
+        </form>
+ </section>
+
+<section class="home_bot mg_b fl">
+        <ul class="list_ul">
+        <if condition="$vo['files']">
+        <volist name="vo['files']" id="v">
+            <a href="{lanrain::U('wap_info',array('id'=>$list['id'],'token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}">
+            <li class="bg4 mg_t fl">
+                <div class="bg_title fl">
+                    <img src="./Tpl/Qyapp/Knowledge/images/bg2.png">
+                    收藏捡漏功夫的养成
+                </div>
+                <div class="title_r fr">(作者：三毛)</div>
+                <p class="list_text">{lanrain:$data.info}</p>
+            </li>
+            </a>
+        </volist>
+        <else/>
+        <a href="javascript:;">
+        <div class="file_news">此类目还没有内容哦</div>
+        </a>
+        </if>
+            <a href="{lanrain::U('wap_info',array('id'=>$list['id'],'token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}">
+            <li class="bg4 mg_t fl">
+                <div class="bg_title fl">
+                    <img src="./Tpl/Qyapp/Knowledge/images/bg2.png">
+                    收藏捡漏功夫的养成
+                </div>
+                <div class="title_r fr">(作者：三毛)</div>
+                <p class="list_text">在收藏生涯当中，捡漏的确是一种令人神往的美事，带给藏家的快感是其他经历所无法比拟的。只要在收藏的圈子里摸爬滚打一些时日，免不了会从那些得了好处的藏友听到拿来炫耀的捡漏故事，还记得那种因兴奋而微微颤抖的语不可对意料之外的欣喜......</p>
+            </li>
+            </a>
+        </ul>
+    </section>
+
+<div class="top_bar" style="-webkit-transform:translate3d(0,0,0)">
+ <nav>
+    <ul id="top_menu" class="top_menu">
+      <input type="checkbox" id="plug-btn" class="plug-menu themeStyle" style="border-radius:64px;background-image:url('./Tpl/Qyapp/Applyflow/images/menu01.png');background-color:none;border:0px;">   
+	</ul>
+  </nav>
+</div>
+<div id="plug-wrap" style="display: none;" ></div>
+
+<div class="hd" id="upmenu">
+	<ul id="tab" style="position:absolute;bottom:10px;z-index:8888;width:75%;">
+						
+		<a href="{lanrain::U('wap_index',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}">
+		<li style="width: 50%;float: left;">
+			<div class="li-c">
+			<img src="Tpl/Qyapp/Applyflow/images/16.png" height="50px" width="50px" style="display: block;max-width: 100%;margin: 0 auto;">
+			<div class="li-txt" style="font-size: 14px;line-height: 24px;text-align: center;">知识库</div>
+			</div>
+		</li>
+		</a>
+		<a href="{lanrain::U('wap_collect',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}">
+		<li style="width: 50%;float: left;">
+			<div class="li-c">
+			<img src="Tpl/Qyapp/Applyflow/images/14.png" height="50px" width="50px" style="display: block;max-width: 100%;margin: 0 auto;">
+			<div class="li-txt" style="font-size: 14px;line-height: 24px;text-align: center;">我的收藏</div>
+			</div>
+		</li>
+		</a>		
+		<!-- <div class="clear"></div> -->
+	</ul>
+</div>
+
+	<!-- <div class="com_all">
+    	<div class="com_search">
+			<form action="" method="post">
+            <input class="search_text" name="search" value="" placeholder="搜索" />
+			<input type="hidden" name="token" value="{lanrain:$_GET['token']}"/> 
+            <input class="search_sub" type="submit" value="搜索">
+			</form>
+        </div>
+		<div id="main">
+			<if condition="$list">
+			<volist name="list" id="vo">
+			<div class="com_file" >
+				<a href="javascript:;" onclick="lookFile({lanrain:$vo.id});">
+					<div class="file_content">
+						<span data="1" id="color_{lanrain:$vo.id}">{lanrain:$vo.name}</span>
+						<img style="display:block;" id="img_{lanrain:$vo.id}" data="1"  src="./Tpl/Qyapp/Knowledge/images/right_icon.png" />
+						<img style="display:none;" id="imgup_{lanrain:$vo.id}" data="1"  src="./Tpl/Qyapp/Knowledge/images/iconfont-jiantou.png"width="20px" height="20px" />
+					</div>
+				</a>
+					
+					<div id="files_{lanrain:$vo.id}" style="display:none;">
+						<if condition="$vo['files']">
+						<volist name="vo['files']" id="v">
+						<div class="com_file_nav">
+							<a href="{lanrain::U('wap_info',array('id'=>$v['id'],'token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}">
+							<div class="file_news">{lanrain:$v.title}</div>
+							</a>
+						</div>
+						</volist>
+						<else />
+						<div class="com_file" >
+							<div class="com_file_nav com_no">
+								<a href="javascript:;">
+								<div class="file_news">此类目还没有内容哦</div>
+								</a>
+							</div>
+						</div>
+						</if>
+					</div>
+					
+			</div>
+			</volist>
+			<else />
+			<div class="com_file_nav com_no_big">	
+				<div class="file_news text_b">没有找到相关内容哦</div>		
+			</div>
+			</if> -->
+        <!-- <div class="com_btm">
+        	<ul>
+            	<a style="font-size:14px;" href="{lanrain::U('wap_index',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}"><li class="border">知识库</li></a>
+                <a style="font-size:14px;" href="{lanrain::U('wap_collect',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}"><li>我的收藏</li></a>
+            </ul>
+        </div> -->
+</body>
+<script type="text/javascript" src="Tpl/Qyapp/Applyflow/js/iscroll.js" ></script>
+<script type="text/javascript">
+$(function(){
+    $('#top_menu').click(function(){
+	    var window_height = $(window).height()+'300px';
+		if ($("#upmenu").css("display") == 'none')
+		{
+			$("#upmenu").show();		
+			$("#upmenu").animate({ top: '0px' }, 300);
+		} else {
+			$("#upmenu").animate({ top: window_height }, 300, "", function(){
+				$("#upmenu").hide();
+			});
+		}	
+	});
+});
+</script>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 10
+    });
+</script>
+
+<script>
+function lookFile(n){
+	$('#files_'+n).slideToggle();
+	var data = $('#color_'+n).attr('data');
+	if(data==1){
+		$('#color_'+n).css('color','#35AA47');
+		$('#color_'+n).attr('data','2');
+	}else{
+		$('#color_'+n).css('color','#454545');
+		$('#color_'+n).attr('data','1');
+	}
+	var img = $('#img_'+n).attr('data');
+	if(img==1){	
+		$('#img_'+n).css('display','none');
+		$('#imgup_'+n).css('display','block');
+		$('#img_'+n).attr('data','2');
+	}else{
+		$('#img_'+n).css('display','block');
+		$('#imgup_'+n).css('display','none');
+		$('#img_'+n).attr('data','1');
+	}	
+}
+
+</script>
+</html>

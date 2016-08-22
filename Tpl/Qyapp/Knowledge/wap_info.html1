@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+<title>艺术</title>
+</head>
+
+<link href="./Tpl/Qyapp/Knowledge/css/newstyle.css" rel="stylesheet" type="text/css" />
+  <link href="./Tpl/Qyapp/Knowledge/css/banji.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="./Tpl/Qyapp/Knowledge/css/swiper.min.css">
+  <script type="text/javascript" src="./Tpl/Qyapp/Knowledge/js/jquery.min.js"></script>
+  <script type="text/javascript" src="./Tpl/Qyapp/Knowledge/js/swiper.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+   
+<body>
+
+
+<div class="news_t">
+    <p class="news_title">空军建军节就结了婚了</p>
+    <div class="zhishi_info">作者：三毛
+        <div class="zhishi_zt">
+            <a id="praise" class="" href="javascript:;"> 
+                <img id="1" class="praiseImg" src="./Tpl/Qyapp/Knowledge/images/iconfont-zan.png"width="20px" ><span >{lanrain:$record.praise}</span>
+            </a>
+
+            <!-- <img src="./Tpl/Qyapp/Knowledge/images/iconfont-zan1.png" width="20px">
+            <span>116</span> -->
+
+             <a class="" href="javascript:;">
+            <if condition="($status['status'] eq 1)">
+                <img id="easyCollect" data="2" src="./Tpl/Qyapp/Knowledge/images/iconfont-shoucang.png"width="20px">
+            <else/>
+                <img id="easyCollect" data="1" src="./Tpl/Qyapp/Knowledge/images/iconfont-shoucang1.png"width="20px">
+            </if>
+            </a>
+            <!-- <img src="./Tpl/Qyapp/Knowledge/images/iconfont-shoucang.png" width="20px"> -->
+        </div>
+    </div>
+    <img src="./Tpl/Qyapp/Knowledge/images/banner1.jpg" width="100%">
+</div>
+<!-- <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide user_slide"><img src="./Tpl/Qyapp/Knowledge/images/banner1.jpg"></div>
+        </div>
+</div> -->
+ <div class="cont_text mg_b">
+    <p class="teach_info text_indent">{lanrain:$data.info}</p>
+    
+    <p class="teach_info text_indent">在收藏生涯当中，捡漏的确是一种令人神往的美事，带给藏家的快感是其他经历所无法比拟的。只要在收藏的圈子里摸爬滚打一些时日，免不了会从那些得了好处的藏友听到拿来炫耀的捡漏故事，还记得那种因兴奋而微微颤抖的语不可对意料之外的欣喜......</p>
+</div>
+
+
+
+<div class="top_bar" style="-webkit-transform:translate3d(0,0,0)">
+ <nav>
+    <ul id="top_menu" class="top_menu">
+      <input type="checkbox" id="plug-btn" class="plug-menu themeStyle" style="border-radius:64px;background-image:url('./Tpl/Qyapp/Applyflow/images/menu01.png');background-color:none;border:0px;">   
+	</ul>
+  </nav>
+</div>
+<div id="plug-wrap" style="display: none;" ></div>
+
+<div class="hd" id="upmenu">
+	<ul id="tab" style="position:absolute;bottom:10px;z-index:8888;width:75%;">
+						
+		<a href="{lanrain::U('wap_index',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}">
+		<li style="width: 50%;float: left;">
+			<div class="li-c">
+			<img src="Tpl/Qyapp/Applyflow/images/16.png" height="50px" width="50px" style="display: block;max-width: 100%;margin: 0 auto;">
+			<div class="li-txt" style="font-size: 14px;line-height: 24px;text-align: center;">知识库</div>
+			</div>
+		</li>
+		</a>
+		<a href="{lanrain::U('wap_collect',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}">
+		<li style="width: 50%;float: left;">
+			<div class="li-c">
+			<img src="Tpl/Qyapp/Applyflow/images/14.png" height="50px" width="50px" style="display: block;max-width: 100%;margin: 0 auto;">
+			<div class="li-txt" style="font-size: 14px;line-height: 24px;text-align: center;">我的收藏</div>
+			</div>
+		</li>
+		</a>		
+		<!-- <div class="clear"></div> -->
+	</ul>
+</div>
+
+	<!-- <div class="com_all">
+    	<div class="com_search">
+			<form action="" method="post">
+            <input class="search_text" name="search" value="" placeholder="搜索" />
+			<input type="hidden" name="token" value="{lanrain:$_GET['token']}"/> 
+            <input class="search_sub" type="submit" value="搜索">
+			</form>
+        </div>
+		<div id="main">
+			<if condition="$list">
+			<volist name="list" id="vo">
+			<div class="com_file" >
+				<a href="javascript:;" onclick="lookFile({lanrain:$vo.id});">
+					<div class="file_content">
+						<span data="1" id="color_{lanrain:$vo.id}">{lanrain:$vo.name}</span>
+						<img style="display:block;" id="img_{lanrain:$vo.id}" data="1"  src="./Tpl/Qyapp/Knowledge/images/right_icon.png" />
+						<img style="display:none;" id="imgup_{lanrain:$vo.id}" data="1"  src="./Tpl/Qyapp/Knowledge/images/iconfont-jiantou.png"width="20px" height="20px" />
+					</div>
+				</a>
+					
+					<div id="files_{lanrain:$vo.id}" style="display:none;">
+						<if condition="$vo['files']">
+						<volist name="vo['files']" id="v">
+						<div class="com_file_nav">
+							<a href="{lanrain::U('wap_info',array('id'=>$v['id'],'token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}">
+							<div class="file_news">{lanrain:$v.title}</div>
+							</a>
+						</div>
+						</volist>
+						<else />
+						<div class="com_file" >
+							<div class="com_file_nav com_no">
+								<a href="javascript:;">
+								<div class="file_news">此类目还没有内容哦</div>
+								</a>
+							</div>
+						</div>
+						</if>
+					</div>
+					
+			</div>
+			</volist>
+			<else />
+			<div class="com_file_nav com_no_big">	
+				<div class="file_news text_b">没有找到相关内容哦</div>		
+			</div>
+			</if> -->
+        <!-- <div class="com_btm">
+        	<ul>
+            	<a style="font-size:14px;" href="{lanrain::U('wap_index',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}"><li class="border">知识库</li></a>
+                <a style="font-size:14px;" href="{lanrain::U('wap_collect',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}"><li>我的收藏</li></a>
+            </ul>
+        </div> -->
+</body>
+<script type="text/javascript" src="Tpl/Qyapp/Applyflow/js/iscroll.js" ></script>
+<script type="text/javascript">
+$(function(){
+    $('#top_menu').click(function(){
+	    var window_height = $(window).height()+'300px';
+		if ($("#upmenu").css("display") == 'none')
+		{
+			$("#upmenu").show();		
+			$("#upmenu").animate({ top: '0px' }, 300);
+		} else {
+			$("#upmenu").animate({ top: window_height }, 300, "", function(){
+				$("#upmenu").hide();
+			});
+		}	
+	});
+});
+</script>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 10
+    });
+</script>
+
+<script>
+function lookFile(n){
+	$('#files_'+n).slideToggle();
+	var data = $('#color_'+n).attr('data');
+	if(data==1){
+		$('#color_'+n).css('color','#35AA47');
+		$('#color_'+n).attr('data','2');
+	}else{
+		$('#color_'+n).css('color','#454545');
+		$('#color_'+n).attr('data','1');
+	}
+	var img = $('#img_'+n).attr('data');
+	if(img==1){	
+		$('#img_'+n).css('display','none');
+		$('#imgup_'+n).css('display','block');
+		$('#img_'+n).attr('data','2');
+	}else{
+		$('#img_'+n).css('display','block');
+		$('#imgup_'+n).css('display','none');
+		$('#img_'+n).attr('data','1');
+	}	
+}
+
+</script>
+
+<script>
+$('#praise').click(function(){
+var value = $('.praiseImg').attr('id');
+var id={lanrain:$data.id};
+if(value==1){
+    $.ajax({
+        type:"POST",
+        url:"{lanrain::U('Knowledge/wap_my',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}",
+        data:{'id':id,'praise':1},
+        dataType:'json',
+        success:function(json){     
+            $('#praise span').html(json);
+            $('.praiseImg').attr('src','./Tpl/Qyapp/Knowledge/images/iconfont-zans.png');
+            $('.praiseImg').attr('id','2');
+        }
+    });       
+}
+if(value==2){
+    $.ajax({
+        type:"POST",
+        url:"{lanrain::U('Knowledge/wap_my',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}",
+        data:{'id':id,'praise':2},
+        dataType:'json',
+        success:function(json){
+            $('#praise span').html(json);
+            $('.praiseImg').attr('src','./Tpl/Qyapp/Knowledge/images/iconfont-zan.png');
+            $('.praiseImg').attr('id','1');
+        }
+    });
+}
+    
+});
+</script>
+
+<script>
+$('#collect').click(function(){
+    var id={lanrain:$data.id};
+    var status=$('.themeImg').attr('id');
+    if(status==1){
+        $.ajax({
+            type:"POST",
+            url:"{lanrain::U('Knowledge/wap_my',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}",
+            data:{'id':id,'status':1},
+            dataType:'json',
+            success:function(json){
+                if(json==1){
+                    $('#collect').html('取消收藏');
+                    $('.themeImg').attr('id',2);
+                    alert('收藏成功');
+                    $('.meng').fadeOut(100);
+                    $('.new_tan').slideUp(200);                 
+                }else{
+                    alert('收藏失败');
+                    $('.meng').fadeOut(100);
+                    $('.new_tan').slideUp(200);
+                }
+            }
+        });       
+    }
+    if(status==2){
+        $.ajax({
+            type:"POST",
+            url:"{lanrain::U('Knowledge/wap_my',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}",
+            data:{'id':id,'status':2},
+            dataType:'json',
+            success:function(json){
+                if(json==1){
+                    $('#collect').html('收藏');
+                    $('.themeImg').attr('id',1);
+                    alert('该文档已取消收藏');
+                    $('.meng').fadeOut(100);
+                    $('.new_tan').slideUp(200);
+                }else{
+                    alert('取消失败');
+                    $('.meng').fadeOut(100);
+                    $('.new_tan').slideUp(200);                 
+                }
+            }
+        });  
+    }
+});
+</script>
+<script>
+$('#easyCollect').click(function(){
+    var id={lanrain:$data.id};
+    //alert(id);
+    var status=$(this).attr('data');
+    if(status==1){
+        $.ajax({
+            type:"POST",
+            url:"{lanrain::U('Knowledge/wap_my',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}",
+            data:{'id':id,'status':1},
+            dataType:'json',
+            success:function(json){
+                if(json==1){
+                    alert("收藏成功");
+                    $('#easyCollect').attr('src','./Tpl/Qyapp/Knowledge/images/iconfont-sc.png');
+                    $('#easyCollect').attr('data',2);           
+                }
+                if(json==2){
+                    alert("收藏失败");
+                }if(json==3){
+                    alert("你已经收藏过了！");
+                }
+            }
+        });       
+    }
+    if(status==2){
+        $.ajax({
+            type:"POST",
+            url:"{lanrain::U('Knowledge/wap_my',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}",
+            data:{'id':id,'status':2},
+            dataType:'json',
+            success:function(json){
+                if(json==1){
+                    alert("取消成功");
+                    $('#easyCollect').attr('src','./Tpl/Qyapp/Knowledge/images/iconfont-shoucang.png');
+                    $('#easyCollect').attr('data',1);
+                }else{
+                    alert("取消失败");
+                }
+            }
+        });  
+    }
+});
+</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+wx.config({
+debug: false,
+appId: '{lanrain:$jsssdk_info.appId}',
+timestamp: {lanrain:$jsssdk_info.timestamp},
+nonceStr: '{lanrain:$jsssdk_info.nonceStr}',
+signature: '{lanrain:$jsssdk_info.signature}',
+jsApiList: [
+'.previewImage',
+'uploadImage',
+'downloadImage',
+'onMenuShareQQ',
+'onMenuShareWeibo',
+'openCard'
+]
+});
+</script>
+</html>

@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 全局样式 */
+body{ padding:0; margin:0; font-size:12px; height:100%; word-break: break-all;}
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p { padding:0; margin:0;}
+ul,li{list-style:none;}
+img{border:0px;}
+.clearfloat{clear:both; height:0px; font-size:1px; line-height:0px;}
+a{ text-decoration:none;}
+
+
+.name{ width:100%; background-color:#fff; color:#646464; font-size:14px; font-family:"微软雅黑";}
+.name li{ width:80%; padding:3%;}
+
+.content{ width:100%; height:auto; margin:0 auto;padding:-10px;}
+.content ul{ bottom:70px; display:block;}
+.content li{ width:46%; float:left; padding:1% 1%; table-layo}
+.content_c .onclick{ border:0px solid #F09; border-radius:9px;}
+
+
+
+
+

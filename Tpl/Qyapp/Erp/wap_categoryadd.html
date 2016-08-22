@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>添加分类</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta content="" name="description"/>
+<meta content="" name="author"/>
+<head>
+<link href="./Tpl/Qyapp/Erp/css/erp.css" rel="stylesheet" type="text/css" />
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+<link href="./Tpl/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="./Tpl/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+<link href="./Tpl/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="./Tpl/assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+<link href="./Tpl/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
+<!-- END GLOBAL MANDATORY STYLES -->
+<!-- BEGIN PAGE LEVEL STYLES -->
+<link rel="stylesheet" type="text/css" href="./Tpl/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css"/>
+<link rel="stylesheet" type="text/css" href="./Tpl/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css"/>
+<link rel="stylesheet" type="text/css" href="./Tpl/assets/global/plugins/jquery-tags-input/jquery.tagsinput.css"/>
+<link rel="stylesheet" type="text/css" href="./Tpl/assets/global/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
+<link rel="stylesheet" type="text/css" href="./Tpl/assets/global/plugins/typeahead/typeahead.css">
+<!-- END PAGE LEVEL STYLES -->
+<!-- BEGIN THEME STYLES -->
+<link href="./Tpl/assets/global/css/components.css" id="style_components" rel="stylesheet" type="text/css"/>
+<link href="./Tpl/assets/global/css/plugins.css" rel="stylesheet" type="text/css"/>
+<link href="./Tpl/assets/admin/layout/css/layout.css" rel="stylesheet" type="text/css"/>
+<link id="style_color" href="./Tpl/assets/admin/layout/css/themes/default.css" rel="stylesheet" type="text/css"/>
+<link href="./Tpl/assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
+<!-- END THEME STYLES -->
+<script src="./Tpl/static/scroll/dev/jquery-1.9.1.js"></script>		
+<script language="javascript" type="text/javascript" src="./Lanrain/Lib/Widget/My97DatePickerBeta/My97DatePicker/WdatePicker.js"></script>
+</head>
+<style>
+.promote{display:none;}
+label{ margin-bottom:0;}
+input[type=”button”], input[type=”submit”], input[type=”reset”] {
+-webkit-appearance: none;
+}
+select{-webkit-appearance: none;}
+.triangle_border_down{ 
+    width:0; 
+    height:0; 
+    border-width:4px 4px 0; 
+    border-style:solid; 
+    border-color:#333 transparent transparent;/*灰 透明 透明 */ 
+    position:relative; 
+	left: 92%;
+	top: 19px;
+	z-index:123;
+} 
+</style>
+<body style="background-color:#fff;">
+<div class="page-content-wrapper">
+		<div class="page-content">
+	<div class="form">
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="portlet green box">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-cogs"></i>添加分类
+							</div>
+							
+						</div>
+						<div class="portlet-body">
+							
+							<form class="form-horizontal">
+								
+                                <div class="form-group">
+									<label class="col-md-3 control-label" for="title">所属分类</label>
+									<div class="col-md-5">
+                                    <div class="triangle_border_down"> </div>
+										<select id="one" name="pid" class="form-control">
+                                            <option value="0">-----顶级分类-----</option>
+                                           <volist name="values" id="categorylist">
+                                            <option value="{lanrain:$categorylist.cat_id}" <if condition="$categorylist['cat_id'] eq $category['pid']">selected="selected"</if> <if condition="$categorylist['cat_id'] eq $category['pid']">disabled="disabled"</if>>{lanrain:$categorylist.pre}{lanrain:$categorylist.cat_name}</option>
+                                            </volist>
+                                            
+                                        </select>
+									</div>
+								</div>
+                                
+								<div class="form-group">
+									<label class="col-sm-3 control-label">分类名称</label>
+									<div class="col-sm-4">
+										<div class="input-group">
+											<span class="input-group-addon">
+											<i class="fa fa-cogs"></i>
+											</span>
+												<input type="hidden" value="{lanrain:$_GET['cat_id']}" class="form-control" id="cat_id" />
+											<input type="text" value="{lanrain:$category.cat_name}" class="form-control" name="cat_name" id="cat_name" />
+										</div>
+									</div>
+								</div>
+								
+								<div class="form-group">
+                                    <label class="col-md-4 control-label" style="float:left; line-height:35px;">状态</label>
+                                    <div class="col-md-8" style="width:50%; float:left;">
+                                        <div class="input-group">
+                                            <div class="icheck-inline">
+                                                <label>
+                                                <input type="radio" name="radio2" class="icheck"> 启动 </label>
+                                                <label>
+                                                <input type="radio" name="radio2" checked class="icheck"> 禁用 </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+								<div class="form-group">
+									<label class="col-md-3 control-label" for="title"></label>
+									<div class="col-md-5">
+										<a type="submit" name="" id="button" class="button btn green" style="width:100%;"><if condition="($category.cat_id neq 0)">编辑<else/>添加</if></a>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END PAGE CONTENT-->
+</div>
+</div>
+</div>
+</body>
+</html>
+<script>
+$(function(){
+	$('#button').click(function(){
+		var is_show =  $('input[name="is_show"]:checked').val();
+		var cat_name =  $('input[name="cat_name"]').val();
+		if(!cat_name){
+			alert("请填写分类名");
+			return false;
+		}
+		var pid =  $('option:selected').val();
+		if($('#cat_id').val()){
+			var cat_id = $('#cat_id').val();
+		}else{
+			var cat_id =0;
+		}
+
+		$.ajax({
+			type: "post",  
+			url:"{lanrain::U('wap_categoryadd',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}",
+			dataType:'json',
+			data:{'is_show':is_show,'cat_name':cat_name,'pid':pid,'cat_id':cat_id},
+			success:function(json){
+				if(json==1){
+					alert('添加成功');
+				//	window.location.href='index.php?g=Qyapp&m=Erp&a=wap_category&token=$_GET["token"]&wecha_id=$_GET["wecha_id"]';
+					window.location.href="{lanrain::U('wap_category',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}"
+				}
+				if(json==2){
+					alert('修改成功');
+					//window.location.href="index.php?g=Qyapp&m=Erp&a=wap_category&token=$_GET['token']&wecha_id=$_GET['wecha_id']";
+					window.location.href="{lanrain::U('wap_category',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}"
+				}
+				if(json==3){
+					alert('修改失败');
+					//window.location.href="index.php?g=Qyapp&m=Erp&a=wap_category&token=$_GET['token']&wecha_id=$_GET['wecha_id']";
+				}
+				if(json==0){
+					alert('添加失败');
+				}
+			}
+		});
+	})
+})
+</script>

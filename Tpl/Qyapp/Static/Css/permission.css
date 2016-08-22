@@ -1,0 +1,26 @@
+.align-box{text-align: center;}
+.js_ed{display: inline-block;float: right;}
+.js_ed a{color: #4A90E2;}
+.js_ed1{display: inline-block;float: right;}
+.js_ed1 a{color: #4A90E2;}
+#js_select_branch .modal-dialog .modal-body{max-height: 400px;overflow-y: auto;}
+.modal-dialog  .set-permission-box{max-height: 350px;overflow-y: auto;}
+.modal-body{max-height: 510px;}
+.modal-body .app_wrap{max-height:510px;overflow:auto;}
+.modal-body ul,.modal-body li{margin: 0px;padding: 0px;list-style: none;}
+.modal-body .app_list{padding: 34px 34px 0;overflow: hidden;}
+    .app_list .item{float: left;margin-right: 10px;margin-left: 10px;margin-bottom: 30px;width: 100px;text-align: center;}
+    .app_list .item-selected .logo_img{position:relative;}
+    .app_list .item .logo_img{height: 88px;width: 88px;display: inline-block;overflow: hidden;position: relative}
+    .app_list .item .img_logo{border-radius:50%;margin-top:3px;} 
+    .border_alpha{border: 1px solid #eee;border-color: rgba(0,0,0,.1);-moz-background-clip: padding;-webkit-background-clip: padding;background-clip: padding-box;}
+    .app_list .item .h-name{width: 100%;margin-top: 3px;text-align: center;font-size: 14px;font-weight: 400;overflow: hidden;text-overflow: ellipsis;white-space: nowrap}
+    .app_list .item .mask{display: none;}
+    .app_list .item-selected .mask{display: block;position: absolute;top: 4px;left: 6px;width: 78px;height: 78px;overflow: hidden;line-height: 78px;text-align: center; border: 5px solid #4a90e2;-webkit-border-radius: 50%;-o-border-radius: 50%;border-radius: 50%;}
+    .mask .icon_checkmark_big{display: inline-block;width: 32px;height: 24px;background: url(/assets/images/permission/check.png) 0 0 no-repeat;position: absolute;top: 50%;left: 50%;margin:-12px 0 0 -16px;}
+    .app_list .item-selected .mask:before{content: " ";position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-color: #000;-moz-opacity: .5;filter: alpha(opacity=50);opacity: .5;}
+    table.js_template_app td.ui-ta-c{vertical-align: bottom;}
+    table.js_template_address td.ui-ta-c{vertical-align: bottom;}
+    table.js_template_address td.ui-ta-c{vertical-align: bottom;}
+    .visilbe{visibility: hidden;}
+    .modal-body .children-box{padding: 10px 15px;}

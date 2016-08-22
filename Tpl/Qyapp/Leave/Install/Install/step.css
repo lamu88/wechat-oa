@@ -1,0 +1,141 @@
+
+.list-step li{
+	float:left;
+}
+.bind-step{
+	width:135px;
+	height:76px;
+	margin-top:22px;
+	overflow:hidden;
+	position: relative;
+	zoom:1;
+	background: url(setp_common.png) no-repeat 0 0;
+	text-align: center;
+	color:#fff;
+	line-height:60px;
+}
+.bind-step.active{
+	background-position: -135px 0;
+}
+.alert{
+	font-size:16px;
+}
+.bind-step span{
+	position: absolute;
+	bottom:0;
+	line-height:26px;
+	left:64px;
+	color:#999;
+}
+.bind-step.active span{
+	color:#0D7BFF;
+}
+.child-step-li{
+	margin-left:5px;
+}
+.child-step-li ul{
+	margin-top:5px;
+}
+.bind-step-line{
+	width:20px;
+	height:15px;
+	overflow:hidden;
+	display: inline;
+	margin:44px 20px 0 20px;
+	background: url(setp_common.png) no-repeat -206px -121px;
+}
+.bind-child-step{
+	margin-left:10px;
+}
+.bind-child-step span{
+	float:left;
+	margin-left:5px;
+	color:#c7c7c7;
+}
+.bind-child-step b{
+	position: absolute;
+	right:7px;
+	top:1px;
+	font-weight: normal;
+}
+.bind-child-step .child-setp-line{
+	width:41px;
+	height:21px;
+	overflow:hidden;
+	position: relative;
+	zoom:1;
+	background: url(setp_common.png) no-repeat -206px -76px;
+}
+.child-step-li .active .child-setp-line{
+	background-position: -207px -98px
+}
+.child-step-li .active span{
+	color:#0D7BFF;
+}
+
+
+.app-step{
+	width:103px;
+	height:75px;
+	overflow:hidden;
+	position: relative;
+	zoom:1;
+	background: url(setp_common.png) no-repeat 0 -76px;
+	text-align: center;
+	color:#fff;
+	line-height:60px;
+}
+.app-step-br{
+	line-height:16px;
+}
+.app-step-br strong{
+	margin-top:12px;
+	font-weight: normal;
+	display: block;
+}
+.app-step-line{
+	width:11px;
+	height:7px;
+	overflow:hidden;
+	display: inline;
+	margin:26px 13px 0 13px;
+	background: url(setp_common.png) no-repeat -206px -140px;
+}
+.app-step span{
+	position: absolute;
+	bottom:0;
+	line-height:26px;
+	left:48px;
+	color:#999;
+}
+.app-step.active{
+	background-position: -103px -76px;
+}
+
+.app-step.active span{
+	color:#0D7BFF;
+}
+p img{
+	border:1px solid #ccc;
+	margin-bottom: 5px;
+}
+.alert-sb{
+	background:#0079FF;
+	color:#fff;
+	position: relative;
+	zoom:1;
+	height:50px;
+	line-height:30px;
+	overflow:hidden;
+}
+.alert-sb button{
+	position: absolute;
+	right:10px;
+	top:9px;
+}
+.table-bordered tr td{
+	font-size:15px;
+}
+.table-bordered tr .bg-light{
+	color:#333;
+}

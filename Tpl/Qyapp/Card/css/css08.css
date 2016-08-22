@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 全局样式 */
+body{ padding:0; margin:0; font-size:12px; height:100%; word-break: break-all;}
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p { padding:0; margin:0;}
+ul{list-style:none;}
+img{border:0px;}
+.clearfloat{clear:both; height:0px; font-size:1px; line-height:0px;}
+a{ text-decoration:none;}
+
+
+
+.contexts{ position:relative;}
+#content{ width:100%; height:auto; margin:0 auto; float:left; position:absolute; top:8%;}
+#content ul{ width:95%; height:auto; float:left; font-family:"微软雅黑"; padding-left:5%;}
+#content ul li{ width:100%; line-height:130%;}
+#content .logo{ font-size:24px; margin-top:1%;}
+#content .company{ font-size:14px; font-weight:bold;}
+#content ul li b{ font-size:24px;}
+#content ul li span{ margin-left:3%; font-size:14px;}
+#content .zhangsan{ margin-top:1%;}
+#content .address{ margin-top:2%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

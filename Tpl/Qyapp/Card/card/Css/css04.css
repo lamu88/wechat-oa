@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 全局样式 */
+body{ padding:0; margin:0; font-size:12px; height:100%; word-break: break-all;}
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p { padding:0; margin:0;}
+ul{list-style:none;}
+img{border:0px;}
+.clearfloat{clear:both; height:0px; font-size:1px; line-height:0px;}
+a{ text-decoration:none;}
+
+
+
+div#all{
+position:fixed;
+top:0;
+left:0;
+bottom:0;
+right:0;
+z-index:-1;
+}
+div#all > img{height:100%;
+width:100%;
+border:0;
+}
+
+.logo{ width:80px; height:80px; line-height:80px; text-align:center; border:1px solid #fff; border-radius:5px; float:left; margin-left:8%; color:#fff;}
+
+#content{ width:90%; height:auto; margin:0 auto; margin-top:8%; display:block; color:#fff; float:left; margin-left:10%;}
+.company{ width:45%; height:auto; float:left; display:block;}
+.company ul{ width:100%; float:left; font-weight:bold; margin-left:5%;}
+.company ul li{ font-family:"微软雅黑"; font-size:14px; width:100%;}
+.company .margin{ margin-top:5%;}
+.company ul li b{ font-size:36px;}
+.company ul li span{ margin-left:20%; font-size:18px;}
+
+.line{ width:1px; height:80px; background-color:#fff; float:left; margin-left:15%;}
+
+.contact{ width:100%; height:auto; margin:0 auto; color:#fff;}
+.contact ul{ width:80%; margin:0 auto; float:left; text-align:center; margin-top:5%; margin-left:18%;}
+.contact ul li{ width:40%; float:left; margin-top:3%; font-family:"微软雅黑"; line-height:150%; text-align:center;}
+
+
+.address{ width:100%; margin:0 auto; text-align:center; float:left; margin-top:1%; font-family:"微软雅黑"; font-size:14px; color:#fff;}

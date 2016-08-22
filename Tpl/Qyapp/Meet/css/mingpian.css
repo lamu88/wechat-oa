@@ -1,0 +1,112 @@
+﻿F	address, blockquote, body, caption, center, col, colgroup, dd, dir, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, html, isindex, li, listing, map, marquee, menu, noframes, ol, p, plaintext, pre, table, tbody, td, tfoot, th, thead, tr, ul, xmp { margin:0; padding:0; list-style:none;}
+	
+	
+	.container {
+	position: relative;
+	min-height: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+
+	}
+	a{
+	text-decoration:none;
+	
+	}
+	body{ 
+	
+	}
+	.head{
+	border-radius:5px;
+	width:90%;
+	height:66px;
+	margin:0px auto;
+	margin-top:15px;
+	background:#fff;
+	padding:10px;
+	margin-bottom:20px;
+	}
+	.left_img{
+	width:60px;
+	height:60px;
+	float:left;
+	background:red;
+	border-radius:5px;
+	margin-right:15px;
+	}
+	.red{
+	color:#da6868;
+	font-size:14px;
+
+	}
+	.huise{
+	color:#ccc;
+	margin-left:30px;
+	
+	}
+	.rightup{	
+	font-family:黑体;
+	padding:8px;
+	float:left;
+	width:460px;
+	border-bottom:solid 1px #eee;
+	}
+	.content{
+	
+	width:100%;
+	padding:10px;
+	background:#fff;
+	margin-bottom:20px;
+	}
+	.contenttitle{
+	font-family:黑体;
+	font-weight:bold;
+	height:30px;
+	border-bottom:solid 1px #eee;
+	text-indent:16px;
+	position:relative;
+	}
+	.img_width{
+	
+	width:30px;
+	height:30px;
+	position:absolute;
+	top:3px;
+	right:50px;
+	}
+	.contentnub{
+	height:50px;
+	font-weight:normal;
+	line-height:50px;
+	
+	}
+	
+	.newinput{
+	height:40px;
+	border:none;
+	margin-left:20px;
+	width:70%;
+	color:#ccc;
+	}
+	.xuanze{
+	font-family:黑体;
+	background:-webkit-linear-gradient(top , rgb(255, 255, 255) , rgb(246, 246, 246) 5% , rgb(242, 242, 242) 100%);
+	height:40px;
+	line-height:40px;
+	}
+	.Hother{
+	background:#fff;
+	height:40px;
+	padding:2px;
+	margin-bottom:20px;
+	}
+	.footer{
+	width:100%;
+	height:50px;
+	background:#f7f7f7;
+	color:#329acb;
+	font-weight:bold;
+	line-height:50px;
+	text-align:center;
+	font-size:14px;
+
+	}

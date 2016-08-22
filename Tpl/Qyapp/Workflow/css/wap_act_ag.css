@@ -1,0 +1,188 @@
+﻿	html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,p { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+	.same{
+	width:100%;
+	height:36px;
+	border-bottom:solid 1px #eee;
+	font-family:"宋体";
+	line-height:36px;
+	font-size:14px;
+	background:url("images/jiantou.png") no-repeat;background-position:96% 24px;
+    padding-left: 5%;
+	}
+	.samesp{
+	color:#999;
+	font-size:14px;
+	margin-left:20px;
+	}
+	.xm{
+	text-indent:10px;
+	}
+	.botton{
+	width:94%;
+	height:40px;
+	float:left;
+	text-align:center;
+	line-height:40px;
+	margin:30px 0 0 3%;
+    border:1px solid #35AA47;
+	}
+	input{
+	
+	height:22px;	
+	border:none;
+	color:12px;
+	}
+	
+	.container {
+	position: relative;
+	max-width: 640px;
+	min-height: 100%;
+	margin: 0 auto;
+	background-color: #fff;
+	overflow: hidden;
+
+	}
+	.selsectedd{
+		-webkit-appearance: button;
+-webkit-user-select: none;
+font-size: 13px;
+overflow: visible;
+text-overflow: ellipsis;
+white-space: nowrap;
+color: #999999;
+display: inline;
+position: relative;
+margin: 0px 1px 0px 1px;
+font-size: 16px;
+width: 70%;
+height: auto;
+padding: 10px;
+outline: none;
+border: 0;
+background-color: transparent;
+	}
+	body{
+	
+	background-color:#fff;
+	
+	}
+	.spok{
+	
+	width:55px;
+	height:30px;
+	background:green;
+	color:#fff;
+	line-height:30px;
+	font-size:12px;
+	text-align:center;
+	border-bottom-left-radius:20px;
+	position:fixed;
+	right:0;top:0;
+	}
+	.spnot{
+	width:55px;
+	height:30px;
+	background:#7e7e7e;
+	color:#fff;
+	line-height:30px;
+	font-size:12px;
+	text-align:center;
+	border-bottom-left-radius:20px;
+	position:fixed;
+	right:0;top:0;
+	
+	
+	}
+	dl{
+	
+	height:60px;
+	margin-top:10px;
+	margin-left:10px;
+	
+	}
+	.downcs{
+	margin-top: 20px;
+	}
+	
+			a{
+	text-decoration:none;
+	
+	}
+	a:hover{
+  text-decoration:none;
+   }
+   .upcs{
+   width:100%;
+   overflow: hidden;
+   margin-bottom: 30px;
+   }
+   .foto{
+   font-family:黑体;
+   font-weight:normal;
+   color:green;
+   }
+   .botoms{
+   color:orange;
+   font-weight:normal;
+   }
+   
+
+#menus{
+    margin:30px 0;
+    width: 100%;
+}
+#menus ul li {
+    float: left;
+    width: 90%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #35AA47;
+    border-radius: 3px;
+    margin-left: 5%;
+    margin-bottom: 20px;
+}
+
+
+
+
+   	.samec{
+	width:100%;
+	height:50px;
+	padding-bottom:9px;
+	border-bottom:solid 1px #eee;
+	line-height:60px;
+	font-weight:normal;
+	text-indent:10px;
+	}
+	.sametwo{
+	height:40px;
+	background:#eff1f0;
+	border-bottom:solid 1px #e6e7e7;
+	}
+	   .navse{
+   width:55px;
+   height:30px;
+   background:green;
+   color:#fff;
+   line-height:30px;
+   font-size:12px;
+   text-align:right;
+   border-bottom-left-radius:30px;
+   position:fixed;right:0;top:0
+   
+   }
+   
+   .samespd{
+   
+   color:green;
+   margin-right:15px;
+   
+   }
+   
+   .red{
+   
+   color:red;
+   
+   }

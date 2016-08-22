@@ -1,0 +1,125 @@
+<form class="form-horizontal form-validate form-modal" method="post"  target="_self"  action="{lanrain::U('Member/memberAdd')}"> 
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">新增成员</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label must">姓名</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" data-rule-required="true" name="name" 
+                        value=""  maxlength='40'/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label must">帐号</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" data-rule-required="true" placeholder="成员唯一标识，设定后不可更改，不支持中文" name="userid"
+                         value=''   maxlength='120'
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label must">所在部门</label>
+                    <div class="col-sm-7">
+                    <input type="text" class="form-control " data-rule-required="true"  name="depart" 
+                              onclick="openModel();" id="depart" aria-required="true"  value=""/>
+							 <input  id="departId" type="hidden"  name="departid"  value=""/>					 
+                    </div>
+                </div>							
+				
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">身份</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" name="position" value="" maxlength='600'/>
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label class="col-sm-2 control-label">性别</label>
+                     <div class="col-sm-1">
+                            <div class="pull-left m-t-sm" id="mySwitch"  style="width:400px;"> 
+							 <input   type="radio" name="gender"  value="1" checked />男&nbsp;&nbsp;&nbsp;&nbsp;
+							<span> <input type="radio" name="gender"   value="2"  />女</span>
+                            </div>
+                        </div>	
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">工作电话</label>
+                    <div class="col-sm-10">
+                             <div class="form-group col-sm-3">
+                            <input type="text" class="form-control" name="t1" placeholder="区号" value="" maxlength='5'/>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="t2" placeholder="固话" value=''  maxlength='10'/>
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <input type="text" class="form-control" name="t3" placeholder="分机" value='' maxlength='8'/>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">工作地点</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" name="place" value='' maxlength='300'/>
+                    </div>
+                </div>
+                <div class="col-sm-offset-2">  <div class="text-muted m-xs js_form_tips">以下三项信息至少填写一项</div></div>    
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">手机号</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control js_partial_require" name="mobile" value='' maxlength='120'/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">邮箱</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control js_partial_require" name="email" value='' maxlength='220'/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">微信号</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control js_partial_require" name="weixinid" value='' maxlength='120'/>
+                    </div>
+                </div> 				                
+            </div>
+            <div class="modal-footer">
+                <input type='hidden' name='mysignstr' value="b2ec36754061b0562f6fc98956d51fde">
+                <input type='hidden' name='type' value="add">
+                <button type="submit" class="btn btn-primary" data-loading-text="保存中..."  >保存</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</form> 
+
+
+   <div id="myModal" class="modal fade" tabindex="-2" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+  </div>
+<script>
+function openModel(){
+    $('#depart').attr("value",'');
+	$('#departId').attr("value",'');
+	
+	$('#myModal').load("{lanrain::U('Tree/myTree')}", function(){
+		 $('#myModal').modal();
+	});	
+}
+
+function cancel(){
+    $('#depart').attr("value",'');
+	$('#departId').attr("value",'');
+	$('#myModal').modal('hide');
+    $('#myModal').empty();
+}
+
+function guanbi(){
+    $('#myModal').modal('hide');
+    $('#myModal').empty();
+}
+
+</script>

@@ -1,0 +1,54 @@
+*{margin:0;padding:0;list-style:none;}
+body{font-family: microsoft yahei,Tahoma,Helvetica,arial,sans-serif;font-size:12px;-webkit-text-size-adjust: 100%;color:#222}
+article, aside, footer, header, nav, section,figure,figcaption,form{display:block;margin:0;padding:0;border:none;}
+i{font-style:normal}
+img{border:none;}
+a{text-decoration:none;}
+ul li{list-style:none;}
+.fl{float:left;}
+.fr{float:right;}
+.clear{float:none;clear:both;}
+.tl{text-align:left;}
+.tr{text-align:right;}
+.tc{text-align:center;}
+
+html{width:100%;height:100%;}
+body{max-width:640px;margin:0 auto;background:#ccc url("../images/bg.jpg") no-repeat center 0px;}
+.tou{padding:30px 0px;}
+.tou .tit{font-size:16px;color:#fff;line-height:24px;text-align:center;}
+.tou-icon{width:80px;height:80px;margin:0 auto;display:block;}
+.tou-icon img{display:block;width:80px;height:80px;border-radius:100%;}
+
+.main{width:250px;height:250px;border-radius:100%;margin:20px auto;border:2px solid #fff;position:relative;}
+.main .yuan1{width:230px;height:230px;border-radius:100%;background:#6d6a70;position:absolute;left:10px;top:10px;}
+.main .yuan2{width:160px;height:160px;border-radius:100%;border:2px solid #fff;position:absolute;left:40px;top:40px;}
+.main .yuan3{width:140px;height:140px;border-radius:100%;position:absolute;left:55px;top:55px;}
+.main .a{display:block;width:30px;height:30px;border-radius:30px;background:#807675;border:1px solid #fff;position:absolute;color:#fff;text-align:center;line-height:30px;font-size:20px;}
+.main .a.i1{left:105px;top:20px;}
+.main .a.i2{left:35px;top:60px;}
+.main .a.i3{right:35px;top:60px;}
+.main .a.i4{left:35px;bottom:60px;}
+.main .a.i5{right:35px;bottom:60px;}
+.main .i{display:block;width:10px;height:10px;background:#fff;border-radius:100%;position:absolute;}
+.main .i.i11{top:-5px;left:115px;}
+.main .i.i22{top:45px;left:20px;}
+.main .i.i33{top:45px;right:20px;}
+.main .i.i44{bottom:45px;left:20px;}
+.main .i.i55{bottom:45px;right:20px;}
+
+
+section.nei{width:100%;margin:25px auto;}
+section.nei article{max-width:300px;margin:0 auto;}
+section.nei article ul li{display:block;font-size:14px;line-height:30px;color:#fff;}
+section.nei article ul li span{font-size:18px;color:#fff;padding-right:10px;display:inline-block;width:20px;}
+
+footer{position:fixed;width:100%;bottom:0px;left:0px;background:url("../images/bg.png") repeat;padding:5px 0px;}
+footer a{display:block;width:25%;float:left;font-size:14px;color:#fff;text-align:center;}
+footer a span{display:block;font-size:20px;}
+
+
+/* .nei-wrap1{display:none;}
+.nei-wrap2{display:none;}
+.nei-wrap3{display:none;}
+.nei-wrap4{display:none;}
+.nei-wrap5{display:none;} */

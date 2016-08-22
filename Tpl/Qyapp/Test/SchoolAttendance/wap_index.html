@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+<title>签到</title>
+</head>
+<link href="./Tpl/Qyapp/Attendance/css/sign.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="./Tpl/Qyapp/Attendance/css/Return.css" />
+<script src="./Tpl/Qyapp/Static/Js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<!--  -->
+    <link href="./Tpl/Qyapp/Vote/css/iDialog.css?v=2014110717" rel="stylesheet">
+    <script src="./Tpl/Qyapp/Vote/js/helper.js" type="text/javascript" charset="utf-8"></script>
+	<!--  -->
+<script>
+	$(function(){
+	$(".sunb111").click(function() {
+		subdata='token={lanrain::$_GET['token']}&wecha_id={lanrain::$_GET['wecha_id']}';
+		$.ajax({
+				type: "post",  
+				url:"{lanrain::U('wap_updata',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}",
+				dataType:'json',
+				data:subdata,
+				success:function(json){
+					var status = json.status;
+					if(status==1){
+						alert('签到成功');
+						window.location.reload();
+					}else{
+						alert('签到地址不在指定范围内');
+						window.location.reload();
+					}
+				}
+			});
+	
+	});
+	
+	$(".msg").click(function() {
+		var che='{lanrain:$record['creatime']}';
+		if(!che){
+			alert('您还没有签到!');
+			return;
+		}
+		var creatmind=$('.creatmind').val();
+		var desc=$('.desc').val();
+		//alert(desc);
+		subdata='creat_re='+desc+'&creatmind='+creatmind;
+		$.ajax({
+				type: "post",  
+				url:"{lanrain::U('up_feel',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}",
+				dataType:'json',
+				data:subdata,
+				success:function(json){
+					var status = json.status;
+					if(status==1){
+						alert('发表成功');
+						window.location.reload();
+					}else{
+						alert('发表失败');
+						window.location.reload();
+					}
+				}
+			});
+	
+	});
+	
+	
+	$(".fell").click(function() {
+		var id=$(this).attr('fell_id');
+	//	$(this).css('bolder','5px solid red');
+		//alert(id);
+		$('.creatmind').val(id);
+		$('.expression_mid').css('display','none');
+		$('.li_'+id).css('display','block');
+	});
+	
+	})
+	</script>	
+<body>
+<!--顶部-->
+<div class="qiandao_all">
+<if condition="$record['creatime'] eq ''">
+	<div id="Top">
+    	<ul>
+        	<li><img class="sunb" src="./Tpl/Qyapp/Attendance/images/time.png" width="100px" height="100px" /><br/>快来签到</li>
+        </ul>
+    </div>
+<else/>
+
+<div id="Top">
+    	<ul>
+        	<li class="success">签到成功</li>
+            <li>签到时间：{lanrain:$record.creatime|date='Y-m-d H:i:s',###}</li>
+        </ul>
+    </div>
+</if>
+	
+<!--中部-->
+<div id="Mid">
+    	<div class="expression">
+        	<ul class="icon_right">
+			<volist name="list" id="li">
+            	<li fell_id="{lanrain:$li.id}" class="fell"><img src="{lanrain:$li.img}" width="80%" /><br/>{lanrain:$li.title}</li>
+			</volist>
+            </ul>
+        </div>
+		<volist name="list" id="lii">
+        <div class="expression_mid li_{lanrain:$lii.id}" style="<if condition="$lii['id'] eq $record['creatmind']"><else/>display:none;</if>">
+        	<dl>
+            	<dt><img src="{lanrain:$lii.img}" width="100%" /></dt>
+                <dd>{lanrain:$lii.desc}</dd>
+            </dl>
+        </div>
+		</volist>
+        <div class="line"></div>
+		<input type="hidden" name="creatmind" class="creatmind" >
+        <div class="text"><textarea placeholder="说点什么" class="desc">{lanrain:$record.creat_re}</textarea></div>
+    </div>
+<!--底部-->
+	<if condition="$record['creatmind'] eq 0">
+	<a style="text-decoration:none;" href="javascript:void(0);"><div class="fabu msg" style="width:90%;margin-left:5%;">发布</div></a><!-- style="height:20px; padding-top:17px;" -->
+	</if>
+
+    <div id="Btm">
+        <div class="btm_float">
+        	<ul>
+            	<a style="text-decoration:none;" href="{lanrain::U('wap_shark',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}"><li>摇一摇</li></a>
+                <a style="text-decoration:none;" href="{lanrain::U('wap_out',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}"><li class="border">签退</li></a>
+				
+                <a style="text-decoration:none;" href="{lanrain::U('wap_records',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}"><li>记录查询</li></a>
+            </ul>
+        </div>
+    </div> 
+</div>	
+</body>
+</html>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+  wx.config({
+      debug: false,
+      appId: '{lanrain:$jsssdk_info.appId}',
+      timestamp: '{lanrain:$jsssdk_info.timestamp}',
+      nonceStr: '{lanrain:$jsssdk_info.nonceStr}',
+      signature: '{lanrain:$jsssdk_info.signature}',
+      jsApiList: [
+        'getLocation'
+      ]
+  });
+</script>
+<script>
+wx.ready(function(){
+	$('.sunb').click(function(){
+		wx.getLocation({
+			success: function (res) {
+			var longitude = res.longitude; // 纬度，浮点数，范围为90 ~ -90
+			var latitude = res.latitude; // 经度，浮点数，范围为180 ~ -180。
+			var speed = res.speed; // 速度，以米/每秒计
+			var accuracy = res.accuracy; // 位置精度
+			$.ajax({
+				type: "post",  
+				url:"{lanrain::U('wap_updata',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}",
+				dataType:'json',
+				data:{'Latitude':latitude,'Longitude':longitude},
+				success:function(json){
+					var status = json.status;
+					if(status==1){
+						alert('签到成功');
+						window.location.reload();
+					}else{
+						alert('签到地址不在指定范围内');
+					}
+				}
+			});
+			
+			}
+		});
+	});	
+});
+</script>

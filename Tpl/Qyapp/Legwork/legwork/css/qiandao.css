@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 全局样式 */
+body{ padding:0; margin:0; font-size:12px; height:100%; word-break: break-all;}
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p { padding:0; margin:0;}
+ul,li{list-style:none;}
+img{border:0px;}
+a{ text-decoration:none;}
+.fll{float: left;}
+.flr{float: right;}
+/*头部样式*/
+.qiandao_all{ width:100%; height:auto; margin:0 auto;}
+.qiandao_top{ width:100%; border-bottom:1px solid #c6c6c6; float:left; background-color:#fff; color:#8a8a8a; background:url(../images/line_bg.jpg) no-repeat 50% 50%;}
+.qiandao_top ul li{ width:50%; float:left; text-align:center; line-height:3rem;}
+.qiandao_top a{ color:#8a8a8a;}
+.on{ border-bottom:2px solid #199710; color:#121212;}
+
+/*中部样式*/
+.qiandao_mid{ width:100%; height:auto;}
+.qiandao_content_one{ width:100%; background-color:#fff; float:left;}
+.qiandao_content_one dl{ width:94%; margin:0 auto; float:left; line-height:2.5rem; border-bottom:1px solid #cdcdcd; padding:3%}
+.qiandao_content_one dl dt{ width:20%; float:left;}
+.qiandao_content_one dl dd{ width:65%; float:left;}
+.qiandao_content_one input{ border:none; color:#a3a3a3;display: block;margin-top: 12px;
+}
+.shiyou{ background:url(../images/iconfont-bianji.png) no-repeat  7% 50% / 22px 22px ; padding-left:38px;}
+.add{ width:50%; float:left;}
+.add_icon{ float:right;}
+.address{ background:url(../images/iconfont-jikediancanicon.png) no-repeat 6% 50% / 24px 24px ; padding-left:38px;}
+.time{ background:url(../images/iconfont-shijian.png) no-repeat  7% 50% / 20px 20px ; padding-left:38px;}
+.down_time{ float:left;}
+
+.qiandao_content_two{ width:100%; height:auto; background-color:#fff; float:left;}
+.eye{ background:url(../images/iconfont-tupian.png) no-repeat 12% 50% / 20px 22px ; padding:5px 0 5px 38px;}
+
+.qiandao_content_two ul li{ width:94%; border-bottom:1px solid #dddddd; line-height:2rem; padding:3%;}
+.qiandao_content_two textarea{ width:90%; height:90px; border-radius:5px; border:1px solid #ddd;margin-left: 5%;}
+
+
+/*底部*/
+.qiandao_btm{ width:100%; margin:0 auto;}
+.qiandao_button{ width:94%;background-color:#35aa47; border-radius:3px; text-align:center; float:left;line-height: 36px; margin:30px 0 70px 3%; color:#fff;font-size: 14px;}
+.work_btm{
+    width: 94%;
+    height: 36px;
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    margin-left: 3%;
+    padding-bottom: 10px;
+}
+.work_btm a{
+    width: 49%;
+    height: 100%;
+    line-height: 36px;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    background: #35aa47;
+    border-radius: 3px;
+}

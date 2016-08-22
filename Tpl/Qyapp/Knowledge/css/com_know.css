@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 全局样式 */
+body{ padding:0; margin:0; font-size:12px; height:100%; word-break: break-all;}
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p { padding:0; margin:0;}
+ul{list-style:none;}
+img{border:0px;}
+.clearfloat{clear:both; height:0px; font-size:1px; line-height:0px;}
+a{ text-decoration:none; color:#333;}
+
+.com_all{ width:100%; height:auto; margin:0 auto; margin-top:20px;margin-bottom: 40px;}
+.com_search{ width:92%; height:auto;overflow: hidden;
+    margin:auto;
+    border:1px solid #35aa47; }
+.search_text{ 
+    width:72%; 
+    margin:0 auto; 
+    color:#a1a1a1; 
+    background:url(../images/search_icon.png) no-repeat 2% 50% #fff;
+     padding:8px 0 8px 8%;
+     float: left;
+     -webkit-appearance:none;
+     -webkit-border-radius:0;
+     border: none;
+ }
+.search_sub{
+    width: 20%;
+    height: 34px;
+    background: #35aa47;
+    color: #fff;
+    float: right;
+    border:none;
+    cursor: pointer;
+    -webkit-appearance:none;
+     -webkit-border-radius:0;
+}
+
+
+.com_file{ width:100%; height:auto; border-bottom:1px solid #ddd; font-weight:bold;}
+.file_content{ width:84%; margin:0 auto; padding:18px 0 18px 10%; background:url(../images/iconfont-zhishiku.png) no-repeat 2% 50%;background-size: 22px}
+.file_content{
+    color: #454545;
+}
+.file_content span{
+    font-size: 14px;
+}
+.file_content span:active{
+    color: #35aa47;
+}
+.file_content img{ float:right;}
+.com_file a{ color:#000;}
+.com_file_nav{ width:100%; background:url(../images/iconfont-plinglun.png) no-repeat 10% 50%;background-size: 16px; border-top:1px solid #eee;}
+.com_no{background:url(../images/ku.png) no-repeat 10% 50% / 18px;
+}
+.com_no_big{background:url(../images/ku.png) no-repeat 8% 50% / 26px;line-height:100px;border:none;
+}
+.text_b{font-size:18px;}
+.file_news{ width:70%; padding:15px 0px 15px 20%;color: #666;}
+
+.com_btm{ width:100%; height:auto; border-top:1px solid #ccc; position:fixed; bottom:0; background-color:#f3f3f3;}
+.com_btm ul{ width:100%; float:left;}
+.com_btm ul li{ width:49.5%; float:left; height:40px; line-height:40px; text-align:center;}
+.border{ border-right:1px solid #ccc;}
+.com_btm a{ color:#333;}
+
+
+

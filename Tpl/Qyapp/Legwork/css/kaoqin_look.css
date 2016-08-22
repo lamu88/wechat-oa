@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 全局样式 */
+body{ padding:0; margin:0; font-size:12px; height:100%; word-break: break-all;}
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p { padding:0; margin:0;}
+ul,li{list-style:none;}
+img{border:0px;}
+a{ text-decoration:none;}
+
+
+.all{ width:100%; height:auto;}
+.search_top{ width:100%; border:1px solid #c7c7c7; float:left;}
+.top_left{ width:81%; float:left; border-right:1px solid #c7c7c7; padding:1.2%;}
+.top_left input{ border:none; padding:3%; color:#a8a8a8;}
+.top_right{ width:15%; float:left; text-align:center;}
+.top_right img{ margin-top:13%;}
+
+
+.search_mid{ width:100%; height:auto;}
+.content{ width:80%; margin:0 auto; padding:70% 0; text-align:center; line-height:2rem; color:#707070; font-size:14px;}

@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ padding:0; margin:0; font-size:12px; height:100%; word-break: break-all; }
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p { padding:0; margin:0;}
+
+/* 全局样式 */
+body{ padding:0; margin:0; font-size:12px; height:100%;}
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p { padding:0; margin:0;}
+ul{list-style:none;}
+img{border:0px;}
+.clearfloat{clear:both; height:0px; font-size:1px; line-height:0px;}
+.font_01{ font-size:24px; color:#5e5e5e; font-family:"微软雅黑";}
+a{ text-decoration:none;}
+
+
+
+/*内容*/
+.main{ width:100%; background:#f1eff5; height:250px; }
+.main2 img{ position:absolute; left:50%; top:100%; margin-top:5px; float:left;}
+.main2{ margin:2% 0px 0px 3%; float:left;position:relative;}
+.main2_top{ width:100%;height:60px; font-family:"微软雅黑";}
+.main2_top a{ display:block; background:url(../images/name.jpg);width:41px; height:41px; float:left; margin-right:5%;}
+.main2 .main2_top span{ font-size:18px; color:#036;}
+.main2_top p{ color:#666;font-size:12px; margin-top:1px;}
+.main2_main span{ font-size:12px; color:#a8a8aa;}
+.main2_main strong{ font-weight:normal; color:#656566;}
+.main2_main{ margin-top:1%; float:left; font-family:"微软雅黑";}
+.main2_main .ly,.didian{ width:50%; float:left; margin-bottom:14px;}
+.main2_main .guimo,.dizhi,.jieshao{ width:100%; float:left;}
+.main2_main .dizhi,.main2_main .jieshao{ margin-top:16px;}
+
+
+
+/*底部*/
+.buttom{ width:100%; font-family:"微软雅黑"; }
+.buttom a{ width:94%; height:30px; float:left; line-height:30px; text-decoration:none; border-bottom:1px solid #f7f7f7;padding-left:3%; color:#656566; background:url(../images/jiantou.gif) no-repeat right; padding-right:-3%;}
+.buttom a span{ display:block; float:right; margin-right:15px; color:#999;}
+.buttom b{ color:#ff524a; font-weight:normal;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 全局样式 */
+body{ padding:0; margin:0; font-size:12px; height:100%; word-break: break-all; color:#333;}
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p { padding:0; margin:0;}
+ul{list-style:none;}
+img{border:0px;}
+a{ text-decoration:none;}
+
+
+.Per_row{ width:100%; height:auto;}
+.Per_all{ width:96%; height:auto; overflow-x:hidden; padding:2%}
+.Per_all table{ width:100%; margin:50px 0px; border:1px solid #ccc;}
+.Per_all table tr{ width:100%; text-align:center;}
+.Per_all table tr td{ width:33%; float:left; text-align:center; padding:10px 0px; overflow:hidden;}
+
+.Per_title{ width:100%; font-size:16px; font-weight:bold; color:#fff; background-color:#35aa47; position:fixed; top:0;
+padding:10px 0; text-align:center; z-index:111}
+.Per_all table tr .Per_plus{ width:100%; font-size:14px; color:#333; background-color:#fff; border-top:1px solid #ccc;}
+.money{ color:#666;}
+.bgc{ background-color:#eee;}
+.cut-off{ border-left:1px solid #ccc; border-right:1px solid #ccc;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 全局样式 */
+body{ padding:0; margin:0; font-size:12px; height:100%; word-break: break-all;}
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p { padding:0; margin:0;}
+ul{list-style:none;}
+img{border:0px;}
+.clearfloat{clear:both; height:0px; font-size:1px; line-height:0px;}
+a{ text-decoration:none; color:#333;}
+
+.com_all{ width:100%; height:auto; margin:0 auto; margin-top:20px;}
+.com_search{ width:100%; height:auto;}
+
+
+
+/*.com_file{ width:100%; height:auto; border-bottom:1px solid #eee; overflow-x:hidden;}
+.file_content{ width:84%; height:60px; line-height:60px; margin:0 auto; padding:0px 0px 0px 40px; background:url(../images/iconfont-book.png) no-repeat 2% 50%; background-size:25px 20px;}
+.file_content img{ float:right; padding-top:20px; margin-right:5px;}
+.com_file a{ font-size:14px;}
+.com_file_nav{ width:100%; background:url(../images/news_icon.png) no-repeat 10% 50%; border-bottom:1px solid #CCC;}
+.file_news{ width:70%; padding:15px 0px 15px 20%;}
+*/
+.com_file{ width:100%; height:auto; overflow-x:hidden; float:left; margin-bottom:50px;}
+.com_file ul{ width:100%; margin:0 auto; float:left}
+.com_file ul li{ width:22%; height:70px; max-width:120px; float:left; text-align:center; margin-bottom:10px; margin-left:2%;}
+.com_file img{ margin-top:10px; margin-bottom:7px;}
+.com_file .list_one img:focus{} 
+
+.com_btm{ width:100%; height:auto; border-top:1px solid #ccc; position:fixed; bottom:0; background-color:#f3f3f3;}
+.com_btm ul{ width:100%; float:left;}
+.com_btm ul li{ width:49.5%; float:left; height:40px; line-height:40px; text-align:center;}
+.border{ border-right:1px solid #ccc;}
+.com_btm a{ color:#333;}
+
+/*.list_one img:link,.list_one img:active{ background:url(../images/lishi-ct.png) no-repeat center; background-size:32px 32px;}
+*/
+

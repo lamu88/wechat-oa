@@ -1,0 +1,333 @@
+        <div id="add-con">
+		    <div style="background-color: #fff;height:50px;position:relative;">
+			    <ul style="width:100%;list-style: none;" id="top-menu">
+				    <li style="height: 48px;line-height:48px;text-align: center;float: left;width: 25%;">
+					    <span>部门</span>
+					</li>
+				    <li style="height: 48px;line-height:48px;text-align: center;float: left;width: 25%;">
+					    <span>人员</span>
+					</li>
+				    <li style="height: 48px;line-height:48px;text-align: center;float: left;width: 25%;">
+					    <span>已选</span>
+					</li>
+				    <li style="height: 48px;line-height:48px;text-align: center;float: left;width: 25%;">
+					    <span>搜索</span>
+					</li>					
+				</ul>
+				<div class="" style="position:absolute;top:52px;left:0px;width:100%;z-index:9999;background-color:#fff;display:none;" id="letter">
+					<div style="padding:3px 0px;margin:0px;background-color:#fafafa;">
+						<ul style="padding:0px 0px 10px 0px;height:229px;">
+						<li class="letter" onclick="find('A');">A</li>
+						<li  class="letter" onclick="find('B');">B</li>
+						<li  class="letter" onclick="find('C');">C</li>
+						<li  class="letter" onclick="find('D');">D</li>
+						<li  class="letter" onclick="find('E');">E</li>
+						<li  class="letter" onclick="find('F');">F</li>
+						<li  class="letter" onclick="find('G');">G</li>
+						<li  class="letter" onclick="find('H');">H</li>
+						<li  class="letter" onclick="find('I');">I</li>
+						<li  class="letter" onclick="find('J');">J</li>
+						<li  class="letter" onclick="find('K');">K</li>
+						<li  class="letter" onclick="find('L');">L</li>
+						<li  class="letter" onclick="find('M');">M</li>
+						<li  class="letter" onclick="find('N');">N</li>
+						<li  class="letter" onclick="find('O');">O</li>
+						<li  class="letter" onclick="find('P');">P</li>
+						<li  class="letter" onclick="find('Q');">Q</li>
+						<li  class="letter" onclick="find('R');">R</li>
+						<li  class="letter" onclick="find('S');">S</li>
+						<li  class="letter" onclick="find('T');">T</li>
+						<li  class="letter" onclick="find('U');">U</li>
+						<li  class="letter" onclick="find('V');">V</li>
+						<li  class="letter" onclick="find('W');">W</li>
+						<li  class="letter" onclick="find('X');">X</li>
+						<li  class="letter" onclick="find('Y');">Y</li>
+						<li  class="letter" onclick="find('Z');">Z</li>
+						<li  class="letter" onclick="find('AZ');">#</li>				
+						</ul>
+					</div>			
+				</div>				
+			</div>			
+			<div style="clear:both;"></div>	
+            <div id="tab_0">	
+                <div style="overflow:hidden;height:36px;" id="address-head-list">
+				    <div style="float:left;height:36px;line-height:36px;text-align:center;padding-top:6px;padding-left:10px;" id="address-icon" onclick="addressBack()">
+					    <span><img src="./Tpl/Qyapp/Common/images/back.png" width="24px" height="24px"></span>
+					</div>
+					<div class="address-header" style="float:left;height:36px;line-height:36px;text-align:center;" id="dept-top">
+					    <span style="">&nbsp;&nbsp;{lanrain:$dept['name']}</span>
+					</div>			
+                </div>		
+				<div style="clear:both;"></div>
+                <div id="address-content">				
+					<div class="address-list" id="address-{lanrain:$pid}">				
+						<div style="background-color:#fff;">
+							<ul>
+								<volist name="sub" id="sub">
+								<li style="" class="deptlist" id="address-dept-{lanrain:$sub.wxid}">
+									<div style="border-bottom:1px solid #eee;height:40px;line-height:40px;padding:10px 10px 10px 40px;">
+									   <span id="address-dept-name-{lanrain:$sub.wxid}">{lanrain:$sub.name}</span> 
+									   <span style="float:right;margin-top:8px;">
+										   <span style="margin-right:15px;" id="address-dept-img-{lanrain:$sub.wxid}" onclick="addressSelectDept($(this),'{lanrain:$sub.wxid}')"><img src="./Tpl/Qyapp/Common/images/weixuan.png" width="24px" height="24px"></span>
+										   <span style="margin-right:10px;" onclick="addressSub('{lanrain:$sub.wxid}')"><img src="./Tpl/Qyapp/Common/images/jinru.png" width="24px" height="24px"></span>
+									   </span>						   
+									</div>
+								</li>
+								</volist>											
+							</ul>
+						</div>
+						
+						<div style="margin-top:10px;">
+							<ul style="padding-bottom:5px;margin-left:5px;margin-right:5px;">				
+								<volist name="users" id="users">						    
+								<li style="background-color: #fff;margin-bottom: 2px;padding: 7px 10px 4px 10px;height:40px;line-height:40px;" id="address-users-{lanrain:$users.id}">
+									  <div style="float:left;width:40px;padding:5px 10px 2px 10px;" id="address-users-pic-{lanrain:$users.id}">
+										  <if condition="$users['pic']">
+										  <img src="{lanrain:$users.pic}" width="30px" height="30px" style="border-radius:50%;">
+										  <else/>
+										  <img src="./Tpl/Qyapp/Applyflow/images/aabb.png" width="30px" height="30px" style="border-radius:50%;">
+										  </if>								      
+									  </div>
+									  <div style="float:left;width:auto;" id="address-users-name-{lanrain:$users.id}">
+									  {lanrain:$users.name}
+									  </div>
+									   <div style="float:right;margin-top:8px;width:72px;">
+										   <span style="margin-right:15px;" id="address-users-img-{lanrain:$users.id}" onclick="addressSelectUser($(this),'{lanrain:$users.id}')"><img src="./Tpl/Qyapp/Common/images/weixuan.png" width="24px" height="24px"></span>
+										   <span style="" onclick="addressCard('{lanrain:$users.id}')"><img src="./Tpl/Qyapp/Common/images/jinru.png" width="24px" height="24px"></span>
+									   </div>								  					
+								</li>	
+								</volist>																						
+							</ul>
+						</div>	
+					</div>
+				</div>
+            </div>	
+            <div style="display:none;" id="tab_1">	
+                <volist name="lists" id="add">			
+				<div style="" class="userletter" id="{lanrain:$add.letter}">
+				    <p style="height:24px;line-height:24px;font-size:14px;margin-left:10px;">{lanrain:$add.letter}</p>
+					<ul style="list-style:none;padding-bottom:5px;margin-left:5px;margin-right:5px;" id="lists-{lanrain:$add.letter}">
+					    <volist name="add.data" id="vo">	
+							<li style="background-color: #fff;margin-bottom: 2px;padding: 7px 10px 4px 10px;height:40px;line-height:40px;" id="lists-users-{lanrain:$vo.id}">
+								  <div style="float:left;width:40px;padding:5px 10px 2px 10px;" id="lists-users-pic-{lanrain:$vo.id}">
+									  <if condition="$vo['pic']">
+									  <img src="{lanrain:$vo.pic}" width="30px" height="30px" style="border-radius:50%;">
+									  <else/>
+									  <img src="./Tpl/Qyapp/Applyflow/images/aabb.png" width="30px" height="30px" style="border-radius:50%;">
+									  </if>								      
+								  </div>
+								  <div style="float:left;width:auto;" id="lists-users-name-{lanrain:$vo.id}">
+								  {lanrain:$vo.name}
+								  </div>
+								   <div style="float:right;margin-top:8px;width:72px;">
+									   <span style="margin-right:15px;" id="lists-users-img-{lanrain:$vo.id}" onclick="listSelectUser($(this),'{lanrain:$vo.id}')"><img src="./Tpl/Qyapp/Common/images/weixuan.png" width="24px" height="24px"></span>
+									   <span style="" onclick="addressCard('{lanrain:$vo.id}')"><img src="./Tpl/Qyapp/Common/images/jinru.png" width="24px" height="24px"></span>
+								   </div>								  					
+							</li>						
+						</volist>								
+					</ul>
+				</div>
+				<div style="clear:both;"></div>
+				</volist>				
+			</div>
+            <div style="margin-top:10px;display:none;" id="tab_2">			
+                <div id="selected">				
+					<div>             
+						<ul style="list-style:none;background-color:#fff;" id="selected-dept">
+						
+						</ul>
+					</div>
+					
+					<div style="margin-top:10px;">				
+						<ul style="list-style:none;padding-bottom:5px;margin-left:5px;margin-right:5px;" id="selected-users">										    																							
+						</ul>
+					</div>	
+				</div>	
+            </div>
+			<div style="position: fixed;bottom: 0px;width: 100%;height: 36px;line-height: 36px;background: #fff;z-index:10000;padding-bottom: 10px;padding-top:10px;padding-right:2px;">
+				<ul style="margin:0 auto;list-style-type:none;width:100%;height:100%;padding-left:2px;padding-right:2px;margin-right:2px;">
+				<a href="javascript:;" id="fanhui" onclick="fanhui()">
+				    <li style="float:left;background:#de5045;width: 47%;height: 100%;text-align: center;position: relative;font-size: 14px;border-radius: 3px;margin-left:2px;margin-right:2px;"><div style="position: absolute;top: 0px;left: 0px;z-index: 20;width: 100%;height: 100%;color: #fff;">返回</div></li>
+				</a>				
+				<a href="javascript:;" id="queding" onclick="queding()">
+				    <li style="float:right;background:#35aa47;width: 47%;height: 100%;text-align: center;position: relative;font-size: 14px;border-radius: 3px;margin-right:5px;padding-right:5px;"><div style="position: absolute;top: 0px;left: 0px;z-index: 20;width: 100%;height: 100%;color: #fff;">确定</div></li>
+				</a>			
+				</ul>
+			</div>			
+        </div>
+		<script>
+		//if($('#address-head-list').children('.address-header').length > 1){$('#address-icon').show()};
+		$('#tab_0').show();
+		$('#top-menu li:first-child').css('border-bottom','3px solid red');
+		$('#top-menu li').each(function(){
+			$(this).click(function(){
+				$('#top-menu li').css('border-bottom','none');
+				$(this).css('border-bottom','3px solid red');	
+				var index = $(this).index();
+				if(index == 0){
+					$('#letter').hide();		
+					$('#tab_0').show();
+					$('#tab_1').hide();
+					$('#tab_2').hide();
+					$('#tab_3').hide();			
+				}else if(index == 1){
+					$('#letter').hide();		
+					$('#tab_0').hide();		
+					$('#tab_1').show();
+					$('#tab_2').hide();
+					$('#tab_3').hide();	
+					$('div.userletter').show();				
+				}else if(index == 2){
+					$('#letter').hide();		
+					$('#tab_0').hide();		
+					$('#tab_1').hide();
+					$('#tab_2').show();
+					$('#tab_3').hide();
+				}else if(index == 3){
+				    if($('#letter').is(':visible')){
+					    $('#letter').hide();
+					}else{
+					    $('#letter').show();
+					}	
+					$('#tab_0').hide();		
+					$('#tab_1').show();
+					$('#tab_2').hide();						
+				}
+			});
+		});
+		//按字母搜索
+		function find(letter){
+			$('#letter').hide();
+			var letter = letter.toLowerCase();
+			$('div.userletter').hide();
+			$('#'+letter).show();
+		}
+
+		//选中/取消部门
+		function addressSelectDept(obj,id){
+		    if(obj.hasClass('address-active')){
+			    obj.removeClass('address-active');
+			    obj.children('img').attr('src','./Tpl/Qyapp/Common/images/weixuan.png');
+				$('#selected-dept-'+id).remove();
+			}else{
+			    var deptName = $('#address-dept-name-'+id).text();
+			    obj.addClass('address-active');
+				$('#selected-dept').append('<li style="" class="deptlist" id="selected-dept-'+id+'"><div style="border-bottom:1px solid #eee;height:40px;line-height:40px;padding:10px 10px 10px 40px;">'+deptName+'<span style="float:right;margin-top:8px;"><span style="margin-right:15px;" onclick="removeSelectedDept('+id+')"><img src="./Tpl/Qyapp/Common/images/xuanzhong.png" width="24px" height="24px"></span</span></div></li>');
+			    obj.children('img').attr('src','./Tpl/Qyapp/Common/images/xuanzhong.png');			
+			}
+		}		
+
+		//进入下一级部门
+		function addressSub(id){		
+		    var deptName = $('#address-dept-name-'+id).text();
+			if($('#address-'+id).is(':visible')){
+			    return false;
+			}else if($('#address-'+id).length > 0 && $('#address-'+id).is(':hidden')){
+			    $('.address-list').hide();
+			    $('#address-'+id).show();
+			}else{
+				var url = "index.php?g=Qyapp&m=Common&a=wap_sub&token={lanrain::$_GET['token']}&wecha_id={lanrain::$_GET['wecha_id']}&id="+id;
+				$.ajax({
+					type: "GET",
+					cache: false,
+					url: url,
+					dataType: "html",
+					success: function (res) {
+					   $('.address-header').hide();
+			           $('#address-head-list').append('<div class="address-header" style="float:left;height:36px;line-height:36px;text-align:center;"><span>&nbsp;&nbsp;'+deptName+'</span></div>');		
+					    $('.address-list').hide();
+						$('#address-content').append(res);
+					},
+					error: function (xhr, ajaxOptions, thrownError) {
+					    alert('加载失败');
+					}
+				});				
+			}
+		}	
+		
+		//选中/取消人员
+		function addressSelectUser(obj,id){
+		    if(obj.hasClass('address-active')){
+			    obj.removeClass('address-active');
+			    obj.children('img').attr('src','./Tpl/Qyapp/Common/images/weixuan.png');
+				$('#selected-dept-'+id).remove();
+			}else{
+			    var userName = $('#address-users-name-'+id).text();
+				var userPic = $('#address-users-pic-'+id).find('img').attr('src');
+			    obj.addClass('address-active');
+				$('#selected-users').append('<li style="background-color: #fff;margin-bottom: 2px;padding: 7px 10px 4px 10px;height:40px;line-height:40px;" class="" id="selected-users-'+id+'"><div style="float:left;width:40px;padding:5px 10px 2px 10px;"><img src="'+userPic+'" width="30px" height="30px" style="border-radius:50%;"></div><div style="float:left;width:auto;">'+userName+'</div><div style="float:right;margin-top:8px;width:32px;"><span style="" onclick="removeSelectedUser('+id+')"><img src="./Tpl/Qyapp/Common/images/xuanzhong.png" width="24px" height="24px"></span></div></li>');			    
+				obj.children('img').attr('src','./Tpl/Qyapp/Common/images/xuanzhong.png');			
+			}
+		}
+
+		function listSelectUser(obj,id){
+		    if(obj.hasClass('address-active')){
+			    obj.removeClass('address-active');
+			    obj.children('img').attr('src','./Tpl/Qyapp/Common/images/weixuan.png');
+				$('#selected-dept-'+id).remove();
+			}else{
+			    var userName = $('#lists-users-name-'+id).text();
+				var userPic = $('#lists-users-pic-'+id).find('img').attr('src');
+			    obj.addClass('address-active');
+				$('#selected-users').append('<li style="background-color: #fff;margin-bottom: 2px;padding: 7px 10px 4px 10px;height:40px;line-height:40px;" class="" id="selected-users-'+id+'"><div style="float:left;width:40px;padding:5px 10px 2px 10px;"><img src="'+userPic+'" width="30px" height="30px" style="border-radius:50%;"></div><div style="float:left;width:auto;">'+userName+'</div><div style="float:right;margin-top:8px;width:32px;"><span style="" onclick="removeSelectedUser('+id+')"><img src="./Tpl/Qyapp/Common/images/xuanzhong.png" width="24px" height="24px"></span></div></li>');			    
+				obj.children('img').attr('src','./Tpl/Qyapp/Common/images/xuanzhong.png');			
+			}
+		}		
+
+		//进入名片页
+		function addressCard(){
+		
+		}	
+
+		//移除被选中的部门
+		function removeSelectedDept(id){
+		    $('#selected-dept-'+id).remove();
+			if($('#address-dept-'+id).length > 0){
+			    $('#address-dept-img-'+id).removeClass('address-active');
+				$('#address-dept-img-'+id).children('img').attr('src','./Tpl/Qyapp/Common/images/weixuan.png');
+			}
+		}	
+
+		//移除被选中的用户
+		function removeSelectedUser(id){
+		    //alert('aaa');
+		    $('#selected-users-'+id).remove();
+			if($('#address-users-'+id).length > 0){
+			//alert('bbb');
+			    $('#address-users-img-'+id).removeClass('address-active');
+				$('#address-users-img-'+id).children('img').attr('src','./Tpl/Qyapp/Common/images/weixuan.png');
+			}
+            if($('#lists-users-'+id).length > 0){
+			//alert('ccc');
+			    $('#lists-users-img-'+id).removeClass('address-active');
+				$('#lists-users-img-'+id).children('img').attr('src','./Tpl/Qyapp/Common/images/weixuan.png');			
+			}			
+		}		
+		
+		function addressBack(){
+		    //alert(id);
+			if($('#address-head-list').children('.address-header').length > 1){
+				$('.address-header').hide();
+				$('#address-head-list').children('.address-header').last().remove();
+				$('#address-head-list').children('.address-header').last().show();
+				$('.address-list').hide();
+				$('#address-content').children('.address-list').last().remove();
+				$('#address-content').children('.address-list').last().show();			
+			}else{
+			    //$('#address-icon').hide();
+			    return false;
+			}
+			
+			
+		}
+		
+		function fanhui(){
+		    //alert('aaa');
+			$('#add-con').hide();
+		}
+
+		function queding(){
+		    //alert('bbb');	
+            			
+		}		
+		</script>

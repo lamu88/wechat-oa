@@ -1,0 +1,128 @@
+<script>
+$(function(){
+  $("#submit").click(function() {
+	var btn = $(this);
+    var name = $(".name").val();
+    var link 	  = encodeURIComponent($(".link").val());
+	var keyword 	  = $("#module_a").val();
+	var type 	  = $("#menuType_a").val();
+	var customToken 	  = $("#token_a").val();	
+	//alert(customToken);
+	$.ajax({
+			type: "post",  
+			url:"{lanrain::U('Menu/addfirst',array('mid'=>$_GET['mid']))}",
+			dataType:'json',
+			data:'name='+name+'&custom_token='+customToken+'&type='+type+'&keyword='+keyword+'&link='+link+'&appid={lanrain::$_GET["mid"]}',
+			success:function(json){
+				var status = json.status;
+				if(status==0){
+					alert('设置成功');
+					window.location.reload();
+				}else if (status==3){
+					alert('您的一级菜单超过3个,无法新增');
+					window.location.reload();
+				}else{
+					alert('设置失败');
+				}
+
+			}
+		});
+  });
+  
+})
+</script> 
+<div class="form-horizontal form-validate form-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">新增一级菜单</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">名称</label>
+                    <div class="col-sm-7 ">
+                       <input type="text" class="form-control name" data-rule-required="true" name="name" data-rule-phone="true" value="{lanrain:$info['name']}"/>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">菜单类型</label>
+                    <div class="col-sm-7 ">
+                        <select class="form-control keyword" name="type" id="menuType_a" value="">
+                            <option value="1">关键词</option>
+							<option value="2">自定义链接</option>
+                            <option value="3">微信扫码</option>
+							<option value="4">扫码提示</option>
+                            <option value="5">系统拍照发图</option>
+							<option value="6">拍照或者相册发图</option>	
+							<option value="7">微信相册发图</option>
+                            <option value="8">发送位置</option>							
+						</select>
+                    </div>
+                </div>
+                <div class="form-group" id="keyword_a">
+                    <label class="col-sm-2 control-label">关键词</label>
+                    <div class="col-sm-7 ">
+                        <select class="form-control keyword" name="keyword" id="module_a">
+                            <option value="">请选择</option>
+							<volist name="keyword" id='vo'>
+							<if condition="$vo['module']">
+							<option value="{lanrain:$vo.module}">{lanrain:$vo.name}</option>
+							</if>
+							</volist>
+							
+						</select>
+                    </div>
+                </div>
+				
+				<div class="form-group hd" id="custom_a">
+                    <label class="col-sm-2 control-label must">链接网址</label>
+                    <div class="col-sm-7 ">
+                        <input type="text" class="form-control link" data-rule-required="true" name="link" data-rule-phone="true" value="{lanrain:$info['link']}"/>
+                    </div>
+                </div>
+
+				<div class="form-group hd" id="custom_token_a">
+                    <label class="col-sm-2 control-label must">Token</label>
+                    <div class="col-sm-7 ">
+                        <input type="text" class="form-control link" data-rule-required="true" name="custom_token" id="token_a" data-rule-phone="true" value="{lanrain:$info['custom_token']}"/>
+                    </div>
+                </div>				
+				
+				<div class="form-group hd" id="tip_a">
+                    <label class="col-sm-2 control-label must">提示</label>
+                    <div class="col-sm-7 ">
+                        除关键词和自定义链接外，仅支持iPhone上的微信5.4.1和Android上的微信5.4以上版本，旧版本微信不支持
+                    </div>
+                </div>				
+            </div>
+            <div class="modal-footer">
+                <button type="submit" id="submit" class="btn btn-primary" data-loading-text="保存中..." >保存</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+$('#menuType_a').change(function(){
+	var getVal = $(this).find("option:selected").val(); 
+	if(getVal == 1){
+		 $('#keyword_a').removeClass('hd');
+		 $('#custom_a').addClass('hd');	
+		 $('#custom_token_a').addClass('hd');			 
+		 $('#tip_a').addClass('hd');		 
+	}else if(getVal == 2){
+		 $('#custom_a').removeClass('hd');
+		 $('#custom_token_a').removeClass('hd');		 
+		 $('#keyword_a').addClass('hd');
+		 $('#tip_a').addClass('hd');		 
+	}else{
+		$('#keyword_a').addClass('hd');
+		$('#custom_a').addClass('hd');
+		$('#custom_token_a').addClass('hd');		
+		$('#tip_a').removeClass('hd');						
+	}					
+});
+</script>

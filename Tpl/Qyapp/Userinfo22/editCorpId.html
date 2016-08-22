@@ -1,0 +1,57 @@
+<form class="form-horizontal form-validate form-modal"  target="_self" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">开发者凭据</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label must">CorpID</label>
+                    <div class="col-sm-7 ">
+                        <input type="text" class="form-control" data-rule-required="true" id="corpid" name="corpID" value="{lanrain:$Think.session.corpid}"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label must">CorpSecret</label>
+                    <div class="col-sm-7 ">
+                        <input type="text" class="form-control" data-rule-required="true"  id= "corpsecret" name="corpSecret" id="corpSecret" value="{lanrain:$Think.session.corpsecret}"/>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="submit"  id="submit" class="btn btn-primary" data-loading-text="保存中..."  >保存修改</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+$(function(){
+  $("#submit").click(function() {
+	var btn = $(this);
+    var corpid = $("#corpid").val();
+    var corpsecret 	  = $("#corpsecret").val();
+	$.ajax({
+			type: "post",  
+			url:"{lanrain::U('Userinfo/bind')}",
+			dataType:'json',
+			data:'corpid='+corpid+'&corpsecret='+corpsecret,
+			success:function(json){
+				var status = json.status;
+				if(status==0){
+					alert('修改成功');
+					window.location.reload();
+				}else{
+					alert('修改失败');
+					window.location.reload();
+				}
+			}
+		});
+	
+  });
+  
+})
+</script>

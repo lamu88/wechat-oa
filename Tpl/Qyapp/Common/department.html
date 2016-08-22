@@ -1,0 +1,149 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+
+	<div class="modal-header">
+	  <button type="button" class="close" onclick="guanbi();">&times;</button>
+	  <h4 class="modal-title" id="myModalLabel">选择部门</h4>
+	</div>
+	<div class="modal-body">
+	<aside>
+		 <div class="js_party_tree  tree_box" id="mytree"></div> 
+	</aside>
+	<aside>
+		 <input type="hidden" name="departname" id="departname"> 
+		 <input type="hidden" name="departid" id="departid"> 		 
+	</aside>
+	 </div>
+	<div class="modal-footer">
+	  <button type="button" class="btn btn-primary" onclick="guanbi();">确定</button> 		
+	  <button type="button" class="btn btn-default" onclick="cancel();">取消</button> 
+	</div>
+
+  </div>
+</div>
+<script>
+var alldepart = {lanrain::$alldepart};
+var department = {lanrain::$department};
+//alert(JSON.stringify(alldepart));
+var arr = new Array();
+//alert(alldepart[1612]);
+var depart = new Array();
+//var str = '';
+$(function () {
+	$('#mytree')
+	.jstree({
+		'core' : {
+			'data' :  department ,	
+			//'check_callback' : true,
+			'themes' : {
+				//'responsive' : false,
+				'icons'      : false // string for custom								
+			}
+		},
+		'themes' : {
+			//'responsive' : false,
+			'variant' : 'small',
+			'stripes' : true
+		},
+		'checkbox' : {
+			'three_state' : false
+		},			
+		'plugins' : ['state','wholerow','checkbox']
+	})
+	.on('select_node.jstree', function (e, data) {
+		if(data && data.selected && data.selected.length) {	
+			var search = data.node.text;
+            if(!in_array(search,depart)){
+            	depart.push(search);
+				depart.join(',');
+				$('#departname').attr('value',depart);				
+			}			
+			$('#departid').attr('value','');			
+			var selectId = data.selected;
+			$('#departid').attr('value',selectId);
+		}else{
+		    alert('请选择部门');
+		}				
+	})	
+	.on('deselect_node.jstree', function (e, data) {
+		if(data && data.selected && data.selected.length) {	
+			$('#departid').attr('value','');
+			var selectId = data.selected;
+			//alert(selectId);
+			$('#departid').attr('value',selectId);
+
+			var departname = '';
+			arr = selectId.split(",");
+			for(var j=0;j<arr.length;j++){
+			    alert(arr[i]);
+			}
+			for(var i=0;i<arr.length;i++){
+				var node = arr[i];
+				alert(node);
+				if(selectId.indexOf(node)>0){
+					departname+=alldepart[node]+';';
+				}
+			}
+
+            $('#departname').attr('value',departname);			
+			
+			//var desearch = data.node.text;
+			//var strId = $('#departid').attr('value')
+			//var str = $('#departname').attr('value')+',';
+			//alert(str.indexOf(desearch));			
+            //if(str.indexOf(desearch)>0){ 
+			//    alert(desearch);
+			//	alert(str);
+				//var removeStr = desearch+',';
+			    //var reg=new RegExp(removeStr,"g"); 				
+				//alert(reg);
+				//var newstr = str.replace(/销售部/g,"");
+				//alert(newstr);
+				//if(newstr.indexOf(newstr.length -1,newstr.length) == ","){
+				//    newstr=newstr.substring(0,newstr.length-1);
+				//}
+				//alert(newstr);				
+				//$('#departname').attr('value',newstr);				    
+			//}
+			//var selectDepart = '';		
+            //var replaceStr = "\"";
+            //var data = department.split(replaceStr).join('\'');
+			//var reg = new RegExp("\"");
+			//var data = .replace(reg,"'");
+			//var data = eval_r('('+department+')');
+			//alert(JSON.stringify(alldepart));	
+            //alert(department[2].name);			
+            //for(var i in department){
+			//    alert(department[i].name);
+			    //if(selectId.indexOf(department[i].id)>0){
+					//alert(selectId);
+					//alert(department[i].id);
+					//alert(department[i].name);				
+					//alert(selectId.indexOf(department[i].id));				
+				    //alert(department[i].name);
+				//    selectDepart+=department[i].name+',';
+				//}
+			//}
+			//$('#departname').attr('value',selectDepart);	
+			//if(in_array(desearch,str)){  
+			//	var removeStr = desearch+',';
+			//	str.replace(removeStr,"");
+			//	$('#departname').attr('value',str);				
+			//}
+			
+
+		}else{
+			alert('请选择部门');
+		}	
+	
+	});		
+})
+function in_array(search,array){
+    for(var i in array){
+        if(array[i]==search){
+            return true;
+        }
+    }
+    return false;
+}
+</script>

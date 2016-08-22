@@ -1,0 +1,114 @@
+html{ height:100%; width:100%; -webkit-text-size-adjust: 100%;	-ms-text-size-adjust: 100%; background:#f0eff4; }
+body{
+	overflow-x: hidden;
+	background-color: #ffffff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height:100%; width:100%;
+}
+.container {
+position: relative;
+max-width: 640px;
+min-height: 100%;
+margin: 0 auto;
+background-color: #fff;
+overflow: hidden;
+}
+.template{
+	display: none;
+}
+.copyright{
+	font-size: 10px;
+	color: #a3a3a3;
+	text-align: center;
+	line-height: 30px;
+	display: block;
+	background: #DFDFDD;
+}
+.copyright.bottom{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+}
+/***************************loading********************************/
+.loading-box{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+	background-position: center;
+	background-size: 32px 32px;
+	display: none;
+	top: 0;
+	left: 0;
+	text-align: center;
+	color: #fff;
+	background-repeat: no-repeat;
+	background-image: url(../imgs/loading.gif);
+}
+.loading-box.show{
+	display: block;
+}
+/***************************confirm box********************************/
+.common-confirm-box{
+	background-color: rgba(0,0,0,0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.common-confirm-box.show{
+	display: block;
+}
+.common-confirm-box .common-confirm-content{
+    border-radius: 8px;
+    background: #FFFFFF;
+    width: 270px;
+    height: 125px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.common-confirm-box.small .common-confirm-content{
+	height: 80px;
+}
+.common-confirm-box.small .common-confirm-content .common-confirm-msg{
+	color: #1284fb;
+}
+.common-confirm-box .common-confirm-msg{
+	line-height: 80px;
+	color: #000000;
+	font-size: 16px;
+	text-align: center;
+}
+.common-confirm-box .common-btns-layout{
+	line-height: 45px;
+	border-top: 1px solid #b7b7b7;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	display: -webkit-box;
+}
+
+.common-confirm-box .common-btns-layout.two:after{
+	content: "";
+	position: absolute;
+	border-left: 1px solid #b7b7b7;
+	left: 50%;
+	bottom: 0;
+	height: 45px;
+}
+.common-confirm-box .common-btns{
+	color: #1284fb;
+	display: block;
+	font-weight: bold;
+	-webkit-box-flex: 1;
+}

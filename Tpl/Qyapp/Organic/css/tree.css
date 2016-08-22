@@ -1,0 +1,55 @@
+.tree{
+    min-height: 20px;
+	padding: 19px;
+	margin-bottom: 20px;
+}
+
+.tree li {
+    list-style-type:none;
+    margin:0;
+    padding:10px 5px 0 5px;
+    position:relative
+}
+.tree li::before, .tree li::after {
+    content:'';
+    left:-20px;
+    position:absolute;
+    right:auto
+}
+.tree li::before {
+    border-left:1px solid #c3c3c3;
+    bottom:50px;
+    height:100%;
+    top:0;
+    width:1px
+}
+.tree li::after {
+    border-top:1px solid #c3c3c3;
+    height:20px;
+    top:25px;
+    width:25px
+}
+.tree li span {
+    display:inline-block;
+    padding:0px 18px;
+    text-decoration:none;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(100, 100, 100, 0.5);	
+	height:40px;
+	line-height:40px;
+}
+.tree li.parent_li>span {
+    cursor:pointer
+}
+.tree>ul>li::before, .tree>ul>li::after {
+    border:0
+}
+.tree li:last-child::before {
+    height:25px
+}
+.relat{
+margin-left:25px;position:relative;
+}
+.myicon{
+position:absolute;top:19px;left:-14px;z-index:999;
+}

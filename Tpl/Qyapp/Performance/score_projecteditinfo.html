@@ -1,0 +1,136 @@
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header"> 
+   
+                <h4 class="modal-title ">设置数字计分项目清单</h4>
+            </div>
+		
+            <div class="panel-body">
+             
+                   <!-- <div class="form-group" id="singleUplaod" style=" width:300px; float:left;">
+                        <div class="js_single">
+                            <label class="col-sm-2 control-label" style=" width:40%;">添加类别：</label>
+
+                            <div class="col-sm-3" style="width:60%;">
+                                <input class="form-control imgurl" type="text" id='category' name="KPLnorm" placeholder="请输入类别：" value="{lanrain:$result['KPLnorm']}" /> 
+							</div>
+							<div> 
+									<a class="btn btn-default" href="javascript:;" id="editcategory_name">添加</a>
+							</div>
+                        </div>
+
+                    </div>-->
+					<form class="form-validate" method="post" action="" >
+						<input type="hidden" name="id" value="{lanrain:$result['id']}"/>
+                    <div class="form-group" style=" width:300px; float:left;">
+                        <label class="col-sm-2 control-label" style=" width:40%;">选择类别：</label>
+
+                        <div class="col-sm-3 " style="width:60%;">
+                           <select class="form-control imgurl" name="category_name" id="category_name">
+								<option value="">请选择类别</option>
+						   <volist name="category_name" id="data">
+								<if condition="$data.pid eq 0">
+								<option value="{lanrain:$data.id}">{lanrain:$data.name}</option>
+								</if>
+							</volist>
+				
+						   </select>
+                        </div>
+                    </div>
+                    <div class="form-group" style=" width:300px; float:left;">
+                        <label class="col-sm-2 control-label" style=" width:40%;">项目名称：</label>
+
+							<div class="col-sm-3 " style="width:60%;">
+								<input type="text" class="form-control" placeholder="请输入项目名称：" value="" name="name" />
+							</div>
+                    </div>		
+					<div class="form-group" style=" width:300px; float:left;">
+                        <label class="col-sm-2 control-label" style=" width:40%;">分值：</label>
+
+                        <div class="col-sm-3 " style="width:60%;">
+                            <input type="text" class="form-control" placeholder="请输入分值：" value="" name="score" />
+                        </div>
+                    </div>					
+                    					
+                    
+ 
+            </div>       
+			<div class="modal-footer"> 
+                <button type="submit" class="btn btn-primary" data-loading-text="保存中..." id="submitredit">保存修改</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>	
+			</form>
+        </div>
+    </div>
+
+<script type="text/javascript">
+	$('#editcategory_name').click(function(){
+	var category = $('#category').val();
+		if(category ==0){
+			alert("请输入类别");
+			return false;
+		}
+		$.ajax({
+			type: "post",  
+			url:"{lanrain::U('score_projectedit')}",
+			dataType:'json',
+			data:{'category':category},
+			//data:{'token':token,'wecha_id':wecha_id,'a_id':a_id,'touser':touser,'touser2':touser2,'logtype':logtype,'title':title,'content':content,'pic':id},
+			success:function(json){
+				if(json==2){
+					alert('该类名已经存在');
+					return false;
+				}
+				if(json.status){
+				var id = json.data;
+					alert("添加类别成功");
+					var l='';
+					l+='<option value="'+id+'">'+category+'</option>';
+					$('#category_name').append(l);
+				
+				}else{
+					alert('发送失败');
+			
+				}
+			}
+		});
+	});
+	//提交数据
+	$("#submitredit").click(function() {
+	//检查格式
+		var category_name = $('#category_name').val();
+		if(category_name == 0){
+			alert("请选择类别");
+			return false;
+		}
+		var name = $(":input[name='name']").val(); 
+			if(name == 0){
+			alert("请输入项目名称");
+			return false;
+		}
+		var score = $(":input[name='score']").val(); 
+			if(score == 0){
+			alert("请输入分值");
+			return false;
+		}
+		//
+		$.ajax({
+			type: "post",  
+			url:"{lanrain::U('score_projectedit')}",
+			dataType:'json',
+			data:{'score':score,'name':name,'category_name':category_name},
+			//data:{'token':token,'wecha_id':wecha_id,'a_id':a_id,'touser':touser,'touser2':touser2,'logtype':logtype,'title':title,'content':content,'pic':id},
+			success:function(json){
+				if(json){
+					alert('添加项目成功');
+					window.location.href="{lanrain::U('index')}";
+				}else{
+					alert('添加失败');
+					window.location.href="{lanrain::U('index')}";
+				}
+			}
+		});
+		
+	});
+		
+</script>

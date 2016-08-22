@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 全局样式 */
+body{ padding:0; margin:0; font-size:12px; height:100%; word-break: break-all;}
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p { padding:0; margin:0;}
+ul{list-style:none;}
+img{border:0px;}
+a{ text-decoration:none; color:#666;}
+input[type=”button”], input[type=”submit”], input[type=”reset”] {
+-webkit-appearance: none;
+}
+select{-webkit-appearance: none;}
+
+.erp_all{ width:100%; height:auto; font-size:16px; font-family:"微软雅黑";}
+.erp_list{ padding:5px 2% 5px 0px; margin-bottom:40px;}
+.erp_list ul{ width:100%;}
+.erp_list ul li{ margin-top:2%;}
+/*.erp_list ul li{ width:46%; border-radius:3px; height:70px; background-color:#FCC; color:#fff; float:left;}*/
+.erp_list ul li a{ width:100%; height:100%; color:#fff; display:block;}
+/*.erp_list ul li:nth-child(4n-1){ height:140px; background-color:#393; float:left;}*/
+
+.erp_list .erp_nav01 li{ margin-left:2%; padding:2%; border-radius:3px; height:100px; background-color:#FCC; color:#fff;}
+.erp_list .erp_nav02 li{ width:44%; margin-left:2%; padding:2%; float:left; border-radius:3px; height:100px; background-color:#FCC; color:#fff;}
+.erp_list .erp_nav03 li{ width:44%; margin-left:2%; padding:2%; float:left; border-radius:3px; height:100px; background-color:#FCC; color:#fff;}
+.erp_list .erp_nav04 li{ width:44%; margin-left:2%; padding:2%; float:left; border-radius:3px; height:70px; background-color:#FCC; color:#fff;}
+.erp_list .erp_nav05 li{ width:44%; margin-left:2%; padding:2%; float:left; border-radius:3px; height:100px; background-color:#FCC; color:#fff;}
+.erp_list .erp_nav06 li{ width:94%; margin-left:2%; padding:2%; float:left; border-radius:3px; height:70px; background-color:#FCC; color:#fff;}
+
+.erp_list .erp_nav04 li:first-child{ height:140px; background-color:#09C; padding:2% 2% 8% 2%;}
+
+.erp_list .erp_nav01 li:nth-child(1){ background: #66ce42 url(../images/iconfont-toupiao.png) no-repeat center center / 56px 45px;}
+.erp_list .erp_nav01 li:nth-child(2){ background: #8b7acc url(../images/iconfont-shoujiyaoyiyao.png) no-repeat center center / 45px 45px;}
+.erp_list .erp_nav01 li:nth-child(3){ background: #ffa64d url(../images/iconfont-weixinqiang.png) no-repeat center center / 45px 45px;}
+
+
+
+
+
+
+
+
+
+
+

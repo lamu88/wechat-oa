@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>投票列表</title>
+    <meta content=" " name="Keywords">
+    <meta content="" name="Description">
+    <meta content="work微信" name="author">
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+	<script src="jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script> -->
+    <title>投票列表</title>
+    <meta charset="utf-8">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="eric.wu" name="author">
+    
+    <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+    <meta content="no-cache" http-equiv="pragma">
+    <meta content="0" http-equiv="expires">
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+	 <link href="./Tpl/Qyapp/Vote/css/wap_indx.css" rel="stylesheet">
+	 <link href="./Tpl/Qyapp/Workflow/css/info.css?v=<?php echo time();?>" rel="stylesheet" type="text/css" />
+	<script src="./Tpl/Qyapp/Vote/js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./Tpl/Qyapp/Vote/js/jquery.circliful.min.js" type="text/javascript" charset="utf-8"></script>	
+</head>
+<style> 
+.circliful { 
+    position: relative;  
+} 
+.circle-text, .circle-info, .circle-text-half, .circle-info-half { 
+    width: 100%; 
+    position: absolute; 
+    text-align: center; 
+    display: inline-block; 
+} 
+.circle-info, .circle-info-half { 
+    color: #999; 
+} 
+.circliful .fa { 
+    margin: -10px 3px 0 3px; 
+    position: relative; 
+    bottom: 4px; 
+} 
+</style>
+<body onselectstart="return true;" ondragstart="return false;">
+    
+
+
+	<script>   
+	$(function(){
+	$('.nub').each(function(){
+	
+		var nub=Number($(this).html());
+		var newnub=Number(nub*1.4);
+		$(this).parent('div').prev().css('clip','rect(0px,'+newnub+'px,140px,0px)');
+	
+	})
+	
+	})
+
+	</script>
+ 	<div id="menu">
+		<ul>
+			<a href="{lanrain::U('wap_index',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],status=>1))}">
+			    <li style="<if condition='($_GET["status"] eq 1) OR ($_GET["status"] eq NULL)'>border-bottom:solid 2px #01bd52;</if>width:50%;float: left;">
+				<div class="menu_li">&nbsp;进行中
+				</div>
+				
+				
+				</li>
+			</a>
+			<span class="menu_span"></span>
+			<a href="{lanrain::U('wap_index',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],status=>3))}">
+				<li  style="<if condition='$_GET["status"] eq 3'>border-bottom:solid 2px #01bd52;</if>width:50%;float: left;" ><div class="menu_li">&nbsp;已结束</div>
+				</li>
+			</a>
+		</ul>
+	</div> 
+
+	<div class="container" style="margin-top:44px;" id="containerCirl">
+    <volist name="votes" id="votes">
+	<if condition="$votes['status'] eq 3">
+	<div class="vote_list">
+		<div class="first">
+			<span class="firstsp">{lanrain:$votes.title}</span>
+			<span class="red">(<if condition="$votes['type'] eq 1">单选</if><if condition="$votes['type'] eq 2">多选</if><if condition="$votes['type'] eq 5">评级</if><if condition="$votes['type'] eq 3">多图对比</if><if condition="$votes['type'] eq 4">赞成反对</if>)</span>
+			<span class="bak"<if condition="$votes['is_real_name'] eq 1"> style="background:#999;"</if>><if condition="$votes['is_real_name'] eq 1">匿名</if><if condition="$votes['is_real_name'] eq 2">实名</if></span>
+			<div class="hz">{lanrain:$votes.time|date="Y-m-d H:i:s",###}<span class="canyu">已参与：<span style="color:#999;">{lanrain:$votes.nums}</span></span><span class="jinxin"><if condition="$votes['status'] eq 1">正在进行中</if><if condition="$votes['status'] eq 3"><font color="red">已经结束</font></if></span></div>
+		</div>
+		<a data="{lanrain:$votes.id}" href="{lanrain::U('wap_vote',array('type'=>$votes['type'],'id'=>$votes['id'],'token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}">
+			<div class="waiyuan">
+
+			<div id="myStat{lanrain:$votes.id}"  data-dimension="150" data-text="{lanrain:$votes.bi}%" data-info="New Clients" data-width="13" data-fontsize="15" data-percent="{lanrain:$votes.bi}" data-fgcolor="#35aa47" data-bgcolor="#eee" data-fill="#fff"></div>
+			
+			<!-- <div ><span class="nub">{lanrain:$votes.bi}</span><span>%</span></div> -->
+
+			<if condition="$votes['xuanze']">
+			<div class="xuanze hz" style="margin-top:-20px;margin-right:-20%">选择了：<span style="font-weight:normal;"><if condition="$votes['type'] eq 1">{lanrain:$votes.xuanze.chose}<elseif condition="$votes['type'] eq 2"/>点击查看</if><if condition="$votes['type'] eq 5">{lanrain:$votes.xuanze.score}星<elseif condition="$votes['type'] eq 3"/>多图对比<elseif condition="$votes['type'] eq 4"/>  <if condition="$votes['chose']['zan'] eq 2">赞成<else/>反对</if> <else/> </if> </span></div>
+			<else/>
+
+			</if>
+			<div class="gotoupiao">投票已结束   <!-- 去投票 <span class="jiantou">></span> -->
+			</div>
+
+			</div>
+		</a>
+	</div>	
+	<else/>
+	<div class="vote_list">
+		<div class="first">
+			<span class="firstsp">{lanrain:$votes.title}</span><span class="red">(<if condition="$votes['type'] eq 1">单选</if><if condition="$votes['type'] eq 2">多选</if><if condition="$votes['type'] eq 5">评级</if><if condition="$votes['type'] eq 3">多图对比</if><if condition="$votes['type'] eq 4">赞成反对</if>)</span><span class="bak"<if condition="$votes['is_real_name'] eq 1"> style="background:#999;"</if>><if condition="$votes['is_real_name'] eq 1">匿名</if><if condition="$votes['is_real_name'] eq 2">实名</if></span>
+			<div class="hz">{lanrain:$votes.time|date="Y-m-d H:i:s",###}<span class="canyu">已参与：<span style="color:#999;">{lanrain:$votes.nums}</span></span><span class="jinxin"><if condition="$votes['status'] eq 1">正在进行中</if><if condition="$votes['status'] eq 3"><font color="red">已经结束</font></if></span></div>
+		</div>
+		<a href="{lanrain::U('wap_vote',array('type'=>$votes['type'],'id'=>$votes['id'],'token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}">
+			<div class="waiyuan">
+				<div class="yuan"></div>
+				<div class="yingzi">
+				<span class="nub" style="font-size:18px;">{lanrain:$votes.bi}</span><span>%</span>
+				</div>
+				<if condition="$votes['xuanze']">
+				<div class="xuanze hz" style="margin-top:-20px;margin-right:-20%">选择了：<span style="font-weight:normal;"><if condition="$votes['type'] eq 1">{lanrain:$votes.xuanze.chose}<elseif condition="$votes['type'] eq 2"/>点击查看</if><if condition="$votes['type'] eq 5">{lanrain:$votes.xuanze.score}星<elseif condition="$votes['type'] eq 3"/>多图对比<elseif condition="$votes['type'] eq 4"/>  <if condition="$votes['chose']['zan'] eq 2">赞成<else/>反对</if> <else/> </if> </span></div>
+				<else/>
+
+				</if>
+				<div class="gotoupiao">去投票 <span class="jiantou">></span></div>
+			</div>
+		</a>
+	</div>	
+	</if>
+    </volist>
+	<p class="last"><a href="javascript:;" style="font-weight:normal;color:#999">@{lanrain:$copyright}</a></p>
+	
+</body>
+</html>
+
+<script>
+$(function(){
+	$('#containerCirl a').each(function(){
+		var id = $(this).attr('data');
+		$('#myStat'+id).circliful();
+	});
+});
+</script>

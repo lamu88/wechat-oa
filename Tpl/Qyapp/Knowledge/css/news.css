@@ -1,0 +1,44 @@
+body { margin:0; padding:0; font-size: 12px;}
+a { text-decoration:none; color:#333;}
+
+.top {width:100%; 
+    border-bottom:1px solid #ccc; 
+    }
+
+.back{
+   background:url(../images/iconfont-th.png) no-repeat 5% 50%;
+   background-size: 20px;
+   height: 40px;
+}
+.news{
+    font-size: 14px;
+    color: #454545;
+    display:block;
+    padding-left: 8%;
+    line-height: 40px;
+}
+.news:focus{
+    color: #35aa47;
+}
+.top_time{
+    float: right;
+    color: #aaa;
+}
+.top p{
+    margin:0;
+    padding:0 5%;
+}
+.come_from{
+    
+    color: #aaa;
+    line-height: 24px;
+}
+.come_from a{
+    float: right;
+    font-size: 14px;
+    color: #666;
+}
+.footer { width:100%; height:40px; border-top:1px solid #CCC;position:fixed; bottom:0;left:0; background:#f3f3f3;}
+
+a.footer1 { font-family:"微软雅黑";width:50%; border-right:1px solid #CCC; display:block; float:left; height:40px; text-align:center; line-height:40px;}
+a.footer2 { font-family:"微软雅黑";width:49%; border-right:1px solid #CCC; display:block; float:right; height:40px;  text-align:center; line-height:40px;}

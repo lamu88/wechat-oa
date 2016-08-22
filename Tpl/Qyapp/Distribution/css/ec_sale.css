@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 全局样式 */
+body{ padding:0; margin:0; font-size:12px; height:100%; word-break: break-all;}
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p { padding:0; margin:0;}
+ul{list-style:none;}
+img{border:0px;}
+.clearfloat{clear:both; height:0px; font-size:1px; line-height:0px;}
+a{ text-decoration:none; color:#333;}
+td, th {
+display: table-cell;
+vertical-align: inherit;
+}
+
+
+.fenxiao_container{
+	width:94%;
+	height:auto;
+	margin:0 auto;
+	background-color:#fff;
+	padding:3%;
+	margin-bottom:50px;}
+	
+.top{
+	width:100%;
+	color:#FFF;
+	background-color:#35aa47;
+	font-size:16px;
+	text-align:center;
+	height:40px;
+	line-height:40px;}	
+	
+	
+.fenxiao_content{
+	width:100%;
+	margin-bottom:20px;
+	}	
+	
+.fenxiao_title{
+	width:100%;
+	border-bottom:2px solid #eee;
+	font-size:16px;
+	height:30px;
+	line-height:30px;
+	margin-bottom:20px;
+	color:#333;}	
+	
+.fenxiao_text{
+	text-indent:2em;
+	color:#666;}	
+
+.fenxiao_vip{
+	margin-bottom:20px;}
+
+	
+.fenxiao_table{
+	width:100%;
+	text-align:center;
+	color:#666;}
+
+.fenxiao_table table{
+	width:100%;}		
+.fenxiao_table table tr td{
+	padding:5px;}	
+.level{
+	width:15%;}	
+	
+.percent{
+	width:35%;}	
+	
+.fencheng_rule{
+	width:100%;
+	margin-bottom:20px;}	
+	
+	
+	
+	
+.fenxiao_guize table{
+	width:100%;
+	color:#666;
+	text-align:center;}	
+	
+.fenxiao_guize table tr td{
+	width:20%;
+	padding:5px;}
+	
+.fenxiao_btm{
+	width:100%;
+	position:fixed;
+	bottom:0;
+	border-top:1px solid #ccc;
+	background-color:#fff;
+	height:45px;
+	line-height:45px;
+	}	
+	
+.fenxiao_btm ul li{
+	width:49.7%;
+	float:left;
+	text-align:center;
+	}	
+	
+.line{
+	border-right:1px solid #ccc;}	
+	
+	
+	
+	
+	
+	
+	
+	

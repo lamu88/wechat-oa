@@ -1,0 +1,21 @@
+<link href="./Tpl/Qyapp/Card/css/choose.css" rel="stylesheet" type="text/css" />
+<div class="content" style="height:auto;margin-left:-10px;background-color:#DCDCDC">
+	<ul style="background-color:#fff" id="imageList">
+	    <volist name="data" id="data">
+		<li><a href="javascript:;" style="position:relative;"><img src="{lanrain:$data.img}" width="100%" id="{lanrain:$data.id}"/></a></li>
+		</volist>
+	</ul>
+	<input type="hidden" name="selectImg" value=""/>
+</div>
+	<script>
+	$('#imageList li').each(function(){
+		$(this).click(function(){
+			var id = $(this).children().children().attr('id');
+			alert('你选择了模板'+id);
+			$('#imageList li').attr('background-color','red');
+			$('input[name=selectImg]').attr('value',id);
+			
+		});
+
+	});
+	</script>

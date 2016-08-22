@@ -1,0 +1,155 @@
+﻿	.renwu{
+	font-size:12px;
+	color:#a2a2a2;
+	margin-bottom:10px;
+	}
+	.softload ul li span.icon_cont span.icon_dis{
+	float:left;
+	padding:5px;	
+	background:#fff;
+	margin-top:3px;
+	margin-left:16px;
+	border:solid 1px #eee;
+	border-radius:4px;
+	position:relative;
+	width: 72%;
+	}
+		a{
+	text-decoration:none;
+	
+	}
+	a:hover{
+  text-decoration:none;
+   }
+	.softload ul li{
+	border:none;
+    width: 90%;
+    margin:16px 0 0 3%;
+	}
+  .hightli{
+
+  height:50px;
+  
+  }
+.dsmyxm{
+  width:94%;
+  float:left;
+  overflow-x: hidden;
+border:1px solid #35AA47;
+margin-left: 3%;
+margin-top: 10px;
+  }
+
+.xq_top{height: 30px;line-height: 30px;
+    background: #35aa47;color: #fff;text-align: center;
+}
+
+.rightdq{
+
+  margin-right:20px;
+color:#000;
+
+}	
+.dsmyxm dl dt{
+    width: 25%;
+    float: left;
+    color: #333;
+}
+.dsmyxm dl dd{
+    width: 75%;
+    float: left;
+    color: #999;
+}
+.dsmyxm dl{
+  font-size: 14px;
+  overflow: hidden;
+  line-height: 34px;
+  border-bottom: 1px solid #eee;
+}
+.dsmyxm dl:last-child{border:none;}
+.sp_xq{
+    padding:8px;
+}
+.sp_tl{
+    color: #35aa47;
+    font-size: 14px;
+    line-height: 22px;
+}
+.sp_nr{
+    line-height: 20px;
+    margin-bottom: 12px;
+    font-size: 12px;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 6px;
+}
+.sp_pic{
+  overflow: hidden;
+}
+.sp_pic li{
+  width: 50px;
+  height: 50px;
+  float: left;margin:6px 4px 6px 0;
+}
+
+.hightli span{
+  font-size: 12px !important;
+}
+.sp_pic img{
+  width: 50px;
+  height: 50px;
+}
+#content{
+  margin-bottom: 50px;
+  width: 100%;
+  float: left;
+}
+#menus{
+    margin:30px 0;
+    width: 100%;
+}
+#menus ul li {
+    width: 94%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 3%;
+    margin-bottom: 20px;
+    border-radius: 3px ;
+}
+#wd_ul{width: 94% ;padding:0 3% 10px;position: fixed;bottom: 0px;background: #fff;}
+.half_li{
+  width: 49% !important;
+  margin:0 !important;
+  background: #35AA47;
+}
+.fll{float: left;}
+.flr{float: right;}
+.con_title{
+  height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    font-family: "微软雅黑";
+    width: 94%;
+    float: left;
+    margin:10px 3%;
+    background: #35AA47;
+}
+.down{
+  margin-left: 6px !important;
+}
+.sh_zt{
+  width: 100%;
+      text-align: right;
+    line-height: 24px;
+    float: right;
+}
+.sh_nm{
+  width: 48px;
+height: 76px;
+display: block;
+float: left;
+text-align: center;
+line-height: 24px;
+}

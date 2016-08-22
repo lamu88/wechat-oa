@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 全局样式 */
+body{ padding:0; margin:0; font-size:12px; height:100%; word-break: break-all;}
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p { padding:0; margin:0;}
+ul{list-style:none;}
+img{border:0px;}
+.clearfloat{clear:both; height:0px; font-size:1px; line-height:0px;}
+a{ text-decoration:none;}
+
+
+.announce_all{ width:100%; margin-bottom:50px; float:left;}
+.announce_row{ width:100%; height:auto; float:left;}
+.ann_group{ width:100%; padding:2%; height:auto; background-color:#fff; float:left; border-bottom:1px solid #eee; margin-bottom:10px;}
+
+.ann_content{ width:100%; margin:0 auto; height:30px; line-height:30px;}
+.ann_title{ width:60%; float:left; white-space:nowrap; text-overflow:ellipsis; }
+.ann_time{ width:40%; float:right; text-align:right;}
+
+.choose_pic{ width:50px; height:50px; text-align:center; position:relative; float:left; margin-top:7px;}
+.icon_reduce{ position:absolute; top:-5px; right:0px;}
+.sec_sh{
+    width: 120px;
+    height: 30px;
+    border:1px solid #ccc;
+}
+

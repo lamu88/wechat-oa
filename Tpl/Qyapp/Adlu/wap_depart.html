@@ -1,0 +1,105 @@
+<div class="page-quick-sidebar" style="background-color:#fff;">
+	<div class="nav-justified">
+		<ul class="nav nav-tabs nav-justified">
+			<li class="active">
+				<a href="#quick_sidebar_tab_1" data-toggle="tab" style="background-color:#35aa47;color:#fff;">
+				所有部门 
+				<span class="pull-right" onclick="closeList()">
+				<i class="fa fa-times"></i>
+				</span>							
+				</a>
+				
+			</li>
+		</ul>
+		<div class="tab-content">
+			<div class="tab-pane active page-quick-sidebar-chat" style="">
+				<div class="page-quick-sidebar-chat-users" id="userlist" style="">
+					<ul class="media-list list-items scroller" style="padding-bottom:50px;" id="media-list" >
+						<volist name="department" id="department">					
+						<li class="media" style="border-bottom-style: dashed;border-bottom-color: #b3b3b3;position:relative;">
+							<div class="media-status">
+								<span><input class="liChild" type="checkbox" value=""></span>
+							</div>
+							<img class="media-object" src="./Tpl/Qyapp/Address/css/male.png">
+							<!-- <img class="media-object" src="{lanrain:$users.pic}" alt="..."> -->
+							<div class="media-body" style="padding-top:8px;">
+								<h4 class="media-heading" id="{lanrain:$department.id}">{lanrain:$department.name}</h4>
+								<div class="media-heading-sub">
+									 &nbsp;
+								</div>
+							</div>
+						</li>
+						</volist>														
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="getdata">
+
+		</div>				
+
+						
+		<div class="row" style="bottom: 0;left: 0;position: fixed;right: 0;background-color:#fff;height:50px;z-index: 10000; font-size: 12px;padding: 8px 20px 15px;transition: margin 0.3s ease 0s;">
+			<div class="col-md-12" style="margin-bottom:10px;">
+			 <button class="btn green btn-block" id="submit" mydata="">确定</button>
+			</div>
+		</div>		
+
+				
+	</div>
+</div>
+<script>
+$('#userlist li').each(function(){
+    $(this).mouseover(function(){
+		$('#userlist li').css('background','#fff');
+		$(this).css('background','#f0f0f0');
+	});
+});
+$('#media-list li').on('click',function(){
+	var mytype = $('#submit').attr('mydata');
+	var userName = $(this).children('div.media-body').children('h4').text();
+	var userId = $(this).children('div.media-body').children('h4').attr('id');	
+	if($(this).children('div.media-status').children().children().attr('checked')){
+	    $(this).children('div.media-status').children().children().removeAttr('checked');
+		$('#getdata').children('#'+userId).remove(); 
+	}else{
+	    $(this).children('div.media-status').children().children().attr('checked','true');
+		$('#getdata').append('<span id="'+userId+'" dataname="'+userName+'"></span>'); 	
+	}
+});	
+$('#submit').on('click',function(){
+	var mytype = $('#submit').attr('mydata');
+	$('body').removeClass('page-quick-sidebar-open');
+	$('#allusers').css('width','0');
+	var backId = '';
+	var backName = '';		
+	$('#getdata span').each(function(){
+		var id= $(this).attr('id')+';';
+		backId+=id;
+		var name= $(this).attr('dataname')+';';
+		backName+=name;			
+	});	
+	//$('#name').attr('value',backName);	
+	//$('#follow').attr('value',backId);
+	//$('#myinput2').html(backName);
+	//$('#usersData').attr('value',backName);	
+	//$('#getdata').html('');
+	//$('#allusers').html('');
+	$('#truename').attr('value',backName);	
+	$('#todepart').attr('todepart',backId);
+	$('#myinput').html(backName);		
+	$('#getdata').html('');
+	$('#allusers').html('');	
+});
+var screenHeight = $(window).height();
+$('#media-list').slimscroll({
+   height:screenHeight
+});
+
+//alert($(window).height()); //浏览器当前窗口可视区域高度
+//alert($(document).height()); //浏览器当前窗口文档的高度
+//alert($(document.body).height());//浏览器当前窗口文档body的高度
+//alert($(document.body).outerHeight(true));//浏览器当前窗口文档body的总高度 包括border padding margin
+</script>

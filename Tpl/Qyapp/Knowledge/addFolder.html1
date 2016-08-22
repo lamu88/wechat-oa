@@ -1,0 +1,108 @@
+<include file="Common:header" />
+	<link href="./Tpl/Qyapp/Static/Js/jstree/3.0.2/themes/default/style.min.css" rel="stylesheet">	
+	<link href="./Tpl/Qyapp/Static/Js/jrating/jquery/jRating.jquery.css" rel="stylesheet">		
+	<link href="./Tpl/Qyapp/Static/Js/bootstrap/switch/docs/css/highlight.css" rel="stylesheet">		
+    <link href="./Tpl/Qyapp/Static/Js/bootstrap/switch/dist/css/bootstrap3/bootstrap-switch.min.css" rel="stylesheet">	
+	<link href="./Tpl/Qyapp/Static/Js/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./Tpl/Qyapp/Static/Js/clockpicker/dist/bootstrap-clockpicker.min.css">
+    <link rel="stylesheet" type="text/css" href="./Tpl/Qyapp/Static/Js/clockpicker/assets/github.min.css">			
+	<script src="./Tpl/Qyapp/Static/Js/artTemplate/dist/template.js" type="text/javascript"></script>
+	<script src="./Tpl/Qyapp/Static/Js/jstree/3.0.2/jstree.min.js"></script>	
+	<script src="./Tpl/Qyapp/Static/Js/bootstrap/switch/docs/js/highlight.js" type="text/javascript"></script>	
+	<script src="./Tpl/Qyapp/Static/Js/bootstrap/switch/dist/js/bootstrap-switch.min.js" type="text/javascript"></script>
+	<script src="./Tpl/Qyapp/Static/Js/daterangepicker/moment.min.js" type="text/javascript"></script>
+	<script src="./Tpl/Qyapp/Static/Js/daterangepicker/daterangepicker.js" type="text/javascript"></script>
+	<script src="./Tpl/Qyapp/Static/Js/clockpicker/dist/bootstrap-clockpicker.min.js" type="text/javascript"></script>
+	<script src="./Tpl/Qyapp/Static/Js/jrating/jquery/jRating.jquery.min.js" type="text/javascript"></script>	
+<div id="myModal" class="modal fade" tabindex="-2" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+</div>
+	<section class="hbox stretch">
+    <aside class="aside-md bg-white b-r" id="subNav">
+		<include file="Knowledge:navmenu" />
+    </aside>
+	<aside>
+   <section class="vbox">
+        <header class="header bg-white b-b b-light">
+            <p>新增文件夹</p>
+            <a class="text-muted pull-right m-t pointer" data-toggle="back" title="返回" href="javascript:history.go(-1)"><i class="fa fa-reply"></i></a>
+        </header>
+        <section class="scrollable  wrapper">
+            <section class="panel panel-default">
+                <div class="panel-body">
+                   <form class="form-horizontal form-validate" method="post" target="_self" action="{lanrain::U('Knowledge/addFolder',array('mid'=>$_GET['mid'],'id'=>$data['id']))}" id="form">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label must">文件夹名称：</label>
+                        <div class="col-sm-3 ">
+                            <input type="text" class="form-control" data-rule-required="true" value="{lanrain:$data.name}" name="name" />
+                        </div>
+                    </div>
+                   
+                   <div class="form-group">
+                        <label class="col-sm-2 control-label">权限设置：</label>
+                         <div class="col-sm-9">
+                            <label class="checkbox-inline"><input type="checkbox"   name="power">转发邮箱</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label must">可见范围:</label>
+                      
+                           <div class="col-sm-3 ">
+                               <input class="form-control" data-rule-required="true" data-toggle="tokeninputtree" name="depart" onclick="openModel()" placeholder="+请选择部门" type="text" value="{lanrain:$data.dep}" id="depart" />
+							</div>
+                       
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label must">是否公开显示：</label>
+                         <div class="col-sm-9">
+                            <label class="radio-inline"><input type="radio" value="1" checked  name="display">公开显示</label>
+                            <label class="radio-inline"><input type="radio" value="0"    name="display">不公开显示</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-4 col-sm-offset-2">
+                            <input type="hidden" name="method" id="method" value="0" />
+                            <button type="submit"  class="btn btn-primary"  data-loading-text="保存中...">保存</button>
+                            <button type="button" onclick="subMit();" data-toggle="method" data-method="1" class="btn btn-primary" data-confirm="false" data-loading-text="保存中..." id="butTon">保存并新增文档</button>
+                            <button type="button" class="btn btn-default"  data-toggle="back">取消</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+            </section>
+        </section>
+    </section>	
+	</aside>
+    </section>	
+<script>
+function openModel(){
+	$('#depart').attr("value",'');
+	$('#departId').attr("value",'');
+	$('#myModal').load("/index.php?g=Qyapp&m=Tree&a=myTree", function(){
+		 $('#myModal').modal();
+	});	
+}
+
+function cancel(){
+	$('#depart').attr("value",'');
+	$('#departId').attr("value",'');
+	$('#myModal').modal('hide');
+	$('#myModal').empty();
+}
+
+function guanbi(){
+	$('#myModal').modal('hide');
+	$('#myModal').empty();
+}
+
+</script>
+<script>
+function subMit(){
+	$('#method').attr('value',1);
+	$('#form').submit();
+}
+</script>
+<include file="Common:footer" />

@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 全局样式 */
+body{ padding:0; margin:0; font-size:12px; height:100%; word-break: break-all;}
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p { padding:0; margin:0;}
+ul{list-style:none;}
+img{border:0px;}
+.clearfloat{clear:both; height:0px; font-size:1px; line-height:0px;}
+a{ text-decoration:none;}
+
+
+
+div#all{
+position:fixed;
+top:0;
+left:0;
+bottom:0;
+right:0;
+z-index:-1;
+}
+div#all > img{height:100%;
+width:100%;
+border:0;
+}
+
+.logo{ width:70px; height:70px; line-height:70px; text-align:center; border:1px solid #000; border-radius:5px; float:right; margin-right:8%; margin-top:-10%;}
+
+#content{ width:90%; height:auto; margin:0 auto; margin-top:20%;}
+#content img{ float:left; margin-top:2%;} 
+#content ul{ width:70%; float:left; font-weight:bold; margin-left:5%;}
+#content ul li{ font-family:"微软雅黑"; font-size:14px; width:100%;}
+#content .margin{ margin-top:3%;}
+#content ul li b{ font-size:36px;}
+#content ul li span{ margin-left:20%; font-size:18px;}
+
+.contact{ width:90%; margin:0 auto;}
+.contact ul{ width:90%; margin:0 auto; margin-left:5%; float:left; display:block;}
+.contact ul li{ width:40%; float:left; margin-top:3%; font-family:"微软雅黑";}

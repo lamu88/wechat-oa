@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 全局样式 */
+body{ padding:0; margin:0; font-size:12px; height:100%; word-break: break-all;}
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p { padding:0; margin:0;}
+ul,li{list-style:none;}
+img{border:0px;}
+a{ text-decoration:none;}
+
+
+/*头部样式*/
+.qiandao_all{ width:100%; height:auto; margin:0 auto;}
+.qiandao_top{ width:100%; border-bottom:1px solid #c6c6c6; float:left; background-color:#fff; color:#8a8a8a; background:url(../images/line_bg.jpg) no-repeat 50% 50%;}
+.qiandao_top ul li{ width:50%; float:left; text-align:center; line-height:3rem;}
+.qiandao_top a{ color:#8a8a8a;}
+.on{ border-bottom:2px solid #199710; color:#121212;}
+
+/*中部样式*/
+.qiandao_mid{ width:100%; height:auto;}
+.qiandao_content_one{ width:100%; background-color:#fff; float:left;}
+.qiandao_content_one dl{ width:94%; margin:0 auto; float:left; line-height:2.5rem; border-bottom:1px solid #cdcdcd; padding:3%}
+.qiandao_content_one dl dt{ width:20%; float:left;}
+.qiandao_content_one dl dt dd{ width:80%; float:left;}
+.qiandao_content_one input{ border:none; color:#a3a3a3;}
+.shiyou{ background:url(../images/icon_event.jpg) no-repeat  7% 50%; padding-left:38px;}
+.add{ width:50%; float:left;}
+.add_icon{ float:right;}
+.add_icon img{ padding-top:50%;}
+.address{ background:url(../images/icon_address.jpg) no-repeat 6% 50%; padding-left:38px;}
+.time{ background:url(../images/icon_time.jpg) no-repeat  5% 50%; padding-left:38px;}
+.down_time{ float:right; margin-right:10%;}
+
+.qiandao_content_two{ width:100%; height:auto; background-color:#fff; float:left;}
+.eye{ background:url(../images/icon_eye.png) no-repeat left; padding:5px 0 5px 38px;}
+
+.qiandao_content_two ul li{ width:94%; border-bottom:1px solid #dddddd; line-height:2rem; padding:3%;}
+.qiandao_content_two textarea{ width:90%; height:90px; border-radius:5px; background-color:#ebebeb;}
+
+
+/*底部*/
+.qiandao_btm{ width:100%; margin:0 auto;}
+.qiandao_button{ width:84%; margin:0 auto; background-color:#04bd00; border-radius:5px; text-align:center; float:left; padding:3%; margin:5% 0 0 5%; color:#fff;}

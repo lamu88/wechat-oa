@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+		<script src="./Tpl/static/scroll/dev/jquery-1.9.1.js"></script>	
+		<script src="./Tpl/Qyapp/Aftersale/js/layer.m/layer.m.js"></script>		
+</head>
+
+<div class="form">
+           
+                <fieldset class="clearfix">
+                <input type="hidden" value="{/$category.cat_id/}" name="cat_id" />
+                      <p><label>所属分类：</label>
+                        <span><select id="one" name="pid">
+                        <option value="0">-----顶级分类-----</option>
+                       <volist name="values" id="categorylist">
+                        <option value="{lanrain:$categorylist.cat_id}" <if condition="$categorylist['cat_id'] eq $category['pid']">selected="selected"</if> <if condition="$categorylist['cat_id'] eq $category['pid']">disabled="disabled"</if>>{lanrain:$categorylist.pre}{lanrain:$categorylist.cat_name}</option>
+						</volist>
+                        </select></span>
+                        </p>
+                        <p><label><font class="red"> * </font>分类名称：</label>
+                        <span><input type="text" value="{lanrain:$category.cat_name}" class="text-input small-input" name="cat_name" id="cat_name" /></span>
+								<input type="hidden" id="cat_id" value="{lanrain:$category.cat_id}"/>
+                        </p>
+                      <p><label>状态：</label>
+                        <span>
+						<input name="is_show" type="radio" value="1" <if condition="($category['is_show'] eq 1)"> checked="checked" </if> />启用
+						<input name="is_show" type="radio" value="0" <if condition="($category['is_show'] eq 0)"> checked="checked" </if> />禁用
+						</span>
+                        </p>
+                    </ul>
+                  <dt>
+                    <input type="submit" name="" id="button" class="button" value="<if condition="$category.cat_id">编辑<else/>添加</if>" />
+					
+                  </dt>
+                </fieldset>
+       
+</div>
+</html>
+<script>
+$(function(){
+	$('#button').click(function(){
+		var is_show =  $('input[name="is_show"]:checked').val();
+		var cat_name =  $('input[name="cat_name"]').val();
+		var pid =  $('option:selected').val();
+		if($('#cat_id').val()){
+			var cat_id = $('#cat_id').val();
+		}else{
+			var cat_id =0;
+		}
+
+		$.ajax({
+			type: "post",  
+			url:"{lanrain::U('wap_categoryadd',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}",
+			dataType:'json',
+			data:{'is_show':is_show,'cat_name':cat_name,'pid':pid,'cat_id':cat_id},
+			success:function(json){
+				if(json==1){
+					alert('添加成功');
+					window.location.href="index.php?g=Qyapp&m=Erp&a=wap_category&token=$_GET['token']&wecha_id=$_GET['wecha_id']";
+				}
+				if(json==2){
+					alert('修改成功');
+					window.location.href="index.php?g=Qyapp&m=Erp&a=wap_category&token=$_GET['token']&wecha_id=$_GET['wecha_id']";
+				}
+				if(json==3){
+					alert('修改失败');
+					//window.location.href="index.php?g=Qyapp&m=Erp&a=wap_category&token=$_GET['token']&wecha_id=$_GET['wecha_id']";
+				}
+				if(json==0){
+					alert('添加失败');
+				}
+			}
+		});
+	})
+})
+</script>

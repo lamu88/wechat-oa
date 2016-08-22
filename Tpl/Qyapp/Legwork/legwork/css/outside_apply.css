@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 全局样式 */
+body{ padding:0; margin:0; font-size:12px; height:100%; word-break: break-all;}
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p { padding:0; margin:0;}
+ul,li{list-style:none;}
+img{border:0px;}
+a{ text-decoration:none;}
+
+/*中部样式*/
+.qiandao_mid{ width:100%; height:auto;}
+.qiandao_content_one{ width:100%; background-color:#fff; float:left;}
+.qiandao_content_one dl{ width:94%; margin:0 auto; float:left; line-height:2.5rem; border-bottom:1px solid #cdcdcd; padding:3%; white-space:nowrap; overflow:hidden;}
+.qiandao_content_one dl dt{ width:20%; float:left;}
+.qiandao_content_one dl dt dd{ width:80%; float:left;}
+.qiandao_content_one input{ border:none; color:#a3a3a3;}
+.shiyou{ background:url(../images/icon_event.jpg) no-repeat  7% 50%; padding-left:33px;}
+.add_name{ float:right; margin-right:5%;}
+.add{ width:50%; float:left;}
+.add_icon{ float:right;}
+.add_icon img{ padding-top:50%;}
+.begin{ background:url(../images/icon_begin.gif) no-repeat 6% 50%; padding-left:33px;}
+.end{ background:url(../images/icon_stop.gif) no-repeat  5% 50%; padding-left:33px;}
+.out_address{ background:url(../images/icon_address.jpg) no-repeat  5% 50%; padding-left:33px;}
+.out_tpye{ background:url(../images/icon_classify.png) no-repeat  5% 50%; padding-left:33px;}
+
+.qiandao_idea{ margin-right:15%;}
+.both{ width:17%; float:left; color:#999;}
+.ok{ background:url(../images/icon_ok.png) no-repeat  5% 50%; padding-left:35px;}
+.nook{ background:url(../images/icon_nook.png) no-repeat  5% 50%; padding-left:35px;}
+
+.qiandao_content_two{ width:100%; height:auto; background-color:#fff; float:left;}
+.eye{ background:url(../images/icon_eye.png) no-repeat left; padding:5px 0 5px 33px;}
+
+.qiandao_content_two ul li{ width:94%; border-bottom:1px solid #dddddd; line-height:2rem; padding:3%;}
+.qiandao_content_two textarea{ width:90%; height:90px; border-radius:5px; background-color:#ebebeb;}
+
+
+/*底部样式*/
+.outside_btm{ width:94%; margin-left: 3%; position:fixed; bottom:0; left:0;font-size: 14px;padding-bottom: 10px;height: 36px;background: #fff;}
+.outside_btm ul li{ width:49%; float:left; text-align:center; line-height:36px; color:#fff;background: #35aa47;border-radius: 3px;}
+.submit{ }
+

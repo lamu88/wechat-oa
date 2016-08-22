@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 全局样式 */
+body{ padding:0; margin:0; font-size:12px; height:100%; word-break: break-all;}
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p { padding:0; margin:0;}
+ul{list-style:none;}
+img{border:0px;}
+.clearfloat{clear:both; height:0px; font-size:1px; line-height:0px;}
+a{ text-decoration:none;}
+
+
+.meet_xq li{
+    width: 94%;
+    height: auto;
+    line-height: 30px;
+    overflow: hidden;
+    margin:auto;
+    margin-top: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 13px;
+}
+.meet_xq li:last-child{
+    border:none;
+}
+.meet_xq li input{
+    width: 78%;
+    height: 26px;
+    border: none;
+    font-size: 12px;
+}
+.people_list{
+    margin-top: 10px;
+    height: auto;
+    overflow: hidden;
+}
+.pull-right{
+float: right;
+position: relative;
+right: 5%;
+top: 4px;
+}
+.announce_all{ width:100%; margin-bottom:50px; float:left;}
+.announce_row{ width:100%; height:auto; float:left;}
+.ann_group{ width:100%; padding:2%; height:auto; background-color:#fff; float:left; border-bottom:1px solid #eee; margin-bottom:10px;}
+
+.ann_content{ width:100%; margin:0 auto; height:30px; line-height:30px;}
+.ann_title{ width:60%; float:left; white-space:nowrap; text-overflow:ellipsis; }
+.ann_time{ width:40%; float:right; text-align:right;}
+
+.choose_pic{ width:50px; height:56px; text-align:center; position:relative; float:left; margin-top:12px;}
+.choose_pic img{
+    border-radius: 100%;
+}
+.choose_pic span{
+    display:block;
+}
+.icon_reduce{ position:absolute; top:-5px; right:0px; width: 20px;
+height: 20px;}
+
+

@@ -1,0 +1,87 @@
+<section class="scrollable wrapper w-f">
+	<section class="panel panel-default  ">
+		<div class="table-responsive">
+			<table class="table table-hover m-b-none entity-view">
+				<thead>
+					<tr>
+						<th>姓名</th>
+						<th>帐号</th>
+						<th>职位</th>
+						<th>电话</th>
+						<th>邮箱</th>
+						<th>状态</th>
+					</tr>
+				</thead>
+				
+				<tbody id="mytable">
+				<if condition="$userlist">
+				<volist name="userlist" id="userlist">
+					<tr id="{lanrain:$userlist.userid}">
+						<td  >{lanrain:$userlist.name}</td>
+						<td >{lanrain:$userlist.userid}</td>
+						<td  >{lanrain:$userlist.position}</td>
+						<td >{lanrain:$userlist.mobile}</td>
+						<td  >{lanrain:$userlist.email}</td>
+						<td >
+						<if condition="$userlist['status'] eq 1">已关注</if>
+						<if condition="$userlist['status'] eq 2">已禁用</if>
+						<if condition="$userlist['status'] eq 4">未关注</if>
+						</td>
+					</tr>
+				</volist>
+				<else/>
+					<tr>
+ 						<td colspan="6"><center>             					
+				           暂无数据</center>
+						</td>				
+				    </tr>			
+                </if>					
+				</tbody>
+
+			
+			</table>
+		</div>
+	</section>
+	<!-- <footer class="footer bg-white b-t clearfix"> -->
+<div style="position:absolute;width:100%;left:0;bottom:0;background-color:#fff;">	 
+	<footer class="footer bg-white b-t">
+	
+		<div class="row text-center-xs">
+			<div class="col-md-6 hidden-sm">
+				<p class="text-muted m-t">总共0条 当前为第1页</p>
+			</div>
+			<div class="col-md-6 col-sm-12 text-right text-center-xs">
+				<ul class="pagination pagination-sm m-t-sm m-b-none" data-pages-total="0" data-page-current="1" style="display: none;"></ul>
+			</div>
+		</div>
+	</footer>
+</div>	
+</section>	
+	
+<script type="text/javascript">
+$('#mytable tr').click(function(){
+	$(this).each(function(){
+        var userId = $(this).attr('id');
+		if($('#user'+userId).length>0){
+			var curId = $('#memberInfo').children().attr('id');			
+		    if(curId == 'user'+userId){
+				if($('.entity-panel').hasClass('hd')){
+					$('.entity-panel').removeClass('hd');
+				}else{
+					$('.entity-panel').addClass('hd');
+				}			    
+			}else{
+				$('#memberInfo').empty();   
+				$('#memberInfo').load("index.php?g=Qyapp&m=Member&a=memberInfo&id="+userId+'&node={lanrain:$node.id}');
+				$('.entity-panel').removeClass('hd');
+				$('.entity-panel').css('right','0px');				    
+			}
+		}else{
+		    $('#memberInfo').empty();   
+			$('#memberInfo').load("index.php?g=Qyapp&m=Member&a=memberInfo&id="+userId+'&node={lanrain:$node.id}');
+			$('.entity-panel').removeClass('hd');
+			$('.entity-panel').css('right','0px');			    
+		}
+	});
+});	
+</script>

@@ -1,0 +1,4065 @@
+@charset "utf-8";
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td {
+	margin: 0;
+	padding: 0
+}
+
+html {
+	font-size: 62.5%;
+	*font-size: 63%
+}
+
+body {
+	font-size: 1.2em;
+	line-height: 1.5;
+	font-family: \5b8b\4f53;
+	-webkit-text-size-adjust: none;
+	color: #333;
+	font-family: "\5FAE\8F6F\96C5\9ED1","\5b8b\4f53",sans-serif;
+	overflow-y: scroll;
+	*overflow-y: visible
+}
+
+table {
+	border-collapse: collapse
+}
+
+fieldset,img {
+	border: 0
+}
+
+address,caption,cite,code,dfn,em,strong,th,var,optgroup {
+	font-style: inherit;
+	font-weight: inherit
+}
+
+del,ins {
+	text-decoration: none
+}
+
+li {
+	list-style: none
+}
+
+caption,th {
+	text-align: left
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+	font-weight: normal
+}
+
+q:before,q:after {
+	content: ''
+}
+
+abbr,acronym {
+	border: 0;
+	font-variant: normal
+}
+
+sup {
+	vertical-align: baseline
+}
+
+sub {
+	vertical-align: baseline
+}
+
+legend {
+	color: #000
+}
+
+input,button,textarea,select,optgroup,option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit
+}
+
+input,button,textarea,select {
+	font-size: inherit;
+	*font-size: 100%;
+	font-family: inherit
+}
+
+address,cite,dfn,em,code,var,caption,th {
+	font-style: normal;
+	font-weight: normal
+}
+
+section,article,aside,header,footer,nav,dialog,figure {
+	display: block
+}
+
+figure {
+	margin: 0
+}
+
+q:before,q:after {
+	content: ''
+}
+
+wbr:after {
+	content: '\00200b'
+}
+
+img {
+	*-ms-interpolation-mode: bicubic
+}
+
+a {
+	outline: none
+}
+
+.Clear {
+	clear: both
+}
+
+.clearfix {
+	display: inline-block
+}
+
+.clearfix {
+	display: block
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: "\0020";
+	clear: both;
+	height: 0
+}
+
+* html.clearfix {
+	height: 1%
+}
+
+.clearfix {
+	*zoom: 1
+}
+
+a {
+	text-decoration: none;
+	color: #005ea7
+}
+
+a:hover {
+	text-decoration: none;
+	_text-decoration: none;
+	color: #005ea7
+}
+
+.bodyer:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: "\0020";
+	clear: both;
+	height: 0
+}
+
+.bodyer {
+	*zoom: 1
+}
+
+p {
+	line-height: 20px;
+	margin: 0 0 15px
+}
+
+strong {
+	font-weight: 600
+}
+
+abbr[title],abbr[data-original-title] {
+	cursor: help;
+	border-bottom: 1px dotted #f60;
+	margin: 0 5px
+}
+
+em {
+	font-style: italic
+}
+
+.m0 {
+	margin: 0 !important
+}
+
+i.icos-info {
+	vertical-align: middle;
+	margin-right: 8px;
+	display: inline-block;
+	width: 50px;
+	height: 40px;
+	zoom: 1;
+	background: url(/Tpl/Qyapp/Public/Images/icos1.png) 0 -7px no-repeat
+}
+
+i.ico-ease {
+	display: block;
+	width: 50px;
+	height: 50px;
+	background: url(/Tpl/Qyapp/Public/Images/icos1.png) 0 -48px no-repeat
+}
+
+i.ico-fashion {
+	display: block;
+	width: 50px;
+	height: 50px;
+	background: url(/Tpl/Qyapp/Public/Images/icos1.png) 0 -150px no-repeat
+}
+
+i.ico-safety {
+	display: block;
+	width: 50px;
+	height: 50px;
+	background: url(/Tpl/Qyapp/Public/Images/icos1.png) 0 -100px no-repeat
+}
+
+i.ico-bell {
+	display: block;
+	width: 25px;
+	height: 25px;
+	background: url(/Tpl/Qyapp/Public/Images/view-icos.png) -222px -58px no-repeat
+}
+
+i.ico-manage {
+	display: block;
+	width: 25px;
+	height: 26px;
+	background: url(/Tpl/Qyapp/Public/Images/view-icos.png) -180px -58px no-repeat
+}
+
+.scrollLoadingPoint {
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	background: #007aff;
+	position: absolute
+}
+
+.scrollLoadingPoint1 {
+	display: block;
+	width: 48px;
+	height: 48px;
+	position: absolute;
+	background: url(/Tpl/Qyapp/Public/Images/map-d.png) 0 0 no-repeat
+}
+
+.point1 {
+	top: 110px;
+	left: 890px
+}
+
+.point2 {
+	top: 195px;
+	left: 800px
+}
+
+.point3 {
+	top: 265px;
+	left: 505px
+}
+
+.point4 {
+	top: 190px;
+	left: 910px
+}
+
+.point5 {
+	top: 250px;
+	left: 870px
+}
+
+.point6 {
+	top: 295px;
+	left: 765px
+}
+
+.point7 {
+	top: 325px;
+	left: 635px
+}
+
+.point8 {
+	top: 365px;
+	left: 680px
+}
+
+.point9 {
+	top: 345px;
+	left: 725px
+}
+
+.point10 {
+	top: 375px;
+	left: 835px
+}
+
+.point11 {
+	top: 365px;
+	left: 605px
+}
+
+.point12 {
+	top: 380px;
+	left: 470px
+}
+
+.point13 {
+	top: 395px;
+	left: 315px
+}
+
+.point14 {
+	top: 250px;
+	left: 315px
+}
+
+.point15 {
+	top: 530px;
+	left: 570px
+}
+
+.point16 {
+	top: 520px;
+	left: 650px
+}
+
+.point17 {
+	top: 515px;
+	left: 735px
+}
+
+.point18 {
+	top: 532px;
+	left: 785px
+}
+
+.point19 {
+	top: 410px;
+	left: 805px
+}
+
+.point20 {
+	top: 432px;
+	left: 860px
+}
+
+.point21 {
+	top: 385px;
+	left: 745px
+}
+
+.point22 {
+	top: 538px;
+	left: 865px
+}
+
+.point23 {
+	top: 575px;
+	left: 558px
+}
+
+.point24 {
+	top: 595px;
+	left: 680px
+}
+
+.point25 {
+	top: 580px;
+	left: 750px
+}
+
+.point26 {
+	top: 636px;
+	left: 648px
+}
+
+.pos-fixed {
+	width: 100%;
+	position: fixed;
+	background: #000;
+	z-index: 1000;
+	height: 60px;
+	top: -82px;
+	filter: alpha(opacity=60);
+	opacity: .6;
+	-moz-opacity: .6
+}
+
+.hd-nav-pos {
+	height: 149px;
+	position: absolute;
+	z-index: 10;
+	width: 1300px;
+	background: url(/Tpl/Qyapp/Public/Images/header-top.png) 0 0 no-repeat;
+	left: 50%;
+	margin-left: -650px;
+	top: 0
+}
+
+.hd-nav-pos .hd-box {
+	height: 60px;
+	margin-top: 15px
+}
+
+.hd-nav-pos .pos-logo {
+	float: left;
+	width: 350px;
+	height: 8px;
+	padding-top: 5px
+}
+
+.hd-nav-pos .pos-nav-box {
+	float: right;
+	width: 720px;
+	height: 80px
+}
+
+.hd-nav-pos .pos-nav-list {
+	margin-left: 30px
+}
+
+.hd-nav-pos ul.pos-nav-list li {
+	float: left;
+	display: block;
+	font-size: 16px;
+	color: #fff
+}
+
+.hd-nav-pos ul.pos-nav-list li {
+	float: left;
+	display: block
+}
+
+.hd-nav-pos ul.pos-nav-list li a.item {
+	display: block;
+	font-size: 16px;
+	color: #fff;
+	padding: 21px 18px 21px 18px
+}
+
+.hd-nav-pos ul.pos-nav-list li.active a {
+	color: #1283ff
+}
+
+.hd-nav-pos ul.pos-nav-list li.register-item {
+	padding: 14px 0 0 12px
+}
+
+.hd-nav-pos ul.pos-nav-list li.login-item {
+	padding: 14px 0 0 12px
+}
+
+#home-hd .hd-box {
+	width: 1170px;
+	min-width: 960px
+}
+
+#home-hd .hd-box .logo {
+	width: 20%;
+	min-width: 350px
+}
+
+#home-hd .hd-box .nav-box {
+	width: 60%;
+	min-width: 720px
+}
+
+.bodyer-p {
+	position: relative
+}
+
+.bodyer-p img.img_bg {
+	width: 100%;
+	min-width: 1170px
+}
+
+.bodyer-p .hd-register {
+	width: 1170px;
+	position: absolute;
+	height: 668px;
+	top: 0;
+	left: 50%;
+	margin-left: -585px
+}
+
+.bodyer-p .hd-register .register-box {
+	width: 837px;
+	height: 300px;
+	position: relative;
+	margin: auto;
+	margin-top: 257px
+}
+
+.bodyer-p .hd-register .register-box .header-opacity-box {
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	filter: alpha(opacity=60);
+	-moz-opacity: .6;
+	-khtml-opacity: .6;
+	opacity: .6;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	position: absolute;
+	z-index: 3
+}
+
+.bodyer-p .hd-register .register-box .header-show-box {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 10
+}
+
+.bodyer-p .hd-register .register-box .header-show-box .nav-search {
+	margin-left: 36px;
+	margin-top: 25px
+}
+
+.bodyer-p .hd-register .register-box .header-show-box .nav-search .searchForm-box {
+	position: relative
+}
+
+.bodyer-p .hd-register .register-box .header-show-box .nav-search .searchForm-box .hit-info {
+	position: absolute;
+	right: 220px;
+	top: 22px;
+	color: #f00;
+	font-size: 18px;
+	display: none
+}
+
+.bodyer-p .hd-register .register-box .header-show-box p {
+	color: #fff;
+	text-align: center
+}
+
+.bodyer-p .hd-register .register-box .header-show-box p.big-font {
+	font-size: 56px;
+	margin-top: 70px
+}
+
+.bodyer-p .hd-register .register-box .header-show-box p.small-font {
+	font-size: 26px;
+	margin-top: 40px
+}
+
+.homebody-container {
+	padding: 18px 0
+}
+
+.homebody-container .container-info {
+	text-align: center
+}
+
+.homebody-container .container-info p {
+	line-height: 50px;
+	height: 50px;
+	margin: 0;
+	font-size: 20px;
+	color: #000
+}
+
+.homebody-container .container-info p a {
+	color: #000;
+	cursor: pointer
+}
+
+.homebody-container .container-info p a:hover {
+	color: #007aff
+}
+
+.homebody-container .container-list {
+	margin-top: 40px
+}
+
+.homebody-container .container-list .list-box {
+	float: left;
+	border: 1px solid #007aff;
+	margin-left: 15px;
+	width: 378px;
+	height: 126px;
+	padding: 38px 0;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px
+}
+
+.homebody-container .container-list .list-box-first {
+	margin-left: 0
+}
+
+.homebody-container .container-list ul {
+	height: 100%
+}
+
+.homebody-container .container-list .list-box-left {
+	float: left;
+	width: 122px;
+	height: 100%;
+	border-right: 1px solid #007aff;
+	text-align: center;
+	padding-top: 14px
+}
+
+.homebody-container .container-list .list-box-left i.ico {
+	margin: 0 0 22px 38px
+}
+
+.homebody-container .container-list .list-box-left span {
+	font-weight: 600;
+	font-size: 20px;
+	color: #000
+}
+
+.homebody-container .container-list .list-box-right {
+	float: right;
+	width: 244px;
+	height: 100%;
+	color: #464646;
+	font-size: 16px;
+	padding-left: 10px
+}
+
+.bodyer-content-box .bodyer-computer-view {
+	width: 100%;
+	height: 610px;
+	background: url(/Tpl/Qyapp/Public/Images/dn.png) 0 0 no-repeat #fff;
+	margin-top: 60px;
+	padding-top: 33px;
+	position: relative
+}
+
+.bodyer-content-box .bodyer-computer-view .view-box {
+	height: 545px;
+	width: 810px;
+	border: 0 solid #666;
+	margin: 0 0 0 126px
+}
+
+.bodyer-content-box .bodyer-computer-view .view-box .view-body {
+	position: relative;
+	overflow: hidden
+}
+
+.bodyer-content-box .bodyer-computer-view .view-body .slide-right {
+	position: absolute;
+	width: 270px;
+	height: 495px;
+	right: -270px;
+	z-index: 900;
+	top: 0
+}
+
+.bodyer-content-box .bodyer-computer-view .view-box .view-header {
+	height: 50px;
+	background: #2e3e4e
+}
+
+.bodyer-content-box .bodyer-computer-view .view-header .view-header-left {
+	float: left;
+	width: 180px;
+	margin: 16px 0 0 20px
+}
+
+.bodyer-content-box .bodyer-computer-view .view-header .view-header-right {
+	float: right;
+	width: 250px
+}
+
+.bodyer-content-box .bodyer-computer-view .view-header li.view-dropdown-toggle {
+	float: left;
+	position: relative
+}
+
+.bodyer-content-box .bodyer-computer-view .view-header li.open {
+	background: #25313e
+}
+
+.bodyer-content-box .bodyer-computer-view .view-header li.view-dropdown-toggle a.view-header-message {
+	display: block;
+	padding: 12px 12px 13px 12px;
+	color: #adbece
+}
+
+.bodyer-content-box .bodyer-computer-view .view-header li.view-dropdown-toggle a.view-header-manage {
+	padding: 12px
+}
+
+.bodyer-content-box .bodyer-computer-view .view-header li.view-dropdown-toggle a.header-admin {
+	background: url(/Tpl/Qyapp/Public/Images/view-icos.png) -258px -45px no-repeat;
+	padding-left: 35px;
+	padding-top: 19px
+}
+
+.bodyer-content-box .bodyer-computer-view .view-header li.view-dropdown-toggle a.header-admin:hover {
+	background: url(/Tpl/Qyapp/Public/Images/view-icos.png) -258px -1px no-repeat;
+	color: #fff
+}
+
+.bodyer-content-box .bodyer-computer-view a.view-header-message:hover {
+	color: #fff
+}
+
+.bodyer-content-box .bodyer-computer-view a.view-header-message:hover i.ico-bell {
+	background: url(/Tpl/Qyapp/Public/Images/view-icos.png) -222px -14px no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view a.view-header-message:hover i.ico-manage {
+	background: url(/Tpl/Qyapp/Public/Images/view-icos.png) -180px -14px no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .view-header .view-header-nav .dropdown-menu {
+	display: none;
+	position: absolute;
+	z-index: 100;
+	width: 120px;
+	background: #fff;
+	box-shadow: 1px 3px 10px #ccc;
+	-webkit-box-shadow: 1px 3px 10px #ccc;
+	-moz-box-shadow: 1px 3px 10px #ccc
+}
+
+.bodyer-content-box .bodyer-computer-view .view-header .view-header-nav .open .dropdown-menu {
+	display: block
+}
+
+.bodyer-content-box .bodyer-computer-view ul.message-inform {
+	width: 180px;
+	height: 149px
+}
+
+.bodyer-content-box .bodyer-computer-view ul.message-inform li {
+	width: 185px;
+	overflow: hidden
+}
+
+.bodyer-content-box .bodyer-computer-view ul.message-inform li a {
+	padding: 0
+}
+
+.bodyer-content-box .bodyer-computer-view ul.message-inform li a img {
+	width: 185px;
+	margin-top: -8px
+}
+
+.bodyer-content-box .bodyer-computer-view .dropdown-menu li span.view-header-ioc {
+	margin-left: 10px;
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+	background: url(/Tpl/Qyapp/Public/Images/view-icos.png) -64px -101px no-repeat;
+	vertical-align: middle
+}
+
+.bodyer-content-box .bodyer-computer-view .dropdown-menu li span.view-header-ioc1 {
+	background: url(/Tpl/Qyapp/Public/Images/view-icos.png) -93px -101px no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .dropdown-menu li span.view-header-ioc2 {
+	background: url(/Tpl/Qyapp/Public/Images/view-icos.png) -121px -101px no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .dropdown-menu li span.view-header-ioc3 {
+	background: url(/Tpl/Qyapp/Public/Images/view-icos.png) -152px -101px no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .dropdown-menu li a {
+	color: #000;
+	display: inline-block;
+	padding: 10px
+}
+
+.bodyer-content-box .bodyer-computer-view .dropdown-menu li:hover {
+	background: #ececec
+}
+
+.bodyer-content-box .bodyer-computer-view .view-box .box-left {
+	width: 103px;
+	float: left;
+	background: #233445;
+	height: 495px
+}
+
+.bodyer-content-box .bodyer-computer-view .view-box .box-right {
+	width: 707px;
+	background: #ececec;
+	height: 495px;
+	float: left;
+	position: relative
+}
+
+.bodyer-content-box .bodyer-computer-view .view-nav .active {
+	background: #25313e;
+	border-bottom: 1px solid rgba(0,0,0,0.05) !important
+}
+
+.bodyer-content-box .bodyer-computer-view .view-nav a {
+	display: block;
+	padding: 15px 15px 15px 14px;
+	text-align: center;
+	color: #adbece
+}
+
+.bodyer-content-box .bodyer-computer-view .view-nav .active a {
+	border-left: 1px solid #13c4a5;
+	color: #fff
+}
+
+.bodyer-content-box .bodyer-computer-view .view-nav i.ico {
+	display: block;
+	width: 36px;
+	height: 36px;
+	background: url(/Tpl/Qyapp/Public/Images/view-icos.png) -8px -54px no-repeat;
+	margin: auto
+}
+
+.bodyer-content-box .bodyer-computer-view .view-nav i.my-app {
+	background: url(/Tpl/Qyapp/Public/Images/view-icos.png) -8px -54px no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .view-nav i.my-address {
+	background: url(/Tpl/Qyapp/Public/Images/view-icos.png) -54px -54px no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .view-nav i.my-structure {
+	background: url(/Tpl/Qyapp/Public/Images/view-icos.png) -92px -54px no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .view-nav i.my-message {
+	background: url(/Tpl/Qyapp/Public/Images/view-icos.png) -132px -54px no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .view-nav .active a i.my-app {
+	background: url(/Tpl/Qyapp/Public/Images/view-icos.png) -8px -9px no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .view-nav .active a i.my-address {
+	background: url(/Tpl/Qyapp/Public/Images/view-icos.png) -54px -9px no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .view-nav .active a i.my-structure {
+	background: url(/Tpl/Qyapp/Public/Images/view-icos.png) -92px -9px no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .view-nav .active a i.my-message {
+	background: url(/Tpl/Qyapp/Public/Images/view-icos.png) -132px -9px no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .view-nav span {
+	display: block;
+	font-size: 14px
+}
+
+.bodyer-content-box .bodyer-computer-view .box-right .template-box {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+	background: #fff
+}
+
+.bodyer-content-box .bodyer-computer-view .template-box .template-head {
+	height: 39px;
+	border-bottom: 1px solid #cfcfcf;
+	line-height: 39px;
+	background: #fff
+}
+
+.bodyer-content-box .bodyer-computer-view .template-head strong {
+	font-weight: bold;
+	font-size: 14px;
+	padding-left: 15px;
+	margin-right: 5px
+}
+
+.bodyer-content-box .bodyer-computer-view .view-select {
+	overflow: hidden;
+	height: 455px
+}
+
+.bodyer-content-box .bodyer-computer-view .view-select li {
+	float: left;
+	text-align: left;
+	margin: 14px 15px 0 22px;
+	color: #fff;
+	cursor: pointer;
+	text-align: center
+}
+
+.bodyer-content-box .bodyer-computer-view .view-select li a.detail-top {
+	margin-bottom: 8px;
+	display: block;
+	width: 100px;
+	height: 100px;
+	background: url(/Tpl/Qyapp/Public/Images/myapp-icos.png) -1155px 0 no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .view-select li a.detail-ico1 {
+	background: url(/Tpl/Qyapp/Public/Images/myapp-icos.png) 0 0 no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .view-select li a.detail-ico2 {
+	background: url(/Tpl/Qyapp/Public/Images/myapp-icos.png) -420px 0 no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .view-select li a.detail-ico3 {
+	background: url(/Tpl/Qyapp/Public/Images/myapp-icos.png) 100% 0 no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .view-select li a.detail-ico4 {
+	background: url(/Tpl/Qyapp/Public/Images/myapp-icos.png) -630px 0 no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .view-select li a.detail-ico5 {
+	background: url(/Tpl/Qyapp/Public/Images/myapp-icos.png) -524px 0 no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .view-select li a.detail-ico6 {
+	background: url(/Tpl/Qyapp/Public/Images/myapp-icos.png) -105px 0 no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .view-select li a.detail-ico7 {
+	background: url(/Tpl/Qyapp/Public/Images/myapp-icos.png) -315px 0 no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .view-select li a.detail-ico8 {
+	background: url(/Tpl/Qyapp/Public/Images/myapp-icos.png) -945px 0 no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .view-select li a.detail-ico9 {
+	background: url(/Tpl/Qyapp/Public/Images/myapp-icos.png) -210px 0 no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .view-select li a.detail-ico10 {
+	background: url(/Tpl/Qyapp/Public/Images/myapp-icos.png) -1050px 0 no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .view-select li a.detail-ico11 {
+	background: url(/Tpl/Qyapp/Public/Images/myapp-icos.png) -735px 0 no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .view-select li a.detail-ico12 {
+	background: url(/Tpl/Qyapp/Public/Images/myapp-icos.png) -840px 0 no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .view-select a.detail-bottom {
+	display: block;
+	color: #000;
+	font-family: "微软雅黑";
+	font-size: 14px
+}
+
+.bodyer-content-box .bodyer-computer-view .view-select a.detail-bottom .ico-detail {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	float: right;
+	background: url(/Tpl/Qyapp/Public/Images/view-icos.png) -39px -102px no-repeat
+}
+
+.bodyer-content-box .bodyer-computer-view .detail-val {
+	color: #000;
+	font-size: 14px;
+	font-family: "微软雅黑"
+}
+
+.bodyer-content-box .bodyer-computer-view .box-right .visibility {
+	z-index: 3
+}
+
+.bodyer-content-box .bodyer-computer-view .template-box .content-box {
+	width: 100%;
+	height: 100%
+}
+
+.bodyer-content-box .bodyer-computer-view .template-box .view-img {
+	width: 707px;
+	height: 495px;
+	overflow: hidden
+}
+
+.bodyer-content-box .bodyer-computer-view .content-box .content-left {
+	float: left;
+	width: 126px;
+	border-right: 1px solid #cfcfcf;
+	border-bottom: 1px solid #cfcfcf;
+	background: #fff;
+	height: 495px
+}
+
+.bodyer-content-box .bodyer-computer-view .content-box .content-right {
+	float: right;
+	width: 580px;
+	height: 495px;
+	background: #ececec
+}
+
+.bodyer-content-box .bodyer-computer-view .content-box .content-right .loading-img {
+	width: 100%;
+	height: 100%
+}
+
+.bodyer-content-box .bodyer-computer-view .box-right .content-header {
+	padding: 9px 15px 9px 15px;
+	font-size: 14px
+}
+
+.bodyer-content-box .bodyer-computer-view .box-right .content-nav li {
+	display: block;
+	position: relative;
+	border-top: 1px solid #e4e4e4
+}
+
+.bodyer-content-box .bodyer-computer-view .box-right .content-nav li.last {
+	border-bottom: 1px solid #e4e4e4
+}
+
+.bodyer-content-box .bodyer-computer-view .box-right .content-nav a {
+	display: block;
+	padding: 10px 15px;
+	color: #2e3e4e
+}
+
+.bodyer-content-box .bodyer-computer-view .box-right .content-nav li:hover {
+	background: #cfcfcf
+}
+
+.bodyer-content-box .bodyer-computer-view .box-right .content-nav li.open {
+	background: #cfcfcf
+}
+
+.bodyer-content-box .bodyer-computer-view .box-right .content-nav i.pull-right {
+	display: inline-block;
+	width: 8px;
+	height: 12px;
+	background: url(/Tpl/Qyapp/Public/Images/view-icos.png) -22px -108px no-repeat;
+	float: right;
+	margin-top: 4px
+}
+
+@-webkit-keyframes view-scaleDown {
+	to {
+		opacity: 0;
+		-webkit-transform: scale(.6)
+	}
+}
+
+@-moz-keyframes view-scaleDown {
+	to {
+		opacity: 0;
+		-moz-transform: scale(.6)
+	}
+}
+
+@keyframes view-scaleDown {
+	to {
+		opacity: 0;
+		transform: scale(.6)
+	}
+}
+
+.bodyer-content-box .bodyer-computer-view .view-scaleDown {
+	-webkit-animation: view-scaleDown .8s ease both;
+	-webkit-animation-name: view-scaleDown;
+	-webkit-animation-duration: .8s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-delay: initial;
+	-webkit-animation-iteration-count: initial;
+	-webkit-animation-direction: normal;
+	-webkit-animation-fill-mode: both;
+	-moz-animation: view-scaleDown .8s ease both;
+	animation: view-scaleDown .8s ease both
+}
+
+.bodyer-content-box .view-phone {
+	width: 196px;
+	height: 348px;
+	position: absolute;
+	right: 14px;
+	top: 165px;
+	background: #ececec
+}
+
+.bodyer-content-box .view-phone .phone-img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0
+}
+
+.bodyer-content-box .view-phone img {
+	max-width: 196px;
+	max-height: 348px
+}
+
+.bodyer-content-box .said-box {
+	font-size: 44px;
+	color: #000;
+	text-align: center;
+	padding: 60px 0 36px 0;
+	border-bottom: 1px solid #cacaca
+}
+
+.bodyer-content-box .bodyer-focusBox {
+	position: relative;
+	width: 1170px;
+	height: 630px;
+	margin-bottom: 10px;
+	font-family: Arial;
+	text-align: left;
+	background: #fff;
+	overflow: hidden;
+	padding-top: 30px
+}
+
+.bodyer-content-box .bodyer-focusBox li {
+	height: 615px
+}
+
+.bodyer-content-box .bodyer-focusBox .num {
+	position: absolute;
+	right: 560px;
+	bottom: 30px
+}
+
+.bodyer-content-box .bodyer-focusBox .num li {
+	float: left;
+	position: relative;
+	width: 20px;
+	height: 20px;
+	overflow: hidden;
+	text-align: center;
+	margin-right: 1px;
+	cursor: pointer;
+	background: url(/Tpl/Qyapp/Public/Images/icos1.png) -51px -22px no-repeat
+}
+
+.bodyer-content-box .bodyer-focusBox .num li.on {
+	background: url(/Tpl/Qyapp/Public/Images/icos1.png) -51px 0 no-repeat
+}
+
+.bodyer-content-box .bodyer-focusBox .focusBox-content {
+	float: left;
+	width: 45%;
+	text-align: center;
+	padding-top: 15px;
+	height: 260px
+}
+
+.bodyer-content-box .bodyer-focusBox .focusBox-content a {
+	color: #585858;
+	font-size: 20px;
+	display: inline-block;
+	margin-bottom: 15px
+}
+
+.bodyer-content-box .bodyer-focusBox .focusBox-content a:hover {
+	color: #007aff
+}
+
+.bodyer-content-box .bodyer-focusBox .focusBox-content h2.no-hover {
+	color: #585858;
+	font-size: 20px;
+	margin-bottom: 15px
+}
+
+.bodyer-content-box .bodyer-focusBox .focusBox-content span.focusBox-title {
+	display: inline-block;
+	width: 104px;
+	height: 104px;
+	background: url(/Tpl/Qyapp/Public/Images/span-ico.jpg) 0 0 no-repeat;
+	margin-bottom: 15px
+}
+
+.bodyer-content-box .bodyer-focusBox .focusBox-content p {
+	color: #585858;
+	font-size: 16px;
+	text-align: left;
+	line-height: 26px;
+	font-family: "微软雅黑"
+}
+
+.bodyer-content-box .bodyer-focusBox .focusBox-content span.span-ico1 {
+	background: url(/Tpl/Qyapp/Public/Images/span-ico.jpg) 0 0 no-repeat
+}
+
+.bodyer-content-box .bodyer-focusBox .focusBox-content span.span-ico2 {
+	background: url(/Tpl/Qyapp/Public/Images/span-ico.jpg) 0 -106px no-repeat
+}
+
+.bodyer-content-box .bodyer-focusBox .focusBox-content span.span-ico3 {
+	background: url(/Tpl/Qyapp/Public/Images/span-ico.jpg) 0 -210px no-repeat
+}
+
+.bodyer-content-box .bodyer-focusBox .focusBox-content span.span-ico4 {
+	background: url(/Tpl/Qyapp/Public/Images/span-ico.jpg) 0 -315px no-repeat
+}
+
+.bodyer-content-box .bodyer-focusBox .focusBox-content span.span-ico5 {
+	background: url(/Tpl/Qyapp/Public/Images/span-ico.jpg) -111px 0 no-repeat
+}
+
+.bodyer-content-box .bodyer-focusBox .focusBox-content span.span-ico6 {
+	background: url(/Tpl/Qyapp/Public/Images/span-ico.jpg) -111px -106px no-repeat
+}
+
+.bodyer-content-box .bodyer-focusBox .focusBox-content span.span-ico7 {
+	background: url(/Tpl/Qyapp/Public/Images/span-ico.jpg) -111px -210px no-repeat
+}
+
+.bodyer-content-box .bodyer-focusBox .focusBox-content span.span-ico8 {
+	background: url(/Tpl/Qyapp/Public/Images/span-ico.jpg) -111px -315px no-repeat
+}
+
+.bodyer-content-box .bodyer-focusBox .content-right {
+	float: right
+}
+
+.bodyer-content-box .bodyer-map {
+	height: 720px;
+	background: url(/Tpl/Qyapp/Public/Images/map.jpg) 0 0 no-repeat;
+	position: relative
+}
+
+.bodyer-content-box .bodyer-map .nav-search {
+	bottom: 222px;
+	left: 207px
+}
+
+.bodyer-content-box .bodyer-map .nav-search .searchForm-box {
+	position: relative
+}
+
+.bodyer-content-box .bodyer-map .nav-search .hit-info {
+	position: absolute;
+	right: 220px;
+	top: 22px;
+	color: #f00;
+	font-size: 18px;
+	display: none
+}
+
+.bodyer-content-box .brands ul {
+	padding-top: 20px
+}
+
+.bodyer-content-box .brands ul li {
+	text-align: center;
+	float: left;
+	height: 70px;
+	width: 120px;
+	margin-right: 30px;
+	margin-bottom: 20px
+}
+
+.bodyer-content-box .brands ul li img {
+	border: 0
+}
+
+.bodyer-content-box .brands ul .last {
+	margin-right: 0
+}
+
+.nav-search {
+	float: left;
+	width: 760px;
+	height: 66px;
+	border: solid 1px #007aff;
+	overflow: hidden;
+	border-radius: 5px;
+	position: absolute;
+	z-index: 100;
+	margin-top: 200px;
+	margin-left: 5%;
+}
+
+.nav-search .searchForm-box {
+	position: relative
+}
+
+.nav-search .hit-info {
+	position: absolute;
+	right: 220px;
+	top: 22px;
+	color: #f00;
+	font-size: 18px;
+	display: none
+}
+
+.nav-search .searchForm-box {
+	position: relative
+}
+
+.nav-search button.btn {
+	font-size: 20px;
+	color: #fff;
+	border: 0;
+	display: inline-block;
+	float: right;
+	width: 200px;
+	height: 70px;
+	cursor: pointer;
+	zoom: 1;
+	background: #007aff
+}
+
+.nav-search input.search-inp {
+	float: left;
+	height: 54px;
+	line-height: 54px;
+	padding: 6px 10px;
+	width: 540px;
+	border: 0;
+	color: #999;
+	font-size: 18px;
+	outline: none
+}
+
+.home-top-form {
+	border: 0
+}
+
+@-webkit-keyframes exploding-stroke {
+	0% {
+		-webkit-transform: scale(0);
+		opacity: 1
+	}
+
+	100% {
+		-webkit-transform: scale(1.5);
+		opacity: 0
+	}
+}
+
+@-moz-keyframes exploding-stroke {
+	0% {
+		-moz-transform: scale(0);
+		opacity: 1
+	}
+
+	100% {
+		-moz-transform: scale(2);
+		opacity: 0
+	}
+}
+
+@keyframes exploding-stroke {
+	0% {
+		transform: scale(0);
+		opacity: 1
+	}
+
+	100% {
+		transform: scale(2);
+		opacity: 0
+	}
+}
+
+.ct-point {
+	-webkit-animation: exploding-stroke 1.5s ease-out infinite;
+	-moz-animation: exploding-stroke 1.5s ease-out infinite;
+	-o-animation: exploding-stroke 1.5s ease-out infinite;
+	animation: exploding-stroke 1.5s ease-out infinite
+}
+
+@-moz-keyframes pulse {
+	0% {
+		transform: scale(1)
+	}
+
+	25% {
+		transform: scale(1.1);
+		opacity: .9
+	}
+
+	50% {
+		transform: scale(1);
+		opacity: 1
+	}
+
+	75% {
+		transform: scale(1.1);
+		opacity: .9
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1
+	}
+}
+
+@-webkit-keyframes pulse {
+	0% {
+		-webkit-transform: scale(1)
+	}
+
+	25% {
+		transform: scale(1.1);
+		opacity: .9
+	}
+
+	50% {
+		transform: scale(1);
+		opacity: 1
+	}
+
+	75% {
+		transform: scale(1.1);
+		opacity: .9
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1
+	}
+}
+
+@-o-keyframes pulse {
+	0% {
+		-o-transform: scale(1)
+	}
+
+	25% {
+		transform: scale(1.1);
+		opacity: .9
+	}
+
+	50% {
+		transform: scale(1);
+		opacity: 1
+	}
+
+	75% {
+		transform: scale(1.1);
+		opacity: .9
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1
+	}
+}
+
+@-ms-keyframes pulse {
+	0% {
+		-ms-transform: scale(1)
+	}
+
+	25% {
+		transform: scale(1.1);
+		opacity: .9
+	}
+
+	50% {
+		transform: scale(1);
+		opacity: 1
+	}
+
+	75% {
+		transform: scale(1.1);
+		opacity: .9
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1
+	}
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1)
+	}
+
+	25% {
+		transform: scale(1.1);
+		opacity: .9
+	}
+
+	50% {
+		transform: scale(1);
+		opacity: 1
+	}
+
+	75% {
+		transform: scale(1.1);
+		opacity: .9
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1
+	}
+}
+
+.finger-box {
+	position: absolute;
+	top: 85px;
+	left: 145px;
+	width: 60px;
+	height: 60px;
+	z-index: 1;
+	cursor: pointer
+}
+
+.finger-box .finger-ico {
+	width: 56px;
+	height: 56px;
+	position: absolute;
+	top: 16px;
+	left: 16px;
+	background: url(/Tpl/Qyapp/Public/Images/view-icos.png) -232px -90px no-repeat
+}
+
+.finger-point {
+	-webkit-animation: pulse 3.5s ease-in-out infinite;
+	-moz-animation: pulse 3.5s ease-in-out infinite;
+	-o-animation: pulse 3.5s ease-in-out infinite;
+	animation: pulse 3.5s ease-in-out infinite;
+	background: url(/Tpl/Qyapp/Public/Images/view-icos.png) -178px -90px no-repeat;
+	width: 60px;
+	height: 60px
+}
+
+input[type="checkbox"] {
+	vertical-align: middle;
+	margin-right: 4px
+}
+
+.w1170 {
+	width: 1170px;
+	margin: 0 auto
+}
+
+.mb15 {
+	margin-bottom: 15px
+}
+
+.mb25 {
+	margin-bottom: 25px
+}
+
+.mb35 {
+	margin-bottom: 35px
+}
+
+.mt10 {
+	margin-top: 10px
+}
+
+.mt20 {
+	margin-top: 20px
+}
+
+.mt30 {
+	margin-top: 30px
+}
+
+.mb30 {
+	margin-bottom: 30px
+}
+
+.bottom-dashed {
+	border-bottom: 1px dashed #ccc
+}
+
+.fl {
+	float: left
+}
+
+.fr {
+	float: right
+}
+
+.header {
+	background-color: #fff;
+	height: 80px;
+	padding: 0 0 5px 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	-webkit-transform: translateZ(0);
+	-moz-box-shadow: 0 1px 3px #ccc;
+	-webkit-box-shadow: 0 1px 3px #ccc;
+	box-shadow: 0 1px 3px #ccc
+}
+
+.header .nav-list li.active {
+	border-bottom: 2px solid #007aff
+}
+
+.header .nav-list li.active a {
+	color: #1283ff
+}
+
+.bodyer {
+	margin-top: 85px;
+	min-height: 500px
+}
+
+.bodyer .help_detail {
+	width: 960px;
+	margin: 0 auto
+}
+
+.bodyer .help_detail ul {
+	display: none;
+	position: fixed;
+	top: 200px;
+	right: 15px
+}
+
+.bodyer .help_detail h3 {
+	margin-bottom: 500px
+}
+
+#home-bodyer {
+	min-width: 1300px
+}
+
+.banner_box {
+	min-width: 1170px;
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	width: 100%
+}
+
+.banner_box img {
+	display: block
+}
+
+.banner_box .login_box {
+	font-size: 18px;
+	background: url(/Tpl/Qyapp/Public/Images/login_bg.png) no-repeat;
+	position: absolute;
+	top: -15px;
+	left: 50%;
+	height: 420px;
+	width: 350px;
+	padding: 221px 42px 0 42px;
+	margin-left: -217px
+}
+
+.banner_box .login_box img {
+	margin: 0 0 25px 35px
+}
+
+.banner_box .login_box .form-hint {
+	height: 30px;
+	width: 100%
+}
+
+.banner_box .login_box .form-hint .hint-box {
+	padding-left: 30px;
+	font-size: 16px;
+	color: #f00;
+	display: none;
+	background: url(/Tpl/Qyapp/Public/Images/reject.png) left no-repeat
+}
+
+.banner_box .login_box .bor_bot {
+	border-bottom: 2px solid #cecece
+}
+
+.banner_box .login_box .bor_bot span.login-ico {
+	filter: alpha(opacity=40);
+	opacity: .4;
+	-moz-opacity: .4;
+	vertical-align: middle;
+	display: inline-block;
+	width: 27px;
+	height: 22px;
+	background: url(/Tpl/Qyapp/Public/Images/register-icon.png) 0 -187px no-repeat
+}
+
+.banner_box .login_box .bor_bot span.login-opacity {
+	filter: alpha(opacity=100);
+	opacity: 1;
+	-moz-opacity: 1
+}
+
+.banner_box .login_box .bor_bot span.ico2 {
+	background: url(/Tpl/Qyapp/Public/Images/register-icon.png) 0 -222px no-repeat
+}
+
+.banner_box .login_box .bor_bot input {
+	padding-left: 5px;
+	outline: none
+}
+
+.banner_box .login_box p {
+	margin-bottom: 0;
+	padding: 15px 5px;
+	width: 340px
+}
+
+.banner_box .login_box p .email {
+	background-position: 0 -188px
+}
+
+.banner_box .login_box p .pwd {
+	background-position: 0 -223px
+}
+
+.banner_box .login_box input {
+	border: 0
+}
+
+.banner_box .login_box .rem {
+	font-size: 16px;
+	color: #999
+}
+
+.banner_box .login_box .rem a {
+	color: #1283ff;
+	text-decoration: underline
+}
+
+.banner_box .login_box .rem .a1 {
+	margin-left: 105px
+}
+
+.banner_box .login_box .rem .a2 {
+	margin-left: 10px
+}
+
+.banner_box .login_box .sub {
+	width: 350px
+}
+
+.sub {
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	background: #1283ff;
+	width: 403px;
+	height: 50px;
+	border: 0;
+	color: #fff;
+	cursor: pointer
+}
+
+.bg_grey {
+	background: url(/Tpl/Qyapp/Public/Images/bg.jpg) repeat;
+	width: 100%;
+	min-height: 530px;
+	padding-bottom: 50px;
+	overflow: hidden
+}
+
+.bg_grey .main {
+	width: 760px;
+	margin: 0 auto
+}
+
+.bg_grey .main .center {
+	text-align: center
+}
+
+.bg_grey .main .center h1 {
+	font-size: 28px;
+	font-weight: normal;
+	line-height: 2;
+	padding-top: 28px
+}
+
+.bg_grey .main .center p {
+	font-size: 18px;
+	margin-bottom: 30px
+}
+
+.bg_grey .main .center p span {
+	color: #007aff
+}
+
+.bg_grey .main .center .p1 {
+	font-size: 16px;
+	padding: 0 0 20px 0;
+	margin-bottom: 20px
+}
+
+.bg_grey .main .center .p2 {
+	font-size: 16px;
+	position: relative;
+	padding: 25px 0;
+	color: #999
+}
+
+.bg_grey .main .center .p2 a {
+	color: #999
+}
+
+.bg_grey .main .center .p2 a:hover {
+	color: #1283ff;
+	text-decoration: underline
+}
+
+.bg_grey .main .center .p3 {
+	font-size: 20px;
+	line-height: 40px;
+	margin-bottom: 32px
+}
+
+.bg_grey .main .center .p3 img {
+	vertical-align: middle;
+	margin-right: 17px
+}
+
+.bg_grey .main .center .p3 span {
+	color: #000
+}
+
+.bg_grey .main .forms {
+	font-size: 16px;
+	color: #666;
+	background-color: #fff;
+	overflow: hidden;
+	-moz-box-shadow: 0 0 3px #ccc;
+	-webkit-box-shadow: 0 0 3px #ccc;
+	box-shadow: 0 0 3px #ccc;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px
+}
+
+.bg_grey .main .forms p {
+	margin: 0
+}
+
+.bg_grey .main .forms .form1 {
+	padding: 35px 39px 53px 37px
+}
+
+.bg_grey .main .forms .form1 td {
+	position: relative
+}
+
+.bg_grey .main .forms .form1 #city_a {
+	margin-top: -20px
+}
+
+.bg_grey .main .forms .form1 #city_a select {
+	height: 45px;
+	border: 1px solid #ccc;
+	outline: none;
+	width: 150px
+}
+
+.bg_grey .main .forms .form1 label.error {
+	background: url(/Tpl/Qyapp/Public/Images/reject.png) right no-repeat;
+	padding-right: 50px;
+	position: absolute;
+	top: 10px;
+	right: 50px;
+	color: #f00;
+	height: 24px;
+	min-width: 80px
+}
+
+.bg_grey .main .forms .form1 .p2 label.error {
+	top: 25px
+}
+
+.bg_grey .main .forms .form1 label.success {
+	background: url(/Tpl/Qyapp/Public/Images/pass.png) right no-repeat;
+	padding: 0;
+	width: 22px;
+	min-width: 22px;
+	text-indent: -999px
+}
+
+.bg_grey .main .forms .form1 div.code label.success {
+	background: none
+}
+
+.bg_grey .main .forms .form1 div.form_add label.error {
+	width: 22px;
+	min-width: 22px;
+	padding: 0
+}
+
+.bg_grey .main .forms .form1 div.select-business label.error {
+	width: 22px;
+	min-width: 22px;
+	padding: 0
+}
+
+.bg_grey .main .forms .form1 .labels {
+	display: inline-block;
+	text-align: right;
+	width: 80px;
+	padding-left: 38px;
+	line-height: 47px
+}
+
+.bg_grey .main .forms .form1 .inputs {
+	width: 426px;
+	height: 25px;
+	line-height: 25px;
+	border: 1px solid #ccc;
+	padding: 10px 20px 10px 10px;
+	outline: none
+}
+
+.bg_grey .main .forms .form1 select.inputs {
+	width: 458px;
+	height: 45px
+}
+
+.bg_grey .main .forms .form1 input.valid {
+	border: 2px solid #9f9f9f
+}
+
+.bg_grey .main .forms .form1 input.error {
+	border: 2px solid #ff1818
+}
+
+.bg_grey .main .forms .form1 .code .inputs {
+	width: 198px;
+	float: left
+}
+
+.bg_grey .main .forms .form1 .code img {
+	float: left;
+	margin-left: 4px;
+	height: 47px;
+	width: 110px
+}
+
+.bg_grey .result {
+	width: 1170px;
+	margin: 0 auto;
+	overflow: hidden;
+	color: #666;
+	position: relative
+}
+
+.bg_grey .result .form-hint {
+	height: 30px;
+	width: 100%;
+	position: absolute;
+	top: 205px;
+	left: 220px
+}
+
+.bg_grey .result .form-hint .hint-box {
+	padding-left: 30px;
+	display: none;
+	font-size: 16px;
+	color: #f00;
+	background: url(/Tpl/Qyapp/Public/Images/reject.png) left no-repeat
+}
+
+.bg_grey .result .wating-box {
+	position: absolute;
+	width: 65px;
+	height: 28px;
+	top: 111px;
+	right: 205px;
+	display: none
+}
+
+.bg_grey .result .reg_success {
+	padding: 62px 0 50px 70px
+}
+
+.bg_grey .result .reg_success h1 {
+	background: url(/Tpl/Qyapp/Public/Images/register-icon.png) 0 -111px no-repeat;
+	padding-left: 82px;
+	color: #4ab293;
+	font-size: 32px;
+	height: 62px;
+	line-height: 57px;
+	position: relative
+}
+
+.bg_grey .result .reg_success h1 span {
+	position: absolute;
+	top: -1px;
+	left: 240px;
+	color: #000;
+	font-size: 30px
+}
+
+.bg_grey .result h2 {
+	font-size: 18px
+}
+
+.bg_grey .result .no_email {
+	padding: 42px 78px 30px 70px;
+	border-top: 1px dashed #cdcdce
+}
+
+.bg_grey .result .no_email p {
+	font-size: 14px;
+	line-height: 24px;
+	margin-bottom: 10px
+}
+
+.bg_grey .result .forget_pwd {
+	background: url(/Tpl/Qyapp/Public/Images/register-icon.png) 0 13px no-repeat;
+	padding-left: 130px;
+	margin: 90px 0 80px 90px;
+	font-size: 18px
+}
+
+.bg_grey .result .forget_pwd form {
+	background: #fff;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	border: 2px solid #4ab293;
+	width: 747px;
+	height: 65px;
+	overflow: hidden
+}
+
+.bg_grey .result .forget_pwd form .input1 {
+	border: 0;
+	htight: 25px;
+	line-height: 25px;
+	width: 485px;
+	margin: 20px 25px;
+	color: #666;
+	outline: none
+}
+
+.bg_grey .result .forget_pwd form .input2 {
+	border: 0;
+	padding: 0;
+	height: 65px;
+	line-height: 65px;
+	wdith: 100px;
+	background-color: #4ab293;
+	width: 212px;
+	color: #fff;
+	cursor: pointer
+}
+
+.bg_grey .result .forget_pwd form .disabled-input {
+	color: #000;
+	background-color: #ccc
+}
+
+.bg_grey .result .forget_pwd form .lab-tip {
+	margin: 18px 0 0 10px
+}
+
+.bg_grey .result .forget_pwd p {
+	margin: 20px 0 0 0
+}
+
+.bg_grey .result a {
+	color: #1283ff;
+	text-decoration: underline
+}
+
+.bg_grey .products {
+	background-color: #fff;
+	-moz-box-shadow: 0 0 10px #ccc;
+	-webkit-box-shadow: 0 0 10px #ccc;
+	box-shadow: 0 0 10px #ccc;
+	width: 1170px;
+	height: 1000px;
+	margin: 10px auto;
+	overflow: hidden
+}
+
+.bg_grey .products .fixed {
+	position: fixed;
+	z-index: 2;
+	top: 85px
+}
+
+.bg_grey .products .tab_menu {
+	background-color: #efefef;
+	border-bottom: 1px solid #ccc;
+	height: 136px;
+	width: 1170px;
+	padding-top: 15px
+}
+
+.bg_grey .products .tab_menu .btn {
+	display: block;
+	padding: 45px 17px 50px
+}
+
+.bg_grey .products .tab_menu .btn a {
+	cursor: pointer;
+	border: 0;
+	display: block;
+	background-image: url(/Tpl/Qyapp/Public/Images/product-icon.png);
+	height: 40px;
+	width: 22px
+}
+
+.bg_grey .products .tab_menu .pre a {
+	background-position: -247px -79px
+}
+
+.bg_grey .products .tab_menu .next a {
+	background-position: -285px -79px
+}
+
+.bg_grey .products .tab_menu .w1056 {
+	height: 137px;
+	width: 1056px;
+	overflow: hidden;
+	position: relative
+}
+
+.bg_grey .products .tab_menu .w1056 ul {
+	left: 0;
+	position: absolute;
+	width: 2000px
+}
+
+.bg_grey .products .tab_menu .w1056 ul li {
+	font-size: 16px;
+	cursor: pointer;
+	float: left;
+	width: 64px;
+	height: 104px;
+	border: 1px solid #efefef;
+	padding: 0 33px 30px;
+	text-align: center
+}
+
+.bg_grey .products .tab_menu .w1056 ul li i {
+	display: block;
+	background-image: url(/Tpl/Qyapp/Public/Images/product-icon.png);
+	width: 62px;
+	height: 48px;
+	margin: 28px 0 8px 0
+}
+
+.bg_grey .products .tab_menu .w1056 ul li .i1 {
+	background-position: 0 0
+}
+
+.bg_grey .products .tab_menu .w1056 ul li .i2 {
+	background-position: -76px 0
+}
+
+.bg_grey .products .tab_menu .w1056 ul li .i3 {
+	height: 56px;
+	background-position: -150px 0;
+	margin-top: 20px
+}
+
+.bg_grey .products .tab_menu .w1056 ul li .i4 {
+	width: 71px;
+	height: 58px;
+	background-position: -234px 0;
+	margin-top: 18px
+}
+
+.bg_grey .products .tab_menu .w1056 ul li .i5 {
+	height: 53px;
+	background-position: 5px -77px;
+	margin-top: 23px
+}
+
+.bg_grey .products .tab_menu .w1056 ul li .i6 {
+	background-position: -54px -80px
+}
+
+.bg_grey .products .tab_menu .w1056 ul li .i7 {
+	height: 50px;
+	background-position: -111px -80px;
+	margin-top: 26px
+}
+
+.bg_grey .products .tab_menu .w1056 ul li .i8 {
+	height: 51px;
+	background-position: -176px -76px;
+	margin-top: 25px
+}
+
+.bg_grey .products .tab_menu .w1056 ul li.selected {
+	background-color: #fff;
+	height: 105px;
+	border: 1px solid #ccc;
+	border-bottom: 1px solid #fff
+}
+
+.bg_grey .products .tab_box {
+	height: 100px
+}
+
+.bg_grey .search {
+	width: 1170px;
+	margin: 0 auto;
+	overflow: hidden;
+	text-align: center
+}
+
+.bg_grey .search h1 {
+	margin: 40px 0 25px 0;
+	font-size: 30px
+}
+
+.bg_grey .search .nav-search {
+	position: static;
+	margin: 0 auto;
+	float: none
+}
+
+.bg_grey .search .nav-search .searchForm-box {
+	position: relative
+}
+
+.bg_grey .search .nav-search .searchForm-box .hit-info {
+	position: absolute;
+	right: 220px;
+	top: 22px;
+	color: #f00;
+	font-size: 18px;
+	display: none
+}
+
+.register-hint {
+	height: 30px;
+	width: 100%;
+	margin-top: 10px
+}
+
+.register-hint .register-info {
+	margin-left: 140px;
+	text-align: left;
+	padding-left: 30px;
+	font-size: 16px;
+	color: #f00;
+	display: none;
+	background: url(/Tpl/Qyapp/Public/Images/reject.png) 0 2px no-repeat
+}
+
+.backToTop {
+	display: none;
+	background: url(/Tpl/Qyapp/Public/Images/top.png) -62px 0 no-repeat;
+	width: 52px;
+	height: 140px;
+	position: fixed;
+	_position: absolute;
+	right: 15px;
+	bottom: 50px;
+	_bottom: "auto";
+	cursor: pointer
+}
+
+.backToTop:hover {
+	background-position: 0 0
+}
+
+.feedback {
+	background: url(/Tpl/Qyapp/Public/Images/fixed.png) -127px 0 no-repeat;
+	width: 72px;
+	height: 92px
+}
+
+.feedback:hover {
+	background-position: -215px 0
+}
+
+.hd-box {
+	height: 80px
+}
+
+.hd-box .logo {
+	float: left;
+	width: 350px;
+	height: 7px;
+	padding-top: 28px
+}
+
+.hd-box .nav-box {
+	float: right;
+	width: 720px;
+	height: 60px
+}
+
+.hd-box .nav-list {
+	margin-left: 30px
+}
+
+.hd-box ul.nav-list li {
+	float: left;
+	display: block;
+	font-size: 16px;
+	color: #333
+}
+
+.hd-box ul.nav-list li {
+	float: left;
+	display: block
+}
+
+ul.nav-list li a.item {
+	display: block;
+	font-size: 16px;
+	color: #333;
+	padding: 29px 18px 30px 18px
+}
+
+ul.nav-list li.register-item {
+	padding: 21px 0 0 12px
+}
+
+ul.nav-list li.login-item {
+	padding: 21px 0 0 12px
+}
+
+.footer {
+	min-width: 1170px;
+	overflow: hidden;
+	background: #fff;
+	height: 250px;
+	color: #666;
+	border-top: 2px solid #ccc
+}
+
+.footer a {
+	color: #666
+}
+
+.footer a:hover {
+	color: #007aff;
+	text-decoration: underline
+}
+
+.foot-content {
+	padding: 30px 0 10px 0
+}
+
+.footer .foot-logo {
+	width: 300px;
+	float: left;
+	height: 21px;
+	margin-right: 130px;
+	margin-left: 120px
+}
+
+.foot-info {
+	float: left
+}
+
+.foot-info dl {
+	float: left;
+	margin-right: 60px
+}
+
+.foot-info dt {
+	font-size: 16px;
+	color: #000;
+	margin-bottom: 5px
+}
+
+.foot-info dd {
+	line-height: 30px;
+	font-size: 14px
+}
+
+.footer .copyright {
+	text-align: center;
+	color: #8b8b8b
+}
+
+.footer p {
+	margin: 15px 0
+}
+
+.fixed-icons {
+	color: #fff;
+	font-size: 18px;
+	position: fixed;
+	right: 5px;
+	bottom: 50px;
+	height: 365px;
+	z-index: 10;
+	-webkit-transform: translateZ(0)
+}
+
+.fixed-icons .consulting {
+	display: block;
+	color: #fff;
+	height: 146px;
+	width: 80px;
+	background: url(/Tpl/Qyapp/Public/Images/fixed.png) 0 0 no-repeat;
+	cursor: pointer
+}
+
+.fixed-icons .consulting:hover {
+	background-position: -89px 0
+}
+
+.fixed-icons .consulting span {
+	display: block;
+	line-height: 22px;
+	width: 40px;
+	padding: 13px 0 0 19px
+}
+
+.fixed-icons ul {
+	padding-left: 30px
+}
+
+.fixed-icons ul li {
+	height: 40px;
+	width: 40px;
+	background-image: url(/Tpl/Qyapp/Public/Images/fixed.png);
+	background-color: #e8e8e8;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	cursor: pointer;
+	margin-top: 12px;
+	position: relative
+}
+
+.fixed-icons ul li:hover {
+	background-color: #007aff
+}
+
+.fixed-icons ul li p {
+	background-color: #007aff;
+	height: 38px;
+	line-height: 36px;
+	padding: 0 10px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin: 0;
+	position: absolute;
+	display: none
+}
+
+.fixed-icons ul li p span {
+	font-size: 14px
+}
+
+.fixed-icons ul li p i {
+	width: 4px;
+	height: 8px;
+	background: url(/Tpl/Qyapp/Public/Images/fixed.png) -1px -368px no-repeat;
+	position: absolute;
+	top: 14px;
+	right: -4px
+}
+
+.fixed-icons ul .icon1 {
+	background-position: -4px -148px
+}
+
+.fixed-icons ul .icon1:hover {
+	background-position: -49px -148px
+}
+
+.fixed-icons ul .icon1 p {
+	left: -101px
+}
+
+.fixed-icons ul .icon2 {
+	background-color: #007aff;
+	background-position: -48px -156px;
+	text-indent: -9999px
+}
+
+.fixed-icons ul .icon2:hover {
+	text-indent: 0;
+	background-image: none;
+	color: #fff;
+	font-size: 12px;
+	height: 34px;
+	line-height: 1.2;
+	padding: 6px 0 0 8px;
+	width: 32px
+}
+
+.fixed-icons ul .icon2 p {
+	font-size: 18px;
+	top: 0;
+	left: -150px
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.fixed-icons ul .icon2 p {
+		left: -155px
+	}
+}
+
+.fixed-icons ul .icon3 {
+	background-position: 4px -198px;
+	text-indent: -9999px
+}
+
+.fixed-icons ul .icon3:hover {
+	text-indent: 0;
+	background-image: none;
+	color: #fff;
+	font-size: 12px;
+	height: 34px;
+	line-height: 1.2;
+	padding: 6px 0 0 8px;
+	width: 32px
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.fixed-icons ul .icon3 p {
+		left: -285px
+	}
+}
+
+.fixed-icons ul .icon4 {
+	background-position: 4px -250px
+}
+
+.fixed-icons ul .icon4:hover {
+	background-position: -48px -250px
+}
+
+.fixed-icons ul .icon4 img {
+	position: absolute;
+	left: -128px;
+	top: -40px;
+	display: none
+}
+
+.fixed-icons ul .icon5 {
+	background-position: 4px -302px
+}
+
+.fixed-icons ul .icon5:hover {
+	background-position: -48px -302px
+}
+
+.fixed-icons ul .icon5 p {
+	left: -101px
+}
+
+a.btn {
+	display: block;
+	width: 78px;
+	height: 40px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
+	line-height: 40px;
+	color: #fff;
+	text-align: center
+}
+
+a.primary {
+	background: #1283ff
+}
+
+a.login {
+	background: #46c3ad
+}
+
+.hide {
+	display: none
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1050;
+	-webkit-overflow-scrolling: touch;
+	outline: 0;
+	font-family: "微软雅黑";
+	font-size: 16px
+}
+
+.modal.fade .modal-dialog {
+	-webkit-transform: translate(0, -25%);
+	-ms-transform: translate(0, -25%);
+	transform: translate(0, -25%);
+	-webkit-transition: -webkit-transform .3s ease-out;
+	-moz-transition: -moz-transform .3s ease-out;
+	-o-transition: -o-transform .3s ease-out;
+	transition: transform .3s ease-out
+}
+
+.modal.in .modal-dialog {
+	-webkit-transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	transform: translate(0, 0)
+}
+
+.modal-dialog {
+	position: relative;
+	width: auto;
+	margin: 10px;
+	width: 835px;
+	margin: 30px auto
+}
+
+.modal-content {
+	position: relative;
+	background-color: #fff;
+	border: 1px solid #999;
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 6px;
+	-webkit-box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+	box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+	background-clip: padding-box;
+	outline: none
+}
+
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1040;
+	background-color: #000;
+	filter: alpha(opacity=50);
+	opacity: .5
+}
+
+.modal-backdrop.fade {
+	opacity: 0;
+	filter: alpha(opacity=0)
+}
+
+.modal-backdrop.in {
+	opacity: .5;
+	filter: alpha(opacity=50)
+}
+
+.modal-header {
+	padding: 15px;
+	border-bottom: 1px solid #007aff;
+	min-height: 16.42857143px
+}
+
+.modal-header .close {
+	font-size: 24px;
+	margin-top: -5px;
+	float: right;
+	border: 0;
+	background: none
+}
+
+.modal-title {
+	margin: 0;
+	line-height: 1.42857143;
+	font-size: 20px;
+	text-align: center
+}
+
+.modal-body {
+	position: relative;
+	padding: 20px;
+	max-height: 480px;
+	overflow-x: hidden;
+	overflow-y: auto
+}
+
+#myModal .modal-body p {
+	line-height: 26px;
+	text-indent: 2em;
+	margin-bottom: 0
+}
+
+.modal-body img {
+	max-width: 774px
+}
+
+.modal-footer {
+	margin-top: 15px;
+	padding: 19px 20px 20px;
+	text-align: right;
+	border-top: 1px solid #007aff
+}
+
+.modal-footer .btn+.btn {
+	margin-left: 5px;
+	margin-bottom: 0
+}
+
+.modal-footer .btn-group .btn+.btn {
+	margin-left: -1px
+}
+
+.modal-footer .btn-block+.btn-block {
+	margin-left: 0
+}
+
+#myModal1 {
+	width: 100%;
+	position: fixed;
+	margin: 0 auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1050
+}
+
+#myModal1 #feedback {
+	display: table;
+	height: 100%;
+	width: 600px;
+	-webkit-overflow-scrolling: touch;
+	outline: 0;
+	margin: 0 auto
+}
+
+#myModal1 #feedback .modal-dialog1 {
+	display: table-cell;
+	vertical-align: middle;
+	margin: 0 20px;
+	position: relative
+}
+
+#myModal1 #feedback .modal-dialog1 .modal-body {
+	overflow: hidden;
+	width: 530px;
+	min-height: 300px;
+	max-height: 700px;
+	padding: 10px 0 0 37px
+}
+
+#myModal1 #feedback .modal-dialog1 .modal-body h2 {
+	font-size: 20px
+}
+
+#myModal1 #feedback .modal-dialog1 .modal-body h3 {
+	font-size: 18px;
+	margin-top: 13px
+}
+
+#myModal1 #feedback .modal-dialog1 .modal-body p {
+	margin: 0
+}
+
+#myModal1 #feedback .modal-dialog1 .modal-body p.p1 {
+	text-indent: 20px;
+	border-bottom: 1px solid #007aff;
+	padding: 5px 0 13px 0
+}
+
+#myModal1 #feedback .modal-dialog1 .modal-body textarea {
+	outline: none;
+	margin-top: 6px;
+	width: 500px;
+	height: 74px;
+	padding: 10px 14px;
+	resize: none
+}
+
+#myModal1 #feedback .modal-dialog1 .modal-body .blue-border {
+	border: 1px solid #007aff;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px
+}
+
+#myModal1 #feedback .modal-dialog1 .modal-body input {
+	outline: none
+}
+
+#myModal1 #feedback .modal-dialog1 .modal-body .input1 {
+	height: 28px;
+	width: 490px;
+	padding: 8px 17px
+}
+
+#myModal1 #feedback .modal-dialog1 .modal-body .input2 {
+	height: 28px;
+	width: 403px;
+	padding: 8px 17px
+}
+
+#myModal1 #feedback .modal-dialog1 .modal-body .code_img {
+	width: 81px;
+	height: 48px;
+	margin-left: 10px
+}
+
+#myModal1 #feedback .modal-dialog1 .modal-body .sub {
+	background-color: #007aff;
+	color: #fff;
+	height: 50px;
+	line-height: 50px;
+	width: 260px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	margin: 18px 0 20px 135px
+}
+
+#myModal1 #feedback .modal-dialog1 .modal-body .texta .lab-tip {
+	left: 16px !important;
+	top: 12px !important
+}
+
+#myModal1 #feedback .modal-dialog1 .hint-box {
+	display: none;
+	position: absolute;
+	bottom: 50px;
+	left: 40px;
+	color: #f00
+}
+
+#mask {
+	width: 100%;
+	height: 100%;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #000;
+	filter: alpha(opacity=60);
+	opacity: .6;
+	-moz-opacity: .6;
+	z-index: 1002
+}
+
+#mask a.close-btn {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+	z-index: 1003;
+	background: url(/Tpl/Qyapp/Public/Images/close-btn.png) 0 0 no-repeat;
+	-webkit-transition: all .6s ease-out;
+	-o-transition: all .6s ease-out;
+	transition: all .6s ease-out
+}
+
+#mask a.close-btn:hover {
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg)
+}
+
+#video-box {
+	cursor: pointer
+}
+
+.player-btn {
+	position: absolute;
+	width: 132px;
+	height: 166px;
+	left: 50%;
+	top: 50%;
+	margin-left: -66px;
+	margin-top: -83px;
+	text-align: center
+}
+
+.player-btn .player-ico {
+	width: 110px;
+	height: 110px;
+	display: block;
+	background: url(/Tpl/Qyapp/Public/Images/player-btn.png) 0 -109px no-repeat;
+	margin: auto;
+	margin-bottom: 26px
+}
+
+.player-btn p {
+	font-size: 30px;
+	color: #fff
+}
+
+.player-btn a.player-ico1 {
+	background: url(/Tpl/Qyapp/Public/Images/player-btn.png) 0 -221px no-repeat
+}
+
+.introVideo {
+	width: 950px;
+	height: 543px;
+	display: none;
+	position: fixed;
+	z-index: 1003;
+	left: 50%;
+	top: 50%;
+	margin-left: -475px;
+	margin-top: -271px
+}
+
+.help-box {
+	height: 245px;
+	padding-top: 105px;
+	width: 100%;
+	min-width: 1170px;
+	background: #588bc4
+}
+
+.help-box .help-inline {
+	background: url(/Tpl/Qyapp/Public/Images/help-top.png) 0 0 no-repeat;
+	width: 950px;
+	height: 145px;
+	margin: auto
+}
+
+.help-font {
+	width: 350px;
+	height: 79px;
+	border-bottom: 1px solid #81a1c3;
+	margin: auto;
+	font-size: 35px;
+	color: #007aff;
+	text-align: center;
+	margin-top: 60px
+}
+
+.help-info {
+	overflow: hidden;
+	margin-top: 13px;
+	margin-bottom: 60px
+}
+
+.help-info ul.info-list {
+	width: 1100px;
+	margin: 0 auto
+}
+
+.help-info ul.info-list li {
+	float: left;
+	text-align: center;
+	margin: 45px 52px 0 0
+}
+
+.help-info ul.info-list li a {
+	display: block;
+	width: 105px;
+	height: 105px;
+	margin-bottom: 15px;
+	background-image: url(/Tpl/Qyapp/Public/Images/help-icon.png)
+}
+
+.help-info ul.info-list li .recruit-ico {
+	background-position: -110px 0
+}
+
+.help-info ul.info-list li .taskMg-ico {
+	background-position: -660px 0
+}
+
+.help-info ul.info-list li .agendaMg-ico {
+	background-position: -550px 0
+}
+
+.help-info ul.info-list li .research-ico {
+	background-position: -1320px 0
+}
+
+.help-info ul.info-list li .address-ico {
+	background-position: -440px 0
+}
+
+.help-info ul.info-list li .vote-ico {
+	background-position: -330px 0
+}
+
+.help-info ul.info-list li .leave-ico {
+	background-position: -770px 0
+}
+
+.help-info ul.info-list li .email-ico {
+	background-position: -220px 0
+}
+
+.help-info ul.info-list li .reserve-ico {
+	background-position: -1210px 0
+}
+
+.help-info ul.info-list li .check-ico {
+	background-position: -1100px 0
+}
+
+.help-info ul.info-list li .flow-ico {
+	background-position: -990px 0
+}
+
+.help-info ul.info-list li .card-ico {
+	background-position: -880px 0
+}
+
+.help-info ul.info-list li .apply-ico {
+	background-position: 0 0
+}
+
+.help-info ul.info-list li span {
+	font-size: 20px;
+	color: #323232
+}
+
+.help-common-box {
+	width: 100%;
+	background: #f7f7f7;
+	padding-top: 60px;
+	overflow: hidden
+}
+
+.help-common-box .help-font {
+	margin-top: 0
+}
+
+.help-common-box .question-box {
+	margin-top: 40px
+}
+
+.help-common-box .question-box li.question-item {
+	float: left;
+	width: 40%;
+	margin-left: 90px;
+	padding: 10px;
+	font-size: 18px;
+	color: #010101;
+	border-bottom: 1px dashed #dcdcdc
+}
+
+.help-common-box .question-box p {
+	text-align: center;
+	color: #010101;
+	font-size: 18px;
+	padding: 48px 0
+}
+
+.use-register {
+	overflow: hidden;
+	padding: 66px 0 70px 0
+}
+
+.use-register p {
+	text-align: center;
+	color: #323232;
+	font-size: 30px;
+	font-family: "宋体"
+}
+
+.use-register .nav-search {
+	position: static;
+	margin: 26px 0 0 200px
+}
+
+.agent-banner {
+	position: relative
+}
+
+.agent-banner img.agent-img {
+	width: 100%;
+	height: 100%;
+	min-width: 1170px
+}
+
+.agent-banner .banner-info {
+	width: 1170px;
+	position: absolute;
+	z-index: 1;
+	left: 50%;
+	margin-left: -585px;
+	top: 44%
+}
+
+.agent-banner .banner-info p {
+	font-size: 28px;
+	font-family: "宋体";
+	color: #fff;
+	text-align: center;
+	line-height: 40px
+}
+
+.agent-banner .banner-info p.big-font {
+	font-size: 56px
+}
+
+.title-box {
+	width: 350px;
+	height: 80px;
+	border-bottom: 1px solid #81a1c3;
+	margin: auto;
+	color: #007aff;
+	font-size: 35px;
+	text-align: center;
+	padding-top: 48px;
+	margin-bottom: 50px
+}
+
+.agent-cooperation-box {
+	overflow: hidden
+}
+
+.agent-cooperation-box .cooperation-info-box .cooperation-list-box {
+	display: inline;
+	border-radius: 4px;
+	border: 1px solid #007aff;
+	padding: 20px;
+	width: 236px;
+	height: 308px;
+	margin-right: 17px;
+	float: left
+}
+
+.agent-cooperation-box .cooperation-info-box .cooperation-list-box .list-ico {
+	display: block;
+	width: 76px;
+	height: 60px;
+	background: url(/Tpl/Qyapp/Public/Images/agent-icos.png) 0 0 no-repeat;
+	margin: auto
+}
+
+.agent-cooperation-box .cooperation-info-box .cooperation-list-box .ico1 {
+	background: url(/Tpl/Qyapp/Public/Images/agent-icos.png) 0 0 no-repeat
+}
+
+.agent-cooperation-box .cooperation-info-box .cooperation-list-box .ico2 {
+	background: url(/Tpl/Qyapp/Public/Images/agent-icos.png) -73px 0 no-repeat
+}
+
+.agent-cooperation-box .cooperation-info-box .cooperation-list-box .ico3 {
+	background: url(/Tpl/Qyapp/Public/Images/agent-icos.png) -145px 0 no-repeat;
+	width: 68px
+}
+
+.agent-cooperation-box .cooperation-info-box .cooperation-list-box .ico4 {
+	background: url(/Tpl/Qyapp/Public/Images/agent-icos.png) -210px 0 no-repeat
+}
+
+.agent-cooperation-box .cooperation-info-box .cooperation-list-box p {
+	margin-top: 35px;
+	font-size: 16px;
+	color: #464646;
+	padding-top: 34px;
+	border-top: 1px solid #007aff;
+	line-height: 24px
+}
+
+.agent-cooperation-box .cooperation-info-box .cooperation-list-box p span {
+	color: #000;
+	display: block;
+	text-align: center;
+	margin-bottom: 20px
+}
+
+.agent-cooperation-box .cooperation-info-box .cooperation-last-box {
+	margin-right: 0
+}
+
+.angent-warp-box {
+	width: 100%;
+	background: #f7f7f7;
+	overflow: hidden;
+	padding-bottom: 50px;
+	margin-top: 68px
+}
+
+.angent-warp-box .support-list {
+	margin-left: 62px
+}
+
+.angent-warp-box .support-list li.items {
+	color: #444;
+	font-size: 16px;
+	margin-bottom: 10px
+}
+
+.anget-table-box {
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border: 1px solid #c8c8c8
+}
+
+.anget-table-box table.agent-table {
+	width: 1170px;
+	margin: auto;
+	text-align: center
+}
+
+.anget-table-box table.agent-table tr.even {
+	background: #f7f7f7
+}
+
+.anget-table-box table.agent-table td {
+	border: 1px solid #c8c8c8;
+	font-size: 16px;
+	font-family: "宋体";
+	padding: 20px 0
+}
+
+.anget-table-box table.agent-table thead td {
+	font-size: 20px;
+	color: #007aff
+}
+
+.anget-table-box table.agent-table .table-ico {
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	background: url(/Tpl/Qyapp/Public/Images/agent-icos.png) 0 -65px no-repeat;
+	vertical-align: middle;
+	margin-top: -5px;
+	margin-right: 8px
+}
+
+.anget-table-box table.agent-table .ico2 {
+	background: url(/Tpl/Qyapp/Public/Images/agent-icos.png) -25px -65px no-repeat;
+	width: 22px
+}
+
+.anget-table-box table.agent-table .ico3 {
+	background: url(/Tpl/Qyapp/Public/Images/agent-icos.png) -50px -65px no-repeat
+}
+
+.anget-table-box table.agent-table .ico4 {
+	background: url(/Tpl/Qyapp/Public/Images/agent-icos.png) -78px -65px no-repeat
+}
+
+.anget-table-box table.agent-table .ico5 {
+	background: url(/Tpl/Qyapp/Public/Images/agent-icos.png) -107px -65px no-repeat
+}
+
+.anget-table-box table.agent-table .ico6 {
+	background: url(/Tpl/Qyapp/Public/Images/agent-icos.png) -139px -65px no-repeat;
+	width: 26px
+}
+
+.abouts-biggest {
+	width: 100%;
+	background: #f7f7f7;
+	padding: 50px 0 55px 0
+}
+
+.abouts-biggest .about-box {
+	background: #fff;
+	-moz-box-shadow: 0 0 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+	box-shadow: 0 0 5px #ccc
+}
+
+.abouts-biggest .about-box .aboutUs-info {
+	overflow: hidden;
+	margin: 50px 0
+}
+
+.abouts-biggest .about-box .aboutUs-info h2 {
+	font-size: 20px
+}
+
+.abouts-biggest .about-box .aboutUs-info .abouts-info-left {
+	float: left;
+	width: 130px;
+	padding: 40px 40px 0
+}
+
+.abouts-biggest .about-box .aboutUs-info .abouts-info-left span.about-ico {
+	display: block;
+	margin: 0 auto 16px;
+	background-image: url(/Tpl/Qyapp/Public/Images/aboutUs-icos.png)
+}
+
+.abouts-biggest .about-box .aboutUs-info .abouts-info-left span.icon1 {
+	background-position: -54px 0;
+	width: 56px;
+	height: 56px
+}
+
+.abouts-biggest .about-box .aboutUs-info .abouts-info-left span.icon2 {
+	background-position: -130px 0;
+	width: 50px;
+	height: 61px
+}
+
+.abouts-biggest .about-box .aboutUs-info .abouts-info-left span.icon3 {
+	background-position: -205px 0;
+	width: 71px;
+	height: 64px
+}
+
+.abouts-biggest .about-box .aboutUs-info .abouts-info-left h2 {
+	text-align: center
+}
+
+.abouts-biggest .about-box .aboutUs-info .abouts-info-right {
+	float: left;
+	padding: 0 40px;
+	width: 879px;
+	border-left: 1px solid #007aff
+}
+
+.abouts-biggest .about-box .aboutUs-info .abouts-info-right p {
+	font-size: 16px;
+	color: #464646;
+	text-align: left;
+	line-height: 30px;
+	margin: 0
+}
+
+.abouts-biggest .about-box .aboutUs-info .abouts-info-right .p1 {
+	margin-bottom: 30px
+}
+
+.abouts-biggest .about-box .aboutUs-img {
+	text-align: center;
+	padding-bottom: 50px
+}
+
+.abouts-biggest .about-box .about-bg {
+	padding-bottom: 52px;
+	box-shadow: 0 4px 7px #e8e8e8;
+	-webkit-box-shadow: 0 4px 7px #e8e8e8;
+	-moz-box-shadow: 0 4px 7px #e8e8e8
+}
+
+.abouts-biggest .about-box .about-bg li {
+	float: left;
+	display: inline;
+	margin-left: 48px
+}
+
+.abouts-biggest .about-box .about-bg li .about-bg-list {
+	width: 325px;
+	height: 325px;
+	overflow: hidden;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	position: relative
+}
+
+.abouts-biggest .about-box .about-bg li .about-bg-list p {
+	text-align: center;
+	height: 41px;
+	width: 100%;
+	background: #007aff;
+	font-size: 16px;
+	line-height: 41px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	color: #fff
+}
+
+.abouts-biggest .about-box .about-bg li .img1-1 {
+	background: url(/Tpl/Qyapp/Public/Images/aboutUs_01.jpg) 0 0 no-repeat
+}
+
+.abouts-biggest .about-box .about-bg li .img1-2 {
+	background: url(/Tpl/Qyapp/Public/Images/aboutUs_02.jpg) 0 0 no-repeat
+}
+
+.abouts-biggest .about-box .about-bg li .img1-3 {
+	background: url(/Tpl/Qyapp/Public/Images/aboutUs_03.jpg) 0 0 no-repeat
+}
+
+.abouts-biggest .about-box .aboutsUs-banner {
+	position: relative;
+	width: 1170px;
+	height: 440px;
+	overflow: hidden;
+	text-align: left;
+	background: #fff
+}
+
+.abouts-biggest .about-box .aboutsUs-banner .pic {
+	height: 350px;
+	overflow: hidden;
+	margin-top: 88px;
+	*margin-top: 88px;
+	background: #fff
+}
+
+.abouts-biggest .about-box .aboutsUs-banner .pic img {
+	width: 1170px;
+	height: 350px;
+	display: block
+}
+
+.abouts-biggest .about-box .aboutsUs-banner .num {
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	width: 1175px
+}
+
+.abouts-biggest .about-box .aboutsUs-banner .num a {
+	float: left;
+	width: 131px;
+	font-size: 20px;
+	color: #787878;
+	position: relative;
+	padding: 29px 80px;
+	text-align: center;
+	cursor: pointer;
+	border-right: 1px solid #c7c7c7
+}
+
+.abouts-biggest .about-box .aboutsUs-banner .num i.about-ico {
+	margin-right: 7px;
+	vertical-align: middle;
+	display: inline-block;
+	width: 17px;
+	height: 18px;
+	background: url(/Tpl/Qyapp/Public/Images/aboutUs-icos.png) 0 0 no-repeat
+}
+
+.abouts-biggest .about-box .aboutsUs-banner .num span.about-san {
+	left: 50%;
+	margin-left: -7px;
+	display: none;
+	width: 15px;
+	height: 8px;
+	background: url(/Tpl/Qyapp/Public/Images/aboutUs-icos.png) 0 -92px no-repeat;
+	position: absolute;
+	bottom: -6px
+}
+
+.abouts-biggest .about-box .aboutsUs-banner .num a.first {
+	width: 161px;
+	padding: 29px 65px
+}
+
+.abouts-biggest .about-box .aboutsUs-banner .num a.last {
+	border: 0;
+	padding: 29px 82px
+}
+
+.abouts-biggest .about-box .aboutsUs-banner .num i.honor-ico {
+	background: url(/Tpl/Qyapp/Public/Images/aboutUs-icos.png) 0 -18px no-repeat;
+	height: 24px;
+	width: 27px
+}
+
+.abouts-biggest .about-box .aboutsUs-banner .num i.company-ico {
+	background: url(/Tpl/Qyapp/Public/Images/aboutUs-icos.png) 0 -44px no-repeat;
+	height: 24px;
+	width: 27px
+}
+
+.abouts-biggest .about-box .aboutsUs-banner .num i.join-ico {
+	background: url(/Tpl/Qyapp/Public/Images/aboutUs-icos.png) 0 -69px no-repeat;
+	width: 25px;
+	height: 24px
+}
+
+.abouts-biggest .about-box .aboutsUs-banner .num a.on {
+	background: #007aff;
+	color: #fff
+}
+
+.abouts-biggest .about-box .aboutsUs-banner .num a.on span.about-san {
+	display: block
+}
+
+.abouts-biggest .about-box .aboutsUs-banner .num a.on i.brief-ico {
+	background: url(/Tpl/Qyapp/Public/Images/aboutUs-icos.png) -26px 0 no-repeat
+}
+
+.abouts-biggest .about-box .aboutsUs-banner .num a.on i.honor-ico {
+	background: url(/Tpl/Qyapp/Public/Images/aboutUs-icos.png) -26px -18px no-repeat;
+	height: 24px;
+	width: 27px
+}
+
+.abouts-biggest .about-box .aboutsUs-banner .num a.on i.company-ico {
+	background: url(/Tpl/Qyapp/Public/Images/aboutUs-icos.png) -26px -44px no-repeat;
+	height: 24px;
+	width: 27px
+}
+
+.abouts-biggest .about-box .aboutsUs-banner .num a.on i.join-ico {
+	background: url(/Tpl/Qyapp/Public/Images/aboutUs-icos.png) -26px -69px no-repeat;
+	width: 25px;
+	height: 24px
+}
+
+.panel-group {
+	margin-bottom: 20px;
+	width: 485px
+}
+
+.panel-group .panel {
+	margin-bottom: 0;
+	border-radius: 4px;
+	overflow: hidden
+}
+
+.panel-group .panel+.panel {
+	margin-top: 5px
+}
+
+.panel-group .panel-heading {
+	border-bottom: 0
+}
+
+.panel-group .panel-heading+.panel-collapse .panel-body {
+	border-top: 1px solid #ddd
+}
+
+.panel-group .panel-footer {
+	border-top: 0
+}
+
+.panel-group .panel-footer+.panel-collapse .panel-body {
+	border-bottom: 1px solid #ddd
+}
+
+.panel-default {
+	border-color: #ddd
+}
+
+.panel-default>.panel-heading {
+	color: #333;
+	background-color: #f5f5f5;
+	border-color: #ddd
+}
+
+.panel-default>.panel-heading+.panel-collapse .panel-body {
+	border-top-color: #ddd
+}
+
+.panel-default>.panel-footer+.panel-collapse .panel-body {
+	border-bottom-color: #ddd
+}
+
+.panel-default .panel-heading h4.panel-title {
+	position: relative
+}
+
+.panel-heading h4.panel-title i.aboutUs-5 {
+	position: absolute;
+	top: 35px;
+	right: 18px;
+	display: block;
+	width: 9px;
+	height: 5px;
+	background: url(/Tpl/Qyapp/Public/Images/aboutUs-5.png) 0 -7px no-repeat
+}
+
+.panel-heading h4.panel-title .collapsed i.aboutUs-5 {
+	position: absolute;
+	top: 35px;
+	right: 18px;
+	display: block;
+	width: 9px;
+	height: 5px;
+	background: url(/Tpl/Qyapp/Public/Images/aboutUs-5.png) 0 0 no-repeat
+}
+
+.panel-primary {
+	border-color: #428bca
+}
+
+.panel-primary>.panel-heading {
+	color: #fff;
+	background-color: #428bca;
+	border-color: #428bca
+}
+
+.panel-primary>.panel-heading+.panel-collapse .panel-body {
+	border-top-color: #428bca
+}
+
+.panel-primary>.panel-footer+.panel-collapse .panel-body {
+	border-bottom-color: #428bca
+}
+
+.panel-success {
+	border-color: #d6e9c6
+}
+
+.panel-success>.panel-heading {
+	color: #3c763d;
+	background-color: #dff0d8;
+	border-color: #d6e9c6
+}
+
+.panel-success>.panel-heading+.panel-collapse .panel-body {
+	border-top-color: #d6e9c6
+}
+
+.panel-success>.panel-footer+.panel-collapse .panel-body {
+	border-bottom-color: #d6e9c6
+}
+
+.panel-body {
+	padding: 15px
+}
+
+.panel-info {
+	border-color: #bce8f1
+}
+
+.panel-info>.panel-heading {
+	color: #31708f;
+	background-color: #d9edf7;
+	border-color: #bce8f1
+}
+
+.panel-info>.panel-heading+.panel-collapse .panel-body {
+	border-top-color: #bce8f1
+}
+
+.panel-info>.panel-footer+.panel-collapse .panel-body {
+	border-bottom-color: #bce8f1
+}
+
+.panel-warning {
+	border-color: #faebcc
+}
+
+.panel-warning>.panel-heading {
+	color: #8a6d3b;
+	background-color: #fcf8e3;
+	border-color: #faebcc
+}
+
+.panel-warning>.panel-heading+.panel-collapse .panel-body {
+	border-top-color: #faebcc
+}
+
+.panel-warning>.panel-footer+.panel-collapse .panel-body {
+	border-bottom-color: #faebcc
+}
+
+.panel-danger {
+	border-color: #ebccd1
+}
+
+.panel-danger>.panel-heading {
+	color: #a94442;
+	background-color: #f2dede;
+	border-color: #ebccd1
+}
+
+.panel-danger>.panel-heading+.panel-collapse .panel-body {
+	border-top-color: #ebccd1
+}
+
+.panel-danger>.panel-footer+.panel-collapse .panel-body {
+	border-bottom-color: #ebccd1
+}
+
+.panel-title a {
+	display: block;
+	padding: 22px;
+	font-size: 18px;
+	color: #000
+}
+
+.aboutUs-mian .fade {
+	opacity: 0;
+	-webkit-transition: opacity .15s linear;
+	transition: opacity .15s linear
+}
+
+.aboutUs-mian .fade.in {
+	opacity: 1
+}
+
+.aboutUs-mian .collapse {
+	display: none
+}
+
+.aboutUs-mian .collapse.in {
+	display: block
+}
+
+.aboutUs-mian .collapsing {
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	-webkit-transition: height .35s ease;
+	transition: height .35s ease
+}
+
+#accordion1,#accordion {
+	float: left
+}
+
+.aboutUs-mian {
+	padding: 0 70px;
+	margin-top: 68px;
+	overflow: hidden;
+	background: #fff
+}
+
+.panel-body ol li {
+	margin-top: 0;
+	list-style: inside decimal;
+	font-size: 14px;
+	color: #686868;
+	font-weight: normal
+}
+
+.panel-body ul li {
+	font-size: 14px;
+	line-height: 1.8
+}
+
+.combo-bodyer {
+	position: relative
+}
+
+.combo-warp .combo-table-box {
+	width: 1170px;
+	margin: auto;
+	padding: 30px 7px 0 7px;
+	background: #fff
+}
+
+.combo-warp .combo-table-box .combo-table {
+	width: 1155px;
+	text-align: center;
+	color: #323232;
+	font-size: 16px;
+	font-family: "宋体"
+}
+
+.combo-warp .combo-table-box .combo-table .row-title {
+	color: #000
+}
+
+.combo-warp .combo-table-box .combo-table thead td {
+	background: #1283ff;
+	border-right: 1px solid #1283ff;
+	padding: 24px 0;
+	color: #fff;
+	border-right: 1px solid #fff
+}
+
+.combo-warp .combo-table-box .combo-table thead td.last {
+	border-right: 1px solid #1283ff
+}
+
+.combo-warp .combo-table-box .combo-table .fixed {
+	display: block;
+	position: fixed;
+	z-index: 2;
+	top: 85px;
+	width: 1155px
+}
+
+.combo-warp .combo-table-box .combo-table tbody td {
+	border: 1px solid #c8c8c8;
+	padding: 24px 0
+}
+
+.combo-warp .combo-table-box .combo-table tr.even {
+	background: #f7f7f7
+}
+
+.combo-warp .combo-table-box .combo-table .combo-icon {
+	display: block;
+	width: 63px;
+	height: 62px;
+	background-image: url(/Tpl/Qyapp/Public/Images/combo-icon.png);
+	margin: auto;
+	margin-bottom: 15px
+}
+
+.combo-warp .combo-table-box .combo-table .icon06 {
+	background-position: -136px 0
+}
+
+.combo-warp .combo-table-box .combo-table .icon07 {
+	background-position: -272px 0
+}
+
+.combo-warp .combo-table-box .combo-table .icon08 {
+	background-position: -340px 0
+}
+
+.combo-warp .combo-table-box .combo-table .icon09 {
+	background-position: -544px 0
+}
+
+.combo-warp .combo-table-box .combo-table .icon10 {
+	background-position: -680px 0
+}
+
+.combo-warp .combo-table-box .combo-table .icon11 {
+	background-position: 0  0
+}
+
+.combo-warp .combo-table-box .combo-table .icon12 {
+	background-position: -204px 0
+}
+
+.combo-warp .combo-table-box .combo-table .icon13 {
+	background-position: -476px 0
+}
+
+.combo-warp .combo-table-box .combo-table .icon14 {
+	background-position: -408px 0
+}
+
+.combo-warp .combo-table-box .combo-table .icon15 {
+	background-position: -68px 0
+}
+
+.combo-warp .combo-table-box .combo-table .icon16 {
+	background-position: -612px 0
+}
+
+.combo-warp .combo-table-box .combo-table .icon17 {
+	background-position: -748px 0
+}
+
+.combo-warp .combo-table-box .combo-table .icon18 {
+	background-position: -816px 0
+}
+
+.combo-warp .combo-table-box .combo-table .combo-right {
+	display: block;
+	width: 13px;
+	height: 8px;
+	background: url(/Tpl/Qyapp/Public/Images/combo-icos.png) -62px -8px no-repeat;
+	margin: auto
+}
+
+.combo-warp .combo-table-box .combo-table .combo-error {
+	display: block;
+	width: 9px;
+	height: 8px;
+	background: url(/Tpl/Qyapp/Public/Images/combo-icos.png) -62px 0 no-repeat;
+	margin: auto
+}
+
+.bodyer-p {
+	font-family: "微软雅黑"
+}
+
+.bodyer-p .bodyer-asideLeft {
+	width: 280px;
+	overflow: hidden;
+	height: 1000px;
+	position: relative;
+	float: left;
+	margin-top: 20px
+}
+
+.bodyer-p .bodyer-asideLeft .sidebar-link-list {
+	position: relative;
+	width: 280px
+}
+
+.bodyer-p .bodyer-asideLeft .sidebar-link-list li {
+	border-bottom: solid 1px #e5e5e5;
+	background-color: #fff
+}
+
+.bodyer-p .bodyer-asideLeft .sidebar-link-list li .link-con {
+	display: block;
+	line-height: 25px;
+	padding: 12px 8px;
+	font-size: 16px;
+	cursor: pointer;
+	color: #666
+}
+
+.bodyer-p .bodyer-asideLeft .sidebar-link-list li .link-con i.ico-chevron-right {
+	width: 6px;
+	height: 11px;
+	background-position: 0 0;
+	font-style: inherit;
+	float: right;
+	display: block;
+	margin-top: 10px;
+	background: #ececec;
+	background: url(/Tpl/Qyapp/Public/Images/i-union.gif) 0 0 no-repeat
+}
+
+.bodyer-p .bodyer-asideLeft .sidebar-link-list li .link-con-active {
+	color: #f24d36;
+	font-weight: bold
+}
+
+.bodyer-p .bodyer-asideLeft .sb-link-list-2 {
+	display: none;
+	position: absolute;
+	left: 100%;
+	top: 0;
+	width: 280px
+}
+
+.bodyer-p .bodyer-asideLeft .sb-link-list-2 .ico-back {
+	display: inline-block;
+	vertical-align: middle;
+	width: 16px;
+	height: 12px;
+	background: url(/Tpl/Qyapp/Public/Images/i-union.gif) 0 -40px no-repeat;
+	margin-right: 4px
+}
+
+.bodyer-p .bodyer-asideLeft .open-sidebar {
+	left: -280px
+}
+
+.bodyer-p .bodyer-asideLeft .open-sidebar .sb-link-show {
+	display: block
+}
+
+.bodyer-p .box-article-empty {
+	width: 800px;
+	float: right;
+	overflow: hidden;
+	margin-top: 20px;
+	margin-bottom: 20px
+}
+
+.bodyer-p .box-article-empty p.tind1 {
+	margin-top: 20px;
+	font-size: 20px
+}
+
+.bodyer-p .bodyer-mainRight {
+	width: 800px;
+	float: right;
+	overflow: hidden;
+	margin-top: 20px;
+	margin-bottom: 20px
+}
+
+.bodyer-p .bodyer-mainRight .details-hd .tind2 {
+	text-indent: 2em;
+	font-size: 14px
+}
+
+.bodyer-p .bodyer-mainRight .details-hd .tind3 {
+	text-indent: 3em
+}
+
+.bodyer-p .bodyer-mainRight .details-hd img {
+	width: 780px
+}
+
+.bodyer-p .bodyer-mainRight .details-link a {
+	display: block;
+	padding: 5px 0;
+	font-size: 16px
+}
+
+.bodyer-p .bodyer-mainRight .details-tit1 h3 {
+	font-size: 18px;
+	margin: 12px 0 20px;
+	color: #333
+}
+
+.bodyer-p .bodyer-mainRight .box-article-main {
+	border-top: dashed 1px #e5e5e5
+}
+
+.bodyer-p .bodyer-mainRight .box-article-main .box-ele {
+	border-bottom: dashed 1px #e5e5e5;
+	padding: 12px 10px
+}
+
+.bodyer-p .bodyer-mainRight .box-article-main .box-ele .box-ele-tit {
+	line-height: 22px;
+	font-size: 16px;
+	color: #06c;
+	cursor: pointer
+}
+
+.bodyer-p .bodyer-mainRight .box-article-main .box-ele .box-ele-tit .ico {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	overflow: hidden;
+	vertical-align: middle;
+	background: url(/Tpl/Qyapp/Public/Images/i-union.gif) no-repeat
+}
+
+.bodyer-p .bodyer-mainRight .box-article-main .box-ele .box-ele-tit .ico-arrow {
+	width: 10px;
+	margin-right: 4px;
+	background-position: 0 -20px;
+	height: 8px
+}
+
+.bodyer-p .bodyer-mainRight .box-article-main .box-ele .box-ele-tit a {
+	color: #06c
+}
+
+.bodyer-p .bodyer-mainRight .box-article-main .box-ele .box-ele-con {
+	display: none;
+	text-align: center
+}
+
+.bodyer-p .bodyer-mainRight .box-article-main .box-ele .box-ele-con p {
+	margin-bottom: 5px;
+	color: #333;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	text-align: left
+}
+
+.bodyer-p .bodyer-mainRight .box-article-main .box-ele .box-ele-con .tind1 {
+	font-size: 16px
+}
+
+.bodyer-p .bodyer-mainRight .box-article-main .box-ele .box-ele-con .tind2 {
+	text-indent: 2em
+}
+
+.bodyer-p .bodyer-mainRight .box-article-main .box-ele .box-ele-con .tind3 {
+	text-indent: 3em
+}
+
+.bodyer-p .bodyer-mainRight .box-article-main .box-ele .box-ele-con img.imgs {
+	width: 780px
+}
+
+.bodyer-p .bodyer-mainRight .box-article-main .box-ele .box-ele-con .red {
+	color: #f00
+}
+
+.bodyer-p .bodyer-mainRight .box-article-main .box-ele-open .box-ele-tit {
+	font-weight: bold;
+	color: #f24d36
+}
+
+.bodyer-p .bodyer-mainRight .box-article-main .box-ele-open .box-ele-tit .ico-arrow {
+	height: 5px;
+	background-position: 0 -30px
+}
+
+.bodyer-p .bodyer-mainRight .box-article-main .box-ele-open .box-ele-tit a {
+	color: #f24d36
+}
+
+.bodyer-p .bodyer-mainRight .box-article-main .box-ele-open .box-ele-con {
+	display: block;
+	margin-top: 8px
+}

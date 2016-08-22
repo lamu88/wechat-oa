@@ -1,0 +1,121 @@
+﻿
+.container{
+
+	position: relative;
+	max-width: 640px;
+	min-height: 100%;
+	margin: 0 auto;
+	background-color: #fff;
+
+}
+.bgblack{
+
+position:fixed;
+width:100%;
+height:100%;
+background:#000;
+z-index:555;
+display:none;
+opacity:0.8;
+}
+.witbg{
+width:100%;
+
+background:#fff;
+position:absolute;
+padding-top:30px;
+padding-bottom:30px;
+display:none;
+filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#b8c4cb',endColorStr='#f6f6f8',gradientType='0');
+background: -moz-linear-gradient(top, #b8c4cb, #f6f6f8);      
+
+background: -o-linear-gradient(top,#b8c4cb, #f6f6f8);  
+
+background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#b8c4cb), to(#f6f6f8));
+border-radius:6px;
+top:35%;
+  
+z-index:666;
+}
+.title{
+text-align:center;
+font-family:黑体;
+font-size:16px;
+margin-bottom:20px;
+font-weight:bold;
+}
+.tzt{
+font-family:黑体;
+font-size:14px;
+text-indent:20px;
+}
+#hinpt{
+font-family:黑体;
+border:solid 1px #8c837c;
+height:20px;
+margin-left:10px;  
+border-radius:8px;
+text-indent:5px;
+font-size:12px;
+color:#000;
+margin-bottom:20px;
+-moz-box-shadow:2px 2px 2px #999 inset;              
+-webkit-box-shadow:2px 2px 2px #999 inset;           
+box-shadow:2px 2px 2px #999 inset;
+}
+#cinpt{
+font-family:黑体;
+border:solid 1px #8c837c;
+margin-left:10px;  
+border-radius:5px;
+text-indent:5px;
+font-size:12px;
+color:#000;
+-moz-box-shadow:2px 2px 2px #999 inset;              
+-webkit-box-shadow:2px 2px 2px #999 inset;           
+box-shadow:2px 2px 2px #999 inset;         
+}
+#dinput{
+font-family:黑体;
+border:solid 1px #8c837c;
+height:20px;
+margin-left:10px;  
+border-radius:8px;
+text-indent:5px;
+font-size:12px;
+color:#000;
+margin-bottom:5px;
+-moz-box-shadow:1px 1px 1px #999 inset;              
+-webkit-box-shadow:1px 1px 1px #999 inset;           
+box-shadow:1px 1px 1px #999 inset;
+}
+.heidds{
+height:20px;
+margin-bottom:5px;
+}
+#rcbtn{
+font-size:12px;
+font-family:黑体;
+margin-left:60%;
+font-weight:normal;
+width:40px;
+margin-right:8px;
+height:30px;
+line-height:30px;
+background:#999;
+border:none;
+}
+#nrcbtn{
+font-size:12px;
+font-family:黑体;
+font-weight:normal;
+width:40px;
+height:30px;
+line-height:30px;
+background:#999;
+border:none;
+text-align:center;
+color:#fff;
+border-radius:3px;
+box-sizing:border-box;
+}

@@ -1,0 +1,42 @@
+﻿			img{width:100%!important;}
+					a{
+			text-decoration:none;
+			
+			}
+			a:hover{
+			text-decoration:none;
+			}
+		  .yushd{
+			width:46px;
+			height:24px;
+			float:left;
+			border:solid 1px #ccc;
+		   text-align:left;
+		   border-radius:14px;
+		   line-height:24px;
+		   color:#999;
+		   z-index:50;
+		   }
+		   .geyushd{
+		   
+		
+		   }
+		  .hsyushd{
+		  
+	
+		  } 
+
+
+.dw_left{
+	position: absolute;
+	top: 8px ;
+	left: 18px;
+}
+.dw_right{
+	position: absolute;
+	top: 8px ;
+	left: 112px;
+}
+
+
+

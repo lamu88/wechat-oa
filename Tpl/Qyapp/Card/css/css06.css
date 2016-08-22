@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* 全局样式 */
+body{ padding:0; margin:0; font-size:12px; height:100%; word-break: break-all;}
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p { padding:0; margin:0;}
+ul{list-style:none;}
+img{border:0px;}
+.clearfloat{clear:both; height:0px; font-size:1px; line-height:0px;}
+a{ text-decoration:none;}
+
+
+
+.contexts{ position:relative;}
+
+#content{ width:100%; height:auto; position:absolute; top:5%; margin-top:5%;}
+.logo{ width:60px; height:60px; line-height:60px; text-align:center; border:1px solid #000; border-radius:5px; float:left;
+margin-top:8%; margin-left:3%;}
+
+#content ul{ width:60%; float:left; padding-left:5%; border-left:1px solid #000; margin-left:5%;}
+#content ul li{ font-family:"微软雅黑"; font-size:10px; width:100%;}
+#content .margin{ font-weight:bold; font-size:12px;}
+#content ul li b{ font-size:24px;}
+#content ul li span{ margin-left:10%; font-size:14px; font-weight:bold;}
+
+
+
+
+
+
+
+
+

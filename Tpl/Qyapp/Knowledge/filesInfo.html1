@@ -1,0 +1,134 @@
+<section class="entity-panel-wrapper" id="user{lanrain:$data.id}">
+
+	<header class="entity-panel-header header">
+		<p>文档详情</p>
+		<button type="button" class="close m-t" data-dismiss="entity" onclick="panelClose();">&times;</button>
+	</header>
+	<div class="entity-panel-body form-horizontal">
+		<div class="form-group">
+	   <strong class="col-sm-4">文档信息</strong>
+	   </div>
+		<div class="form-group">
+			<label class="col-sm-5 control-label">文档名称：</label>
+			<div class="col-sm-7">
+				<p class="form-control-static">{lanrain:$data.title}</p>
+			</div>
+		</div>
+		<div class="line line-dashed line-lg pull-in"></div>
+		<div class="form-group">
+			<label class="col-sm-5 control-label">文档类型：</label>
+			<div class="col-sm-7">
+				<p class="form-control-static">{lanrain:$data.type}</p>
+			</div>
+		</div>
+		<div class="line line-dashed line-lg pull-in"></div>
+		<div class="form-group">
+			<label class="col-sm-5 control-label">文档所在文件夹：</label>
+			<div class="col-sm-7">
+				<p class="form-control-static">{lanrain:$data.folder}</p>
+			</div>
+		</div>
+		<div class="line line-dashed line-lg pull-in"></div>
+		<div class="form-group">
+			<label class="col-sm-5 control-label">文档可见范围：</label>
+			<div class="col-sm-7">
+				<p class="form-control-static">{lanrain:$data.dep}</p>
+			</div>
+		</div>
+		<div class="line line-dashed line-lg pull-in"></div>
+		<div class="form-group">
+			<label class="col-sm-5 control-label">文档使用权限：</label>
+			<div class="col-sm-7">
+				<p class="form-control-static">{lanrain:$data.power}</p>
+			</div>
+		</div>		
+		<div class="line line-dashed line-lg pull-in"></div>
+		<div class="form-group">
+			<label class="col-sm-5 control-label">文件夹创建时间：</label>
+			<div class="col-sm-7">
+				<p class="form-control-static">{lanrain:$data.ctime|date="Y-m-d H:i:s",###}</p>
+			</div>
+		</div>
+		<div class="line line-dashed line-lg pull-in"></div>
+		<div class="form-group">
+			<label class="col-sm-5 control-label">文档反馈数量：</label>
+			<div class="col-sm-7">
+				<p class="form-control-static">{lanrain:$num.feed}</p>
+			</div>
+		</div>		
+		<div class="line line-dashed line-lg pull-in"></div>
+		<div class="form-group">
+			<label class="col-sm-5 control-label">文档点赞数量：</label>
+			<div class="col-sm-7">
+				<p class="form-control-static">{lanrain:$num.praise}</p>
+			</div>
+		</div>		
+		<div class="line line-dashed line-lg pull-in"></div>
+		<div class="form-group">
+			<label class="col-sm-5 control-label">文档收藏数量：</label>
+			<div class="col-sm-7">
+				<p class="form-control-static">{lanrain:$num.collect}</p>
+			</div>
+		</div>		
+		<div class="line line-dashed line-lg pull-in"></div>
+		<div class="form-group">
+			<label class="col-sm-5 control-label">文档转发数量：</label>
+			<div class="col-sm-7">
+				<p class="form-control-static">{lanrain:$num.relay}</p>
+			</div>
+		</div>		
+		<div class="line line-dashed line-lg pull-in"></div>
+		<div class="form-group">
+			<label class="col-sm-5 control-label">文档下载数量：</label>
+			<div class="col-sm-7">
+				<p class="form-control-static">{lanrain:$num.download}</p>
+			</div>
+		</div>		
+		<div class="line line-dashed line-lg pull-in"></div>
+		<div class="form-group">
+			<label class="col-sm-5 control-label">扫一扫预览：</label>
+			<div class="col-sm-7">
+				<p class="form-control-static"><img src="#"/></p>
+			</div>
+		</div>		
+		<div class="line line-dashed line-lg pull-in"></div>
+		
+	   
+	</div>
+	<footer class="entity-panel-footer footer  text-right">
+		<a href="{lanrain::U('Knowledge/files',array('mid'=>$_GET['mid'],'id'=>$data['id']))}" target="_self" target="_self" class="btn btn-default">查看反馈</a>
+		<a href="{lanrain::U('Knowledge/addFolder',array('id'=>$data['id']))}" target="_self" class="btn btn-default">修改</a>
+		<button type="button" class="btn btn-default" data-confirm="true"  onclick='del("{lanrain:$data.id}")' data-toggle="ajaxPost" data-msg="确定删除吗？" >删除</button>
+	</footer>
+
+</section>
+<script type="text/javascript">
+function panelClose(){
+   $('.entity-panel').addClass('hd');
+}
+//删除操作
+function del(id){
+	$.ajax({
+		type:"POST",
+		url:"index.php?g=Qyapp&m=Knowledge&a=delFolder&mid={lanrain::$_GET['mid']}&id="+id,
+		data:"id="+id,
+		dataType:'json',
+		success:function(json){
+		var status = json;
+		  if(status==1)
+		  {
+			alert('删除成功');location.reload();
+			  $('#cont').html('删除成功');
+			  $('#delMember').model();
+		  }
+		  else
+		  {
+			alert('删除失败');location.reload();
+			  $('#cont').html('删除失败');
+			  $('#delMember').model();
+		  }
+		}
+	});       	
+}		 
+</script>
+

@@ -1,0 +1,322 @@
+        <div id="add-con">
+		    <div style="background-color: #fff;height:50px;position:relative;">
+			    <ul style="width:100%;list-style: none;" id="top-menu">
+				    <li style="height: 48px;line-height:48px;text-align: center;float: left;width: 25%;">
+					    <span>部门</span>
+					</li>
+				    <li style="height: 48px;line-height:48px;text-align: center;float: left;width: 25%;">
+					    <span>人员</span>
+					</li>
+				    <li style="height: 48px;line-height:48px;text-align: center;float: left;width: 25%;">
+					    <span>已选</span>
+					</li>
+				    <li style="height: 48px;line-height:48px;text-align: center;float: left;width: 25%;">
+					    <span>搜索</span>
+					</li>					
+				</ul>
+				<div class="" style="position:absolute;top:52px;left:0px;width:100%;z-index:9999;background-color:#fff;display:none;" id="letter">
+					<div style="padding:3px 0px;margin:0px;background-color:#fafafa;">
+						<ul style="padding:0px 0px 10px 0px;height:229px;">
+						<li class="letter" onclick="find('A');">A</li>
+						<li  class="letter" onclick="find('B');">B</li>
+						<li  class="letter" onclick="find('C');">C</li>
+						<li  class="letter" onclick="find('D');">D</li>
+						<li  class="letter" onclick="find('E');">E</li>
+						<li  class="letter" onclick="find('F');">F</li>
+						<li  class="letter" onclick="find('G');">G</li>
+						<li  class="letter" onclick="find('H');">H</li>
+						<li  class="letter" onclick="find('I');">I</li>
+						<li  class="letter" onclick="find('J');">J</li>
+						<li  class="letter" onclick="find('K');">K</li>
+						<li  class="letter" onclick="find('L');">L</li>
+						<li  class="letter" onclick="find('M');">M</li>
+						<li  class="letter" onclick="find('N');">N</li>
+						<li  class="letter" onclick="find('O');">O</li>
+						<li  class="letter" onclick="find('P');">P</li>
+						<li  class="letter" onclick="find('Q');">Q</li>
+						<li  class="letter" onclick="find('R');">R</li>
+						<li  class="letter" onclick="find('S');">S</li>
+						<li  class="letter" onclick="find('T');">T</li>
+						<li  class="letter" onclick="find('U');">U</li>
+						<li  class="letter" onclick="find('V');">V</li>
+						<li  class="letter" onclick="find('W');">W</li>
+						<li  class="letter" onclick="find('X');">X</li>
+						<li  class="letter" onclick="find('Y');">Y</li>
+						<li  class="letter" onclick="find('Z');">Z</li>
+						<li  class="letter" onclick="find('AZ');">#</li>				
+						</ul>
+					</div>			
+				</div>				
+			</div>			
+			<div style="clear:both;"></div>	
+            <div style="margin-top:10px;display:none;" id="tab_0">	
+                <div style="overflow:hidden;">
+				    <ul id="dept-header">
+					    <li style="float:left;height:36px;line-height:36px;" onclick="getSub('{lanrain:$pid}')"><span style="">{lanrain:$dept['name']}</span></li>
+						<li style="float:left;height:36px;line-height:36px;"><span style="">-->{lanrain:$dept['name']}</span></li>
+					</ul>
+                </div>
+				<div style="clear:both;"></div>				
+                <div id="address">				
+					<div style="background-color:#fff;" class="dept-{lanrain:$pid}">
+						<ul style="list-style:none;" id="address-dept">
+							<volist name="sub" id="sub">
+							<li style="" class="deptlist" id="address-dept-{lanrain:$sub.id}">
+								<div style="border-bottom:1px solid #eee;height:40px;line-height:40px;padding:10px 10px 10px 40px;">
+								   {lanrain:$sub.name} 
+								   <span style="float:right;margin-top:8px;">
+									   <span style="margin-right:15px;" class="img-dept-{lanrain:$sub.id}" onclick="addressSelectDept($(this),'{lanrain:$sub.id}')"><img src="./Tpl/Qyapp/Common/images/weixuan.png" width="24px" height="24px"></span>
+									   <span style="margin-right:10px;" onclick="addressSub('{lanrain:$sub.id}')"><img src="./Tpl/Qyapp/Common/images/jinru.png" width="24px" height="24px"></span>
+								   </span>						   
+								</div>
+							</li>
+							</volist>											
+						</ul>
+					</div>
+					
+					<div style="margin-top:10px;" class="users-{lanrain:$pid}">
+						<ul style="list-style:none;padding-bottom:5px;margin-left:5px;margin-right:5px;" id="address-users">				
+							<volist name="users" id="users">						    
+							<li style="background-color: #fff;margin-bottom: 2px;padding: 7px 10px 4px 10px;height:40px;line-height:40px;" id="address-users-{lanrain:$users.wecha_id}">
+								  <div style="float:left;width:40px;padding:5px 10px 2px 10px;">
+									  <if condition="$users['pic']">
+									  <img src="{lanrain:$users.pic}" width="30px" height="30px" style="border-radius:50%;">
+									  <else/>
+									  <img src="./Tpl/Qyapp/Applyflow/images/aabb.png" width="30px" height="30px" style="border-radius:50%;">
+									  </if>								      
+								  </div>
+								  <div style="float:left;width:auto;">
+								  {lanrain:$users.name}
+								  </div>
+								   <div style="float:right;margin-top:8px;width:72px;">
+									   <span style="margin-right:15px;" class="img-users-{lanrain:$users.id}" onclick="addressSelectUser($(this),'{lanrain:$users.id}')"><img src="./Tpl/Qyapp/Common/images/weixuan.png" width="24px" height="24px"></span>
+									   <span style="" onclick="addressCard('{lanrain:$users.id}')"><img src="./Tpl/Qyapp/Common/images/jinru.png" width="24px" height="24px"></span>
+								   </div>								  					
+							</li>	
+							</volist>																						
+						</ul>
+					</div>	
+				</div>
+            </div>	
+            <div style="display:none;" id="tab_1">	
+                <volist name="lists" id="add">			
+				<div style="" class="userletter" id="{lanrain:$add.letter}">
+				    <p style="height:24px;line-height:24px;font-size:14px;margin-left:10px;">{lanrain:$add.letter}</p>
+					<ul style="list-style:none;padding-bottom:5px;margin-left:5px;margin-right:5px;" id="lists-{lanrain:$add.letter}">
+					    <volist name="add.data" id="vo">	
+						<!-- <li class="add-user" style="background-color: #fff;margin-bottom: 2px;padding: 7px 10px 4px 10px;height:40px;line-height:40px;">
+							<div style="float:left;padding:5px 10px 2px 10px;">
+								<if condition='$vo["pic"] eq "http://". $_SERVER["SERVER_NAME"]."/"'>
+								<img class="media-object" src="./Tpl/Qyapp/Applyflow/images/aabb.png" width="30px" height="30px" style="border-radius:50%;">
+								<else/>
+								<img class="media-object" id="pic_{lanrain:$vo.id}" src="{lanrain:$vo.pic}" width="30px" height="30px" style="border-radius:50%;">
+								</if> 								
+							</div>
+							<div style="float:left;width:80%;">
+							   {lanrain:$vo.name}
+							</div>
+						   <div style="float:left;padding-top:3px;" class="img-status">
+							   <img src="./Tpl/Qyapp/Applyflow/images/ccdd.png" width="16px" height="16px">
+						   </div>						
+						</li> -->
+							<li style="background-color: #fff;margin-bottom: 2px;padding: 7px 10px 4px 10px;height:40px;line-height:40px;" id="lists-users-{lanrain:$vo.wecha_id}">
+								  <div style="float:left;width:40px;padding:5px 10px 2px 10px;">
+									  <if condition="$vo['pic']">
+									  <img src="{lanrain:$vo.pic}" width="30px" height="30px" style="border-radius:50%;">
+									  <else/>
+									  <img src="./Tpl/Qyapp/Applyflow/images/aabb.png" width="30px" height="30px" style="border-radius:50%;">
+									  </if>								      
+								  </div>
+								  <div style="float:left;width:auto;">
+								  {lanrain:$vo.name}
+								  </div>
+								   <div style="float:right;margin-top:8px;width:72px;">
+									   <span style="margin-right:15px;" onclick="addressSelectUser($(this),'{lanrain:$vo.id}')"><img src="./Tpl/Qyapp/Common/images/weixuan.png" width="24px" height="24px"></span>
+									   <span style="" onclick="addressCard('{lanrain:$vo.id}')"><img src="./Tpl/Qyapp/Common/images/jinru.png" width="24px" height="24px"></span>
+								   </div>								  					
+							</li>						
+						</volist>								
+					</ul>
+				</div>
+				<div style="clear:both;"></div>
+				</volist>				
+			</div>
+            <div style="margin-top:10px;display:none;" id="tab_2">			
+                <div id="selected">				
+					<div>             
+						<ul style="list-style:none;background-color:#fff;" id="selected-dept">
+							<li style="" class="deptlist" id="selected-dept-5">
+								<div style="border-bottom:1px solid #eee;height:40px;line-height:40px;padding:10px 10px 10px 40px;">
+								   反对
+								   <span style="float:right;margin-top:8px;">
+									   <span style="margin-right:15px;" onclick="removeSelectedDept($(this),'5')"><img src="./Tpl/Qyapp/Common/images/weixuan.png" width="24px" height="24px"></span>
+								   </span>						   
+								</div>
+							</li>										
+						</ul>
+					</div>
+					
+					<div style="margin-top:10px;">				
+						<ul style="list-style:none;padding-bottom:5px;margin-left:5px;margin-right:5px;" id="selected-users">										    
+							<li style="background-color: #fff;margin-bottom: 2px;padding: 7px 10px 4px 10px;height:40px;line-height:40px;" class="users-{lanrain:$users.wecha_id}" id="selected-users-5">
+								  <div style="float:left;width:40px;padding:5px 10px 2px 10px;">
+									  <if condition="$users['pic']">
+									  <img src="{lanrain:$users.pic}" width="30px" height="30px" style="border-radius:50%;">
+									  <else/>
+									  <img src="./Tpl/Qyapp/Applyflow/images/aabb.png" width="30px" height="30px" style="border-radius:50%;">
+									  </if>								      
+								  </div>
+								  <div style="float:left;width:auto;">
+								  张三
+								  </div>
+								   <div style="float:right;margin-top:8px;width:32px;">
+									   <span style="" class="img-users-{lanrain:$users.id}" onclick="removeSelectedUser($(this),'6')"><img src="./Tpl/Qyapp/Common/images/weixuan.png" width="24px" height="24px"></span>
+								   </div>								  					
+							</li>																							
+						</ul>
+					</div>	
+				</div>	
+            </div>	
+        </div>
+		<script>
+		$('#tab_0').show();
+		$('#top-menu li:first-child').css('border-bottom','3px solid red');
+		$('#top-menu li').each(function(){
+			$(this).click(function(){
+				$('#top-menu li').css('border-bottom','none');
+				$(this).css('border-bottom','3px solid red');	
+				var index = $(this).index();
+				if(index == 0){
+					$('#letter').hide();		
+					$('#tab_0').show();
+					$('#tab_1').hide();
+					$('#tab_2').hide();
+					$('#tab_3').hide();			
+				}else if(index == 1){
+					$('#letter').hide();		
+					$('#tab_0').hide();		
+					$('#tab_1').show();
+					$('#tab_2').hide();
+					$('#tab_3').hide();	
+					$('div.userletter').show();				
+				}else if(index == 2){
+					$('#letter').hide();		
+					$('#tab_0').hide();		
+					$('#tab_1').hide();
+					$('#tab_2').show();
+					$('#tab_3').hide();
+				}else if(index == 3){
+					$('#letter').show();
+					$('#tab_0').hide();		
+					$('#tab_1').show();
+					$('#tab_2').hide();			
+				}
+			});
+		});
+		//按字母搜索
+		function find(letter){
+			$('#letter').hide();
+			var letter = letter.toLowerCase();
+			$('div.userletter').hide();
+			$('#'+letter).show();
+		}
+
+		//按字母搜索
+		function find(){
+		
+		}		
+
+		//按字母搜索
+		function find(){
+		
+		}	
+		
+		//按字母搜索
+		function find(){
+		
+		}	
+
+		//按字母搜索
+		function find(){
+		
+		}	
+
+		//按字母搜索
+		function find(){
+		
+		}			
+		
+		$('.add-user').click(function(){
+			if($(this).find('.img-status').is(':visible')){
+				$(this).find('.img-status').hide();
+			}else{
+				$(this).find('.img-status').show();
+			}
+		});
+		
+		function mySelect(obj,pid){
+		    if(obj.hasClass('add-active')){
+			    obj.removeClass('add-active');
+				//$('.img-'+pid).children('img').attr('src','./Tpl/Qyapp/Common/images/weixuan.png');
+			    obj.children('img').attr('src','./Tpl/Qyapp/Common/images/weixuan.png');
+				//移除
+				$('#selectList').find('img-'+pid).parent().parent().parent().remove();
+			}else{
+			    obj.addClass('add-active');
+				//增加
+				$('#selectList').append('<li>sss</li>');
+				//$('.img-'+pid).children('img').attr('src','./Tpl/Qyapp/Common/images/xuanzhong.png');
+			    obj.children('img').attr('src','./Tpl/Qyapp/Common/images/xuanzhong.png');			
+			}
+		}
+		
+		function selectList(){
+		
+		}
+		
+		function getSub(pid){
+		    if($('#').length > 0){
+			    
+			}else{
+				var url = "index.php?g=Qyapp&m=Common&a=wap_sub&token={lanrain::$_GET['token']}&wecha_id={lanrain::$_GET['wecha_id']}&id="+pid;
+				$.ajax({
+					type: "GET",
+					cache: false,
+					url: url,
+					dataType: "html",
+					success: function (res) {
+						$('#dept-users').append(res);
+						$('.dept-'+pid).hide();
+						$('.users-'+pid).hide();
+					},
+					error: function (xhr, ajaxOptions, thrownError) {
+					
+					}
+				});				
+			}		
+		}
+		
+		
+		var pid = "{lanrain:$pid}";
+		$('.deptlist1').on('click',function(){
+		    var id = $(this).attr('data-id');
+			var url = "index.php?g=Qyapp&m=Common&a=wap_sub&token={lanrain::$_GET['token']}&wecha_id={lanrain::$_GET['wecha_id']}&id="+id;
+			//var pageContent = $('.page-content');
+			//var pageContentBody = $('.page-content .page-content-body');
+
+			$.ajax({
+				type: "GET",
+				cache: false,
+				url: url,
+				dataType: "html",
+				success: function (res) {
+					$('#dept-users').append(res);
+					$('.dept-'+pid).hide();
+					$('.users-'+pid).hide();
+				},
+				error: function (xhr, ajaxOptions, thrownError) {
+				
+				}
+			});				
+		});
+		</script>

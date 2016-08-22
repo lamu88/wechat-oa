@@ -1,0 +1,31 @@
+.indexTop .btnDiv{background:url(../Images/indexTop.png) top repeat-x; height:120px; width:100%; overflow:hidden; position:absolute; z-index:5; left:0px; bottom:0px;}
+.indexTop .btnDiv .fr{padding-right:20px;}
+.indexTop .btnDiv li{float:left; width:120px; overflow:hidden; padding-top:17px;}
+.indexTop .btnDiv a{display:block; width:86px; height:86px; overflow:hidden;}
+.indexTop .btnDiv .li_01 a{background:url(../Images/indexTopBtn.png) -0px -0px no-repeat;}
+.indexTop .btnDiv .li_01 a:hover, .indexTop .btnDiv .li_01 .aNow{background:url(../Images/indexTopBtn.png) -0px -90px no-repeat;}
+.indexTop .btnDiv .li_02 a{background:url(../Images/indexTopBtn.png) -120px -0px no-repeat;}
+.indexTop .btnDiv .li_02 a:hover, .indexTop .btnDiv .li_02 .aNow{background:url(../Images/indexTopBtn.png) -120px -90px no-repeat;}
+.indexTop .btnDiv .li_03 a{background:url(../Images/indexTopBtn.png) -240px -0px no-repeat;}
+.indexTop .btnDiv .li_03 a:hover, .indexTop .btnDiv .li_03 .aNow{background:url(../Images/indexTopBtn.png) -240px -90px no-repeat;}
+.indexTop .btnDiv .li_04 a{background:url(../Images/indexTopBtn.png) -360px -0px no-repeat;}
+.indexTop .btnDiv .li_04 a:hover, .indexTop .btnDiv .li_04 .aNow{background:url(../Images/indexTopBtn.png) -360px -90px no-repeat;}	
+
+.indexPart2{height:448px; overflow:hidden; position:relative; background:url(../Images/indexPart2.gif) left 213px repeat-x;}
+.indexPart2 .list{padding-left:30px;}
+.indexPart2 li{float:left; width:217px; height:364px; position:relative; overflow:hidden; padding:84px 34px 0 34px;}
+.indexPart2 .imgDiv{position:absolute; z-index:10; left:0px; top:0px; width:100%; text-align:center;}
+.indexPart2 .bg{height:128px; overflow:hidden; border:#dcdddd solid 1px;}
+.indexPart2 .title{height:46px; line-height:46px; overflow:hidden; text-align:center; font-size:24px; color:#FFF;}
+.indexPart2 .content{background:#dcdddd; height:164px; overflow:hidden; padding-top:24px;}
+.indexPart2 .content a{display:block; height:24px; line-height:24px; padding-left:38px; font-size:18px; font-weight:100;}
+.indexPart2 .content a:hover{padding-left:35px; background:#f7f7f8;}
+.indexPart2 .content dd{height:30px; overflow:hidden;}
+.indexPart2 .li_01 .title{background:#589c00;}
+.indexPart2 .li_01 .content a:hover{border-left:#589c00 solid 3px;}
+.indexPart2 .li_02 .title{background:#ff8309;}
+.indexPart2 .li_02 .content a:hover{border-left:#ff8309 solid 3px;}
+.indexPart2 .li_03 .title{background:#177cda;}
+.indexPart2 .li_03 .content a:hover{border-left:#177cda solid 3px;}
+.indexPart2 .li_04 .title{background:#06c0b2;}
+.indexPart2 .li_04 .content a:hover{border-left:#06c0b2 solid 3px;}			

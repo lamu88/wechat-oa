@@ -1,0 +1,315 @@
+
+<style>
+    .portlet{
+	    border: 1px solid #eee;
+	    padding: 12px 20px 15px;
+		border-radius: 4px;
+		margin-bottom: 25px;
+		overflow: hidden;
+		padding: 0px;	
+		
+	}
+    .portlet p {
+	padding:15px;
+    border-bottom: 1px solid #eee;
+    border-radius: 4px 4px 0 0;
+    margin-bottom: 10px;
+    min-height: 30px;
+	font-size: 14px;
+    font-weight: bold;
+	margin-top: 0px;
+	}	
+	.portlet > p > small {
+		font-size: 70%;
+		font-weight: normal;
+		padding-left: 5px;
+	}
+	.app-item-img {border-radius: 100%;width: 100%;}
+	.app-item-name {
+		margin: 5px 0px;
+		font-size: 11px;
+		width:100%;
+	}
+	.app-item {
+		float: left;
+		overflow: hidden;
+		cursor: pointer;
+		text-align: center;
+		position: relative;
+		width: 25%;
+		padding:0px;
+		padding-left:9px;
+		padding-right:8px;
+	}
+	.wrapper {
+    padding: 15px;
+}
+.scrollable {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Microsoft YaHei,Helvitica,Verdana,Arial,san-serif;
+    font-size: 13px;
+    color: #717171;
+	margin:0 auto;
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #333;
+}
+.panel.panel-default {
+    border-color: #E8E8E8;
+}
+.panel {
+    border-radius: 2px;
+}
+.panel-default {
+    border-color: #DDD;
+}
+.panel {
+    margin-bottom: 20px;
+    background-color: #FFF;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+}
+</style>
+<section class="vbox">
+    <!-- <header class="header bg-white b-b clearfix">
+        <p>
+            我的应用<small>{lanrain:$user.endtime|date="Y年m月d日",###}到期</small>
+        </p>
+    </header> -->
+   <section class="scrollable wrapper w-f" style="padding:0px;">
+        <section class="panel panel-default ">
+		    <if condition="$jichu">
+            <div class="row m-l-none m-r-none bg-light lter portlet" id="jichu">	
+				<p style="background: #eaeaea  url('./Tpl/Qyapp/Appslist/images/abc.png') no-repeat scroll left center / 32px auto;padding: 7px 7px 7px 35px;">
+				{lanrain:$jichu.head}
+				<small>{lanrain:$jichu.info}</small>
+				</p>
+				<volist name="jichu.data" id="vo">
+				<div class="app-item" style="">
+					<a href="{lanrain::U($vo['module'].'/index',array('mid'=>$vo['id']))}" target="_self">
+					<img class="app-item-img"  alt="{lanrain:$vo.name}" src="{lanrain:$vo.logo}"></a>
+					<div class="app-item-name js_entity_view" data-path="">{lanrain:$vo.name}                               
+						<span class="pull-right text-muted" title="查看详情">
+						<i class="fa fa-trash-o mypanel" id="{lanrain:$vo.id}"></i>
+						</span>
+					</div>
+				</div>
+				</volist>				
+				<!-- <a href="{lanrain::U('Appslist/appCenter')}" target="_self">
+					<div class="app-item-add" title="添加应用" style="height:130px;width:130px;">
+						<a  href="{lanrain::U('Appslist/appCenter')}" target="_self" class="fa fa-plus icon_add_pid "></a>
+					</div>
+				</a>   -->             				
+			</div>
+			</if>
+		    <if condition="$sanji">			
+            <div class="row m-l-none m-r-none bg-light lter portlet" id="sanji">	
+				<p style="background: #eaeaea  url('./Tpl/Qyapp/Appslist/images/abc4.png') no-repeat scroll left center / 32px auto;padding: 7px 7px 7px 35px;">
+				{lanrain:$sanji.head}
+				<small>{lanrain:$sanji.info}</small>
+				</p>
+				<volist name="sanji.data" id="vo">
+				<div class="app-item" >
+					<a href="{lanrain::U($vo['module'].'/index',array('mid'=>$vo['id']))}" target="_self">
+					<img class="app-item-img" alt="{lanrain:$vo.name}" src="{lanrain:$vo.logo}"></a>
+					<div class="app-item-name js_entity_view" data-path="">{lanrain:$vo.name}                               
+						<span class="pull-right text-muted" title="查看详情">
+						<i class="fa fa-trash-o mypanel" id="{lanrain:$vo.id}"></i>
+						</span>
+					</div>
+				</div>
+				</volist>				
+				<!-- <a href="{lanrain::U('Appslist/appCenter')}" target="_self">
+					<div class="app-item-add" title="添加应用" style="height:130px;width:130px;">
+						<a  href="{lanrain::U('Appslist/appCenter')}" target="_self" class="fa fa-plus icon_add_pid "></a>
+					</div>
+				</a>   -->             				
+			</div>
+			</if>			
+			<if condition="$yingxiao">
+            <div class="row m-l-none m-r-none bg-light lter portlet" id="yingxiao">	
+				<p style="background: #eaeaea  url('./Tpl/Qyapp/Appslist/images/abc3.png') no-repeat scroll left center / 32px auto;padding: 7px 7px 7px 35px;">
+				{lanrain:$yingxiao.head}
+				<small>{lanrain:$yingxiao.info}</small>
+				</p>
+				<volist name="yingxiao.data" id="vo">
+				<div class="app-item" style="">
+					<a href="{lanrain::U($vo['module'].'/index',array('mid'=>$vo['id']))}" target="_self">
+					<img class="app-item-img" alt="{lanrain:$vo.name}" src="{lanrain:$vo.logo}"></a>
+					<div class="app-item-name js_entity_view" data-path="">{lanrain:$vo.name}                               
+						<span class="pull-right text-muted" title="查看详情">
+						<i class="fa fa-trash-o mypanel" id="{lanrain:$vo.id}"></i>
+						</span>
+					</div>
+				</div>
+				</volist>				
+				<!-- <a href="{lanrain::U('Appslist/appCenter')}" target="_self">
+					<div class="app-item-add" title="添加应用" style="height:130px;width:130px;">
+						<a  href="{lanrain::U('Appslist/appCenter')}" target="_self" class="fa fa-plus icon_add_pid "></a>
+					</div>
+				</a> -->                				
+			</div>
+			</if>			
+			<if condition="$hangye">
+            <div class="row m-l-none m-r-none bg-light lter portlet" id="hangye">	
+				<p style="background: #eaeaea  url('./Tpl/Qyapp/Appslist/images/abc5.png') no-repeat scroll left center / 32px auto;padding: 7px 7px 7px 35px;">
+				{lanrain:$hangye.head}
+				<small>{lanrain:$hangye.info}</small>
+				</p>
+				<volist name="hangye.data" id="vo">
+				<div class="app-item" style="">
+					<a href="{lanrain::U($vo['module'].'/index',array('mid'=>$vo['id']))}" target="_self">
+					<img class="app-item-img" alt="{lanrain:$vo.name}" src="{lanrain:$vo.logo}"></a>
+					<div class="app-item-name js_entity_view" data-path="">{lanrain:$vo.name}                               
+						<span class="pull-right text-muted" title="查看详情">
+						<i class="fa fa-trash-o mypanel" id="{lanrain:$vo.id}"></i>
+						</span>
+					</div>
+				</div>
+				</volist>				
+				<a href="{lanrain::U('Appslist/appCenter')}" target="_self">
+					<div class="app-item-add" title="添加应用" style="height:130px;width:130px;">
+						<a  href="{lanrain::U('Appslist/appCenter')}"  target="_self" class="fa fa-plus icon_add_pid "></a>
+					</div>
+				</a>               				
+			</div>
+			</if>			
+			<if condition="$shangwu">
+            <div class="row m-l-none m-r-none bg-light lter portlet" id="shangwu">	
+				<p style="background: #eaeaea  url('./Tpl/Qyapp/Appslist/images/abc6.png') no-repeat scroll left center / 32px auto;padding: 7px 7px 7px 35px;">
+				{lanrain:$shangwu.head}
+				<small>{lanrain:$shangwu.info}</small>
+				</p>
+				<volist name="shangwu.data" id="vo">
+				<div class="app-item" style="">
+					<a href="{lanrain::U($vo['module'].'/index',array('mid'=>$vo['id']))}" target="_self">
+					<img class="app-item-img" alt="{lanrain:$vo.name}" src="{lanrain:$vo.logo}"></a>
+					<div class="app-item-name js_entity_view" data-path="">{lanrain:$vo.name}                               
+						<span class="pull-right text-muted" title="查看详情">
+						<i class="fa fa-trash-o mypanel" id="{lanrain:$vo.id}"></i>
+						</span>
+					</div>
+				</div>
+				</volist>				
+				<!-- <a href="{lanrain::U('Appslist/appCenter')}" target="_self">
+					<div class="app-item-add" title="添加应用" style="height:130px;width:130px;">
+						<a  href="{lanrain::U('Appslist/appCenter')}" target="_self" class="fa fa-plus icon_add_pid "></a>
+					</div>
+				</a>  -->              				
+			</div>
+			</if>			
+<!--             <div class="row m-l-none m-r-none bg-light lter portlet" id="crm">	
+				<p>
+				{lanrain:$crm.head}
+				<small>{lanrain:$crm.info}</small>
+				</p>
+				<volist name="crm.data" id="vo">
+				<div class="app-item" style="padding-left:17px;padding-right:15px;width:170px;">
+					<a href="{lanrain::U($vo['module'].'/index',array('mid'=>$vo['id']))}" target="_self">
+					<img class="app-item-img" alt="{lanrain:$vo.name}" src="{lanrain:$vo.logo}"></a>
+					<div class="app-item-name js_entity_view" data-path="">{lanrain:$vo.name}                               
+						<span class="pull-right text-muted" title="查看详情">
+						<i class="fa fa-trash-o mypanel" id="{lanrain:$vo.id}"></i>
+						</span>
+					</div>
+				</div>
+				</volist>				
+				<a href="{lanrain::U('Appslist/appCenter')}" target="_self">
+					<div class="app-item-add" title="添加应用" style="height:130px;width:130px;">
+						<a  href="{lanrain::U('Appslist/appCenter')}" target="_self" class="fa fa-plus icon_add_pid "></a>
+					</div>
+				</a>               				
+			</div>
+            <div class="row m-l-none m-r-none bg-light lter portlet" id="hudong">	
+				<p>
+				{lanrain:$hudong.head}
+				<small>{lanrain:$hudong.info}</small>
+				</p>
+				<volist name="hudong.data" id="vo">
+				<div class="app-item" style="padding-left:17px;padding-right:15px;width:170px;">
+					<a href="{lanrain::U($vo['module'].'/index',array('mid'=>$vo['id']))}" target="_self">
+					<img class="app-item-img" alt="{lanrain:$vo.name}" src="{lanrain:$vo.logo}"></a>
+					<div class="app-item-name js_entity_view" data-path="">{lanrain:$vo.name}                               
+						<span class="pull-right text-muted" title="查看详情">
+						<i class="fa fa-trash-o mypanel" id="{lanrain:$vo.id}"></i>
+						</span>
+					</div>
+				</div>
+				</volist>				
+				<a href="{lanrain::U('Appslist/appCenter')}" target="_self">
+					<div class="app-item-add" title="添加应用" style="height:130px;width:130px;">
+						<a  href="{lanrain::U('Appslist/appCenter')}" target="_self" class="fa fa-plus icon_add_pid "></a>
+					</div>
+				</a>                				
+			</div>	 -->	
+	        <style>
+			.icon_add_pid{
+			display:black;
+			background-image: url(./Tpl/Qyapp/Appslist/images/icon_main_efa6f7de.png)!important;
+			background-repeat: no-repeat!important;
+			width:30px;
+			height:30px;
+			margin-top:55px;
+			margin-left:10px;
+			}
+	        </style>			
+        </section>
+ </section>
+</section>
+<div class="msgbox"></div>
+<section class="entity-panel hd" id="info">
+</section>
+<script src="./Tpl/Qyapp/Static/Js/weiyi.js" type="text/javascript"></script>
+<script type="text/javascript">
+var a = $('#jichu.portlet div.app-item div.js_entity_view span.pull-right i.mypanel');
+var b = $('#sanji.portlet div.app-item div.js_entity_view span.pull-right i.mypanel');
+var c = $('#yingxiao.portlet div.app-item div.js_entity_view span.pull-right i.mypanel');
+var d = $('#hangye.portlet div.app-item div.js_entity_view span.pull-right i.mypanel');
+var e = $('#shangwu.portlet div.app-item div.js_entity_view span.pull-right i.mypanel');
+a.add(b).add(c).add(d).add(e).click(function(){
+    //alert('gggggggggg');
+	$(this).each(function(){
+	    //获取每行用户的id
+        var userId = $(this).attr('id');
+		//alert(userId);
+		if($('#user'+userId).length>0){
+			//查看是否为当前的成员的信息
+			var curId = $('#info').children().attr('id');			
+		    if(curId == 'user'+userId){
+				if($('.entity-panel').hasClass('hd')){
+					$('.entity-panel').removeClass('hd');
+				}else{
+					$('.entity-panel').addClass('hd');
+				}			    
+			}else{
+				$('#info').empty();   
+				//并ajax加载点击行的数据信息
+				$('#info').load("index.php?g=Qyapp&m=Appslist&a=panelInfo&mid={lanrain::$_GET['mid']}&id="+userId);
+				$('.entity-panel').removeClass('hd');
+				$('.entity-panel').css('right','0px');				    
+			}
+		}else{
+		    $('#info').empty();   //清除点击其他行在id为memberInfo的div中产生的数据信息
+			$('#info').load("index.php?g=Qyapp&m=Appslist&a=panelInfo&mid={lanrain::$_GET['mid']}&id="+userId);
+			$('.entity-panel').removeClass('hd');
+			$('.entity-panel').css('right','0px');			    
+		}
+
+		
+	});
+	
+});	
+</script>

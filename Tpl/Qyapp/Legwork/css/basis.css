@@ -1,0 +1,251 @@
+@charset "utf-8";
+input {
+  font-family:"Microsoft YaHei", "微软雅黑", Arial, Helv, Helvetica, sans-serif;
+  -webkit-appearance:none;
+  font-size:12px;
+}
+input[placeholder]{ font-size:12px;}
+-webkit-input[placeholder]{ font-size:12px;}
+body,p{
+  font-family:"Microsoft YaHei", "微软雅黑", Arial, Helv, Helvetica, sans-serif;
+  font-size: 12px;
+  margin:0;
+  padding:0;
+}
+a{
+    text-decoration: none;
+}
+.content{
+    width: 100%;
+    height: auto;
+}
+form{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+
+.same{
+    width:100%;
+    height:40px;
+    border-bottom:solid 1px #eee;
+    line-height:40px;
+    background:#fff;
+    font-size:13px;
+    text-indent:10px;
+    }
+    .samesp{
+    color:#999;
+    font-size:14px;
+    margin-left:20px;
+    }
+    .font_s input{ 
+        color: #888;
+    }
+.samesp input::-webkit-input-placeholder{
+    font-size: 12px
+}
+.newimg textarea::-webkit-input-placeholder{
+    font-size: 12px
+}
+    .xm{
+    text-indent:10px;
+    }
+    .botton{
+    width:49%;
+    height:60px;
+    float:left;
+    text-align:center;
+    line-height:69px;
+    background:#f8f8f8;
+    border:solid 1px #eee;
+    
+    }
+    input{
+    border:none;
+    color:12px;
+    
+    }
+    
+    .container {
+    position: relative;
+    max-width: 640px;
+    min-height: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    overflow: hidden;
+
+    }
+    .btright{
+    
+    margin-left:36%;
+    
+    }
+    
+    .selsectedd{
+        -webkit-appearance: button;
+-webkit-user-select: none;
+font-size: 13px;
+overflow: visible;
+text-overflow: ellipsis;
+white-space: nowrap;
+color: #888;
+display: inline;
+margin: 0px 1px 0px 1px;
+font-size: 16px;
+height: auto;
+padding: 10px;
+outline: none;
+border: 0;
+background-color: transparent;
+font-size:12px;
+z-index:0
+    }
+#r-result{width:100%;}
+
+
+.text{
+    width: 77%;
+    height: 40px;
+    padding-left: 5%;
+    float: left;
+    border: none;
+    border-right: 1px solid #CCC;
+	border-radius:0px;
+}
+.search{
+    width: 15%;
+    height: 40px;
+    float: left;
+    border:none;
+    background:none;
+    background:url(../images/001.png) no-repeat center;
+    cursor: pointer;
+	border-radius:0px;
+
+}
+
+.com_search{ width:92%; height:auto;overflow: hidden;
+    margin:auto;
+    border:1px solid #35aa47;margin: 15px 5%; }
+.search_text{ 
+    width:72%; 
+    margin:0 auto; 
+    color:#a1a1a1; 
+    background:url(../images/search_icon.png) no-repeat 2% 50% #fff;
+     padding:8px 0 8px 8%;
+     float: left;
+     -webkit-appearance:none;
+     -webkit-border-radius:0;
+     border: none;
+ }
+.search_sub{
+    width: 20%;
+    height: 34px;
+    background: #35aa47;
+    color: #fff;
+    float: right;
+    border:none;
+    cursor: pointer;
+    -webkit-appearance:none;
+     -webkit-border-radius:0;
+}
+.bder{
+    width: 94%;
+    height: auto;
+    margin:auto;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+    padding:10px 3% ;
+}
+.bder p{
+    font-size: 13px;
+    line-height: 20px;
+    color: #454545;
+}
+.bder p span{color: #999}
+#ff{
+    font-size: 14px;
+    font-weight: bold;
+    color: #454545;
+    line-height: 32px;
+}
+.bder a{
+    width: 12%;
+    height: 23px;
+    text-align: center;
+    font-size: 14px;
+    display: block;
+    float: left;
+    margin:6px 20px 3px 0;
+	line-height:23px;
+}
+.qd,.bj,.sc{
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webket-border-radius: 3px;
+}
+.qd,.bj{
+    color: #35aa47;
+    border:1px solid #35aa47;
+}
+
+.sc{
+    color: #de5054;
+    border:1px solid #de5054;
+}
+.jh{
+    display: block;
+    font-size: 16px;
+	line-height:40px;
+	text-align:center;
+	background-color:#f6f6f6;
+    width: 100%;
+    height: 40px;
+    border-top: 1px solid #ccc;
+	position:fixed;
+	bottom:0;
+	left:0;
+}
+.jh a{
+    color: #35AA47;
+}
+.conts{
+    margin-bottom: 50px;
+}
+.bs_xq{
+  width: 94%;
+margin: 10px 0 50px 3%;
+border: 1px solid #35aa47;
+height: auto;
+overflow: hidden;
+}
+.xq_top{height: 30px;line-height: 30px;
+    background: #35aa47;color: #fff;text-indent: 10px;font-size: 14px;
+}
+.fll{float: left;}
+.flr{float: right;}
+  .work_btm{
+    width: 94%;
+    height: 36px;
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    margin-left: 3%;
+    padding-bottom: 10px;
+}
+.work_btm a{
+    width: 49%;
+    height: 100%;
+    line-height: 36px;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    background: #35aa47;
+    border-radius: 3px;
+}
+
+
+

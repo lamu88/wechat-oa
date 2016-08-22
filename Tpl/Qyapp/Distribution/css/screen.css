@@ -1,0 +1,414 @@
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure {
+    font-size: 12px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+}
+
+body {
+    background: #FFF url("../images/bg_color_strip.png") top center repeat-x;
+    font: 14px/1.5 "宋体", Arial, sans-serif;
+}
+
+.hide {
+    display: none!important;
+}
+
+.android, .ios {
+    display: none;
+}
+
+.row {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: url("../images/bg_header.jpg") center bottom;
+    background-size: cover;
+    /* box-shadow: 0 5px 15px 0 #A2A09E; */
+    height: 100px;
+    margin: 7px 0 0;
+    padding: 20px 0 0;
+    width: 100%;
+}
+#logo a img {
+    height: 59px;
+    width: 141px;
+}
+.en header {
+    height: 90px;
+    padding: 30px 0 0;
+}
+.en header #logo a img {
+    height: 44px;
+    width: 176px;
+}
+header h6 {
+    float: right;
+    position: relative;
+    top: -20px;
+}
+header h6 a {
+    color: #DDD;
+    font-size: 14px;
+}
+.app_tray {
+    /* background: #FFF url("../images/bg_apps.png") repeat; */
+    /* box-shadow: 0 0 15px #A2A09E inset; */
+    overflow: hidden;
+}
+.app_tray .row {
+    padding: 0;
+}
+.app_tray .row li {
+    border-bottom: 1px solid #E5E5E5;
+    padding: 20px;
+}
+.app_tray .row li a {
+    color: #686868;
+    display: block;
+}
+.app_tray .row li .figure {
+    text-align: left;
+}
+.app_tray .row li img {
+    float: left;
+    width: 70px;
+    position: relative;
+    top: 1px;
+}
+.app_tray .row li .figcaption {
+    /*background: url("../images/bg_arrow.png") no-repeat right 25px;*/
+    color: #999;
+    /*display: table-cell;*/
+    font-size: 12px;
+    padding: 0 0 0 80px;
+    text-shadow: 0 1px 0 white;
+    vertical-align: middle;
+    /*width: 195px;*/
+}
+.app_tray .row li .figcaption h2 {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
+.app_tray .row li .figcaption p {
+    font-size: 14px;
+    height: 42px;
+    overflow: hidden;
+}
+.more {
+    background: #F7F7F7;
+    padding: 20px 0;
+}
+.more h2 {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+.more ul {
+    overflow: hidden;
+}
+.more li {
+    background: #E5E5E5;
+    border-radius: 24px;
+    color: #666;
+    float: left;
+    font-size: 16px;
+    margin: 0 15px 10px 0;
+    padding: 6px 20px;
+}
+.more li a {
+    color: #666;
+}
+footer {
+    background: #EAEAEA;
+    /* box-shadow: 0 0 15px 0 #A2A09E;*/
+    color: #777;
+    font-family: Arial;
+    height: 45px;
+    padding: 25px 0 0;
+}
+footer .row {
+    width: 300px;
+}
+footer li {
+    float: left;
+    font-size: 14px;
+    line-height: 19px;
+    padding: 0 10px;
+}
+.en footer li {
+    padding: 0 6px;
+}
+footer li a {
+    color: #666;
+}
+footer li a.desktop {
+    background: url("../images/bg_pc.png") no-repeat;
+    display: block;
+    height: 19px;
+    text-indent: -9999px;
+    width: 22px;
+}
+
+/* 工行chrome插件会在页面底部自动插入元素，所以需要隐藏 */
+#ClCache {
+    display: none;
+}
+
+/* 产品页面 */
+.download {
+    background: #F7F7F7;
+}
+.download .row {
+    margin: 0 0 -10px;
+    overflow: hidden;
+    position: relative;
+    top: -26px;
+}
+.download .figure {
+    background: #EAEAEA;
+    /* Safari 5.1, Chrome 10+ */
+    background: -webkit-linear-gradient(top, #FFF, #EAEAEA);
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(top, #FFF, #EAEAEA);
+    /* IE 10 */
+    background: -ms-linear-gradient(top, #FFF, #EAEAEA);
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(top, #FFF, #EAEAEA);
+    border-radius: 6px;
+    box-shadow: 0 3px 10px #A2A09E;
+    margin: 0 0 10px;
+    padding: 30px 10px 10px;
+    text-align: center;
+}
+.download .figure img {
+    width: 96px;
+}
+.download .figcaption {
+}
+.download .figure h2 {
+    color: #333;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+.en .download .figure h2 {
+    font-size: 22px;
+}
+.download .figure h3 {
+    background: #75A000;
+    /* Safari 5.1, Chrome 10+ */
+    background: -webkit-linear-gradient(top, #9AC80B, #75A000);
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(top, #9AC80B, #75A000);
+    /* IE 10 */
+    background: -ms-linear-gradient(top, #9AC80B, #75A000);
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(top, #9AC80B, #75A000);
+    border-radius: 6px;
+    clear: both;
+    font-size: 24px;
+    font-weight: bold;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+}
+.en .download .figure h3 {
+    font-size: 18px;
+}
+.download .figure h3 a {
+    color: #FFF;
+    display: block;
+}
+.download .figure h3 a span {
+    background: url("../images/bg_download.png") no-repeat 100% 50%;
+    padding: 0 35px 0 0;
+}
+.en .download .figure h3 a span {
+    background: url("../images/bg_download_en.png") no-repeat 100% 50%;
+    padding: 5px 35px 5px 0;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (-moz-min-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2) {
+    .download .figure h3 a span {
+        background: url("../images/bg_download_402x.png") no-repeat 100% 50%;
+        background-size: auto 100%;
+    }
+    .en .download .figure h3 a span {
+        background: url("../images/bg_download_en_402x.png") no-repeat 100% 50%;
+        background-size: auto 100%;
+    }
+}
+.share {
+    float: right;
+    margin: 15px 0 0;
+}
+.share ul {
+    float: left;
+}
+.share li h4 {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 32px;
+}
+.share li {
+    float: left;
+    margin: 0 0 0 10px;
+}
+.share li a {
+    background: url("../images/icon_twitter.png") no-repeat;
+    display: block;
+    height: 32px;
+    text-indent: -9999px;
+    width: 32px;
+}
+.share li.digg a {
+    background: url("../images/icon_digg.png") no-repeat;
+}
+.share li.delicious a {
+    background: url("../images/icon_delicious.png") no-repeat;
+}
+.description {
+    background: #F7F7F7;
+    line-height: 1.8;
+    padding: 0 0 20px;
+}
+.description .thumb {
+    margin: 10px 0 0;
+    text-align: center;
+}
+.description .thumb img {
+    max-width: 100%;
+}
+.description .row {
+}
+.description h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+.description p {
+    color: #999;
+    font-size: 16px;
+}
+.description ol {
+    list-style: inside decimal;
+    margin: 10px 0;
+}
+.description li {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.description h5 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+}
+.description h4 {
+    background: url("../images/bg_goto.png") no-repeat 0 50%;
+    color: #7C3964;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0 0;
+    text-indent: 20px;
+}
+.en .description h4 {
+    background: url("../images/bg_goto_en.png") no-repeat 0 50%;
+}
+.description h4 a {
+    color: #7C3964;
+}
+
+/* 介绍页面 */
+.about {
+    /* background: #FFF url("../images/bg_apps.png") repeat;
+    box-shadow: 0 0 15px #A2A09E inset;*/
+    line-height: 1.5;
+    overflow: hidden;
+    padding: 20px 0 10px;
+}
+.about .row {
+}
+.about h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.about p {
+    color: #999;
+    font-size: 14px;
+    margin: 0 0 10px;
+}
+.about dl {
+    color: #999;
+    font-size: 14px;
+    line-height: 2;
+}
+.about dt {
+    float: left;
+}
+.about ol {
+    list-style: none;
+}
+.about li {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.8;
+}
+.about li h3 {
+    color: #888;
+    font-size: 14px;
+    font-weight: bold;
+}
+.about h6 {
+    color: #999;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.about h6 a {
+    color: #999;
+}
+.unload_msg {
+    font-size: 20px;
+    height: 200px;
+}
+
+/* 自动下载页面 隐藏下载按钮和分享链接 */
+.download_auto .download .figure {
+    background: none;
+    box-shadow: 0 0 0;
+    padding-top: 100px;
+}
+.download_auto .download .figure h3 {
+    display: none!important;
+}
+.download_auto .share {
+    display: none!important;
+}
+.download_auto .description h4 {
+    display: none!important;
+}

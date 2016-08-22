@@ -1,0 +1,127 @@
+/*
+ * CSS Calendar
+ * Tim Wright
+ * Chris Coyier
+ -----------------------------*/
+
+*                   {margin:0;padding:0;}
+body                {font:1em/1.4 Verdana, Arial, Helvetica, sans-serif; 
+					 background: url(../imgs/bg.jpg) top center no-repeat #545454;
+					 
+					 position: relative;
+					max-width: 640px;
+					min-height: 100%;
+					margin: 0 auto;
+					overflow: hidden;
+					 
+					 }
+			 a {
+   text-decoration:none;
+   color:#000;
+}
+
+
+ol.calendar         {margin:0 auto;display:block; min-height: 200px;
+					 background: url(../imgs/tl.png) top left no-repeat; padding: 12px 0 0 20px;}
+li                  {list-style:none;}
+p{
+font-family:ºÚÌå;
+margin-bottom:5px;
+display:block;
+}
+.
+
+
+p.link              {text-align:center;display: block;}
+h1					{display: block; width: 200px;height:76px;
+			         background:url(../imgs/july.png);text-indent:-9999px; margin: 15px auto; }
+
+/*
+ * Day styles  
+ -------------------------*/
+li li               {width:6em;height:6em;float:left;margin:.2em; padding:.2em;overflow:auto;
+					 background: url(../imgs/day-bg.png) bottom right no-repeat; }
+
+/*
+ * Day content (UL/OL & P)
+ -------------------------*/
+li li p             {font-size:.7em;display:block;}
+li li ol            {width:auto;}
+li li ul li,
+li li ol li         {font-size:.7em;display:block;height:auto;width:auto; background: none;
+					 margin:0;padding:.2em 0;float:none;}
+.bg{
+position:fixed;
+width:100%;
+height:100%;  
+background:#000;
+z-index:50;
+opacity:0.7;
+}	
+.quanbu{
+border-radius:8px;
+position:absolute;
+width:100%;
+padding:10px;
+background:#fff;
+z-index:996;
+margin-top:80px;
+}
+
+.info{
+width:80%;
+margin-left:10%;
+position:absolute;
+top:35%;
+border-radius:8px;
+position:absolute;
+margin-left:10%;
+width:80%;
+padding:10px;
+background:#fff;
+z-index:998;
+color:red;
+height:60px;
+line-height:60px;
+font-weight:bold;
+text-align:center;
+margin-top:80px;
+
+}
+.btnrili{
+width:100%;
+height:40px;
+background:#8cdb42;
+border:none;
+font-weight:bold;
+text-align:center;
+color:#fff;
+line-height:40px;
+position:absolute;
+z-index:997
+}
+.big{
+text-align:center;
+font-weight:bold;
+
+}
+.nsqb{
+border-radius:8px;
+position:absolute;
+width:80%;
+margin-left:10%;
+padding:10px;
+background:#ccc7c3;
+z-index:998;
+
+}
+/*
+ * Holiday class
+ -------------------------*/
+li li.holiday       {  }
+
+/*
+ * Inactive months
+ -------------------------*/
+li#lastmonth li,
+li#nextmonth li     { background: url(../imgs/day-bg-inactive.png);}

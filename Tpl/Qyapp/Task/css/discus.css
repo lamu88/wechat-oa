@@ -1,0 +1,73 @@
+﻿	.container {
+	position: relative;
+	max-width: 640px;
+	min-height: 100%;
+	margin: 0 auto;
+	background-color: #fff;
+	overflow: hidden;
+
+	}
+		.softload ul li{
+	border:none;
+
+	}
+	.yanse{
+	
+	background:red;
+	color:#fff;
+	border-radius:20px;
+	width:40px;
+	height:20px;
+	text-align:center;
+	float:right;
+	position:absolute;
+	right:40px;
+	top:50px;
+	line-height:20px;
+	}
+	.othyanse{
+	background:#5acf00;
+	
+	
+	}
+		.diyanse{
+	background:#eee;
+	
+	
+	}
+		a{
+	text-decoration:none;
+	
+	}
+	a:hover{
+  text-decoration:none;
+   }
+   	.softload ul li span.icon_cont span.icon_dis{
+	float:left;
+	padding:5px;	
+	background:#fff;
+	margin-bottom:15px;
+	margin-left:26px;
+	border:solid 1px #eee;
+	border-radius:4px;
+	position:relative;
+	
+	}  
+   
+     .dsmyxm{
+  width:85%;
+  margin:0px auto;
+  padding:15px;
+  background:#fff;
+  border:solid 1px #eee;
+  border-radius:5px;
+  margin-top:10px;
+
+  }
+#menu ul li{float:left;width:49.9%;height:100%;text-align:center;position:relative;font-size:14px;}
+#menu ul li .line{position:absolute;top:0px;right:0px;z-index:30;}
+#menu ul li .menu_li{position:absolute;top:0px;left:0px;z-index:20;width:100%;height:100%;color:#454545;background:url(./Tpl/Qyapp/Workflow/images/menubg.png) repeat-x;}
+#menu ul li .img_front{position:absolute;top:0px;left:0px;z-index:30;width:100%;height:100%;}
+#menu ul li .img_front img{width:100%;height:100%;}
+#menu ul li span{position:absolute;bottom:-300px;left:50%;width:104px;margin-left:-52px;height:auto;text-align:center;z-index:10;}
+#menu ul li span a{float:left;width:100%;height:43px;line-height:43px;color:#454545;text-decoration:none;}

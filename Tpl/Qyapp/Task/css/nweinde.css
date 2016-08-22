@@ -1,0 +1,70 @@
+﻿	.container {
+	position: relative;
+	max-width: 640px;
+	min-height: 100%;
+	margin: 0 auto;
+	background-color: #fff;
+	overflow: hidden;
+
+	}
+	.yanse{
+	
+	background:red;
+	color:#fff;
+	border-radius:20px;
+	width:40px;
+	height:20px;
+	text-align:center;
+	float:right;
+	position:absolute;
+	right:40px;
+	top:50px;
+	line-height:20px;
+	}
+	.othyanse{
+	background:#5acf00;
+	
+	
+	}
+	.qjlyd{
+	margin-left:20px;
+	font-weight:黑体;
+	font-size:12px;
+	color:red;
+	}
+	.lxud{
+	margin-left:0px;
+
+	
+	}
+	.liyy{
+	font-size:12px;
+	color:#000;
+	}
+	.red{
+	margin-left:3px;
+	color:#ccc;
+	font-size:12px;
+	
+	}
+		.diyanse{
+	background:#eee;
+	
+	
+	}
+		a{
+	text-decoration:none;
+	
+	}
+	a:hover{
+  text-decoration:none;
+   }
+   .bottms{
+   width:96%;
+   background:#fff;
+   margin-bottom:10px;
+   position:relative;
+   border-radius:8px;
+   border:solid 1px #ccc;
+   margin:10px auto;
+   }

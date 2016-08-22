@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 全局样式 */
+body{ padding:0; margin:0; font-size:12px; height:100%;}
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p { padding:0; margin:0;}
+ul{list-style:none;}
+img{border:0px;}
+.clearfloat{clear:both; height:0px; font-size:1px; line-height:0px;}
+a{ text-decoration:none; color:#999;}
+
+
+
+
+.All{ width:100%; height:auto; margin:0 auto;}
+.box{ width:100%; height:auto; margin:0 auto;}
+.box ul{ width:80%; height:auto; margin:0 auto;}
+.box ul li{ height:48px; width:100%; margin:0 auto; text-align:center; line-height:48px;}
+.box .user{ background:url(../images/user_icon.gif) no-repeat left; border:1px solid #03a78c; font-size:20px; padding-left:25%;}
+.box .passwork{ background:url(../images/password_icon.gif) no-repeat left; border:1px solid #03a78c; font-size:20px; padding-left:25%;}
+
+.box .logo{ font-size:24px; font-family:"微软雅黑"; margin-bottom:30px; color:#03a78c;}
+.box .Up{ margin-bottom:20px;}
+.box .forget{ text-align:right; color:#999;}
+.box .forget a span{ color:#03a78c; float:left;}
+.box .forget b a{ font-weight:normal; float:left; color:#999;}
+.box .login{ background-color:#03a78c; color:#fff; font-family:"微软雅黑"; font-size:14px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

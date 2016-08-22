@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 全局样式 */
+body{ padding:0; margin:0; font-size:12px; height:100%; word-break:break-all; background-color:#e5e5e5;}
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p { padding:0; margin:0;}
+ul{list-style:none;}
+img{border:0px;}
+.clearfloat{clear:both; height:0px; font-size:1px; line-height:0px;}
+a{ text-dec:none;}
+
+
+/*顶部*/
+#Top{ width:100%; height:auto; margin:0 auto; background-color:#fff; padding:3% 0px; margin-top:3%; border-bottom:1px solid #dfdfdf;}
+#Top ul{ width:100%; color:#c9c9c9; text-align:center; font-family:"微软雅黑"; line-height:170%;}
+#Top ul li{ width:100%;}
+#Top .success{ color:#282828; font-weight:bold; font-size:14px;}
+
+/*中部*/
+#Mid{ width:100%; height:auto; background-color:#fff; margin-top:5%; float:left;}
+#Mid .text{ width:90%; margin:0 auto; font-family:"微软雅黑"; color:#9f9f9f; line-height:1.5em;}
+#Mid .text span{ color:#d86e83;}
+#Mid .pic{ width:90%; margin:0 auto; text-align:center; margin-top:3%; margin-bottom:7%;}
+
+
+
+/*底部*/
+
+.fabu{ width:90%; height:35px; margin:0 auto; background-color:#06bc05; float:left; border-radius:5px; text-align:center; color:#fff; margin-top:5%; margin-left:5%; margin-bottom:70px; line-height:35px;}
+#Btm{ width:100%; height:auto;}
+.btm_float{ width:100%; position:fixed; bottom:0px;}
+.btm_float ul{ width:100%; float:left; background-color:#fafafa; text-align:center; overflow:hidden;}
+.btm_float ul a{ color:#676767;}
+.btm_float ul li{ width:33%; float:left; padding:15px 0px;}
+.btm_float .border{ border-left:1px solid #eaeaea; border-right:1px solid #eaeaea;}

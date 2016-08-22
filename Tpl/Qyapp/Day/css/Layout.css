@@ -1,0 +1,395 @@
+﻿@charset "utf-8";
+.Description, .VoteDoneMessage {
+	font-size: 13px;
+	margin-bottom: 15px;
+}
+.Description img,
+.VoteDoneMessage img
+{
+	max-width:100%;
+}
+.OptionList span.OptionImage {
+}
+.OptionList li {
+	position: relative;
+}
+.OptionList li a.DescriptionLink {
+	/*border:1px solid red;*/
+	width: 28px;
+	padding-right:8px;
+	/*height: 22px;*/
+	height:100%;
+	top:0;
+	right:0;
+	position: absolute;
+	/*top: 8px;*/
+	/*right: 8px;*/
+	z-index: 9999;
+	display: block;
+	/*background: url(../../../Images/Front/Mobile/DescriptionLink.png) right 10px no-repeat;*/
+	-webkit-background-origin:content-box;
+	-moz-background-origin:content-box;
+	background-origin: content-box;
+	background-image:url(../../../Images/Front/Mobile/DescriptionLink.png);
+	background-repeat:no-repeat;
+	background-position:right 10px;
+}
+.OptionList img {
+	vertical-align: middle;
+	padding: 2px;
+	background: #fff;
+	border: 1px solid #ddd !important;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+}
+.OptionList .OptionImageWrapper {
+	/*width:160px;*/
+    width: 150px;
+	display: table-cell;
+}
+.OptionList .OptionTitle {
+	display: table-cell;
+	padding-left: 6px;
+}
+.OptionList label span.OptionTitle {
+	font-weight: bold;
+	font-size: 13px;
+}
+.TitleBar {
+	position: relative;
+	height: 42px;
+	padding-top: 8px;
+	margin-bottom: 12px;
+	padding-right: 70px;
+}
+.TitleBar .Counter {
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: url(../../../Images/Front/Mobile/Counter.png) no-repeat;
+	width: 68px;
+	height: 48px;
+	color: #fff;
+	font-size: 12px;
+	line-height: 25px;
+	text-align: center;
+}
+.TitleBar div.TimelineStatus {
+	background: url(../../../Images/Front/Mobile/Clock.png) no-repeat;
+	padding-left: 23px;
+	color: #333;
+	font-size: 12px;
+}
+.VoteDisabledNotify {
+	background: #F0F0F0;
+	border: 1px solid #ccc;
+	color: #888;
+	padding: 5px 12px;
+	font-size: 12px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	display: block;
+}
+.VoteDisabledNotify span {
+	/*	height: 16px;
+	
+	padding-left: 24px;
+	display:inline-block;
+ 	*display:inline;
+	zoom:1;*/
+        min-height: 16px;
+	line-height: 18px;
+	padding-left: 25px;
+	display: block;
+}
+.VoteDisabledNotify .Success {
+	background: url(../../../Images/Front/Mobile/VoteDisabledNotify.png) 0 0 no-repeat;
+	color: #769b00;
+}
+.VoteDisabledNotify .Warning {
+	background: url(../../../Images/Front/Mobile/VoteDisabledNotify.png) 0 -16px no-repeat;
+	color: #FF6600;
+}
+/*强制等待时间倒数*/
+.WaittingMessage {
+	margin-top: 12px;
+	/*padding:6px 12px 6px 35px;*/
+    padding: 6px 12px 6px 38px;
+	background-position: 12px 7px;
+	background-repeat: no-repeat;
+	/*border:1px solid #ccc;*/
+    background-image: url(../../../Images/Front/Mobile/Waitting.png);
+	display: none;
+}
+.WaittingMessage span {
+	padding: 0 3px;
+	font-weight: bold;
+}
+.SortWrapper {
+	margin-top: 12px;
+}
+
+/*投票主题*/
+.TopicTitle {
+	font-size:15px;
+	margin-top:18px;
+	margin-bottom:10px;
+}
+.TopicDescription {
+	color:#999;
+	font-size:13px;
+}
+
+/*QQ验证*/
+.QQVerifyMessage {
+	margin-top: 12px;
+	padding: 6px 12px 6px 38px;
+	background-position: 12px 7px;
+	background-repeat: no-repeat;
+	background-image: url(../../../Images/Front/Mobile/QQVerifyMessage.png);
+}
+.QQVerifyMessage .QQNotVerify {
+	color: #ff0000;
+	margin-right: 3px;
+}
+.QQVerifyMessage .QQHasVerify {
+	color: #669900;
+	margin-right: 3px;
+}
+.QQVerifyMessage .QQVerifyButton {
+	color: #1c80db;
+	cursor: pointer;
+}
+/*Shortcut*/
+.ShortcutWrapper {
+}
+.ShortcutWrapper {
+	margin-top: 15px;
+}
+.ShortcutWrapper span {
+	font-size: 14px;
+	font-weight: bold;
+	color: #003366;
+}
+.ShortcutWrapper div {
+	margin-top: 6px;
+	text-align: center;
+	border: 2px dotted #e2eaec;
+	background: #f2f7fb url(../../../Images/Front/Mobile/QuoteLeft.gif) 3px 3px no-repeat;
+	padding: 3px;
+}
+.ShortcutWrapper img {
+	margin-top: 12px;
+}
+.ShortcutWrapper h4 {
+	display: block;
+	font-weight: bold;
+	font-size: 14px;
+	color: #003366;
+	padding: 12px;
+	background: url(../../../Images/Front/Mobile/QuoteRight.gif) right bottom no-repeat;
+}
+/*统计条*/
+.OptionList label div.Stat {
+	font-size: 12px;
+	font-weight: normal;
+}
+.OptionList label div.Stat span.Bar {
+	display: inline-block;
+ 	*display: inline;
+	zoom: 1;
+	height: 12px;
+	line-height: 12px;
+}
+.OptionList label div.Stat span.Bar i {
+	display: inline-block;
+ 	*display: inline;
+	zoom: 1;
+	height: 12px;
+	line-height: 12px;
+	width: 100%;
+}
+
+.OptionList label div.Stat span.Bar i {
+	background-image:url(../../../Images/Front/Mobile/Bars.png);
+	background-repeat:repeat-x;
+}
+.OptionList label div.Stat span.Bar i.Color_1 {
+	background-position:0 0;
+}
+.OptionList label div.Stat span.Bar i.Color_2 {
+	background-position:0 -12px;
+}
+.OptionList label div.Stat span.Bar i.Color_3 {
+	background-position:0 -24px;
+}
+.OptionList label div.Stat span.Bar i.Color_4 {
+	background-position:0 -36px;
+}
+.OptionList label div.Stat span.Bar i.Color_5 {
+	background-position:0 -48px;
+}
+.OptionList label div.Stat span.Bar i.Color_6 {
+	background-position:0 -60px;
+}
+.OptionList label div.Stat span.Bar i.Color_7 {
+	background-position:0 -72px;
+}
+.OptionList label div.Stat span.Bar i.Color_8 {
+	background-position:0 -84px;
+}
+
+
+
+.OptionList label div.Stat span.Quantity {
+	margin-left: 2px;
+	color: #666;
+}
+.OptionList label div.Stat span.Percentage {
+	margin-left: 0px;
+	color: #666;
+}
+.OptionList label div.Stat span.Bar {
+	width: 150px;
+	margin-top: 4px;
+	margin-left: 2px;
+}
+/*ButtonWrapper*/
+.ButtonWrapper {
+	margin-top: 12px;
+}
+/*评论*/
+.NoComment {
+	text-align: center;
+	margin-top: 12px;
+	font-size: 13px;
+}
+.Comment {
+	margin-top: 25px;
+	padding-top: 10px;
+	border-top: 1px solid #ccc;
+}
+.CommentList ul li p {
+	white-space: normal;
+	line-height: 18px;
+}
+.CommentList .Nickname {
+	font-weight: bold;
+}
+.CommentList .PostDatetime {
+	color: #888;
+}
+.Comment .Emoticon {
+	vertical-align: middle;
+	margin: 0 2px;
+}
+/*评论分页*/
+.Comment .PagerComment {
+	margin-top: 15px; /*height:22px;*/
+}
+.Comment .PagerComment span, .Comment .PagerComment a {
+	border: 1px solid #ccc;
+	padding: 5px 7px;
+	margin-right: 8px;
+	font-size: 12px;
+	line-height: 20px;
+	color: #666;
+	font-family: Tahoma, Verdana, Arial;
+	font-weight: normal;
+	text-decoration: none;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+.Comment .PagerComment .CurrentPage {
+	color: #FFF;
+	background-color: #6699FF;
+}
+.Comment .PagerComment a:hover {
+	background-color: #A5A5A5;
+	color: #FFF;
+}
+/*广告*/
+.ADTop {
+	margin-bottom: 16px;
+	text-align: center;
+}
+.ADMiddle {
+	margin-top: 16px;
+	text-align: center;
+}
+/*选项详情页面*/
+.DescriptionPageContentWrapper {
+	padding: 15px;
+}
+.DescriptionPageContentWrapper .DescriptionContent {
+	margin-bottom: 20px;
+}
+.DescriptionPageContentWrapper .DescriptionContent img {
+	max-width: 100%;
+}
+/* 底部计算器 */
+.InvisibleCounter {
+	display: none;
+}
+/*只允许微信投票提示信息*/
+.WeixinOnlyNotify {
+	font-size: 14px;
+	text-align: center;
+}
+.WeixinOnlyNotify h4 {
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.WeixinOnlyNotify img {
+}
+.WeixinOnlyNotify ul li {
+	text-align: left;
+	list-style: none;
+}
+.WeixinOnlyNotify span {
+	font-weight: bold;
+	padding: 3px 4px;
+	margin: 0 3px;
+}
+/*地理位置*/
+.LocationLimitNotify {
+	font-size: 13px;
+	margin-bottom: 12px;
+}
+.LocationLimitNotify .LocationEnabledNameList {
+	background: url(../../../Images/Front/Mobile/Location.png) no-repeat;
+	display: block;
+	padding-left: 24px;
+}
+#LocationVerifyResult {
+	margin-top: 12px;
+	padding: 6px 12px 6px 38px;
+	background-repeat: no-repeat;
+	background-position: 12px 7px;
+}
+#LocationVerifyProcessing {
+	margin-top: 15px;
+	padding: 6px 12px 6px 38px;
+	background-image: url(../../../Images/Front/Mobile/LocationVerifyProcessing.gif);
+	background-repeat: no-repeat;
+	background-position: 11px 10px;
+}
+.LocationVerifyFailure {
+	/*	color:#555;
+	border:1px solid #FF9933;*/
+    background-image: url(../../../Images/Front/LocationVerifyFailure.png);
+}
+.LocationVerifySuccess {
+	background-image: url(../../../Images/Front/LocationVerifySuccess.png);
+}
+.MobileBottom {
+	text-align: center;
+}
+.MobileBottom p {
+	font-weight: normal;
+	font-size: 13px;
+	margin: 6px 0;
+}

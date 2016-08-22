@@ -1,0 +1,62 @@
+﻿.header{
+width:100%;
+height:50px;
+background:#fff;
+margin-bottom:20px;
+padding:14px;
+position:relative;
+background:url(./Tpl/Qyapp/Address/img/icon_notice.png) no-repeat left;
+background-color:#fff;
+}
+.bdname{
+font-size:16px;
+margin-right:80px;
+}
+.zhiwei{
+font-size:14px;
+}
+.zhidown{
+margin-top:15px;
+
+}
+.bjbtn{
+width:50px;
+height:30px;
+background:#5acf00;
+color:#fff;
+line-height:30px;
+text-align:center;
+position:absolute;
+right:40px;
+top:20px;
+border-radius:4px;
+}
+.contexts{
+padding:10px;
+height:220px;
+background:#fff;
+margin-bottom:20px;
+}
+.yuanimg{
+border-radius:6px;
+}
+.wewipt{
+margin-left:50px;
+}
+.meet_detail{ width:100%;}
+.meet_detail dl{ width:100%; line-height:1.5rem; font-size:12px;}
+.meet_detail dl dt{ width:28%; float:left; text-align:right; color:#828282; margin-right:2%;}
+.meet_detail dl dt dd{ width:70%; float:left; text-align:left; color:#000;}
+
+
+
+
+
+
+
+
+
+
+
+
+

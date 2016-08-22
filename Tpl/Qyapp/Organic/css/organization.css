@@ -1,0 +1,138 @@
+.select_org_lists{
+	height:330px;
+	width:480px;
+}
+.list-letter{
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
+	margin-left:0;
+}
+.list-letter li{
+	padding-left: 2px;
+	padding-right: 2px;
+	font-size:12px;
+}
+.member-list-div{
+	height:200px;
+	overflow-y:auto;
+}
+.list-member{
+	
+}
+.list-member li{
+	line-height:30px;
+	height:30px;
+	float:left;
+}
+.list-member .no{
+	width:40px;
+}
+.list-member .name{
+	width:100px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+.list-member .depart{
+	width:200px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+
+.node-item{
+	border-radius: 3px;
+	box-shadow: 0 0 5px rgba(100,100,100,0.5);
+	height:40px;
+	line-height:40px;
+	padding:0 5px;
+}
+.node-item.self{
+	background-color: #EDF4FB;
+}
+.root .node-item.self{
+	background-color: #FFFFDE;
+}
+.node-item span{
+	margin:0 3px;
+	font-size: 12px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 47px;
+    min-width: 20px;
+}
+.org-nodes{
+	margin-left:10px;
+}
+.node-item span img{
+	width:24px;
+	height:24px;
+}
+.node-item span i{
+	cursor: pointer;
+}
+.org-nodes .tree-expand{
+	width:13px;
+	height:13px;
+	overflow:hidden;
+	margin:14px 2px 0 -1px;
+	background: url(org-tree.png) no-repeat -26px 0;
+}
+.org-nodes .tree-expand:hover{
+	background-position: -39px 0;
+}
+.org-nodes .tree-expand-close{
+	background-position:0 0;
+}
+.org-nodes .tree-expand-close:hover{
+	background-position:-13px 0;
+}
+.org-nodes .vline{
+	background: url(vertical_line.png) repeat-y;
+}
+.org-nodes .no-tree-expand{
+	width:13px;
+	height:13px;
+	overflow:hidden;
+	margin:13px 2px 0 -1px;
+	background: url(node_last_nc.png) -5px -23px no-repeat;
+}
+.nodes-item{
+	padding: 10px 0 0 12px;
+	background: url(node_line.png) no-repeat;
+}
+.node-last{
+	background: url(node_last.png) no-repeat;
+}
+.nodes-items{
+	padding-left:37px;
+}
+.node-item .m-depart{
+	max-width: 70px;
+}
+.node-item .m-name{
+	max-width: 50px;
+}
+.node-item .m-profession{
+	max-width: 100px;
+}
+.org-menu{
+	padding: 5px 0;
+	box-shadow: 0 0 5px #ccc;
+	position: absolute;
+	border-radius: 3px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+}
+.org-menu .org-menu-item{
+	color: #333;
+	text-decoration: none;
+	padding: 5px 20px;
+	display: block;
+	white-space: nowrap;
+}
+.org-menu .org-menu-item:hover{
+	background-color: #0066cc;
+	color:#fff;
+}

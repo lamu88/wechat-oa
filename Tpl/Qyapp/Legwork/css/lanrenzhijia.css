@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* 代码整理：懒人之家 www.lanrenzhijia.com */
+*{ margin:0; padding:0; list-style:none;}
+body{ font-size:12px; text-align:left;}
+img{ border:none;}
+a{ text-decoration:none;}
+.none { display:none;}
+
+.lanrenzhijia h3 { font-family: "Microsoft YaHei",微软雅黑; font-size:16px; background:#f7f7f7; height:43px; line-height:43px; padding-left:12px; }
+.lanrenzhijia ul li { display:inline; }
+.lanrenzhijia ul li a { background:url(../images/legbg1.png) no-repeat 200px 18px; padding-left:30px; text-decoration:none; font-size:14px; color:#555; display:block;  height:43px;  line-height:43px; border-bottom:1px dotted #d2d2d2; }
+.lanrenzhijia ul li a.noline { border-bottom:none; }
+.lanrenzhijia ul li a:hover{ color:#8caf00; }
+.lanrenzhijia ul li a.selected:hover { color:#fff; }
+.lanrenzhijia ul li .selected { background-color:#8caf00;  background-position:200px -9px; color:#fff; }
+.lanrenzhijia ul li { border-bottom:1px dotted #d2d2d2; display:inline-block; width:100%; position: relative; min-height:43px; _height:43px; z-index: 10; zoom:1 }
+.lanrenzhijia ul li h4 { cursor:pointer; background:url(../images/legbg2.png) no-repeat 200px 18px; padding-left:30px; text-decoration:none; font-size:14px; color:#555; display:block;  line-height:43px; font-weight:normal; }
+.lanrenzhijia ul li.noline { border-bottom:none; }
+.lanrenzhijia ul li h4:hover { color:#8caf00; text-decoration:underline; }
+.lanrenzhijia ul li.selected h4 { background-position:200px -37px; border-bottom:1px dotted #d2d2d2; }
+.lanrenzhijia ul li a { }
+.lanrenzhijia ul li .on a { color:#8caf00; font-weight:bold; }
+.lanrenzhijia ul li a:hover { color:#8caf00; text-decoration:underline; }
+.bg-color { background-color:#8caf00; }
+.lanrenzhijia li .list-item { padding:5px 0; position:relative; zoom:1 }
+.lanrenzhijia li .list-item p { padding-left:8px; background:url(../images/ico_li.png) no-repeat 60px center; }
+.lanrenzhijia li .list-item a { background:none;  border:none; color: #333333; display:block; text-align:left;float:left; font-size:12px; width:60px; padding-left:10px;height:30px; line-height:30px;}
+.lanrenzhijia li .list-item a:hover{ background:#999; color:#fff; text-decoration:none;}
+.lanrenzhijia { border:1px solid #eaeaea;  zoom:1; width:221px; margin:0 auto;}
+.ser-online a { background:url(../images/bg_ser_online.jpg) no-repeat 0 0; margin-top:10px; height:75px; border:1px solid #eaeaea; display:block;}
+/* 代码整理：懒人之家 www.lanrenzhijia.com */

@@ -1,0 +1,24 @@
+﻿@charset "utf-8";
+
+.ContentField {
+	-moz-box-shadow:0 1px 3px #cbcbcb;
+	-webkit-box-shadow:0 1px 3px #cbcbcb;
+	box-shadow: 1px 1px 3px 0 #cbcbcb;
+
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	background-color:#fff;
+	
+	border:1px solid #eee;
+	font-size:14px;
+	
+	padding:16px;
+}
+
+.clearfloat { /* 此类应当放在 div 或 break 元素上，而且该元素应当是完全包含浮动的容器关闭之前的最后一个元素 */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}

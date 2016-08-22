@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+<title>日报详情</title>
+<link href="./Tpl/Qyapp/Log/css/com.css" rel="stylesheet"/>
+<link href="./Tpl/Qyapp/Announce/css/info.css" rel="stylesheet" type="text/css" />
+<script src="./Tpl/static/scroll/dev/jquery-1.9.1.js"></script>	 
+<script src="./Tpl/Qyapp/Aftersale/js/layer.m/layer.m.js"></script>	
+</head>
+<body>
+ <div class="work_deta work_xq">
+	<ul>
+      <?php// print_r($qyuserdata);exit;?>
+      <li class="rz_xq">日报详情</li>
+		<li><div class="pics"><img src="{lanrain:$qyuserdata['pic']}"></div>
+        	<p class="deta_nm">{lanrain:$qylogdata.title}<span>{lanrain:$qylogdata['create_time']}</span></p>
+        </li>
+        <li class="li_rh">[类&nbsp;&nbsp;&nbsp;型]
+            <span><if condition="$qylogdata.type eq 0">
+			 日报
+			 <elseif condition="$qylogdata.type eq 1"/>
+			 周报
+			 <elseif condition="$qylogdata.type eq 2"/>
+			 月报
+			 <elseif condition="$qylogdata.type eq 3"/>
+			 季报
+			 <elseif condition="$qylogdata.type eq 4"/>
+			 年报
+			 </if></span>
+		</li>
+	
+        <li class="li_rh">[接收人]
+						<span>
+						<volist name="principalarr" id="data">
+						{lanrain:$data.name}、
+						</volist>
+						</span>
+		</li>
+        <li class="li_rh">[抄送人]<span>	
+						<volist name="relevancearr" id="data">
+							{lanrain:$data.name}、
+						</volist> </span></li>
+        <li class="deta_nm">[内&nbsp;&nbsp;&nbsp;容]
+        	<span>
+			{lanrain:$qylogdata.content}
+			</span>
+        <ul class="ul_pic" id="xq_li">
+		<if condition="Log_pic">
+			<volist name="Log_pic" id="data" key="k">
+				  <li><div class="pic"><a href="#"><img src="{lanrain:$data.picurl}" id="picInfo_{lanrain:$k}" onclick="checkImg({lanrain:$k});"></a></div>  </li>
+			</volist>
+
+		</if>
+        </ul>
+        </li>
+	
+	</ul>
+	 <if condition="($users['id'] neq $qyuserdata['id'])">
+	<div class="comment">
+                    <div class="comment_zan" >评论<b id="numberId">{lanrain:$number}</b></div>
+                    <div class="comment_content" id="addComment">
+                        <volist name="comment" id="v">
+                    	<dl>
+                        	<dt><img src="{lanrain:$v.pic}" width="50px" height="50px" /></dt>
+                            <dd>{lanrain:$v.name}<span>{lanrain:$v.time|date="Y-m-d H:i:s",###}</span></dd>
+                            <dd>{lanrain:$v.content}</dd>
+                        </dl>
+                     </volist>
+                    </div>
+    </div>
+	</if>
+ </div>
+ <if condition="($users['id'] neq $qyuserdata['id'])">
+    <div class="work_btm">                   
+        <a href="{lanrain::U('waprelevancelog',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'logusers_id'=>$qylogdata['userid']))}" class="fll">查看往期</a>
+        <a href="javascript:;" class="flr"  id="comment">评论</a>
+    </div>
+<else/>
+	<div class="work_btm_1">                   
+      	  <!-- <a href="{lanrain::U('waprelevancelog',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'logusers_id'=>$qylogdata['userid']))}" class="a_left">查看往期</a>-->
+		<if condition="$qylogdata['submittype'] eq 1">
+			 <a href="{lanrain::U('wapaboutMe',array('token'=>$_GET['token'],'submittype'=>1,'wecha_id'=>$_GET['wecha_id'],'logusers_id'=>$qylogdata['userid']))}" class="">查看往期</a>
+		<else/>
+			<a href="javascript:;" class="" id="submiting">立即提交</a>
+	    </if>
+    </div>
+
+</if>
+	<!--评论-->
+	
+	   <div class="btm_comment" style="display:none;" id="com2">
+            	<div class="comment_row">
+                    <div class="write">
+                        <input type="text" name="" value="" id="contentComment"/>
+                    </div>
+                    <div class="send">
+                        <input type="button" name="" value="发送" id="submitComment"/>
+                    </div>
+                </div>
+         </div>
+</body>
+</html>
+<script>
+function checkImg(n){
+	var url = $('#picInfo_'+n).attr('src');
+	layer.open({					
+		type: 0,
+		content: '<img width="100%" height="auto" src="'+url+'" />',
+	});
+	
+}
+</script>
+<script>
+$('#comment').click(function(){
+	$('#com2').fadeIn();
+	$('.comment').click(function(){
+		$('#com2').fadeOut();
+	});
+});
+</script>
+<script>
+$("#submiting").click(function(){
+var logid = {lanrain:$qylogdata.id};
+//alert(logid);
+	if(logid){
+		$.ajax({
+			type: "post",  
+			url:"{lanrain::U('wapsubmittype',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}",
+			dataType:'json',
+			data:{'logid':logid},
+			success:function(json){
+				if(json==1){
+					alert("提交成功");
+					window.location.href="{lanrain::U('wapaboutMe',array('submittype'=>1,'token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}";
+				}else{
+					alert(json);
+				}
+			}
+		});
+	}else{
+		alert("非法操作");
+		
+	}
+	
+	//alert(logid);
+
+})
+</script>
+
+<script>
+$('#submitComment').click(function(){
+	var content = $('#contentComment').val();
+	if(!content){
+		alert('请填写内容');
+		return false;
+	}
+	var logId = "{lanrain:$qylogdata.id}";
+	var wecha_id = "{lanrain::$_GET['wecha_id']}";
+	var token = "{lanrain::$_GET['token']}";
+	var number = Number($('#numberId').html());
+	var l="";
+	$.ajax({
+		type: "post",  
+		url:"{lanrain::U('showcontents',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}",
+		dataType:'json',
+		data:{'content':content,'wecha_id':wecha_id,'token':token,'log_id':logId},
+		success:function(json){
+			if(json==2){
+				alert('发表失败');
+			}else{
+				l +='<dl>';
+                l +='<dt><img src="'+json.pic+'" width="50px" height="50px" /></dt>';
+                l +='<dd>'+json.name+'<span>'+json.time+'</span></dd>';
+                l +='<dd>'+json.content+'</dd>';
+                l +='</dl>';
+				$('#addComment').append(l);
+				alert('发表成功');
+				$('#com2').fadeOut();
+				$('#numberId').html(number+1);
+				$('#numberId1').html(number+1);
+			}
+		}
+	});
+	
+});
+</script>

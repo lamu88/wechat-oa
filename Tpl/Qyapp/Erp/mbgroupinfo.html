@@ -1,0 +1,54 @@
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header"> 
+   
+                <h4 class="modal-title ">设置会员等级</h4>
+            </div>
+			 <form class="form-validate" method="post" action="{lanrain::U('Erp/mbgroupinfo')}" >
+			<input type="hidden" name="mgid" value="{lanrain:$result['mgid']}"/>
+            <div class="panel-body">
+             
+                    <div class="form-group" id="singleUplaod" style=" width:300px; float:left;">
+                        <div class="js_single">
+                            <label class="col-sm-2 control-label" style=" width:40%;">名称</label>
+
+                            <div class="col-sm-3" style="width:60%;">
+                                <input class="form-control imgurl" type="text" id='imgurl' name="mgroup_name" placeholder="名称" value="{lanrain:$result['mgroup_name']}" /> 
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group" style=" width:300px; float:left;">
+                        <label class="col-sm-2 control-label" style=" width:40%;">折扣：</label>
+
+                        <div class="col-sm-3 " style="width:60%;">
+                            <input type="text" class="form-control" id="zg" placeholder="请输折扣：" value="{lanrain:$result['discount']}" name="discount" />
+                        </div>
+                    </div>					
+                    
+ 
+            </div>       
+			<div class="modal-footer"> 
+                <button type="submit" class="btn btn-primary" id ="buttonimg" data-loading-text="保存中..." >保存修改</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>	
+			</form>
+        </div>
+    </div>
+
+<script type="text/javascript">
+	$(function(){
+		$('#buttonimg').click(function(){
+			if(!$('#imgurl').val()){
+				alert("请填写名称");
+				return false;
+			}
+			if(!$('#zg').val()){
+				alert("请填写折扣");
+				return false;
+			}
+		})
+		
+	})
+	</script>
