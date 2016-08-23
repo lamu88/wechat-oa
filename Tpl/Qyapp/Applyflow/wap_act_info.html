@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./Tpl/Qyapp/Applyflow/css/style.css">
+    <link rel="stylesheet" href="./Tpl/Qyapp/Applyflow/css/date.css">
+</head>
+<body class="bg1">
+<!--header start-->
+<!--<header class="bg1">
+    <a class="pre"><img src="images/header-pre.png"></a>
+    <div class="txt">报 销</div>
+</header>-->
+<!--header end-->
+<!--sec02 start-->
+<!--sec03-01 start-->
+<section class="sec03-01">
+    <a class="tou">
+        <img src="./Tpl/Qyapp/Applyflow/images/que.png">
+        <div class="message">姓名：joann    部门：行政部</div> 
+    </a>
+</section>
+<!--sec03-01 end-->
+<!--sec03-02 start-->
+<section class="sec03-02">
+    <div class="title">
+        <ul>
+            <li>
+                <div class="li-c"><div class="cc"><img src="./Tpl/Qyapp/Applyflow/images/04-01.png"><span>{lanrain:$list.type}</span><div class="clear"></div> </div> </div>
+            </li>
+            <li>
+                <div class="li-c"><div class="cc"><img src="./Tpl/Qyapp/Applyflow/images/04-02.png"><span>{lanrain:$list.allmoney}元</span><div class="clear"></div> </div> </div>
+            </li>
+            <li>
+                <div class="li-c">
+					<div class="cc">
+					<if condition="$list['status'] eq 0"><img src="./Tpl/Qyapp/Applyflow/images/04-03.png"><span>待审核</span></if>
+					<if condition="$list['status'] eq 2"><img src="./Tpl/Qyapp/Applyflow/images/04-03.png"><span>已通过</span></if>
+					<if condition="$list['status'] eq 3"><img src="./Tpl/Qyapp/Applyflow/images/04-03.png"><span>已驳回</span></if>
+					<div class="clear"></div> 
+				    </div> 
+				</div>
+            </li>
+            <div class="clear"></div>
+        </ul>
+    </div>
+    <!--------------------------->
+    <!--sec02 start-->
+    <section class="sec02-01">
+        <ul>
+            <li>
+                <i><img src="./Tpl/Qyapp/Applyflow/images/sec02-01.png"></i>
+                <input class="input1" type="text" value="报销总额">
+                <span class="span">元</span>
+            </li>
+            <li>
+                <i><img src="./Tpl/Qyapp/Applyflow/images/sec02-02.png"></i>
+                <div class="dguide-select-area" id="select">
+                    <ul>
+                        <li class="one-col">
+                            <div class="sel_wrap">
+                                <label>报销类型</label>
+                                <select class="select" name="" id="c_city">
+                                    <option value="0" selected="selected">报销类型</option>
+                                    <option value="1">11</option>
+                                    <option value="2">111</option>
+                                </select>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <i><img src="./Tpl/Qyapp/Applyflow/images/sec02-03.png"></i>
+                <input  id="beginTime" value="报销时间" class="kbtn" /></div>
+            </li>
+            <li class="li2">
+                <!--li-w start-->
+                <div class="li-w">
+                    <!--fl start-->
+                    <div class="fl">
+                        <div class="li-c">
+                            <div class="fl-c">
+                                <div class="icon">项目一</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--fl end-->
+                    <!--fr start-->
+                    <div class="fr">
+                        <div class="li-c">
+                            <div class="fr-c">
+                                <div class="ii"></div>
+                                <div class="cc">
+                                    <div class="c"><i><img src="./Tpl/Qyapp/Applyflow/images/sec02-01.png"></i><span>:</span><div class="input">￥5500.00</div> </div>
+                                    <div class="c"><i><img src="./Tpl/Qyapp/Applyflow/images/sec02-03.png"></i><span>:</span><div class="input">2015.7.2</div> </div>
+                                    <div class="c"><i><img src="./Tpl/Qyapp/Applyflow/images/sec02-04.png"></i><span>:</span><div class="input">广州</div> </div>
+                                    <div class="c"><i><img src="./Tpl/Qyapp/Applyflow/images/sec02-05.png"></i><span>:</span><div class="input">广州出差时的车费跟餐费,该代理商东
+                                        第四个富婆飞扑哥胡覅电饭锅iohdfhPDF 法
+                                        放寒假破费高好</div>
+                                    </div>
+                                    <div class="img">
+                                        <img src="./Tpl/Qyapp/Applyflow/images/sec03-04.png"><img src="./Tpl/Qyapp/Applyflow/images/sec03-04.png"><img src="./Tpl/Qyapp/Applyflow/images/sec03-04.png"><img src="./Tpl/Qyapp/Applyflow/images/sec03-04.png"><img src="./Tpl/Qyapp/Applyflow/images/sec03-04.png">
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--fr end-->
+                    <div class="clear"></div>
+                </div>
+                <!--li-w end-->
+                <div class="add1"><img src="./Tpl/Qyapp/Applyflow/images/04-04.png"></div>
+            </li>
+        </ul>
+    </section>
+    <!--sec02 end-->
+    <!--------------------------->
+</section>
+<!---sec03-02 end-->
+<!--sec03-03 start-->
+<section class="sec03-03">
+    <article>
+        <ul>
+            <li>
+                <img src="./Tpl/Qyapp/Applyflow/images/que.png">
+                <div class="fl">
+                    <div class="t">我</div>
+                    <div class="c">2014.07.03 16:12</div>
+                </div>
+                <div class="fr">
+                    <div class="t">发起申请</div>
+                    <div class="c"></div>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <img src="./Tpl/Qyapp/Applyflow/images/close.png">
+                <div class="fl">
+                    <div class="t">我</div>
+                    <div class="c">2014.07.03 16:12</div>
+                </div>
+                <div class="fr">
+                    <div class="t color1">已通过</div>
+                    <div class="c">Good jop</div>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <img src="./Tpl/Qyapp/Applyflow/images/que.png">
+                <div class="fl">
+                    <div class="t">我</div>
+                    <div class="c">2014.07.03 16:12</div>
+                </div>
+                <div class="fr">
+                    <div class="t color2">审批中</div>
+                    <div class="c"></div>
+                </div>
+                <div class="clear"></div>
+            </li>
+        </ul>
+    </article>
+</section>
+<!--sec03-03 end-->
+<!--sec03-bottom start-->
+<div class="sec03-bottom-top"></div>
+<section class="sec03-bottom">
+    <span class="span1" id="span-ju"><img src="./Tpl/Qyapp/Applyflow/images/close01.png">拒绝</span>
+    <span class="span2" id="span-tong"><img src="./Tpl/Qyapp/Applyflow/images/que01.png">同意</span>
+</section>
+<!--sec03-bottom end-->
+<!--#liyou start-->
+<div id="liyou">
+    <div id="shu">
+        <div class="shu1">
+            <div class="tit">请输入拒绝理由（非必填）<span class="span1" id="shou">手写输入：</span></div>
+            <div class="con"><div id="qian">长按说话<img  src="./Tpl/Qyapp/Applyflow/images/sec03-10.png"></div><div id="hou">1：02<img  src="./Tpl/Qyapp/Applyflow/images/sec03-09.png"></div> </div>
+            <div class="button"><a href="">返回</a><a href="">发送</a><div class="clear"></div> </div>
+        </div>
+        <div class="shu2">
+            <div class="tit">请输入拒绝理由（非必填）<span class="span1" id="yin">语音输入：</span></div>
+            <div class="con"><textarea></textarea></div>
+            <div class="button"><a href="">返回</a><a href="">发送</a><div class="clear"></div> </div>
+        </div>
+    </div>
+</div>
+<!--liyou end-->
+<!--js start-->
+<script src="./Tpl/Qyapp/Applyflow/js/jquery.js"></script>
+<script src="./Tpl/Qyapp/Applyflow/js/main.js"></script>
+</body>
+</html>

@@ -139,15 +139,13 @@ $(function(){
                         <li>
                             <a href="<?php echo U('Userinfo/edit', array('token' => $token));?>" target="_self"><i class="iconfont icon-pwd m-r-xs icon-size20"></i>修改密码</a>
                         </li>
+						<!-- <li>
+                            <a href="<?php echo U('Userinfo/version', array('token' => $token));?>" target="_self"><i class="iconfont icon-binding m-r-xs icon-size20"></i>版本升级</a>
+                        </li> -->
                         <li>
                             <a href="<?php echo U('Userinfo/bind', array('token' => $token));?>" target="_self"><i class="iconfont icon-binding m-r-xs icon-size20"></i>帐号绑定</a>
                         </li>
-						<li>
-                            <a href="<?php echo U('Userinfo/version', array('token' => $token));?>" target="_self"><i class="iconfont icon-binding m-r-xs icon-size20"></i>版本升级</a>
-                        </li>
-						<li>
-                            <a href="<?php echo U('Userinfo/appList', array('token' => $token));?>" target="_self"><i class="iconfont icon-binding m-r-xs icon-size20"></i>应用商店</a>
-                        </li>
+					
                         <li class="divider"></li>
                         <li>
                             <a href="<?php echo U('Userinfo/logout', array('token' => $token));?>" data-toggle="ajaxModal" target="_self"><i class="iconfont icon-logout m-r-xs icon-size20"></i>退出</a>
@@ -252,7 +250,8 @@ $(function(){
     <header class="header bg-white b-b clearfix">
         <p>应用中心</p>
 		<div class="pull-right m-t-sm">
-           </div>
+            <a href="<?php echo U('Plug/index');?>" target="_self"><button type="button"   class="btn btn-primary btn-sm">使用套件库安装</button></a>
+        </div>
     </header>
    <section class="scrollable wrapper w-f" style="padding:0px;">
         <section class="panel panel-default ">
@@ -264,10 +263,13 @@ $(function(){
 				<small><?php echo ($jichu["info"]); ?></small>
 				</p>
 				<?php if(is_array($jichu["data"])): $i = 0; $__LIST__ = $jichu["data"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="app-item center js_entity_view" data-path="" style="width:165px;">
-				   <a href="<?php echo u('Install/page_one',array('id'=>$vo['id']));?>" target="_self">
+				   <a data_id="<?php echo ($vo["id"]); ?>" onclick="addapps(<?php echo ($vo["id"]); ?>,<?php echo ($vo["status"]); ?>);">
+				   <!-- href="<?php echo u('Install/page_one',array('id'=>$vo['id']));?>" -->
 						<?php if($vo['status'] == 1): ?><span class="installed">已安装</span><?php endif; ?>
 						 <img class="app-item-img" alt="<?php echo ($vo["name"]); ?>" src="<?php echo ($vo["logo"]); ?>">
 						<div class="app-item-name"><?php echo ($vo["name"]); ?> </div>
+						<div class="app-item-count">安装量 <?php echo ($vo["times"]); ?></div>
+						<div class="app-item-versions">套餐：<?php echo ($vo["vip"]); ?></div>
 					</a>
 					</div><?php endforeach; endif; else: echo "" ;endif; ?>				              				
 			</div><?php endif; ?>	
@@ -277,14 +279,14 @@ $(function(){
 				<?php echo ($sanji["head"]); ?>
 				<small><?php echo ($sanji["info"]); ?></small>
 				</p>
-				<?php if(is_array($sanji["data"])): $i = 0; $__LIST__ = $sanji["data"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="app-item center js_entity_view" data-path="" style="width:165px;">
-				   <a href="<?php echo u('Install/page_one',array('id'=>$vo['id']));?>" target="_self">
+				<?php if(is_array($sanji["data"])): $i = 0; $__LIST__ = $sanji["data"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="app-item center js_entity_view" data-path="" style="width:165px;"><a data_id="<?php echo ($vo["id"]); ?>" onclick="addapps(<?php echo ($vo["id"]); ?>,<?php echo ($vo["status"]); ?>);">
+				   <!-- href="<?php echo u('Install/page_one',array('id'=>$vo['id']));?>" -->
 						<?php if($vo['status'] == 1): ?><span class="installed">已安装</span><?php endif; ?>
 						 <img class="app-item-img" alt="<?php echo ($vo["name"]); ?>" src="<?php echo ($vo["logo"]); ?>">
 						<div class="app-item-name"><?php echo ($vo["name"]); ?> </div>
-						</a>
-						</div>
-					<!-- </div>	 --><?php endforeach; endif; else: echo "" ;endif; ?>				              				
+						<div class="app-item-count">安装量 <?php echo ($vo["times"]); ?></div>
+						<div class="app-item-versions">适用套餐：试用版</div></a>
+					</div><?php endforeach; endif; else: echo "" ;endif; ?>				              				
 			</div><?php endif; ?>	
 
 		    <?php if($yingxiao): ?><div class="row m-l-none m-r-none bg-light lter portlet">	
@@ -292,11 +294,13 @@ $(function(){
 				<?php echo ($yingxiao["head"]); ?>
 				<small><?php echo ($yingxiao["info"]); ?></small>
 				</p>
-				<?php if(is_array($yingxiao["data"])): $i = 0; $__LIST__ = $yingxiao["data"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="app-item center js_entity_view" data-path="" style="width:165px;">
-				   <a href="<?php echo u('Install/page_one',array('id'=>$vo['id']));?>" target="_self">
+				<?php if(is_array($yingxiao["data"])): $i = 0; $__LIST__ = $yingxiao["data"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="app-item center js_entity_view" data-path="" style="width:165px;"><a data_id="<?php echo ($vo["id"]); ?>" onclick="addapps(<?php echo ($vo["id"]); ?>,<?php echo ($vo["status"]); ?>);">
+				   <!-- href="<?php echo u('Install/page_one',array('id'=>$vo['id']));?>" -->
 						<?php if($vo['status'] == 1): ?><span class="installed">已安装</span><?php endif; ?>
 						 <img class="app-item-img" alt="<?php echo ($vo["name"]); ?>" src="<?php echo ($vo["logo"]); ?>">
-						<div class="app-item-name"><?php echo ($vo["name"]); ?> </div></a>
+						<div class="app-item-name"><?php echo ($vo["name"]); ?> </div>
+						<div class="app-item-count">安装量 <?php echo ($vo["times"]); ?></div>
+						<div class="app-item-versions">适用套餐：试用版</div></a>
 					</div><?php endforeach; endif; else: echo "" ;endif; ?>				              				
 			</div><?php endif; ?>	
 
@@ -305,11 +309,13 @@ $(function(){
 				<?php echo ($hangye["head"]); ?>
 				<small><?php echo ($hangye["info"]); ?></small>
 				</p>
-				<?php if(is_array($hangye["data"])): $i = 0; $__LIST__ = $hangye["data"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="app-item center js_entity_view" data-path="" style="width:165px;">
-				   <a href="<?php echo u('Install/page_one',array('id'=>$vo['id']));?>" target="_self">
+				<?php if(is_array($hangye["data"])): $i = 0; $__LIST__ = $hangye["data"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="app-item center js_entity_view" data-path="" style="width:165px;"><a data_id="<?php echo ($vo["id"]); ?>" onclick="addapps(<?php echo ($vo["id"]); ?>,<?php echo ($vo["status"]); ?>);">
+				   <!-- href="<?php echo u('Install/page_one',array('id'=>$vo['id']));?>" -->
 						<?php if($vo['status'] == 1): ?><span class="installed">已安装</span><?php endif; ?>
 						 <img class="app-item-img" alt="<?php echo ($vo["name"]); ?>" src="<?php echo ($vo["logo"]); ?>">
-						<div class="app-item-name"><?php echo ($vo["name"]); ?> </div></a>
+						<div class="app-item-name"><?php echo ($vo["name"]); ?> </div>
+						<div class="app-item-count">安装量 <?php echo ($vo["times"]); ?></div>
+						<div class="app-item-versions">适用套餐：试用版</div></a>
 					</div><?php endforeach; endif; else: echo "" ;endif; ?>				              				
 			</div><?php endif; ?>	
 
@@ -318,11 +324,13 @@ $(function(){
 				<?php echo ($shangwu["head"]); ?>
 				<small><?php echo ($shangwu["info"]); ?></small>
 				</p>
-				<?php if(is_array($shangwu["data"])): $i = 0; $__LIST__ = $shangwu["data"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="app-item center js_entity_view" data-path="" style="width:165px;">
-				   <a href="<?php echo u('Install/page_one',array('id'=>$vo['id']));?>" target="_self">
+				<?php if(is_array($shangwu["data"])): $i = 0; $__LIST__ = $shangwu["data"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="app-item center js_entity_view" data-path="" style="width:165px;"><a data_id="<?php echo ($vo["id"]); ?>" onclick="addapps(<?php echo ($vo["id"]); ?>,<?php echo ($vo["status"]); ?>);">
+				   <!-- href="<?php echo u('Install/page_one',array('id'=>$vo['id']));?>" -->
 						<?php if($vo['status'] == 1): ?><span class="installed">已安装</span><?php endif; ?>
 						 <img class="app-item-img" alt="<?php echo ($vo["name"]); ?>" src="<?php echo ($vo["logo"]); ?>">
-						<div class="app-item-name"><?php echo ($vo["name"]); ?> </div></a>
+						<div class="app-item-name"><?php echo ($vo["name"]); ?> </div>
+						<div class="app-item-count">安装量 <?php echo ($vo["times"]); ?></div>
+						<div class="app-item-versions">适用套餐：试用版</div></a>
 					</div><?php endforeach; endif; else: echo "" ;endif; ?>				              				
 			</div><?php endif; ?>	
 
@@ -331,11 +339,13 @@ $(function(){
 				<?php echo ($crm["head"]); ?>
 				<small><?php echo ($crm["info"]); ?></small>
 				</p>
-				<?php if(is_array($crm["data"])): $i = 0; $__LIST__ = $crm["data"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="app-item center js_entity_view" data-path="" style="width:165px;">
-				   <a href="<?php echo u('Install/page_one',array('id'=>$vo['id']));?>" target="_self">
+				<?php if(is_array($crm["data"])): $i = 0; $__LIST__ = $crm["data"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="app-item center js_entity_view" data-path="" style="width:165px;"><a data_id="<?php echo ($vo["id"]); ?>" onclick="addapps(<?php echo ($vo["id"]); ?>,<?php echo ($vo["status"]); ?>);">
+				   <!-- href="<?php echo u('Install/page_one',array('id'=>$vo['id']));?>" -->
 						<?php if($vo['status'] == 1): ?><span class="installed">已安装</span><?php endif; ?>
 						 <img class="app-item-img" alt="<?php echo ($vo["name"]); ?>" src="<?php echo ($vo["logo"]); ?>">
 						<div class="app-item-name"><?php echo ($vo["name"]); ?> </div>
+						<div class="app-item-count">安装量 <?php echo ($vo["times"]); ?></div>
+						<div class="app-item-versions">适用套餐：试用版</div></a>
 					</div><?php endforeach; endif; else: echo "" ;endif; ?>				              				
 			</div><?php endif; ?>	
 
@@ -344,14 +354,24 @@ $(function(){
 				<?php echo ($hudong["head"]); ?>
 				<small><?php echo ($hudong["info"]); ?></small>
 				</p>
-				<?php if(is_array($hudong["data"])): $i = 0; $__LIST__ = $hudong["data"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="app-item center js_entity_view" data-path="" style="width:165px;">
-				   <a href="<?php echo u('Install/page_one',array('id'=>$vo['id']));?>" target="_self">
+				<?php if(is_array($hudong["data"])): $i = 0; $__LIST__ = $hudong["data"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="app-item center js_entity_view" data-path="" style="width:165px;"><a data_id="<?php echo ($vo["id"]); ?>" onclick="addapps(<?php echo ($vo["id"]); ?>,<?php echo ($vo["status"]); ?>);">
+				   <!-- href="<?php echo u('Install/page_one',array('id'=>$vo['id']));?>" -->
 						<?php if($vo['status'] == 1): ?><span class="installed">已安装</span><?php endif; ?>
 						 <img class="app-item-img" alt="<?php echo ($vo["name"]); ?>" src="<?php echo ($vo["logo"]); ?>">
 						<div class="app-item-name"><?php echo ($vo["name"]); ?> </div>
+						<div class="app-item-count">安装量 <?php echo ($vo["times"]); ?></div>
+						<div class="app-item-versions">适用套餐：试用版</div></a>
 					</div><?php endforeach; endif; else: echo "" ;endif; ?>				              				
 			</div><?php endif; ?>					
 			
+			
+<!-- 				<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="app-item center js_entity_view" data-path=""><a data_id="<?php echo ($vo["id"]); ?>" onclick="addapps(<?php echo ($vo["id"]); ?>,<?php echo ($vo["status"]); ?>);" >
+						<?php if($vo['status'] == 1): ?><span class="installed">已安装</span><?php endif; ?>
+						 <img class="app-item-img" alt="<?php echo ($vo["name"]); ?>" src="<?php echo ($vo["logo"]); ?>">
+						<div class="app-item-name"><?php echo ($vo["name"]); ?> </div>
+						<div class="app-item-count">安装量 <?php echo ($vo["times"]); ?></div>
+						<div class="app-item-versions">适用套餐：试用版</div></a>
+					</div><?php endforeach; endif; else: echo "" ;endif; ?> -->
              </div>
         </section>
     </section>

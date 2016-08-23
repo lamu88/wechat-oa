@@ -57,6 +57,7 @@
           <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav1">
             <li><a href="<?php echo U('website');?>" class="am-cf" target="menuFrame"><span class="am-icon-check"></span> 站点设置</a></li>
 			<li><a href="<?php echo U('login');?>" class="am-cf" target="menuFrame"><span class="am-icon-check"></span> 企业号登录</a></li>
+		<li><a href="<?php echo U('Appstore/version');?>" target="menuFrame"><span class="am-icon-th"></span> 版本升级</a></li>
             <li><a href="<?php echo U('userinfo');?>" target="menuFrame"><span class="am-icon-puzzle-piece"></span> 个人中心</a></li>
           </ul>
         </li>

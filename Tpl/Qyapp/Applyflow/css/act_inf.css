@@ -1,0 +1,231 @@
+﻿	html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,p { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+  a{ text-decoration:none;font-family:"微软雅黑";color:red;}
+  .same{
+  width:100%;
+  height:40px;
+  border-bottom:solid 1px #eee;
+  line-height:40px;
+  text-indent:10px;
+    color: #454545;
+    font-size: 13px;
+  }
+  .sametwo{
+        height: auto;
+  background:#fff;
+margin-left: 3%;
+  border:1px solid #ddd;
+    padding: 10px 0;
+width: 94%;
+text-indent: 0px;
+line-height: 26px;
+margin-bottom: 20px;
+  }
+  .botton{
+  width:49%;
+  height:60px;
+  float:left;
+  text-align:center;
+  line-height:69px;
+  background:#f8f8f8;
+  border:solid 1px #eee;
+  }
+  a{
+  
+  color:#000;
+  text-decoration:none;
+  }
+  .saesp{
+  color:#999;
+  font-size:13px;
+  font-weight:normal;
+  margin-left:10px;
+  }
+    #leixing{
+        background: #35aa47;
+        height: 30px;
+        line-height: 30px;
+
+    }
+        #leixing .saesp{
+        color: #fff;
+        font-size: 13px;
+        margin:auto;
+    }
+.bs_xq{
+  width: 94%;
+margin: 10px 0 10px 3%;
+border: 1px solid #35aa47;
+height: auto;
+overflow: hidden;
+}
+  .renwu{
+	font-size:12px;
+	color:#a2a2a2;
+	margin-bottom:10px;
+	}
+	.softload ul li span.icon_cont span.icon_dis{
+	float:left;
+	padding:5px;	
+	background:#fff;
+	margin-top:3px;
+	margin-left:26px;
+	border:solid 1px #eee;
+	border-radius:4px;
+	position:relative;
+	width: 66%;
+  line-height: 20px;
+	}
+		a{
+	text-decoration:none;
+	
+	}
+	a:hover{
+  text-decoration:none;
+   }
+	.softload ul li{
+	border:none;
+    width: 90%;
+    margin:16px 0 0 5%;
+    list-style: none;
+	}
+  .hightli{
+
+  height:50px;
+  
+  }
+  .dsmyxm{
+  width:100%;
+  background:#fff;
+  border-radius:5px;
+  float:left;
+  margin-bottom:20px;
+
+  }
+.rightdq{
+
+  margin-right:20px;
+color:#000;
+
+}	
+.dsmyxm dl dt{
+    width: 25%;
+    float: left;
+    color: #333;
+}
+.dsmyxm dl dd{
+    width: 75%;
+    float: left;
+    color: #999;
+}
+.dsmyxm dl{
+  width: 95%;
+  font-size: 14px;
+  overflow: hidden;
+  line-height: 34px;
+  border-bottom: 1px solid #eee;
+  padding-left: 5%;
+}
+.sp_xq{
+    padding:8px;
+}
+.sp_tl{
+    color: #35aa47;
+    font-size: 14px;
+    line-height: 22px;
+}
+.sp_nr{
+    line-height: 20px;
+    margin-bottom: 12px;
+    font-size: 12px;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 6px;
+}
+.sp_pic{
+  overflow: hidden;
+}
+.sp_pic li{
+  width: 50px;
+  height: 50px;
+  float: left;margin:6px 4px 6px 0;
+}
+
+.hightli span{
+  font-size: 12px !important;
+  /*display: inline-block;*/
+}
+.sp_pic img{
+  width: 50px;
+  height: 50px;
+}
+
+.xq_top{height: 30px;line-height: 30px;
+    background: #35aa47;color: #fff;text-indent: 10px;
+}
+#content{
+  margin-bottom: 90px;
+  width: 100%;
+  float: left;
+}
+#menu{width:100%;height:auto;}
+#menu ul{margin:0 auto;list-style-type:none;width:100%;height:100%;}
+#menu ul li{float:left;width:90%;height:30px;line-height: 30px; text-align:center;font-size:14px; border:1px solid #35aa47;border-radius: 6px;
+margin-left: 5%; margin-bottom: 20px;}
+.con_title{
+  height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    width: 94%;
+    float: left;
+    margin:30px 3%;
+    background: #35AA47;
+    font-size: 14px;
+}
+.down{
+  margin-left: 6px !important;
+}
+.sh_zt{
+  width: 100%;
+      text-align: right;
+    line-height: 24px;
+    float: right;
+}
+.sh_nm{
+  width: 48px;
+height: 76px;
+display: block;
+float: left;
+text-align: center;
+line-height: 24px;
+}
+.sh_nm img{
+  margin-top: 6px;
+  border-radius: 100%;
+}
+.icon_cont{
+  margin-bottom: 56px;
+}
+
+.bx_fj{font-size: 13px;
+  border:1px solid #35AA47;
+  padding:0;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

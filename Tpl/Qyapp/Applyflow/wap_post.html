@@ -1,0 +1,517 @@
+﻿<!DOCTYPE html>
+<html lang="cn" class="app fadeInUp animated js no-touch no-android chrome no-firefox no-iemobile no-ie no-ie10 no-ie11 no-ios"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+	 <title>申请报销</title>
+    <!-- <meta name="viewport" content="width=./Tpl/Qyapp/Static/Js/scroll/device-width, initial-scale=1, maximum-scale=1"> -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content=" " name="Keywords">
+    <meta content="" name="Description">
+	<link rel="stylesheet" href="./Tpl/Qyapp/Applyflow/css/MOA.common.css">
+<link rel="stylesheet" href="./Tpl/Qyapp/Applyflow/css/MOA.dialog.css">
+<link rel="stylesheet" href="./Tpl/Qyapp/Attendance/css/MOA.timeslider.css">
+  <script src="./Tpl/Qyapp/Static/Js/scroll/dev/jquery-1.9.1.js"></script>
+    <script src="./Tpl/Qyapp/Static/Js/scroll/dev/js/mobiscroll.core-2.5.2.js" type="text/javascript"></script>
+	<script src="./Tpl/Qyapp/Static/Js/scroll/dev/js/mobiscroll.core-2.5.2-zh.js" type="text/javascript"></script>
+	<link href="./Tpl/Qyapp/Static/Js/scroll/dev/css/mobiscroll.core-2.5.2.css" rel="stylesheet" type="text/css" />
+	<link href="./Tpl/Qyapp/Static/Js/scroll/dev/css/mobiscroll.animation-2.5.2.css" rel="stylesheet" type="text/css" />
+	<script src="./Tpl/Qyapp/Static/Js/scroll/dev/js/mobiscroll.datetime-2.5.1.js" type="text/javascript"></script>
+	<script src="./Tpl/Qyapp/Static/Js/scroll/dev/js/mobiscroll.datetime-2.5.1-zh.js" type="text/javascript"></script>
+	<!-- S 可根据自己喜好引入样式风格文件 -->
+	<script src="./Tpl/Qyapp/Static/Js/scroll/dev/js/mobiscroll.android-ics-2.5.2.js" type="text/javascript"></script>
+	<link href="./Tpl/Qyapp/Static/Js/scroll/dev/css/mobiscroll.android-ics-2.5.2.css" rel="stylesheet" type="text/css" />
+    <link href="./Tpl/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./Tpl/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./Tpl/assets/global/css/components.css" id="style_components" rel="stylesheet" type="text/css"/>
+    <link href="./Tpl/assets/global/css/plugins.css" rel="stylesheet" type="text/css"/>
+    <link href="./Tpl/assets/admin/layout/css/layout.css" rel="stylesheet" type="text/css"/>
+    <link href="./Tpl/assets/admin/layout/css/weiyi.css" rel="stylesheet" type="text/css"/>
+    <link href="./Tpl/Qyapp/Announce/css/ann.css" rel="stylesheet" type="text/css">
+	</head>
+	<style>
+	html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,p { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+
+	.sp_li{width:100%;border-top:1px solid #ddd;border-bottom:1px solid #ddd;box-sizing:border-box;
+	padding:0 2%;margin-top:10px;background:#fff;
+	}
+	.sp-label{vertical-align:top;font-size:14px;color:#333;line-height:40px;width:20%;}
+	.sp_li input,.sp_li select{width:78%;height:38px;text-align:right;border:none;color:rgb(121, 121, 121);font-size:14px;background:transparent;}
+	.sp_li select option{text-align:right;}
+	.sp_text{width:100%;padding:6px;border:none;font-size:14px;color:#888;line-height:18px;border-bottom:1px solid #eee;margin-bottom:10px;height:60px;}
+	
+	</style>
+		<script type="text/javascript">
+        $(function(){
+			var currYear = (new Date()).getFullYear();	
+			var opt={};
+			opt.date = {preset : 'date'};
+			//opt.datetime = { preset : 'datetime', minDate: new Date(2012,3,10,9,22), maxDate: new Date(2014,7,30,15,44), stepMinute: 5  };
+			opt.datetime = {preset : 'datetime'};
+			opt.time = {preset : 'time'};
+			opt.default = {
+				theme: 'android-ics light', //皮肤样式
+		        display: 'modal', //显示方式 
+		        mode: 'scroller', //日期选择模式
+				lang:'zh',
+		        startYear:currYear - 10, //开始年份
+		        endYear:currYear + 10 //结束年份
+			};
+			$("#appDate_1").val('').scroller('destroy').scroller($.extend(opt['date'], opt['default']));
+			$("#appDate").val('').scroller('destroy').scroller($.extend(opt['date'], opt['default']));
+			$("#endtime").val('').scroller('destroy').scroller($.extend(opt['date'], opt['default']));
+			var num = 1;
+			$('#zenjia').on('click',function(){
+				num++;
+				var html = '<div class="content_block" id="'+num+'"> <div class="same xm bgxiangmu" style="margin-top:20px;height:32px;line-height:32px;"> 项目'+num+' <a href="javascript:;" style="float:right;margin-right:10px; color:#fff;" onclick="removeProject($(this));">&times;</a> </div> <div class="form"> <div class="form-body" style="border:1px solid #35aa47;"> <div class="form-group"><div class="col-md-4" style="padding:0;"><div class="input-group input-add"><span class="input-group-addon"><i class="fa fa-calendar"></i></span><input name="project['+num+'][dotime]" class="form-control spinner" id="appDate_'+num+'" value="" placeholder="" type="text" ><label class="input-label">发生日期</label></div></div></div><div class="form-group"><div class="col-md-4" style="padding:0;"><div class="input-group input-add"><span class="input-group-addon"><i class="fa fa-cny"></i></span><input name="project['+num+'][money]" class="form-control spinner money" id="money_'+num+'" value="" onblur="total()" placeholder="" type="tel"><label class="input-label">金额</label></div></div></div><div class="form-group"><div class="col-md-4">[凭证]<br/><div class="addImg" id="addImg_'+num+'"></div><a href="javascript:;" class="chooseImage" onclick="chooseImage($(this));" data-n="'+num+'"><img src="./Tpl/Qyapp/Announce/images/iconfont-zengjia.png" width="50px" height="50px"></a></div></div><div class="form-group"><div class="col-md-4" style="padding:0;"><div class="same ">备 注&nbsp;&nbsp;<br/><span class="samesp"><textarea class="enter_font" type="text" value="" class="newimg info" name="project['+num+'][info]"></textarea></span></div></div></div></div></div> </div>';
+				$('#xm').append(html);
+				$('#appDate_'+num).val('').scroller('destroy').scroller($.extend(opt['date'], opt['default']));
+			});	          			
+			
+        });
+		
+    </script>
+	<body style="background-color:#f1f1f1;">
+    <form action="{lanrain::U('Applyflow/wap_post',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}" method="post" id="myform"> 
+		<input type="hidden" value="{lanrain::$_GET['token']}"  name="token">
+		<input type="hidden" value="{lanrain::$_GET['wecha_id']}"  name="wecha_id">	
+	<div class="page-content-wrapper"> 
+						<div class="sp_li">
+						<label class="sp-label">报销类型</label>
+						<select name="type" id="applytype" class="" style="-webkit-appearance: none;">
+							<option value="" placeholder="qingjainna">请选择...</option> 
+							<volist name="list" id="list">
+							<option value="{lanrain:$list.id}">{lanrain:$list.name}</option>
+							</volist>
+						</select>
+						
+						</div>
+						<div class="sp_li">
+						<label class="sp-label">出差地点</label>
+						<input name="place" class="" id="truename" value="" placeholder="请输入..." type="text">
+						
+						</div>
+						<div class="sp_li">
+						<label class="sp-label">开始日期</label>
+						<input name="starttime" class="" id="appDate"  value="" placeholder="请选择..." type="text" >
+						
+						</div>
+						<div class="sp_li">
+						<label class="sp-label">结束日期</label>
+						<input name="endtime" class="" id="endtime" value="" placeholder="请选择..." type="text" >
+						
+						</div>
+						<div class="sp_li">
+						<label class="sp-label">详细说明</label>
+						<span class=""> 
+							<textarea type="text" value="" class="sp_text" placeholder="请输入..." name="name"></textarea> 
+						</span>
+						</div>
+	<div class="content_down" id="xm" class="find">
+	    <div class="content_block" id="1">
+			<div  class="same xm bgxiangmu"  id="one" style="height:32px;line-height:32px;margin-right:4%;">项目1<a href="javascript:;" style="float:right;margin-right:2%;"></a></div>	
+			
+			<!-- <div  class="same ">发生日期&nbsp;&nbsp;<br/>
+				<span class="samesp">
+					<input name="project[1][dotime]" class="px dotime appDate" id="appDate_1" value="" placeholder="请选择发生日期" type="text" >
+				</span>
+			</div>
+			
+			<div  class="same ">金 额&nbsp;&nbsp;<br/>
+				<span class="samesp">
+					<input name="project[1][money]" class="px money" id="money_1" value="" onblur="total()" placeholder="请输入金额" type="text">
+				</span>
+			</div>
+	  
+			<div  class="same ">备 注&nbsp;&nbsp;<br/>
+				<span class="samesp"> 
+                    <textarea class="enter_font" type="text" value="" class="newimg info" name="project[1][info]"></textarea> 
+				</span>
+			</div> -->
+			<div class="portlet-body form">
+				<div class="form-horizontal"> 
+					<div class="form-body" style="border:1px solid #35aa47;">											
+						<div class="form-group">
+							<div class="col-md-4">
+								
+								<div class="input-group input-add">
+									<span class="input-group-addon">
+									<i class="fa fa-calendar"></i>
+									</span>
+								<input name="project[1][dotime]" class="form-control spinner" id="appDate_1" value="" placeholder="" type="text" >
+								<label class="input-label">发生日期</label>
+								</div>
+								
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-4">
+								
+								<div class="input-group input-add">
+									<span class="input-group-addon">
+									<i class="fa fa-cny"></i>
+									</span>
+								<input name="project[1][money]" class="form-control spinner money" id="money_1" value="" onblur="total()" placeholder="" type="tel">
+								<label class="input-label">金额</label>
+								
+								</div>														
+								
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-4">
+                                [凭证]
+								<br/>
+								<div class="addImg" id="addImg_1"></div>	
+								<a href="javascript:;" class="chooseImage" onclick="chooseImage($(this));" data-n="1"><img src="./Tpl/Qyapp/Announce/images/iconfont-zengjia.png" width="50px" height="50px"></a>
+								<!-- <input type="hidden" value="{lanrain:$form.type}"  name="project[1][pic]"> -->
+							</div>
+						</div>
+						<!-- <div class="form-group">												
+							<div id="uploadPic">
+								<div id="appendInput"></div>
+							</div>	
+						</div> -->											
+						<div class="form-group">
+							<div class="col-md-4">
+								<div  class="same ">备 注&nbsp;&nbsp;<br/>
+								<span class="samesp"> 
+									<textarea class="enter_font" type="text" value="" class="newimg info" name="project[1][info]"></textarea> 
+								</span>
+							</div>
+							</div>
+						</div>												
+					</div>
+				</div>
+				
+			</div>
+        </div>		
+	</div>
+    
+	<div class="btm_plus">
+	    <div class="same ">合计金额:&nbsp;&nbsp
+			
+				<input name="project[1][total]" id="somemoney" value="" placeholder="" type="text" style="border:none; color:#de5045;">
+			
+        </div>
+	<!-- <div class="same xm">大写<input name="big" class="px" id="truename" value="" placeholder="大写" type="text"></div> -->
+	</div>
+	<div class="more_add" id="zenjia">
+        <span class="add_sign">
+            +
+        </span>
+        增 加 一 条
+    </div>
+    
+	<div>
+	<div id="uploadPic">
+		<div id="appendInput"></div>
+	</div>		
+	<input id="submit" class="submit" type="submit" value="提交" onclick="mySubmit()">
+
+	</div>
+	</form>
+	</div>
+
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>	
+<script>
+function removeProject(obj){
+	obj.parent().parent().remove();
+	total();
+}
+</script>
+<script>
+function total(){
+	somemoney=0;
+	$(".money").each(function(){
+	somemoney+=Number($(this).val());
+	$("#somemoney").val("￥"+somemoney+"元");
+	})	    
+}
+</script>
+<script>
+wx.config({
+debug: false,
+appId: '{lanrain:$jsssdk_info.appId}',
+timestamp: {lanrain:$jsssdk_info.timestamp},
+nonceStr: '{lanrain:$jsssdk_info.nonceStr}',
+signature: '{lanrain:$jsssdk_info.signature}',
+jsApiList: [
+'checkJsApi',
+'onMenuShareTimeline',
+'onMenuShareAppMessage',
+'onMenuShareQQ',
+'onMenuShareWeibo',
+'openCard',
+'previewImage',
+'chooseImage',
+'uploadImage',
+'downloadImage'
+]
+});
+</script>
+<script>
+var n = null;
+function chooseImage(obj){
+    //alert(obj);
+    n = obj.attr('data-n');
+	//alert(type);
+	wx.chooseImage({
+		success: function (res) {			
+			var localId = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+			//alert(type);
+			//var type = type;
+			//var field = field;
+			uploadImage(n,localId,'');
+		}
+	});	
+}
+
+function uploadImage(n,localIds){
+    //var type = type;
+	//var field = field;
+    //alert(type);
+    //alert(field);
+	
+    var localId = localIds.pop();
+	var token="{lanrain::$_GET['token']}";
+	var wecha_id="{lanrain::$_GET['wecha_id']}";
+	wx.uploadImage({
+		localId: localId,
+		isShowProgressTips: 1,
+		success: function (res) {
+			var serverId = res.serverId;
+			var l = '';
+			var num = Math.floor(Math.random()*999+1);
+			//type = type;
+			//var myfield = field;
+			//alert(field);
+			//alert(type);
+			l += '<div class="choose_pic"  id="appendsImg_'+num+'">';
+			l += '<img src="'+localId+'" width="35px" height="35px"/>';
+			l += '<a href="javascript:;" onclick="delImg('+num+')">';
+			l += '<img class="icon_reduce" src="./Tpl/Qyapp/Announce/images/iconfont-iconfontjian.png" width="15px" height="15px"/>';
+			l += '</a></div>';
+			$('#addImg_'+n).append(l);
+			var imgInput = '<input type="hidden" value="'+serverId+'" name="project['+n+'][pic]['+num+']"/>';
+			//alert($('#addImg_'+field).html());
+			$('#appendInput').append(imgInput);
+			//alert($('#appendInput').html());
+			if(localIds.length > 0){
+				setTimeout(function(){ uploadImage(n,localIds);},100);
+			}	
+		}
+	});
+}
+
+function delImg(obj,m){
+	//$('#appendsImg_'+m).remove();
+	//$('#chooseDoneimg_'+m).remove();	
+}
+</script>
+
+<script>
+$('#submitImg1').click(function(){
+	var localIds = new Array();
+	var token="{lanrain::$_GET['token']}";
+	var wecha_id="{lanrain::$_GET['wecha_id']}";
+	var fuzeren=$('#truename').val();
+	var head=$('#head').val();
+	var helper=$('#name').val();
+	var follow=$('#follow').val();
+	var end_time=$('#dateline').val();
+	var order=$('#ysex').val();
+	var content=$('#contents').val();
+	if(!fuzeren){
+		alert('请选择负责人！');
+		return false;
+	}
+	if(!content){
+		alert('您没有输入内容！');
+		return false;
+	}
+	var pic='';
+	$('#uploadPic input').each(function(k,v){
+		 var value = $(this).attr('value');	
+		 pic += ''+value+',';
+	});	
+	//$('#liHeader .choose_pic input').each(function(k,v){
+	//	 var value = $(this).attr('value');	
+	//	 localIds[k] = value;
+	//});
+	//if(localIds.length!=0){
+	//	syncUpload(localIds,'');
+	//}else{
+		$.ajax({
+			type: "post",  
+			url:"{lanrain::U('wap_add_task',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}",
+			dataType:'json',
+			data:{'token':token,'wecha_id':wecha_id,'fuzeren':fuzeren,'head':head,'helper':helper,'follow':follow,'end_time':end_time,'order':order,'content':content,'pic':pic},
+			success:function(json){
+				if(json==1){
+					alert('申请成功,已通知负责人');
+					window.location.href="index.php?g=Qyapp&m=Task&a=wap_index_three&token="+token+"&wecha_id="+wecha_id+"&type="+order+"&status=1";
+				}
+				if(json==2){
+					alert('申请成功');
+					window.location.href="index.php?g=Qyapp&m=Task&a=wap_index_three&token="+token+"&wecha_id="+wecha_id+"&type="+order+"&status=1";
+				}
+				if(json==4){
+					alert('申请失败');
+				}
+				if(json==5){
+					alert('申请失败!');
+				}	
+				if(json==6){
+					alert('申请失败');
+				}				
+			}
+		});
+	//}	
+});
+function syncUpload(localIds,id){
+	var localId = localIds.pop();
+	var token="{lanrain::$_GET['token']}";
+	var wecha_id="{lanrain::$_GET['wecha_id']}";
+	var fuzeren=$('#truename').val();
+	var head=$('#head').val();
+	var helper=$('#name').val();
+	var follow=$('#follow').val();
+	var end_time=$('#dateline').val();
+	var order=$('#ysex').val();
+	var content=$('#contents').val();
+	wx.uploadImage({
+		localId: localId,
+		isShowProgressTips: 1,
+		success: function (res) {
+			var serverId = res.serverId;
+			id += ''+serverId+',';
+			if(localIds.length > 0){
+				setTimeout(function(){ syncUpload(localIds,id);},100);
+			}else{
+				$.ajax({
+					type: "post",  
+					url:"{lanrain::U('wap_add_task',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}",
+					dataType:'json',
+					data:{'token':token,'wecha_id':wecha_id,'fuzeren':fuzeren,'head':head,'helper':helper,'follow':follow,'end_time':end_time,'order':order,'content':content,'pic':id},
+					success:function(json){
+						if(json==2){
+							alert('申请成功,已通知负责人与协作人');
+							window.location.href="index.php?g=Qyapp&m=Task&a=wap_index_three&token="+token+"&wecha_id="+wecha_id+"&type="+order+"&status=1";
+						}
+						if(json==4){
+							alert('申请失败');
+						}
+					}
+				});
+			}
+		}
+	});
+	
+};
+</script>
+
+<script>
+wx.ready(function () {
+// 2.1 监听“分享给朋友”，按钮点击、自定义分享内容及分享结果接口
+var newUrl="http://{lanrain::$_SERVER['HTTP_HOST']}";
+wx.onMenuShareAppMessage({
+title: '分享招聘岗位挣红包',
+desc: '分享招聘岗位挣红包',
+link: newUrl+"{lanrain::U('wap_positionInfo',array('token'=>$_GET['token'],'pid'=>$_GET['pid'],'wecha_id'=>$_GET['wecha_id'],'type'=>'up'))}",
+imgUrl: newUrl+"/Tpl/Qyapp/Hiring/images/logo.jpg",
+trigger: function (res) {
+},
+success: function (res) {
+},
+cancel: function (res) {
+},
+fail: function (res) {
+}
+});
+// 2.2 监听“分享到朋友圈”按钮点击、自定义分享内容及分享结果接口
+wx.onMenuShareTimeline({
+title: '分享招聘岗位挣红包',
+link: newUrl+"{lanrain::U('wap_positionInfo',array('token'=>$_GET['token'],'pid'=>$_GET['pid'],'wecha_id'=>$_GET['wecha_id'],'type'=>'up'))}",
+imgUrl: newUrl+"/Tpl/Qyapp/Hiring/images/logo.jpg",
+trigger: function (res) {
+},
+success: function (res) {
+},
+cancel: function (res) {
+},
+fail: function (res) {
+}
+});
+
+// 2.3 监听“分享到QQ”按钮点击、自定义分享内容及分享结果接口
+wx.onMenuShareQQ({
+title: '分享招聘岗位挣红包',
+desc: '分享招聘岗位挣红包',
+link: newUrl+"{lanrain::U('wap_positionInfo',array('token'=>$_GET['token'],'pid'=>$_GET['pid'],'wecha_id'=>$_GET['wecha_id'],'type'=>'up'))}",
+imgUrl: newUrl+"/Tpl/Qyapp/Hiring/images/logo.jpg",
+trigger: function (res) {
+},
+complete: function (res) {
+},
+success: function (res) {
+},
+cancel: function (res) {
+},
+fail: function (res) {
+}
+});
+// 2.4 监听“分享到微博”按钮点击、自定义分享内容及分享结果接口
+wx.onMenuShareWeibo({
+title: '分享招聘岗位挣红包',
+desc: '分享招聘岗位挣红包',
+link:  newUrl+"{lanrain::U('wap_positionInfo',array('token'=>$_GET['token'],'pid'=>$_GET['pid'],'wecha_id'=>$_GET['wecha_id'],'type'=>'up'))}",
+imgUrl: newUrl+"/Tpl/Qyapp/Hiring/images/logo.jpg",
+trigger: function (res) {
+},
+complete: function (res) {
+},
+success: function (res) {
+},
+cancel: function (res) {
+},
+fail: function (res) {
+}
+});
+
+});
+</script>
+
+<script>
+    //function mySubmit(){
+	//    $('#myform').submit();
+	//}
+	$('#submit').on('click',function(){
+	    //alert('sss');
+		var money = $('#somemoney').val();
+		var place = $('#truename').val();
+		var appdate = $('#appDate').val();
+		var endtime = $('#endtime').val();		
+		var type = $('#applytype option:selected').attr("value");
+		if(type == ""){
+		    alert('请输入选择报销类型');
+			return false;
+		}	
+		if(place == ""){
+		    alert('请输入地点');
+			return false;
+		}	
+		if(appdate == ""){
+		    alert('请输入开始时间');
+			return false;
+		}	
+		if(endtime == ""){
+		    alert('请输入结束时间');
+			return false;
+		}			
+		if(money == ""){
+		    alert('请输入金额');
+			return false;
+		}		
+		$('#myform').submit();
+	});
+	</script>
+	</body>

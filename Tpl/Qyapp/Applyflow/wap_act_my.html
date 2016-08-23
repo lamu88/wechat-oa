@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+    <title>我的报销</title>
+    <link rel="stylesheet" href="Tpl/Qyapp/Applyflow/css/style1.css">
+    <link rel="stylesheet" href="Tpl/Qyapp/Applyflow/css/date.css">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="./Tpl/Qyapp/Applyflow/js/mobiscroll/js/mobiscroll.core.js"></script>
+    <script src="./Tpl/Qyapp/Applyflow/js/mobiscroll/js/mobiscroll.frame.js"></script>
+    <script src="./Tpl/Qyapp/Applyflow/js/mobiscroll/js/mobiscroll.scroller.js"></script>
+
+    <script src="./Tpl/Qyapp/Applyflow/js/mobiscroll/js/mobiscroll.util.datetime.js"></script>
+    <script src="./Tpl/Qyapp/Applyflow/js/mobiscroll/js/mobiscroll.datetimebase.js"></script>
+    <script src="./Tpl/Qyapp/Applyflow/js/mobiscroll/js/mobiscroll.datetime.js"></script>
+    <script src="./Tpl/Qyapp/Applyflow/js/mobiscroll/js/mobiscroll.frame.ios.js"></script>
+    <script src="./Tpl/Qyapp/Applyflow/js/mobiscroll/js/mobiscroll.frame.jqm.js"></script>
+    <script src="./Tpl/Qyapp/Applyflow/js/mobiscroll/js/i18n/mobiscroll.i18n.zh.js"></script>
+
+    <link href="./Tpl/Qyapp/Applyflow/js/mobiscroll/css/mobiscroll.animation.css" rel="stylesheet" type="text/css" />
+    <link href="./Tpl/Qyapp/Applyflow/js/mobiscroll/css/mobiscroll.icons.css" rel="stylesheet" type="text/css" />
+    <link href="./Tpl/Qyapp/Applyflow/js/mobiscroll/css/mobiscroll.frame.css" rel="stylesheet" type="text/css" />
+    <link href="./Tpl/Qyapp/Applyflow/js/mobiscroll/css/mobiscroll.frame.ios.css" rel="stylesheet" type="text/css" />
+    <link href="./Tpl/Qyapp/Applyflow/js/mobiscroll/css/mobiscroll.frame.jqm.css" rel="stylesheet" type="text/css" />
+    <link href="./Tpl/Qyapp/Applyflow/js/mobiscroll/css/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
+    <link href="./Tpl/Qyapp/Applyflow/js/mobiscroll/css/mobiscroll.scroller.ios.css" rel="stylesheet" type="text/css" />
+    <link href="./Tpl/Qyapp/Applyflow/js/mobiscroll/css/mobiscroll.scroller.jqm.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8">   
+    $(function() {   
+	
+		$('#beginTime').mobiscroll().date({
+			theme: 'ios',     // Specify theme like: theme: 'ios' or omit setting to use default 
+			mode: 'mixed',       // Specify scroller mode like: mode: 'mixed' or omit setting to use default 
+			display: 'bottom', // Specify display mode like: display: 'bottom' or omit setting to use default 
+			lang: 'zh',        // Specify language like: lang: 'pl' or omit setting to use default 
+			dateOrder: 'yymm', 
+			dateFormat: 'yy-mm'
+		});	
+		$('#beginTime').on('change',function(){
+		    $('#beginTime').css('width','0px');
+			 $('#beginTime').css('height','0px');		
+			window.location.href="index.php?g=Qyapp&m=Applyflow&a=wap_act_my&token={lanrain::$_GET['token']}&wecha_id={lanrain::$_GET['wecha_id']}&date="+$('#beginTime').val();
+		});		
+    });   
+</script>	
+</head>
+<body class="bg1">
+<!--sec-banner01 start-->
+<section class="top" >
+	<ul style="">
+		<li style="width:25%;">
+			<if condition="$userinfo['pic']"><img src="{lanrain:$userinfo.pic}" width="72px" height="72px" style="border-radius:10px;"><else/><img src="./Tpl/Qyapp/Applyflow/images/que.png" width="72px" height="72px" style="border-radius:10px;"></if>
+		</li>
+		<li style="width:55%;">
+			<p class="top-p" style="font-size:24px;margin-bottom:8px;">{lanrain:$userinfo.name}</p>
+			<p class="top-p">职务:{lanrain:$userinfo.position}</p>
+			<p class="top-p">部门:{lanrain:$userinfo.department}</p>		
+		</li>
+		<li style="width:20%;text-align:center;padding-top:10px;position:relative;">
+		    <img src="./Tpl/Qyapp/Applyflow/images/rili.png" width="50px" height="50px">
+			<p style="position:absolute;top:20px;left:19px;color:#fff;">
+			<span style="font-size:10px;color:#fff;">{lanrain:$year}</span><br>
+			<span style="font-size:18px;color:#fff;">{lanrain:$month}<label style="font-size:12px;color:#fff;">月</label></span>
+			</p>			
+			<input type="text" name="begintime" id="beginTime" class="input-text" value="">
+		</li>
+	</ul>
+</section>
+<!--sec-banner01 end-->
+<!--sec01-01 start-->
+<section class="sec01-01">
+    <div class="slideTxtBox">
+        <div class="hd">
+            <ul id="tab">
+			    <a href="{lanrain::U('wap_index',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'date'=>$t,'status'=>2))}">
+                
+				<if condition="$_GET['status'] eq 2"><li class="li-active-status"><else/><li class="li-status"></if>
+                    <div class="li-c">
+					<span class="span-center" style="color:#38adff;"><if condition="$count2">{lanrain:$count2}<else/>0</if></span>
+                    <div class="li-txt" >已通过</div>
+                    </div>
+                </li>
+				</a>
+				<a href="{lanrain::U('wap_index',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'date'=>$t,'status'=>3))}">
+				<if condition="$_GET['status'] eq 3"><li class="li-active-status"><else/><li class="li-status"></if>
+                    <div class="li-c">
+						<span class="span-center" style="color:#93e4df;"><if condition="$count3">{lanrain:$count3}<else/>0</if></span>					
+						<div class="li-txt" style="color:#575757;" >未通过</div>
+                    </div>
+                </li>
+				</a>
+				<a href="{lanrain::U('wap_index',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'date'=>$t,'status'=>1))}">
+                <if condition="$_GET['status'] eq 1"><li class="li-active-status"><else/><li class="li-status"></if>
+                    <div class="li-c" style="margin-left:10px;">
+						<span class="span-center" style="color:#C5CB63;"><if condition="$count1">{lanrain:$count1}<else/>0</if></span>
+						<div class="li-txt" style="color:#575757;" >待审核</div>
+                    </div>
+                </li>
+				</a>
+                <div class="clear"></div>
+            </ul>
+        </div>
+        <div class="bd" id="content">
+            <ul>
+			   <if condition="$list">
+			   <volist name="list" id="list">			
+               <li style="margin-top:10px;border:1px solid #dbdbdb;">
+				   <a href="{lanrain::U('wap_sp_info',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'pid'=>$list['id']))}">
+                   <div class="li-w">
+                       <div>
+                           <div class="li-c" style="position:relative;">					   
+                               <div class="fr-c ">	
+                                   <dl>
+									  <if condition="$_GET['status'] eq 1"><dd style="float:left;width:30px;"><img src="Tpl/Qyapp/Applyflow/images/icon03.png" class="pic1"></dd></if>
+									  <if condition="$_GET['status'] eq 2"><dd style="float:left;width:30px;"><img src="Tpl/Qyapp/Applyflow/images/icon01.png" class="pic1"></dd></if>
+									  <if condition="$_GET['status'] eq 3"><dd style="float:left;width:30px;"><img src="Tpl/Qyapp/Applyflow/images/icon02.png" class="pic1"></dd></if>								   
+                                       <dd style="float:left;">
+									       <span>报销时间：{lanrain:$list.time|date="Y-m-d",###} {lanrain:$list.time|date="H:i",###}</span></br>
+                                           申请金额：<font>￥{lanrain:$list.allmoney}</font></br>
+                                           所属部门：{lanrain:$list.dept}</br>
+                                           报销类型：{lanrain:$list.type}</br>
+                                       </dd>
+                                       <div class="clear"></div>
+                                   </dl>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="clear"></div>
+                   </div>
+				   </a> 
+                </li>
+				</volist>
+                <else/>
+				   <p style="text-align:center;padding-top:30px;">
+				   <img src="./Tpl/Qyapp/Applyflow/images/que.png" width="100px" height="100px">
+				   <br>
+                    暂无数据
+					</p>				
+				</if>				
+            </ul>		
+        </div>
+    </div>
+</section>
+<!--sec01-01 end-->
+<!---#mdnu staart-->
+<style type="text/css">
+body{ margin-bottom:60px !important;}
+a,button,input{-webkit-tap-highlight-color:rgba(255,0,0,0);}
+ul,li{ list-style:none; margin:0;padding:0}
+#plug-wrap {
+    position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0);
+    z-index:800;
+}
+.top_bar {
+    position:fixed;
+    bottom:0;
+    right:0px;
+    z-index:900;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-family: Helvetica, Tahoma, Arial, Microsoft YaHei, sans-serif;
+}
+.plug-menu {
+    -webkit-appearance:button;
+    display:inline-block;
+    width:50px;
+    height:50px;
+    border-radius:36px;
+    position: absolute;
+    bottom:35px;
+    right: 20px;
+    z-index:999;
+    <!-- box-shadow: 0 0 0 4px #FFFFFF, 0 2px 5px 4px rgba(0, 0, 0, 0.25); -->
+    background-color: #B70000;
+    -webkit-transition: -webkit-transform 200ms;
+    -webkit-transform:rotate(1deg);
+    color:#fff;
+    background-image:url('images/ico/plug.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: 80% auto;
+    background-size: 100% auto;
+    background-position: center center;
+}
+.plug-menu:before {
+    font-size:20px;
+    margin:9px 0 0 9px;
+}
+.plug-menu:checked {
+    -webkit-transform:rotate(135deg);
+}
+.top_menu>li {
+    width: 32px;
+    height:32px;
+    border-radius:32px;
+    box-shadow: 0 0 0 3px #FFFFFF, 0 2px 5px 3px rgba(0, 0, 0, 0.25);
+    background:#B70000;
+    position:absolute;
+    bottom:0;
+    right:0;
+    margin-bottom: 40px;
+    margin-right:40px;
+    z-index:900;
+    -webkit-transition: -webkit-transform 200ms;
+}
+.top_menu>li a {
+    <!-- color:#fff; -->
+    font-size:20px;
+    display: block;
+    height: 100%;
+    line-height: 33px;
+    text-align: center;
+	background:none;
+}
+.top_menu>li>a label{
+display:none;
+}
+.top_menu>li a img {
+display: block;
+width: 60px;
+height: 60px;
+text-indent: -999px;
+position: absolute;
+top: 100%;
+left: 100%;
+margin-top: -40px;
+margin-left: -40px;
+background:none;
+}
+.top_menu>li.on:nth-of-type(1) {
+-webkit-transform: translate(-0, -100px) rotate(720deg);
+}
+.top_menu>li.on:nth-of-type(2) {
+-webkit-transform: translate(-68px, -68px) rotate(720deg);
+}
+.top_menu>li.on:nth-of-type(3) {
+-webkit-transform: translate(-100px, 0) rotate(720deg);
+}
+ 
+#sharemcover {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.7);
+display: none;
+z-index: 20000;
+}
+#sharemcover img {
+position: fixed;
+right: 18px;
+top: 5px;
+width: 260px;
+height: 180px;
+z-index: 20001;
+border:0;
+background-color:none;
+}
+    #upmenu{background: #000; width:100%; height: 100%; filter:alpha(opacity=50);-moz-opacity:0.8;-khtml-opacity: 0.8;opacity: 0.8; position: absolute;top: 600px; display: none;}
+	#content1 {max-width: 640px;min-width: 320px; height: 600px;  margin: 0 auto; position: relative; border: 1px solid black; }
+
+	#bj1{background: black; width:100%; height: 100%; filter:alpha(opacity=50);-moz-opacity:0.8;-khtml-opacity: 0.8;opacity: 0.8; position: absolute;top: 600px; display: none; }
+
+	a {color:white;}
+
+	.menu1{
+	    -webkit-transition: 0.4s;
+	    -webkit-transition: -webkit-transform 0.4s ease-out;
+	    transition: transform 0.4s ease-out;
+	    -moz-transition: -moz-transform 0.4s ease-out;
+	}
+	  
+	.menu1:hover{
+	    transform: rotateZ(360deg);
+	    -webkit-transform: rotateZ(360deg);
+	    -moz-transform: rotateZ(360deg);
+	}
+	</style>
+
+<div class="top_bar" style="-webkit-transform:translate3d(0,0,0)">
+ <nav>
+    <ul id="top_menu" class="top_menu">
+      <input type="checkbox" id="plug-btn" class="plug-menu themeStyle" style="border-radius:64px;background-image:url('./Tpl/Qyapp/Applyflow/images/menu01.png');background-color:none;border:0px;">   
+	</ul>
+  </nav>
+</div>
+<div id="plug-wrap" style="display: none;" ></div>
+<!--menu end-->
+<!--rili start-->
+<div id="datePlugin"></div>
+<!--rili end-->
+<div class="hd" id="upmenu">
+	<ul id="tab" style="position:absolute;bottom:10px;z-index:8888;width:75%;">
+		<a href="{lanrain::U('wap_index',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}">
+		<li style="width: 33.333%;float: left;">
+			<div class="li-c">
+			<img src="Tpl/Qyapp/Applyflow/images/14.png" height="50px" width="50px" style="display: block;max-width: 100%;margin: 0 auto;">
+			<div class="li-txt" style="font-size: 14px;line-height: 24px;text-align: center;">我的</div>
+			</div>
+		</li>
+		</a>				
+		<a href="{lanrain::U('wap_act_list',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}">
+		<li style="width: 33.333%;float: left;">
+			<div class="li-c">
+			<img src="Tpl/Qyapp/Applyflow/images/16.png" height="50px" width="50px" style="display: block;max-width: 100%;margin: 0 auto;">
+			<div class="li-txt" style="font-size: 14px;line-height: 24px;text-align: center;">审批</div>
+			</div>
+		</li>
+		</a>
+		<a href="{lanrain::U('wap_post',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}">
+		<li style="width: 33.333%;float: left;">
+			<div class="li-c">
+			<img src="Tpl/Qyapp/Applyflow/images/15.png" height="50px" width="50px" style="display: block;max-width: 100%;margin: 0 auto;">
+			<div class="li-txt" style="font-size: 14px;line-height: 24px;text-align: center;">新增</div>
+			</div>
+		</li>
+		</a>		
+		<div class="clear"></div>
+	</ul>
+</div>
+
+<!--js start-->
+<!-- <script type="text/javascript" src="Tpl/Qyapp/Applyflow/js/jquery.js" ></script>
+<script type="text/javascript" src="Tpl/Qyapp/Applyflow/js/date.js" ></script> -->
+<script type="text/javascript" src="Tpl/Qyapp/Applyflow/js/iscroll.js" ></script>
+<script type="text/javascript">
+$(function(){
+    $('#top_menu').click(function(){
+	    var window_height = $(window).height()+'300px';
+		if ($("#upmenu").css("display") == 'none')
+		{
+			$("#upmenu").show();		
+			$("#upmenu").animate({ top: '0px' }, 300);
+		} else {
+			$("#upmenu").animate({ top: window_height }, 300, "", function(){
+				$("#upmenu").hide();
+			});
+		}	
+	});
+});
+</script>
+<!--js end-->
+</body>
+</html>

@@ -1,0 +1,2181 @@
+[ 2015-11-26T11:41:02+08:00 ] 58.48.10.52 /index.php?g=Yi&m=Public&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031250s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031250s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.046876s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.046876s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.046876s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:41:02+08:00 ] 58.48.10.52 /index.php?g=Yi&m=Public&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.046876s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.046876s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.062501s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.062501s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.062501s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.062501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.062501s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:41:16+08:00 ] 58.48.10.52 /index.php?g=Yi&m=Public&a=checklogin
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qyuser` [ RunTime:0.171877s ]
+SQL: SELECT * FROM `tp_qyuser` WHERE ( `username` = 'admin' ) AND ( `psd` = '21232f297a57a5a743894a0e4a801fc3' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.203128s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.203128s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046875s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.250003s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.250003s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.250003s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.250003s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.250003s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:41:17+08:00 ] 58.48.10.52 /index.php?g=Yi&m=Admin&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.015625s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.015625s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031250s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031250s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031250s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:41:17+08:00 ] 58.48.10.52 /index.php?g=Yi&m=Admin&a=website
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.015625s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: status D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Yi\231fde1ba9601a4959b5a06f2fb5c30d.php 第 113 行.
+NOTIC: [8] Undefined index: status D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Yi\231fde1ba9601a4959b5a06f2fb5c30d.php 第 114 行.
+NOTIC: [8] Undefined index: id D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Yi\231fde1ba9601a4959b5a06f2fb5c30d.php 第 196 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:41:28+08:00 ] 58.48.10.52 /index.php?g=Yi&m=App&a=appcenter
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qyapplist` [ RunTime:0.062501s ]
+SQL: SELECT * FROM `tp_qyapplist` WHERE ( `install` = 1 )  [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.078126s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.078126s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.078126s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.093751s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.093751s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.093751s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.093751s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:41:36+08:00 ] 58.48.10.52 /index.php?g=Yi&m=App&a=appinfo&id=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qyapplist` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyapplist` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.062501s ]
+SQL: SHOW COLUMNS FROM `tp_qyusernode` [ RunTime:0.031251s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: up D:\WWW\duoqy\duoqy\dqy\Lanrain\Lib\Action\Yi\AppAction.class.php 第 20 行.
+NOTIC: [8] Undefined variable: isinstall D:\WWW\duoqy\duoqy\dqy\Lanrain\Lib\Action\Yi\AppAction.class.php 第 24 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.109377s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.109377s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.125002s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.125002s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.125002s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.125002s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.125002s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:41:38+08:00 ] 58.48.10.52 /index.php?g=Yi&m=App&a=appvip&id=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qyapplist` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyapplist` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qyusernode` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `uid` = 1 )  [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:41:44+08:00 ] 58.48.10.52 /index.php?g=Yi&m=User&a=userlist
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_qytoken` LIMIT 1   [ RunTime:0.015626s ]
+SQL: SELECT * FROM `tp_qytoken` ORDER BY addtime desc LIMIT 0,20   [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `tp_qyusernode` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.062501s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: username D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Yi\ac3caea323a19a1d1c6a3edf7c6aa5f2.php 第 48 行.
+NOTIC: [8] Undefined variable: departname D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Yi\ac3caea323a19a1d1c6a3edf7c6aa5f2.php 第 49 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.062501s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.078126s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.078126s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.078126s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.078126s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.078126s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:41:49+08:00 ] 58.48.10.52 /index.php?g=Yi&m=Admin&a=website
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: status D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Yi\231fde1ba9601a4959b5a06f2fb5c30d.php 第 113 行.
+NOTIC: [8] Undefined index: status D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Yi\231fde1ba9601a4959b5a06f2fb5c30d.php 第 114 行.
+NOTIC: [8] Undefined index: id D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Yi\231fde1ba9601a4959b5a06f2fb5c30d.php 第 196 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:41:50+08:00 ] 58.48.10.52 /index.php?g=Yi&m=Admin&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.015626s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: provider_secret D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Yi\bb62621f7852d9f70b00256f2e0cc2e9.php 第 97 行.
+NOTIC: [8] Undefined index: corpid D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Yi\bb62621f7852d9f70b00256f2e0cc2e9.php 第 105 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:41:51+08:00 ] 58.48.10.52 /index.php?g=Yi&m=Admin&a=userinfo
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.031250s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031250s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031250s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031250s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031250s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031250s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:42:04+08:00 ] 58.48.10.52 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.031250s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.062501s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.078126s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.078126s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.078126s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.078126s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.078126s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.078126s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:42:09+08:00 ] 58.48.10.52 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:42:10+08:00 ] 58.48.10.52 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031250s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031250s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031250s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031250s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031250s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:42:10+08:00 ] 58.48.10.52 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.015625s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:42:10+08:00 ] 58.48.10.52 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.015625s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.031250s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.062501s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.062501s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.078126s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.078126s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.078126s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.078126s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.078126s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:42:11+08:00 ] 58.48.10.52 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2015-11-26T11:42:11+08:00 ] 58.48.10.52 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.015625s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.031250s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.046876s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.046876s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.046876s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.046876s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.046876s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:42:11+08:00 ] 58.48.10.52 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.046876s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.062501s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.062501s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.062501s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.062501s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.062501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.062501s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:42:11+08:00 ] 58.48.10.52 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:42:12+08:00 ] 58.48.10.52 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.015625s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.046876s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.046876s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.046876s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.046876s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.046876s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.046876s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:42:12+08:00 ] 58.48.10.52 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.015625s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:42:13+08:00 ] 58.48.10.52 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:42:13+08:00 ] 58.48.10.52 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.015625s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.031250s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.046876s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.046876s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.046876s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.046876s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.046876s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:42:13+08:00 ] 58.48.10.52 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.015625s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.031250s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.046875s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.046875s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.046875s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.046875s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.046875s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:42:13+08:00 ] 58.48.10.52 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031250s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031250s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031250s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031250s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031250s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:42:14+08:00 ] 58.48.10.52 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031250s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031250s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031250s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031250s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031250s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:42:21+08:00 ] 58.48.10.52 /index.php?g=Qyapp&m=Public&a=checklogin
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `username` = 'weiyi' ) AND ( `password` = 'b59c67bf196a4758191e42f76670ceba' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: host D:\WWW\duoqy\duoqy\dqy\Lanrain\Lib\Action\Qyapp\PublicAction.class.php 第 59 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:42:22+08:00 ] 58.48.10.52 /index.php?g=Qyapp&m=Appslist&a=appList
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: Describe  `tp_qytoken` `agency_id`; [ RunTime:0.000000s ]
+SQL: Describe  `tp_qyapplist` `category`; [ RunTime:0.000000s ]
+SQL: Describe  `tp_qymyapp` `category`; [ RunTime:0.031251s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.015625s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `id` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qymyapp` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `status` = 1 ) AND ( `userid` = 25 )  [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `tp_qyapplist` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyapplist` WHERE ( `id` = 1 ) AND ( `install` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyapplist` WHERE ( `id` = 5 ) AND ( `install` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyapplist` WHERE ( `id` = 4 ) AND ( `install` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyapplist` WHERE ( `id` = 6 ) AND ( `install` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyapplist` WHERE ( `id` = 11 ) AND ( `install` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyapplist` WHERE ( `id` = 14 ) AND ( `install` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyapplist` WHERE ( `id` = 15 ) AND ( `install` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.109376s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: site_title D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 4 行.
+NOTIC: [8] Undefined index: headimg D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 82 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 134 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 137 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 140 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 143 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 148 行.
+NOTIC: [8] Undefined index: node_id D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 205 行.
+NOTIC: [8] Undefined index: head D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 272 行.
+NOTIC: [8] Undefined index: info D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 273 行.
+NOTIC: [8] Undefined index: data D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 275 行.
+NOTIC: [8] Undefined index: head D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 292 行.
+NOTIC: [8] Undefined index: info D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 293 行.
+NOTIC: [8] Undefined index: data D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 295 行.
+NOTIC: [8] Undefined index: head D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 312 行.
+NOTIC: [8] Undefined index: info D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 313 行.
+NOTIC: [8] Undefined index: data D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 315 行.
+NOTIC: [8] Undefined index: head D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 332 行.
+NOTIC: [8] Undefined index: info D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 333 行.
+NOTIC: [8] Undefined index: data D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 335 行.
+NOTIC: [8] Undefined index: head D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 352 行.
+NOTIC: [8] Undefined index: info D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 353 行.
+NOTIC: [8] Undefined index: data D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 355 行.
+NOTIC: [8] Undefined index: head D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 372 行.
+NOTIC: [8] Undefined index: info D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 373 行.
+NOTIC: [8] Undefined index: data D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 375 行.
+NOTIC: [8] Undefined index: mid D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 432 行.
+NOTIC: [8] Undefined index: mid D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 438 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.125001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031251s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.156252s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.156252s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.156252s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.156252s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.156252s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:42:30+08:00 ] 58.48.10.52 /index.php?g=Qyapp&m=Userinfo&a=bind
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `id` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: site_title D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\44885e0eda982d54cef135bad09ba8a8.php 第 4 行.
+NOTIC: [8] Undefined index: headimg D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\44885e0eda982d54cef135bad09ba8a8.php 第 82 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\44885e0eda982d54cef135bad09ba8a8.php 第 134 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\44885e0eda982d54cef135bad09ba8a8.php 第 137 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\44885e0eda982d54cef135bad09ba8a8.php 第 140 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\44885e0eda982d54cef135bad09ba8a8.php 第 143 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\44885e0eda982d54cef135bad09ba8a8.php 第 148 行.
+NOTIC: [8] Undefined index: node_id D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\44885e0eda982d54cef135bad09ba8a8.php 第 205 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.046876s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:42:34+08:00 ] 58.48.10.52 /index.php?g=Qyapp&m=Appslist&a=appCenter
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: Describe  `tp_qytoken` `agency_id`; [ RunTime:0.000000s ]
+SQL: Describe  `tp_qyapplist` `category`; [ RunTime:0.015625s ]
+SQL: Describe  `tp_qymyapp` `category`; [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `id` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qyapplist` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyapplist`  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qymyapp` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 1 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qyusernode` [ RunTime:0.015625s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 2 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 3 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 4 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 5 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 6 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 8 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 9 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 10 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 11 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 12 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 13 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 14 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 15 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 17 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 18 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 19 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 20 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 22 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 23 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 24 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 25 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 26 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.062500s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: site_title D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 4 行.
+NOTIC: [8] Undefined index: headimg D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 82 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 134 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 137 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 140 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 143 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 148 行.
+NOTIC: [8] Undefined index: node_id D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 205 行.
+NOTIC: [8] Undefined variable: list D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 365 行.
+NOTIC: [8] Undefined index: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 382 行.
+NOTIC: [8] Undefined index: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 389 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.078126s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062501s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.125001s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.125001s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.125001s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.125001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.125001s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:42:37+08:00 ] 58.48.10.52 /index.php?g=Qyapp&m=Appslist&a=choose_type&&appid=1&status=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: Describe  `tp_qytoken` `agency_id`; [ RunTime:0.000000s ]
+SQL: Describe  `tp_qyapplist` `category`; [ RunTime:0.015625s ]
+SQL: Describe  `tp_qymyapp` `category`; [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `id` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qyapplist` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyapplist` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.046876s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.046876s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.046876s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.046876s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.046876s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:42:41+08:00 ] 58.48.10.52 /index.php?g=Qyapp&m=Userinfo&a=bind&
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.046876s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `id` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.062501s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: site_title D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\44885e0eda982d54cef135bad09ba8a8.php 第 4 行.
+NOTIC: [8] Undefined index: headimg D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\44885e0eda982d54cef135bad09ba8a8.php 第 82 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\44885e0eda982d54cef135bad09ba8a8.php 第 134 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\44885e0eda982d54cef135bad09ba8a8.php 第 137 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\44885e0eda982d54cef135bad09ba8a8.php 第 140 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\44885e0eda982d54cef135bad09ba8a8.php 第 143 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\44885e0eda982d54cef135bad09ba8a8.php 第 148 行.
+NOTIC: [8] Undefined index: node_id D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\44885e0eda982d54cef135bad09ba8a8.php 第 205 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.062501s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.078126s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.078126s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.078126s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.078126s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.078126s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:42:52+08:00 ] 58.48.10.52 /index.php?g=Qyapp&m=Userinfo&a=upfile&
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qyagent_config` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyagent_config` WHERE ( `uid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015626s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: site_title D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\37ab70275966fd6402a50c4fb2d35688.php 第 4 行.
+NOTIC: [8] Undefined index: headimg D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\37ab70275966fd6402a50c4fb2d35688.php 第 82 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\37ab70275966fd6402a50c4fb2d35688.php 第 134 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\37ab70275966fd6402a50c4fb2d35688.php 第 137 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\37ab70275966fd6402a50c4fb2d35688.php 第 140 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\37ab70275966fd6402a50c4fb2d35688.php 第 143 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\37ab70275966fd6402a50c4fb2d35688.php 第 148 行.
+NOTIC: [8] Undefined index: node_id D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\37ab70275966fd6402a50c4fb2d35688.php 第 205 行.
+NOTIC: [8] Undefined index: id D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\37ab70275966fd6402a50c4fb2d35688.php 第 321 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.046876s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.046876s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.046876s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.046876s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.046876s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:43:14+08:00 ] 58.48.10.52 /index.php?g=Qyapp&m=Userinfo&a=upfile
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qyagent_config` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyagent_config` WHERE ( `uid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `tp_qyagent_config` SET `upload_type`='upyun',`up_bucket`='zhumengliuyun',`up_form_api_secret`='n9hQggLr+Q+1mKKlOzwlHp1zTMs=',`up_username`='zhumengliuyun',`up_password`='1qazxsw23edc',`up_domainname`='zhumengliuyun.b0.upaiyun.com',`up_exts`='jpg,png',`up_size`='10000',`uid`=25 WHERE ( `uid` = 25 ) [ RunTime:0.031250s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.046875s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.046875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.046875s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.046875s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.046875s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.046875s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.046875s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:43:15+08:00 ] 58.48.10.52 /index.php?g=Qyapp&m=Userinfo&a=upfile&
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qyagent_config` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyagent_config` WHERE ( `uid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: site_title D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\37ab70275966fd6402a50c4fb2d35688.php 第 4 行.
+NOTIC: [8] Undefined index: headimg D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\37ab70275966fd6402a50c4fb2d35688.php 第 82 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\37ab70275966fd6402a50c4fb2d35688.php 第 134 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\37ab70275966fd6402a50c4fb2d35688.php 第 137 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\37ab70275966fd6402a50c4fb2d35688.php 第 140 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\37ab70275966fd6402a50c4fb2d35688.php 第 143 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\37ab70275966fd6402a50c4fb2d35688.php 第 148 行.
+NOTIC: [8] Undefined index: node_id D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\37ab70275966fd6402a50c4fb2d35688.php 第 205 行.
+NOTIC: [8] Undefined index: id D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\37ab70275966fd6402a50c4fb2d35688.php 第 321 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031250s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031250s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031250s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031250s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031250s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:43:21+08:00 ] 58.48.10.52 /index.php?g=Qyapp&m=Userinfo&a=bind
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `id` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015626s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: site_title D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\44885e0eda982d54cef135bad09ba8a8.php 第 4 行.
+NOTIC: [8] Undefined index: headimg D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\44885e0eda982d54cef135bad09ba8a8.php 第 82 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\44885e0eda982d54cef135bad09ba8a8.php 第 134 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\44885e0eda982d54cef135bad09ba8a8.php 第 137 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\44885e0eda982d54cef135bad09ba8a8.php 第 140 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\44885e0eda982d54cef135bad09ba8a8.php 第 143 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\44885e0eda982d54cef135bad09ba8a8.php 第 148 行.
+NOTIC: [8] Undefined index: node_id D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\44885e0eda982d54cef135bad09ba8a8.php 第 205 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:43:23+08:00 ] 58.48.10.52 /index.php?g=Qyapp&m=Appslist&a=appCenter
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: Describe  `tp_qytoken` `agency_id`; [ RunTime:0.015625s ]
+SQL: Describe  `tp_qyapplist` `category`; [ RunTime:0.000000s ]
+SQL: Describe  `tp_qymyapp` `category`; [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `id` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qyapplist` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyapplist`  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qymyapp` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 1 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qyusernode` [ RunTime:0.015625s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 2 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 3 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 4 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 5 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 6 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 8 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 9 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 10 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 11 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 12 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 13 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 14 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 15 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 17 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 18 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 19 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 20 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 22 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 23 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 24 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 25 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 26 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.062501s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: site_title D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 4 行.
+NOTIC: [8] Undefined index: headimg D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 82 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 134 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 137 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 140 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 143 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 148 行.
+NOTIC: [8] Undefined index: node_id D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 205 行.
+NOTIC: [8] Undefined variable: list D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 365 行.
+NOTIC: [8] Undefined index: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 382 行.
+NOTIC: [8] Undefined index: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 389 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.062501s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062501s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.125002s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.125002s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.140627s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.140627s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.140627s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:46:10+08:00 ] 58.48.10.52 /index.php?g=Qyapp&m=Appslist&a=appCenter
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: Describe  `tp_qytoken` `agency_id`; [ RunTime:0.000000s ]
+SQL: Describe  `tp_qyapplist` `category`; [ RunTime:0.015625s ]
+SQL: Describe  `tp_qymyapp` `category`; [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `id` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qyapplist` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyapplist`  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qymyapp` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 1 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qyusernode` [ RunTime:0.015625s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 2 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 3 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 4 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 5 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 6 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 8 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 9 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 10 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 11 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 12 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 13 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 14 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 15 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 17 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 18 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 19 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 20 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 22 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 23 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 24 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 25 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `fun_id` = 26 ) AND ( `userid` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyusernode` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.062501s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: site_title D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 4 行.
+NOTIC: [8] Undefined index: headimg D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 82 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 134 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 137 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 140 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 143 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 148 行.
+NOTIC: [8] Undefined index: node_id D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 205 行.
+NOTIC: [8] Undefined variable: list D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 365 行.
+NOTIC: [8] Undefined index: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 382 行.
+NOTIC: [8] Undefined index: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7120cfff5d788f4802fc957908efc0d3.php 第 389 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.062501s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046876s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.109377s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.109377s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.109377s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.109377s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.109377s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:46:16+08:00 ] 58.48.10.52 /index.php?g=Weiyi&m=Weiyi&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.015626s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.046876s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.046876s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.046876s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:46:39+08:00 ] 58.48.10.52 /index.php?g=Weiyi&m=Weiyi&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.031250s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031250s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031250s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.046875s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.046875s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.046875s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:46:44+08:00 ] 58.48.10.52 /index.php?g=Weiyi&m=Weiyi&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.015625s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.031250s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031250s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031250s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.046875s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.046875s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.046875s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:46:48+08:00 ] 58.48.10.52 /index.php?g=Weiyi&m=Weiyi&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015626s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:47:34+08:00 ] 58.48.10.52 /index.php?g=Weiyi&m=Weiyi&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.015625s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.031250s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031250s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031250s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031250s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031250s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031250s ]
+INFO: [ view_end ] --END-- [ RunTime:0.015626s ]
+
+[ 2015-11-26T11:47:37+08:00 ] 58.48.10.52 /index.php?g=Weiyi&m=Weiyi&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.062501s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.062501s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.078126s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.078126s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.078126s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.078126s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.078126s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:47:38+08:00 ] 58.48.10.52 /index.php?g=Weiyi&m=Weiyi&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:47:39+08:00 ] 58.48.10.52 /index.php?g=Weiyi&m=Weiyi&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031250s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031250s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.046875s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.046875s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.046875s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:47:39+08:00 ] 58.48.10.52 /index.php?g=Weiyi&m=Weiyi&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.046876s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.046876s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:47:39+08:00 ] 58.48.10.52 /index.php?g=Weiyi&m=Weiyi&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031250s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031250s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031250s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031250s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031250s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:47:39+08:00 ] 58.48.10.52 /index.php?g=Weiyi&m=Weiyi&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.031250s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031250s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031250s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031250s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031250s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031250s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:47:39+08:00 ] 58.48.10.52 /index.php?g=Weiyi&m=Weiyi&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031250s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031250s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031250s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031250s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031250s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:47:39+08:00 ] 58.48.10.52 /index.php?g=Weiyi&m=Weiyi&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015626s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:47:52+08:00 ] 58.48.10.52 /index.php?g=Weiyi&m=Weiyi&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015626s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:50:09+08:00 ] 58.48.10.52 /index.php?g=Weiyi&m=Weiyi&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:50:13+08:00 ] 58.48.10.52 /index.php?m=Weiyi&a=service
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015626s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.046876s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.062501s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.062501s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.062501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.062501s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:50:14+08:00 ] 58.48.10.52 /index.php?m=Weiyi&a=help
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015626s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:50:15+08:00 ] 58.48.10.52 /index.php?m=Weiyi&a=agent
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.015626s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.046876s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.046876s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.046876s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:50:16+08:00 ] 58.48.10.52 /index.php?m=Weiyi&a=about
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015625s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:50:48+08:00 ] 58.48.10.52 /index.php?m=Weiyi&a=about
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015626s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:50:50+08:00 ] 58.48.10.52 /index.php?m=Weiyi&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015626s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:51:17+08:00 ] 58.48.10.52 /index.php?g=Weiyi&m=Weiyi&a=checklogin
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.015625s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `username` = 'weiyi' ) AND ( `password` = 'b59c67bf196a4758191e42f76670ceba' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: host D:\WWW\duoqy\duoqy\dqy\Lanrain\Lib\Action\Weiyi\WeiyiAction.class.php 第 77 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.031250s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031250s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031250s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031250s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031250s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031250s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:51:18+08:00 ] 58.48.10.52 /index.php?g=Qyapp&m=Appslist&a=appList
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: Describe  `tp_qytoken` `agency_id`; [ RunTime:0.000000s ]
+SQL: Describe  `tp_qyapplist` `category`; [ RunTime:0.000000s ]
+SQL: Describe  `tp_qymyapp` `category`; [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `id` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qymyapp` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qymyapp` WHERE ( `status` = 1 ) AND ( `userid` = 25 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qyapplist` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyapplist` WHERE ( `id` = 1 ) AND ( `install` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyapplist` WHERE ( `id` = 5 ) AND ( `install` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyapplist` WHERE ( `id` = 4 ) AND ( `install` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyapplist` WHERE ( `id` = 6 ) AND ( `install` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyapplist` WHERE ( `id` = 11 ) AND ( `install` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyapplist` WHERE ( `id` = 14 ) AND ( `install` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qyapplist` WHERE ( `id` = 15 ) AND ( `install` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: site_title D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 4 行.
+NOTIC: [8] Undefined index: headimg D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 82 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 134 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 137 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 140 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 143 行.
+NOTIC: [8] Undefined variable: token D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 148 行.
+NOTIC: [8] Undefined index: node_id D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 205 行.
+NOTIC: [8] Undefined index: head D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 272 行.
+NOTIC: [8] Undefined index: info D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 273 行.
+NOTIC: [8] Undefined index: data D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 275 行.
+NOTIC: [8] Undefined index: head D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 292 行.
+NOTIC: [8] Undefined index: info D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 293 行.
+NOTIC: [8] Undefined index: data D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 295 行.
+NOTIC: [8] Undefined index: head D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 312 行.
+NOTIC: [8] Undefined index: info D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 313 行.
+NOTIC: [8] Undefined index: data D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 315 行.
+NOTIC: [8] Undefined index: head D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 332 行.
+NOTIC: [8] Undefined index: info D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 333 行.
+NOTIC: [8] Undefined index: data D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 335 行.
+NOTIC: [8] Undefined index: head D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 352 行.
+NOTIC: [8] Undefined index: info D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 353 行.
+NOTIC: [8] Undefined index: data D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 355 行.
+NOTIC: [8] Undefined index: head D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 372 行.
+NOTIC: [8] Undefined index: info D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 373 行.
+NOTIC: [8] Undefined index: data D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 375 行.
+NOTIC: [8] Undefined index: mid D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 432 行.
+NOTIC: [8] Undefined index: mid D:\WWW\duoqy\duoqy\dqy\Data\Conf\logs\Cache\Qyapp\7ba69f4e559ef867a770aa5d6658a059.php 第 438 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.062501s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.062501s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.078126s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.078126s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.078126s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:51:25+08:00 ] 58.48.10.52 /index.php?g=Weiyi&m=Weiyi&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031251s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.031251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:52:44+08:00 ] 58.48.10.52 /index.php?g=Weiyi&m=Weiyi&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.015625s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.031250s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031250s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.031250s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.046875s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.046875s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.046875s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T12:31:52+08:00 ] 61.135.190.198 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.015626s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.015626s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.046877s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.046877s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.046877s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.046877s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.062502s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.062502s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.062502s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T15:04:41+08:00 ] 221.231.6.195 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.015626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015626s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.015625s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.046876s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.015625s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.093751s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.093751s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046875s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.140626s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.140626s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.140626s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.140626s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.156252s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T19:37:35+08:00 ] 139.196.13.106 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.031250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.031250s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\WWW\duoqy\duoqy\dqy\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_qywebsite` [ RunTime:0.046875s ]
+SQL: SELECT * FROM `tp_qywebsite` WHERE ( `site_url` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_qytoken` [ RunTime:0.031251s ]
+SQL: SELECT * FROM `tp_qytoken` WHERE ( `host` = '121.40.76.167' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.125002s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.125002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.156252s ]
+NOTIC: [8] Array to string conversion D:\WWW\duoqy\duoqy\dqy\Lib\Core\Behavior.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\WWW\duoqy\duoqy\dqy\Lib\Behavior\TokenBuildBehavior.class.php 第 71 行.
+NOTIC: [2] unlink(./Data/Conf/logs/Temp/0/b/0bd00bad38522939af44147774e596f2.php): No such file or directory D:\WWW\duoqy\duoqy\dqy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: Run TokenBuild Behavior [ RunTime:-0.156252s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.156252s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.156252s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.156252s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+

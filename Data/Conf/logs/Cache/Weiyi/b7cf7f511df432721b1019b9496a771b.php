@@ -158,20 +158,22 @@
         <div class="foot-info">
             <dl class="about-us">
                 <dt>关于</dt>
-                <dd><a href="./about.html">关于我们</a></dd>
+                <dd><a href="<?php echo U('about');?>">关于我们</a></dd>
                 
             </dl>
-            <dl class="cooperation">
+           <dl class="cooperation">
                 <dt>合作</dt>
-                <dd>商务合作： <?php echo ($webinfo["site_tel"]); ?></dd>
-                <dd>地址： <?php echo ($webinfo["address"]); ?></dd>
+                <dd>QQ交流群：451493529</dd>
+				<dd>版权归属：深度实业集团网络科技有限公司</dd>
+				
+                <dd>地址：中国-安徽-淮北</dd>
             </dl>
-            <dl class="contact-us">
+            <!-- <dl class="contact-us">
                 <dt>联系我们</dt>
                 <dd>热线：<?php echo ($webinfo["site_tel"]); ?></dd>
                 <dd>反馈：<a href="mailto:lanrain@wxopen.cn"><?php echo ($webinfo["site_email"]); ?></a></dd>
                 <dd>招聘：<a href="mailto:lanrain@wxopen.cn"><?php echo ($webinfo["site_email"]); ?></a></dd>
-            </dl>
+            </dl> -->
         </div>
     </div>
     <p class="copyright">Copyright © 2014-2014  All Rights Reserved <?php echo ($webinfo["site_ipc"]); ?>2</p>

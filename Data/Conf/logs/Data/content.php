@@ -1,0 +1,1 @@
+<?php	return array ( 'msgcode' => 1004, 'msg' => '请联系官方授权', ); ?>

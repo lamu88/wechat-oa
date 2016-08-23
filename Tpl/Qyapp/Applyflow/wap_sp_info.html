@@ -1,0 +1,540 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+    <title>报销详情</title>
+    <link rel="stylesheet" href="./Tpl/Qyapp/Applyflow/css/style1.css">
+    <link rel="stylesheet" href="./Tpl/Qyapp/Applyflow/css/date.css">
+    <link rel="stylesheet" type="text/css" href="./Tpl/Qyapp/Applyflow/css/btm.css?v=<?php echo time();?>">	
+			<script src="./Tpl/static/scroll/dev/jquery-1.9.1.js"></script>	
+<!-- <script src="./Tpl/Qyapp/Aftersale/js/layer.m/layer.m.js"></script>	 -->
+</head>
+<body class="bg1">
+<section class="top" >
+	<ul style="">
+		<li style="width:25%;">
+			<if condition="$users['pic']"><img src="{lanrain:$users.pic}" width="72px" height="72px" style="border-radius:10px;"><else/><img src="./Tpl/Qyapp/Applyflow/images/que.png" width="72px" height="72px" style="border-radius:10px;"></if>
+		</li>
+		<li style="width:55%;">
+			<p class="top-p" style="font-size:24px;">{lanrain:$users.name}</p>
+			<p class="top-p">职务:{lanrain:$users.position}</p>
+			<p class="top-p">部门:{lanrain:$users.department}</p>		
+		</li>
+		<li style="width:20%;text-align:center;padding-top:10px;position:relative;" tel="{lanrain:$users.mobile}">
+		    <a href="tel:123456789">
+		    <img src="./Tpl/Qyapp/Applyflow/images/phone.png" width="50px" height="50px">
+			</a>
+		</li>		
+	</ul>
+</section>
+<!--sec03-01 end-->
+<section class="sec01-01">
+    <div class="slideTxtBox">
+        <div class="hd">
+            <ul id="tab" style="background:#fff;">
+				<if condition="$_GET['status'] eq 2"><li class="li-active-status"><else/><li class="li-status"></if>
+                    <div class="li-c">
+                    <div class="li-txt" style="height:20px;line-height:20px;padding-top:5px;text-align:center;font-size:14px;" ><img src="./Tpl/Qyapp/Applyflow/images/04-01.png" width="12px" height="12px" style="display:inline;margin-right:5px;">{lanrain:$info.type}</div>
+                    </div>
+                </li>
+				<if condition="$_GET['status'] eq 3"><li class="li-active-status"><else/><li class="li-status"></if>
+                    <div class="li-c">				
+						<div class="li-txt" style="height:20px;line-height:20px;padding-top:5px;text-align:center;font-size:14px;" ><img src="./Tpl/Qyapp/Applyflow/images/04-02.png" width="14px" height="14px" style="display:inline;margin-right:5px;">{lanrain:$info.allmoney}元</div>
+                    </div>
+                </li>
+                <if condition="$_GET['status'] eq 1"><li class="li-active-status"><else/><li class="li-status"></if>
+                    <div class="li-c" style="margin-left:10px;">
+						<div class="li-txt" style="height:20px;line-height:20px;padding-top:5px;text-align:center;font-size:14px;" ><img src="./Tpl/Qyapp/Applyflow/images/04-03.png" width="14px" height="14px" style="display:inline;margin-right:5px;"><if condition="$info['status'] eq 1">审批中</if><if condition="$info['status'] eq 2">已通过</if><if condition="$info['status'] eq 3">已驳回</if></div>
+                    </div>
+                </li>
+                <div class="clear"></div>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--sec03-02 start-->
+<section class="sec03-02">
+    <!--------------------------->
+    <!--sec02 start-->
+    <section class="sec02-01">
+            <ul>
+			   <if condition="$namedefine">
+			   <volist name="namedefine" id="list">			
+               <li style="margin-top:10px;border:1px solid #dbdbdb;">
+				   <a href="{lanrain::U('wap_sp_info',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'pid'=>$list['id']))}">
+                   <div class="li-w">
+                       <div>
+                           <div class="li-c" style="position:relative;">					   
+                               <div class="fr-c ">	
+                                   <dl>
+									  <if condition="$_GET['status'] eq 1"><dd style="float:left;width:30px;"><img src="Tpl/Qyapp/Applyflow/images/icon03.png" class="pic1"></dd></if>
+									  <if condition="$_GET['status'] eq 2"><dd style="float:left;width:30px;"><img src="Tpl/Qyapp/Applyflow/images/icon01.png" class="pic1"></dd></if>
+									  <if condition="$_GET['status'] eq 3"><dd style="float:left;width:30px;"><img src="Tpl/Qyapp/Applyflow/images/icon02.png" class="pic1"></dd></if>								   
+                                       <dd style="float:left;">
+									       <span>报销时间：{lanrain:$list.time|date="Y-m-d",###} {lanrain:$list.time|date="H:i",###}</span></br>
+                                           申请金额：<font>￥{lanrain:$list.allmoney}</font></br>
+                                           所属部门：{lanrain:$list.dept}</br>
+                                           报销类型：{lanrain:$list.type}</br>
+                                       </dd>
+                                       <div class="clear"></div>
+                                   </dl>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="clear"></div>
+                   </div>
+				   </a> 
+                </li>
+				</volist>
+                <else/>
+				   <p style="text-align:center;padding-top:30px;">
+				   <img src="./Tpl/Qyapp/Applyflow/images/que.png" width="100px" height="100px">
+				   <br>
+                    暂无数据
+					</p>				
+				</if>				
+            </ul>
+    </section>
+    <!--sec02 end-->
+    <!--------------------------->
+</section>
+<!---sec03-02 end-->
+<!--sec03-03 start-->
+<section class="sec03-03">
+    <article>
+        <ul>
+            <li>
+                <if condition="$users['pic']"><img src="{lanrain:$users.pic}"><else/><img src="./Tpl/Qyapp/Applyflow/images/que.png"></if>			
+                <div class="fl">
+                    <div class="t">{lanrain:$users.name}</div>
+                    <div class="c">{lanrain:$info['time']|date='Y-m-d H:i',###}</div>
+				</div>
+                <div class="fr">
+                    <div class="t">发起申请
+					</div>
+                    <div class="c"></div>
+                </div>
+                <div class="clear"></div>
+            </li>		
+			<volist name="audit" id="vo" k="key">
+            <li>
+                <if condition="$vo['avatar'] neq ''"><img src="{lanrain:$vo.avatar}"><else/><img src="./Tpl/Qyapp/Applyflow/images/que.png"></if>			
+                <div class="fl">
+                    <div class="t"><if condition="$vo['form_wecha_id'] eq $_GET['wecha_id']">我<else/>{lanrain:$vo.name}</if></div>
+                    <div class="c"><if condition="$vo['time']">{lanrain:$vo.time|date='Y-m-d H:i',###}</if></div>
+                </div>
+                <div class="fr">
+                    <div class="t">
+					<if condition="$vo['status'] eq 0">审批中</if>
+					<if condition="$vo['status'] eq 2">已通过</if>
+					<if condition="$vo['status'] eq 3">已驳回</if>
+					</div>
+                    <div class="c">{lanrain:$vo.content}</div>
+                </div>
+                <div class="clear"></div>
+            </li>
+	        </volist>
+            			
+        </ul>
+    </article>
+</section>
+<div class="sec03-bottom-top"></div>
+    <if condition="($info['next_wecha_id'] eq $_GET['wecha_id']) AND ($state eq 1)">
+	<div class="btm_comment" id="com2">
+		<div class="comment_row" id="control">
+			<div id="menu" style="margin-left:0px;margin-right:2px;">
+				<ul style="margin:0 auto;list-style-type:none;width:100%;height:100%;padding-left: 0;">
+				<a href="javascript:;" id="jujue"><li style="float:left;background:#de5045;"><div class="menu_li" >拒绝</div>
+				</li></a>				
+				<a href="javascript:;" id="tongyi"><li style="float:right;background:#35aa47;"><div class="menu_li">同意</div></li></a>			
+				</ul>
+			</div>
+		</div>
+		<div class="comment_row" style="display:none;" id="yes">
+			<p style="text-align:left;padding-left:10px;float:left;">请输入拒绝理由(非必填)</p>
+			<p style="float:right;"><!-- 手写输入: --><!-- <span onclick="shurujujue()"><img src="Tpl/Qyapp/Applyflow/images/iconfont-shuru.png" width="24px" height="24px"> --><!-- <input type="radio" name="type" value="0" checked="checked"/> --></span><!-- &nbsp;&nbsp;<span onclick="yuyinjujue()"><img src="Tpl/Qyapp/Applyflow/images/sec03-07.png" width="24px" height="24px"></span> --></p>		
+			<div class="write" id="jujie_write_comment">				
+				<textarea class="enter_font" type="text" value="" class="newimg info" id="reason1" name="name" style="width: 98%;height: 75px;background-color: #fff;border: 1px solid #ccc;border-radius: 3px;color: #999;margin-top: 10px;margin-bottom:10px;"></textarea> 
+			</div>
+			<div class="write" id="jujie_voice_comment">
+
+				<div class="page-container">
+					<div class="title">长按说话</div>
+					<div class="icon">
+						<!-- <img src="Tpl/Qyapp/Applyflow/images/mouth.png" class="mouth img_mouth"> -->
+						<a href="javascript:;" id="record"><img src="Tpl/Qyapp/Applyflow/images/sec03-10.png" width="80px" height="80px" class="mouth img_mouth"></a>
+						<a class="play img_play" href="javascript:playRecord()" style="display:none"><img src="Tpl/Qyapp/Applyflow/images/play.png"></a>
+						<!-- <img src="Tpl/Qyapp/Applyflow/images/playVoice.gif" class="playgif img_recording" style="display:none"> -->
+						<img src="Tpl/Qyapp/Applyflow/images/iconfont-yuyinshiting.png" class="playgif img_recording" style="display:none">
+					</div>
+					<!-- <div class="tips div_tips" >&nbsp;</div> -->
+					<!-- <div class="btn">
+						<a href="javascript:restartRecord()" class="gray div_start" style="font-size: 12px;color: #222;">开始录音</a>
+						<a class="green div_stop" href="javascript:stopRecord()" style="display:none">停止录音</a>
+					</div>
+					<div class="bottomtext div_friendtxt" style="display:none">已保存，可分享</div> -->
+				</div>
+			
+				<input type="hidden" name="jujie_voice">  
+			</div>			
+			<div id="menu" style="margin-left:0px;margin-right:2px;">
+				<ul style="margin:0 auto;list-style-type:none;width:100%;height:100%;padding-left: 0;">
+				<a href="javascript:;" id="queding1"><li style="float:left;background:#35aa47;"><div class="menu_li" >确定</div>
+				</li></a> 				
+				<a href="javascript:;" id="fanhui1"><li style="float:right;background:#de5045;"><div class="menu_li" >返回</div>
+				</li></a>				
+				</ul>
+			</div>
+		</div>	
+		<div class="comment_row" style="display:none;height:20px;line-height:20px;" id="no">
+		     <!-- <span style="text-align:left;padding-left:10px;float:left;">审批意见:</span> -->
+			 请输入审批意见(非必填)
+			 <span style="float:right;"><!-- 请选择：<span onclick="shurutongyi()"><img src="Tpl/Qyapp/Applyflow/images/iconfont-shuru.png" width="22px" height="22px"></span> --><!-- &nbsp;&nbsp;<span onclick="yuyintongyi()"><img src="Tpl/Qyapp/Applyflow/images/sec03-07.png" width="22px" height="22px"></span> --></span>
+			<div class="write" id="tongyi_write_comment">
+				<textarea class="enter_font" type="text" value="" class="newimg info" id="reason2" name="name" style="width: 98%;height: 75px;background-color: #fff;border: 1px solid #ccc;border-radius: 3px;color: #999;margin-top: 10px;margin-bottom:10px;"></textarea> 
+			</div>
+			<div class="write" id="tongyi_voice_comment">
+			
+					<div class="page-container">
+						<!-- <div class="title">录制语音</div> -->
+						<div class="icon">
+							<img src="Tpl/Qyapp/Applyflow/images/sec03-10.png" width="80px" height="80px" class="mouth img_mouth">
+							<a class="play img_play" href="javascript:playRecord()" style="display:none"><img src="Tpl/Qyapp/Applyflow/images/iconfont-yuyinshiting.png"><!-- <img src="Tpl/Qyapp/Applyflow/images/play.png"> --></a>
+							<img src="Tpl/Qyapp/Applyflow/images/playVoice.gif" class="playgif img_recording" style="display:none">
+						</div>
+						<!-- <div class="tips div_tips" >&nbsp;</div> -->
+						<div class="btn">
+							<a href="javascript:restartRecord()" class="gray div_start" style="font-size: 12px;color: #222;">开始录音</a>
+							<a class="green div_stop" href="javascript:stopRecord()" style="display:none">停止录音</a>
+                        </div>
+						<div class="bottomtext div_friendtxt" style="display:none">已保存，可分享</div>
+					</div>  
+					
+				<input type="hidden" name="tongyi_voice"> 
+			</div>			
+			<div id="menu" style="margin-left:0px;margin-right:2px;">
+				<ul style="margin:0 auto;list-style-type:none;width:100%;height:100%;padding-left: 0;">
+				<a href="javascript:;" id="queding2"><li style="float:left;background:#35aa47;"><div class="menu_li" >确定</div>
+				</li></a> 				
+				<a href="javascript:;" id="fanhui2"><li style="float:right;background:#de5045;"><div class="menu_li" >返回</div>
+				</li></a>				
+				</ul>
+			</div>
+		</div>		
+	</div>
+</if>	
+	<style>
+	#menu{position:fixed;bottom:0px;width:95%;height:36px;line-height:36px;background:#fff;z-index:999;margin-left:3%;padding-bottom: 10px;}
+	#menu ul li{float:left;width:49%;height:100%;text-align:center;position:relative;font-size:14px;border-radius: 3px;}
+	#menu ul li .menu_li{position:absolute;top:0px;left:0px;z-index:20;width:100%;height:100%;color:#fff;}
+	a{text-decoration:none;}
+	</style>
+	<input type="text" id="txt_serverID" style="display:none" />
+	<input type="text" id="myvoice" name="voice" style="display:none" />
+    <input type="hidden" id="token" value="<?php echo $_GET['token']?>"></input>
+<script src="./Tpl/Qyapp/Applyflow/js/jquery.js"></script>
+<script src="./Tpl/Qyapp/Applyflow/js/main.js"></script>
+<script>
+$('#jujie_voice_comment').css('display','none');
+$('#tongyi_voice_comment').css('display','none');
+$('.btm_comment').css('height','55px');
+$('#jujue').on('click',function(){
+$('.btm_comment').css('height','180px');
+$('#jujie_write_comment').css('display','block');
+$('#control').css('display','none');
+$('#yes').css('display','block');
+$('#no').css('display','none');
+});
+$('#tongyi').on('click',function(){
+$('.btm_comment').css('height','180px');
+$('#tongyi_write_comment').css('display','block');
+$('#control').css('display','none');
+$('#yes').css('display','none');
+$('#no').css('display','block');
+});
+$('#fanhui1').on('click',function(){
+$('.btm_comment').css('height','55px');
+$('#control').css('display','block');
+$('#yes').css('display','none');
+$('#no').css('display','none');
+});
+$('#fanhui2').on('click',function(){
+$('.btm_comment').css('height','55px');
+$('#control').css('display','block');
+$('#yes').css('display','none');
+$('#no').css('display','none');
+});
+</script>
+<script>
+function shurujujue(){
+   $('#jujie_write_comment').css('display','block');
+   $('#jujie_voice_comment').css('display','none');
+   $('.btm_comment').css('height','180px');
+}
+function yuyinjujue(){
+
+    $('#jujie_write_comment').css('display','none');
+   $('#jujie_voice_comment').css('display','block');
+   $('.btm_comment').css('height','180px');
+}
+function shurutongyi(){
+    $('#tongyi_write_comment').css('display','block');
+    $('#tongyi_voice_comment').css('display','none');
+	$('.btm_comment').css('height','180px');
+}
+function yuyintongyi(){
+    $('#tongyi_write_comment').css('display','none');
+    $('#tongyi_voice_comment').css('display','block');
+	$('.btm_comment').css('height','180px');
+}
+</script>
+
+
+<script>
+//同意
+$('#queding2').click(function(){
+    var content = $('#reason2').val();
+	var voice = '';
+    if($('#myvoice').val()){
+	    voice = $('#myvoice').val();
+	}	
+	//alert(voice);
+	$.ajax({
+			type: "post",  
+			url:"{lanrain::U('wap_agree',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'status'=>2,'a_id'=>$witer['id']))}",
+			data:{'content':content,'voice':voice},
+			dataType:'json',
+			//data:{'token':token,'wecha_id':wecha_id,'id':id,'status':status},
+			success:function(json){
+			    if(json==0){
+				    alert('您已经审核过了');
+					window.location.reload();
+				}
+				if(json==1){
+				    alert('您同意了报销申请');
+					//$('#com2').css('display','none');
+					window.location.reload();
+				}
+				if(json==7){
+					alert('审核失败或者您已经审核过了');
+				}				
+			}
+		});
+});
+
+//拒绝
+$('#queding1').click(function(){
+    var content = $('#reason1').val();
+	var voice = '';
+    if($('#myvoice').val()){
+	    voice = $('#myvoice').val();
+	}	
+	$.ajax({
+			type: "post",  
+			url:"{lanrain::U('wap_agree',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'status'=>3,'a_id'=>$witer['id']))}",
+			data:{'content':content,'voice':voice},			
+			dataType:'json',
+			//data:{'token':token,'wecha_id':wecha_id,'id':id,'status':status},
+			success:function(json){
+			    //if(json==0){
+				//    alert('您已经审核过了');
+				//	window.location.reload();
+				//}			
+				if(json==1){
+				    
+				    alert('您拒绝了报销申请');
+					window.location.reload();
+				}
+				if(json==7){
+					alert('审核失败或者您已经审核过了');
+				}				
+			}
+		});
+});
+//取消
+function closeLay(){
+window.location.reload();
+}
+//发送理由
+function submitLay(m,n){
+	var token = "{lanrain::$_GET['token']}";
+	var wecha_id = "{lanrain::$_GET['wecha_id']}";
+	var content = $('#layContent').val();
+	$.ajax({
+		type: "post",  
+		url:"{lanrain::U('wap_comment',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}",
+		dataType:'json',
+		data:{'token':token,'wecha_id':wecha_id,'id':m,'status':n,'content':content},
+		success:function(json){
+			if(json==1){
+				alert('修改成功');
+				window.location.reload();
+			}
+			if(json==2){
+				alert('修改失败');
+				window.location.reload();
+			}
+			if(json==3){
+				alert('发表成功');
+				window.location.reload();
+			}
+			if(json==4){
+				alert('发表失败');
+				window.location.reload();
+			}
+		}
+	});
+}
+</script>
+<script type="text/javascript">
+
+    //var play_time_ti;
+    var is_playing = false;
+    function playVoice(id) {
+        is_playing = true;
+        //play_time_ti = setInterval(function () {
+        //    var tt = $('.div_tips').text().replace("s", "");
+        //    var ss = tt * 1;
+        //    $('.div_tips').text((ss > 1 ? ss - 1 : 0) + "s");
+        //}, 1000);
+
+        setTimeout(function () {
+            is_playing = false;
+            $(".img_recording").hide();
+            $('.img_play').show();
+            //$('.div_tips').text(voice_record_time * 1 + "s");
+
+            //if (play_time_ti) {
+           //     clearInterval(play_time_ti);
+            //}
+
+        }, voice_record_time * 1000);
+        wx.playVoice({
+            localId: id// 需要播放的音频的本地ID，由stopRecord接口获得
+        });
+
+    }
+
+    function playVoiceByUser() {
+        if (is_playing) return;
+
+        playVoice(last_voice_localId);
+    }
+    function uploadVoice(localId) {
+	    //alert(localId);
+        wx.uploadVoice({
+            localId: localId, // 需要上传的音频的本地ID，由stopRecord接口获得
+            isShowProgressTips: 1, // 默认为1，显示进度提示
+            success: function (res) {
+                var serverId = res.serverId; // 返回音频的服务器端ID
+                $("#txt_serverID").val(serverId);
+				$("#myvoice").val(serverId);
+				//alert($("#myvoice").val());
+                //$("#div_friend").show();
+                //$("#div_friendtxt").show();
+				//wxShareDataArray[3] = serverId;
+                //changeWeixinShareData();
+            }
+        });
+    }
+
+    var last_voice_localId;
+    function onRecordDone(localId) {
+
+        voice_record_time = Math.ceil(((new Date()).getTime() - voice_record_start) / 1000);
+		//alert(voice_record_time+'aa');
+        //$(".div_tips").text(voice_record_time * 1 + "s");
+        last_voice_localId = localId;
+		//alert(last_voice_localId+'bbbs');
+        //wxShareDataArray[2] = voice_record_time * 1 + "\"";
+        setTimeout(function () {
+            uploadVoice(localId);
+        }, 1000);
+
+        playVoice(localId);
+
+    }
+
+    var isRecording = false;
+    function startRecord() {
+        if (isRecording) return;
+        $(".img_mouth").hide();
+        $(".div_start").hide();
+        $('.img_play').hide();
+        $(".img_recording").show();
+        //$(".div_tips").show();
+        //$(".div_tips").text("正在录音...");
+        $(".div_stop").show();
+        $(".div_friend").hide();
+        $(".div_friendtxt").hide();
+        isRecording = true;
+        wx.onVoiceRecordEnd({
+            // 录音时间超过一分钟没有停止的时候会执行 complete 回调
+            complete: function (res) {
+                var localId = res.localId;
+
+                isRecording = false;
+                onRecordDone(localId);
+            }
+        });
+
+
+        voice_record_time = 0;
+        voice_record_start = (new Date()).getTime();
+
+        wx.startRecord({
+            success: function () {
+                isRecording = false;
+                voice_record_start = (new Date()).getTime();
+            },
+            cancel: function () {
+                isRecording = false;
+            }
+        });
+
+    }
+
+
+    function stopRecord() {
+        isRecording = false;
+		$('.img_recording').show();
+		$('.img_play').show();
+        //$(".div_stop").hide();
+        $(".div_start").show();
+        wx.stopRecord({
+            success: function (res) {
+                var localId = res.localId;
+				//alert(localId);
+                onRecordDone(localId);
+				$('.img_recording').show();
+				$('.img_play').show();
+            }
+        });
+        //$(".img_recording").show();
+        //$(".div_tips").show();
+        //$(".div_tips").text("正在录音...");
+        //$(".div_stop").show();		
+		$('.img_recording').show();
+		$('.img_play').show();		
+    }
+
+    function playRecord() {
+        $(".img_recording").show();
+        $('.img_play').hide();
+        playVoice(last_voice_localId);
+    }
+
+    function restartRecord() {
+        startRecord();
+    }
+	$('#record').mousedown(function(){
+	    alert('aaa');
+	});
+	$('#record').mousedown(function(){
+	    alert('bbb');
+	});	
+</script>
+</body>
+</html>

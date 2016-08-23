@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="cn" class="app fadeInUp animated js no-touch no-android chrome no-firefox no-iemobile no-ie no-ie10 no-ie11 no-ios"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+	 <title>申请报销</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta content=" " name="Keywords">
+    <meta content="" name="Description">
+	<link rel="stylesheet" href="./Tpl/Qyapp/Attendance/css/MOA.common.css">
+<link rel="stylesheet" href="./Tpl/Qyapp/Attendance/css/MOA.dialog.css">
+<link rel="stylesheet" href="./Tpl/Qyapp/Attendance/css/MOA.timeslider.css">
+	</head>
+	<style>
+	html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,p { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+	.same{
+	width:100%;
+	height:50px;
+	padding-bottom:9px;
+	border-bottom:solid 1px #eee;
+	font-family:黑体;
+	line-height:60px;
+	font-size:14px;
+	background:url("images/jiantou.png") no-repeat;background-position:96% 24px;
+	}
+	.samesp{
+	color:#999;
+	font-size:14px;
+	margin-left:20px;
+	}
+	.xm{
+	text-indent:10px;
+	}
+	.botton{
+	width:49%;
+	height:60px;
+	float:left;
+	text-align:center;
+	line-height:69px;
+	background:#f8f8f8;
+	border:solid 1px #eee;
+	
+	}
+	input{
+	
+	height:22px;	
+	border:none;
+	color:12px;
+	}
+	.container {
+	position: relative;
+	max-width: 640px;
+	min-height: 100%;
+	margin: 0 auto;
+	background-color: #fff;
+	overflow: hidden;
+
+	}
+
+	</style>
+	<script src="./Tpl/Qyapp/Applyflow/Js/jscolor.js.js" type="text/javascript"></script>
+	<script src="./Tpl/Qyapp/Applyflow/Js/WdatePicker.js" type="text/javascript"></script>
+	<script src="./Tpl/Qyapp/Static/Js/jquery-1.9.1.min.js" type="text/javascript"></script>
+	<script>
+	$(function(){
+	var i=2;
+	$("#zenjia").click(function(){	
+	var b="text"+i;
+	if($(".find").length==1){
+	var bbb=$("#xm").clone(true);
+	bbb.insertAfter("#xm").addClass(b).removeAttr("id");
+	bbb.find('.dotime').attr("name","project[2]['dotime']");
+	bbb.find('.money').attr("name","project[2]['money']");
+	bbb.find('.info').attr("name","project[2]['info']");
+	bbb.find('.total').attr("name","project[2]['total']");
+	}else{
+		var c=i-1;
+		var h="text"+c;
+		
+		var ccm=$("#xm").clone(true);
+		
+		ccm.insertAfter("."+h).addClass(b).removeAttr("id");
+		ccm.find('.dotime').attr("name","project["+i+"]['dotime']");
+		ccm.find('.money').attr("name","project["+i+"]['money']");
+		ccm.find('.info').attr("name","project["+i+"]['info']");
+		ccm.find('.total').attr("name","project["+i+"]['total']");
+		
+	}
+
+	$("."+b).find("#one").html("项目"+i);
+	
+
+		i++;
+	
+	
+	})
+	$(".money").blur(function(){
+		somemoney=0;
+		$(".money").each(function(){
+		
+		somemoney+=Number($(this).val());
+		
+		$("#somemoney").val(somemoney+"元");
+		
+		
+		})
+
+	})
+	})
+	</script>
+	<body style="background-color:#efedf2;">
+	<div class="container">
+    <form action="{lanrain::U('Applyflow/wap_post')}" method="post"> 
+		<input type="hidden" value="{lanrain::$_GET['token']}"  name="token">
+		<input type="hidden" value="{lanrain::$_GET['wecha_id']}"  name="wecha_id">	
+	
+	<div style="background-color:#fff;padding:2%;">
+	<div class="same">费用类型&nbsp;&nbsp;
+	<select name="type" style="height:30px;">
+		<option selected="selected" value="0">请选择报销类型</option>
+		<volist name="list" id="list">
+		<option value="{lanrain:$list.id}">{lanrain:$list.name}</option>
+		</volist>
+    </select>
+	<!-- </span> --></div>
+	<div class="same">出差地<span class="samesp">&nbsp;&nbsp;<input name="place" class="px" id="truename" value="" placeholder="请输入出差地" type="text"></span></div>
+	<div class="same">开始日期<span class="samesp"><input name="starttime" class="px" id="starttime" value="" placeholder="请输入开始日期" type="text" onclick="WdatePicker()"></span></div>
+	<div class="same">结束日期<span class="samesp"><input name="endtime" class="px" id="endtime" value="" placeholder="请输入结束日期" type="text" onclick="WdatePicker()"></span></div>
+	<input style="width:92%;height:70px;background-color:#ebebeb;border:none;border-radius:8px;color:#999;margin-top:20px;margin-left:3%;" type="text" value="" class="newimg" name="info">	
+	</div>
+	
+	<div style="background-color:#fff;margin-top:20px;padding-bottom:10px;" id="xm" class="find">
+	<div  class="same xm" style="font-weight:bold" id="one">项目1</div>	
+	<div  class="same xm">发生日期&nbsp;&nbsp;<input name="project[1]['dotime']" class="px dotime" id="truename" value="" placeholder="请输入发生日期" type="text" onclick="WdatePicker()"></div>
+	<div  class="same xm">金 额&nbsp;&nbsp;<span class="samesp"><input name="project[1]['money']" class="px money" id="truename" value="" placeholder="请输入金额" type="text"></div>
+	<input style="width:90%;height:70px;background-color:#ebebeb;border:none;border-radius:8px;color:#999;margin-left:5%;margin-top:20px;" type="text" value="" class="newimg info" name="project[1]['info']">	
+	</div>
+	<div style="background-color:#fff;margin-top:20px;padding-bottom:10px;margin-bottom:40px;">
+	<div class="same xm">合计金额:&nbsp;&nbsp;<input name="project[1][total]" class="px total" id="somemoney" value="" placeholder="请输入合计金额" type="text" disabled ></div>
+	<!-- <div class="same xm">大写<input name="big" class="px" id="truename" value="" placeholder="大写" type="text"></div> -->
+	</div>
+	<div style="height:80px;border:dashed 1px #999;width:80%;margin:auto;margin-bottom:40px;font-weight:bold;line-height:80px;text-align:center;	cursor:pointer;" id="zenjia"><span style="font-size:20px;font-weight:bold;">+</span>增 加 一 条</div>
+	<div>
+	<input id="submit" class="submit" type="submit" value="提交" style="font-size:12px;width:100%;height:50px;">
+
+	</div>
+	</form>
+		</div>
+<script type="text/javascript"> 
+
+$(document).ready(function () {
+	new Swipe(document.getElementById('imgs_box'), {
+				speed:1000,
+				auto:5000,
+				callback: function(){
+					var lis = $(this.element).next("ol").children();
+					lis.removeClass("on").eq(this.index).addClass("on");
+				}
+			}); 
+	$( "#dateline" ).datepicker({
+		minDate: new Date(),
+		dateFormat: "yy-mm-dd"
+	}).val((
+			function(d){
+				return [d.getFullYear(), d.getMonth()+1, d.getDate()].join("-");
+			}
+		)(new Date()));
+}); 
+
+
+$("#dateline").change(function () {
+	var submitData = {
+	wxname: "o5JGbjuFTr6lumWIyyW3yfP-G5m0",
+	dateline: $("#dateline").val(),
+	formhash: $("#formhash").val(),
+	action: "getcount"
+	};
+}); 
+</script> 	
+	</body>

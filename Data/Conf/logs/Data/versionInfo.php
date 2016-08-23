@@ -1,1 +1,1 @@
-<?php	return '{"msgcode":1003,"msg":1}'; ?>
+<?php	return '{"msgcode":1004,"msg":"\\u8bf7\\u8054\\u7cfb\\u5b98\\u65b9\\u6388\\u6743"}'; ?>

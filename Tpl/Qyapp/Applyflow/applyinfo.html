@@ -1,0 +1,74 @@
+<section class="entity-panel-wrapper" id="user{lanrain:$data.id}">
+	<header class="entity-panel-header header">
+		<p>报销类型详情</p>
+		<button class="close m-t" data-dismiss="entity" type="button" onclick="panelClose();">×</button>
+	</header>
+	<div class="entity-panel-body form-horizontal">
+		<div class="form-group">
+			<label class="col-sm-3 control-label">显示顺序</label>
+			<div class="col-sm-7">
+			<p class="form-control-static">{lanrain:$data.disorder}</p>
+			</div>
+		</div>
+		<div class="line line-dashed line-lg pull-in"></div>
+		<div class="form-group">
+			<label class="col-sm-3 control-label">类型</label>
+			<div class="col-sm-7">
+			<p class="form-control-static">{lanrain:$data.name}</p>
+			</div>
+		</div>
+		<div class="line line-dashed line-lg pull-in"></div>
+		<div class="form-group">
+			<label class="col-sm-3 control-label">是否启用</label>
+			<div class="col-sm-7">
+			<p class="form-control-static">
+			<if condition="$data['status'] eq 1">是</if>
+			<if condition="$data['status'] eq 0">否</if>			
+			</p>
+			</div>
+		</div>
+		<div class="line line-dashed line-lg pull-in"></div>
+	</div>
+	<footer class="entity-panel-footer footer text-right">
+		  <a class="btn btn-default"  onclick='edit("{lanrain:$data.id}")'>编辑</a>  
+		<button class="btn btn-default" onclick='del("{lanrain:$data.id}")' type="button">删除</button>
+	</footer>
+</section>
+
+   <div id="apply_edit" class="modal" tabindex="-2" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+  </div>
+<script type="text/javascript">
+	function edit(id){
+		$('#apply_edit').load("index.php?g=Qyapp&m=Applyflow&a=edit&mid={lanrain::$_GET['mid']}&id="+id, function(){
+			 $('#apply_edit').modal();
+			 if($('.modal-backdrop').length>0){
+			     $('.modal-backdrop').remove();
+			 }
+		});		   
+	}
+	function del(id){	
+ 		$.ajax({
+			type:"POST",
+			url:"index.php?g=Qyapp&m=Applyflow&a=del&mid={lanrain::$_GET['mid']}",
+			data:"id="+id,
+			dataType:'json',
+			success:function(json){
+			var status = json.status;
+			  if(status==1)
+			  {
+				alert('删除成功');
+				window.location.reload();
+			  }
+			  else
+			  {
+				  alert('删除失败');
+			  }
+			}
+		});       	
+	}	
+	function panelClose(){
+	   $('.entity-panel').addClass('hd');
+	}	
+	
+</script> 

@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html lang="cn" class="app fadeInUp animated js no-touch no-android chrome no-firefox no-iemobile no-ie no-ie10 no-ie11 no-ios"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+	 <title>报销详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta content=" " name="Keywords">
+    <meta content="" name="Description">
+    <link rel="stylesheet" type="text/css" href="./Tpl/Qyapp/Applyflow/css/act_inf.css?v=<?php echo time();?>">
+			<script src="./Tpl/static/scroll/dev/jquery-1.9.1.js"></script>	
+<script src="./Tpl/Qyapp/Aftersale/js/layer.m/layer.m.js"></script>		
+	</head>
+	<style>
+	
+	</style>
+	<body style="background-color:#fff;">
+	<!-- <if condition="$witer.status eq 1"><div style="width:55px;height:30px;background:green;color:#fff;line-height:30px;font-size:12px;text-align:right;border-bottom-left-radius:30px;position:fixed;right:0;top:0">已审批<else/><div style="width:55px;height:30px;background:#7e7e7e;color:#fff;line-height:30px;font-size:12px;text-align:right;border-bottom-left-radius:30px;position:fixed;right:0;top:0">待审批</if>
+	</div> -->
+	<!-- <dl style="width:98%;height:20px;margin-top:10px;margin-left:10px;">
+	<dt style="background:url({lanrain:$info.pic}) no-repeat;width:60px;height:60px;float:left;"></dt>
+	<dd style="background:url(images/shenpi.png) no-repeat;background-position:60px 22px;font-weight:bold;height:80px;"></dd></dl> -->
+<div class="bs_xq">
+	<div class="same" id="leixing"><span class="saesp">{lanrain:$list.type}</span></div>
+    <div class="same">[报销总额]<span class="saesp" style="color:#35aa47" >{lanrain:$list.allmoney}元</span></div>
+	<div class="same">[出发地点]<span class="saesp">{lanrain:$list.place}</span></div>
+    <div class="same">[目的地点]<span class="saesp">{lanrain:$list.place}</span></div>
+	<div class="same">[出差日期]<span class="saesp">{lanrain:$list.starttime}&nbsp;-&nbsp;{lanrain:$list.endtime}</span></div>
+	
+	<div class="same" >[审核状态]<span class="saesp" style="color:red;"><if condition="$list['status'] eq 1">审批中</if><if condition="$list['status'] eq 2">已通过</if><if condition="$list['status'] eq 3">已驳回</if></span></div>
+</div>
+	<div class="">
+	<if condition="$namedefine neq ''">
+	<volist name="namedefine" id="define" >
+	<div class="sametwo bx_fj" style="font-weight:normal;">
+	<p class="xq_top">项目{lanrain:$i}:{lanrain:$define.info}</p>
+	<span style="color:#999;font-size:12px;font-weight:normal;">&nbsp;&nbsp;项目: {lanrain:$define.info}<br>&nbsp;
+    日期: {lanrain:$define.dotime}<br>&nbsp;
+    金额: {lanrain:$define.money}元</span>
+	</div>
+	</volist>
+	<else/>
+	<div class="same sametwo" style="font-weight:normal;">
+    该报销项目下无子报销项目!
+	</div>	
+	</if>
+	</div>
+	
+
+	<div id="content">
+	<p class="con_title">审批记录</p> 
+	<div class="softload"> 
+	<ul style="background-color:#fff;">
+	<volist name="comment" id="vo">
+		<li class="hightli">
+			<span class="icon_cont" style="margin-top:10px;"> 
+				<a class="sh_nm">
+					<img width="48px" height="48px" src="{lanrain:$vo.pic}" alt="" />
+					
+				</a> 
+				
+			    <span class="icon_dis" <if condition="$vo['status'] eq 3">style="background: #FFFFFF url(Tpl/Qyapp/Applyflow/images/unpass.png) no-repeat 98% -24px;" </if><if condition="$vo['status'] eq 2">style="background: #FFFFFF url(Tpl/Qyapp/Applyflow/images/pass.png) no-repeat 98% -24px;" </if>> 
+			    <img src="Tpl/Qyapp/Task/images/123.png" style="width:40px;height:40px;position:absolute;left:-23px;top:-7px;">
+				
+				<span class="title">审批人:&nbsp;<span style="color:#a2a2a2">{lanrain:$vo.name}</span></span>
+				<br>
+				<span class="title">职位:&nbsp;&nbsp;<span style="color:#a2a2a2">{lanrain:$vo.position}</span></span>
+
+
+				<span style="color:#333; display:block"><label>审核理由：</label></span>
+				<span class="down" style="color:#999;display:block;">
+						{lanrain:$vo.content}
+				</span> 
+
+					<!-- <if condition="$vo['status'] eq 2">
+						<span class="down sh_zt" id="id_{lanrain:$vo.wecha_id}" style="color:green;">
+						通过
+						</span> 
+					</if>
+					<if condition="$vo['status'] eq 3">
+						<span class="down sh_zt" id="id_{lanrain:$vo.wecha_id}" style="color:red;">
+						驳回
+						</span> 
+					</if> -->
+					
+				</span>
+			</span>	
+			<span class="clear"></span>
+			<div>
+		</li>
+	</volist>
+	</ul> 
+	</div> 
+	</div> 
+	
+	
+	<div id="frame" >
+<div id="menu">
+<ul style="margin:0 auto;list-style-type:none;width:100%;height:100%;padding-left: 0;">
+<if condition="$list['status'] eq 1">
+
+<if condition="$witer['status'] eq 0">
+<a href="javascript:;" id="refuse"><li style="float:left;background:#de5045 "><div class="menu_li" >拒绝</div>
+</li></a>
+<a href="javascript:;" id="pass"><li style="float:right;background:#35aa47"><div class="menu_li">同意</div></li></a>
+</if>
+
+<elseif condition="$list['status'] eq 2"/>
+
+<elseif condition="$list['status'] eq 3"/>
+
+</if>
+
+
+
+<!-- <if condition="$list['status'] eq 0">
+<a href="javascript:;" id="refuse"><li style="float:left;background:#de5045 "><div class="menu_li" >拒绝</div>
+</li></a>
+<elseif condition="$list['status'] eq 3"/>
+	<a href="#"><li style="float:left;background:#de5045 "><div class="menu_li">已拒绝</div></li></a>
+<else/>
+<a href="#"><li style="float:left;background:#de5045 "><div class="menu_li">拒绝</div></li></a>
+</if>
+<if condition="$list['status'] neq 2">
+<a href="javascript:;" id="pass"><li style="float:right;background:#35aa47"><div class="menu_li">同意</div></li></a>
+<else/>
+	<a href="#"><li style="float:right;background:#35aa47"><div class="menu_li">已经同意</div></li></a>
+</if> -->
+</ul>
+</div>
+<style>
+#menu{position:fixed;bottom:0px;width:94%;height:36px;line-height:36px;background:#fff;z-index:999;margin-left:3%;padding-bottom: 10px;}
+#menu ul li{float:left;width:49%;height:100%;text-align:center;position:relative;font-size:14px;border-radius: 3px;}
+#menu ul li .menu_li{position:absolute;top:0px;left:0px;z-index:20;width:100%;height:100%;color:#fff;}
+#menu ul li .img_front{position:absolute;top:0px;left:0px;z-index:30;width:49.8%;height:100%;}
+#menu ul li span{position:absolute;bottom:-300px;left:50%;width:104px;margin-left:-52px;height:auto;text-align:center;z-index:10;}
+#menu ul li span a{float:left;width:100%;height:43px;line-height:43px;color:#454545;text-decoration:none;}
+.speak_search{
+    width: 94%;
+    position: relative;
+    
+    margin:auto;
+    height: 30px;
+    /*line-height: 28px;*/
+}
+.speak_search img{
+    position: absolute;
+    top:4px;
+    left: 6px;
+}
+.speak_search input{
+    height: 28px;
+    border:1px solid #ccc;
+    width: 100%;
+    background:#fff;
+    color: #666;
+    -webket-appearance:none;
+    border-radius: 15px !important;
+    padding-left: 10%;
+}
+.speak_search input:focus {
+    border-color: #35aa47;
+}
+a{
+text-decoration:none;
+
+}
+</style>
+</div>
+
+</body>
+<script>
+//同意
+$('#pass').click(function(){
+	$.ajax({
+			type: "post",  
+			url:"{lanrain::U('wap_agree',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'status'=>2,'a_id'=>$witer['id']))}",
+			dataType:'json',
+			//data:{'token':token,'wecha_id':wecha_id,'id':id,'status':status},
+			success:function(json){
+			    if(json==0){
+				    alert('您已经审核过了');
+				}
+				if(json==1){
+					if(confirm('审核成功,是否填写理由')){
+						layer.open({					
+							type: 1,
+							content: '<div style="width:300px;height:118px;border-radius:6px;border-radius:5px;overflow:hidden;"><textarea style="padding:6px;line-height:20px;font-size:12px;width:288px;height:60px;color:#666;border:none;" placeholder="请输入内容。。。" id="layContent"></textarea><div style="width:100%;height:40px;line-height:40px;border:1px solid #ccc;text-align:center;"><input style="color:#666;height:40px;width:149px;border:none;background:#fff;border-right:1px solid #ccc;border-radius:0px;-webkit-appearance:none;vertical-align:top;" onclick="closeLay();" type="button" value="取消"><input style="color:#666;height:40px;width:149px;line-height30px;border:none;background:#fff;-webkit-appearance:none;border-radius:none;" type="button" onclick="submitLay({lanrain:$list.id},2);" value="发表"/></div></div>',
+						});
+						$('#id_'+wecha_id).css('color','green');
+						$('#id_'+wecha_id).html('通过');
+					}else{
+						$('#id_'+wecha_id).css('color','green');
+						$('#id_'+wecha_id).html('通过');
+					}
+				}
+				if(json==2){
+					alert('审核失败或者您已经审核过了');
+				}				
+			}
+		});
+});
+
+//拒绝
+$('#refuse').click(function(){
+	
+	$.ajax({
+			type: "post",  
+			url:"{lanrain::U('wap_agree',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'status'=>3,'a_id'=>$witer['id']))}",
+			dataType:'json',
+			//data:{'token':token,'wecha_id':wecha_id,'id':id,'status':status},
+			success:function(json){
+				if(json==1){
+					if(confirm('你拒绝了该申请,是否填写理由')){
+						layer.open({					
+							type: 1,
+							content: '<div style="width:200px;height:156px;border-radius:6px;border-radius:5px;overflow:hidden;"><textarea style="padding:6px;line-height:20px;font-size:12px;width:188px;height:100px;color:#666;border:none;" placeholder="请输入内容。。。" id="layContent"></textarea><div style="width:100%;height:40px;line-height:40px;border:1px solid #ccc;text-align:center;"><input style="color:#666;height:40px;width:99px;border:none;background:#fff;border-right:1px solid #ccc;border-radius:0px;-webkit-appearance:none;vertical-align:top;" onclick="closeLay();" type="button" value="取消"><input style="color:#666;height:40px;width:100px;line-height30px;border:none;background:#fff;-webkit-appearance:none;border-radius:none;" type="button" onclick="submitLay({lanrain:$list.id},3);" value="发表"/></div></div>',
+						});
+						$('#id_'+wecha_id).css('color','red');
+						$('#id_'+wecha_id).html('驳回');
+					}else{
+						$('#id_'+wecha_id).css('color','red');
+						$('#id_'+wecha_id).html('驳回');
+					}
+					
+					
+				}
+				if(json==2){
+					alert('审核失败或者您已经审核过了');
+				}				
+			}
+		});
+});
+//取消
+function closeLay(){
+window.location.reload();
+}
+//发送理由
+function submitLay(m,n){
+	var token = "{lanrain::$_GET['token']}";
+	var wecha_id = "{lanrain::$_GET['wecha_id']}";
+	var content = $('#layContent').val();
+	$.ajax({
+		type: "post",  
+		url:"{lanrain::U('wap_comment',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}",
+		dataType:'json',
+		data:{'token':token,'wecha_id':wecha_id,'id':m,'status':n,'content':content},
+		success:function(json){
+			if(json==1){
+				alert('修改成功');
+				window.location.reload();
+			}
+			if(json==2){
+				alert('修改失败');
+				window.location.reload();
+			}
+			if(json==3){
+				alert('发表成功');
+				window.location.reload();
+			}
+			if(json==4){
+				alert('发表失败');
+				window.location.reload();
+			}
+		}
+	});
+}
+</script>

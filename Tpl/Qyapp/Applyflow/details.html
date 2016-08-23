@@ -1,0 +1,238 @@
+<include file="Common:header" />
+    <section class="hbox stretch">
+     <aside class="aside-md bg-white b-r" id="subNav">
+<!--         <div class="wrapper b-b header"><b>报销</b></div>
+        <ul class="nav">
+        <li class="b-b b-light open">
+            <a href="{lanrain::U('Applyflow/index',array('id'=>$_GET['id']))}">
+                <i class="fa fa-chevron-right pull-right m-t-xs text-xs icon-muted"></i>配置审核人
+            </a>
+        </li>
+        <li class="b-b b-light ">
+        	<a href="{lanrain::U('Applyflow/applytype',array('id'=>$_GET['id']))}">
+        		<i class="fa fa-chevron-right pull-right m-t-xs text-xs icon-muted"></i>配置报销类型
+        	</a>
+        </li>
+        <li class="b-b b-light">
+            <a href="{lanrain::U('Applyflow/details',array('id'=>$_GET['id']))}">
+                <i class="fa fa-chevron-right pull-right m-t-xs text-xs icon-muted"></i>报销明细
+            </a>
+        </li>		
+		<li class="b-b b-light">
+		    <a href="{lanrain::U('Menu/menu',array('id'=>$_GET['id']))}">
+		    <i class="fa fa-chevron-right pull-right m-t-xs text-xs icon-muted"></i>自定义菜单</a>
+		</li>
+		
+		<li class="b-b b-light">
+			<a href="{lanrain::U('Appmsg/conf',array('id'=>$_GET['id']))}">
+			<i class="fa fa-chevron-right pull-right m-t-xs text-xs icon-muted"></i>应用管理</a>
+		</li>
+            
+        </ul> -->
+		<include file="Applyflow:navmenu" />
+    </aside> 
+              <aside>
+            <section class="vbox">
+                <header class="header bg-white b-b clearfix">
+                    <form class="talbe-search" method="get" target="_self" action="">
+                        <div class="row m-t-sm">
+                            <div class="col-sm-8 m-b-xs">
+                               <!-- <a href="javascript:;" class="btn btn-default btn-sm" data-toggle="modal" data-target="#js_type_modal"><i class="fa fa-plus"></i>增加</a> -->
+							   
+                            </div>
+                        </div>  
+                        <input type="hidden" name="pageNumber" id="pageNumber" value="1" />
+                        <input type="hidden" name="orderBy" id="orderBy" value="desc"/>
+                    </form>      
+                </header>
+
+                <section class="scrollable wrapper w-f">
+                  
+                        <section class="panel panel-default ">
+                            <div class="table-responsive">
+                                    <table class="table table-hover m-b-none entity-view">
+                                        <col style="width:10%" />
+                                        <col style="width:30%" />										
+                                        <col style="width:20%" />
+                                        <!-- <col style="width:20%" /> -->										
+                                        <col style="width:20%" />
+                                        <thead>
+                                            <tr >
+                                                <th >顺序</th>
+                                                <th >报销名称</th>												
+                                                <th >类型</th>
+                                                <!-- <th >部门</th> -->
+                                                <th >姓名</th>												
+                                            </tr>
+                                        </thead>
+                                        <tbody id="mytable">
+										    <if condition="$data">
+											<volist name="data" id="data">
+                                                <tr id="{lanrain:$data.id}">
+                                                    <td>{lanrain:$data.id}</td>
+                                                    <td>{lanrain:$data.name}</td>													
+                                                    <td>{lanrain:$data.type}</td>
+                                                    <!-- <td>{lanrain:$data.department}</td> -->
+                                                    <td>{lanrain:$data.user}</td>													
+<!--                                                     <td><if condition="$data['status'] eq 1"><label class="label label-success">是</label></if>	 			
+													    <if condition="$data['status'] eq 0"><label class="label label-default">否</label></if>	
+													</td> -->
+                                                </tr>
+											</volist>
+											<else/>
+                                                <tr>
+												暂无数据
+                                                </tr>												
+											</if>
+											
+                                        </tbody>
+                                    </table>
+                            </div>
+                                
+                        </section>
+                </section>
+                <footer class="footer bg-white b-t">
+                    <div class="row text-center-xs">
+                        <div class="col-md-6 hidden-sm">
+                            <p class="text-muted m-t">{lanrain:$page}</p>
+                        </div>
+                        <div class="col-md-6 col-sm-12 text-right text-center-xs">
+                            <ul class="pagination pagination-sm m-t-sm m-b-none" data-pages-total="1" data-page-current="1  "></ul>
+                        </div>
+                    </div>
+                </footer>
+            </section>
+        </aside>
+    </section> 
+<div class="modal fade in" id="js_type_modal" tabindex="-1" role="dialog">
+<form class="form-horizontal form-validate form-modal" target="_self" action="{lanrain::U('Applyflow/add')}" method="post"> 
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="form-horizontal form-validate form-modal" >            
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">添加类型</h4>
+            </div>
+
+            <div class="modal-body">
+                
+                    <div class="form-group">
+                       <label class="col-sm-3 control-label must">显示顺序</label>
+                        <div class="col-sm-8">
+                           <input class="form-control" data-rule-required="true" type="text" value="" name="disorder" id="order" />                        </div>
+                    </div>
+                    <div class="form-group">
+                       <label class="col-sm-3 control-label must">类型名称</label>
+                        <div class="col-sm-8">
+                           <input class="form-control" data-rule-required="true" type="text" value="" name="name" id="name" />                        </div>
+                    </div>
+                    <div class="form-group">
+                       <label class="col-sm-3 control-label">是否启用</label>
+                        <div class="col-sm-8">
+                           <label class="radio-inline">
+                            <input value="1" checked="checked" type="radio" name="status" id="enable" />是
+                        </label>
+                           <label class="radio-inline">
+                            <input value="0" type="radio" name="status" id="enable" />否
+                        </label>
+                        </div>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" id="submit" name="submit"  >确认</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+            </div>        </div>
+    </div>
+	</form>
+</div>
+<section class="entity-panel hd" id="info">
+</section>
+<script type="text/javascript">
+var browser={    
+versions:function(){            
+var u = navigator.userAgent, app = navigator.appVersion;            
+return {                
+trident: u.indexOf('Trident') > -1, //IE内核                
+presto: u.indexOf('Presto') > -1, //opera内核                
+webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核                
+gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核                
+mobile: !!u.match(/AppleWebKit.*Mobile.*/)||!!u.match(/AppleWebKit/), //是否为移动终端                
+ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端                
+android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器                
+iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器                
+iPad: u.indexOf('iPad') > -1, //是否iPad                
+webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部            
+};
+}()
+} 
+if(browser.versions.android == true){
+	$('#info').css("width","100%"); 
+}else if(browser.versions.iPhone == true){
+	$('#info').css("width","100%"); 
+}else{
+	$('#info').css("width","35%");
+}
+</script>
+<script>
+$(function(){
+  $("#submit").click(function() {
+	var btn = $(this);
+    var order = $("#order").val();
+    var name = $("#name").val();
+	var enable = $("input[name='status']").attr("checked");
+	$.ajax({
+		
+			type: "post",  
+			url:"{lanrain::U('Applyflow/applytype')}",
+			dataType:'json',
+			data:'disorder='+order+'&name='+name+'&status='+enable,
+			success:function(json){
+				var status = json.status;
+				if(status==1){
+					alert('提交成功');
+					window.location.reload();
+				}else if(status==0){
+					alert('提交失败');
+			
+				}
+				
+			}
+		});
+	
+  });
+  
+})
+</script>	
+<script type="text/javascript">
+
+$('#mytable tr').click(function(){
+	$(this).each(function(){
+        var userId = $(this).attr('id');
+		if($('#user'+userId).length>0){
+			var curId = $('#info').children().attr('id');			
+		    if(curId == 'user'+userId){
+				if($('.entity-panel').hasClass('hd')){
+					$('.entity-panel').removeClass('hd');
+				}else{
+					$('.entity-panel').addClass('hd');
+				}			    
+			}else{
+				$('#info').empty();   
+				$('#info').load("index.php?g=Qyapp&m=Applyflow&a=detailsInfo&id="+userId);
+				$('.entity-panel').removeClass('hd');
+				$('.entity-panel').css('right','0px');				    
+			}
+		}else{
+		    $('#info').empty();   
+			$('#info').load("index.php?g=Qyapp&m=Applyflow&a=detailsInfo&id="+userId);
+			$('.entity-panel').removeClass('hd');
+			$('.entity-panel').css('right','0px');			    
+		}
+
+		
+	});
+	
+});	
+</script>	
+<include file="Common:footer" />

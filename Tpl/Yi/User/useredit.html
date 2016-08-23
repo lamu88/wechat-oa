@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="cn" class="app fadeInUp animated">
+<head>
+    <meta charset="utf-8" />
+    <title>work微信，爱工作爱生活</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta content="" name="Keywords" />
+    <meta content="" name="Description" />
+	<link href="./Tpl/Qyapp/Static/Js/bootstrap/3.1.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./Tpl/Qyapp/Static/Css/animate.min.css" rel="stylesheet">
+    <link href="./Tpl/Qyapp/Static/Css/font-awesome.min.css" rel="stylesheet">
+    <link href="./Tpl/Qyapp/Static/Css/style.min.css" rel="stylesheet">
+	<link href="./Tpl/Qyapp/Static/Js/jstree/3.0.2/themes/default/style.min.css" rel="stylesheet">	
+	<link href="./Tpl/Qyapp/Static/Js/bootstrap/switch/docs/css/highlight.css" rel="stylesheet">		
+    <link href="./Tpl/Qyapp/Static/Js/bootstrap/switch/dist/css/bootstrap3/bootstrap-switch.min.css" rel="stylesheet">	
+	 <link href="./Tpl/Qyapp/Static/Js/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+	
+	<script src="./Tpl/Qyapp/Static/Js/jquery-1.9.1.min.js" type="text/javascript"></script>
+	<script src="./Tpl/Qyapp/Static/Js/bootstrap/3.1.1/dist/js/bootstrap.min.js"></script>		
+	<script src="./Tpl/Qyapp/Static/Js/artTemplate/dist/template.js" type="text/javascript"></script>
+	<script src="./Tpl/Qyapp/Static/Js/jstree/3.0.2/jstree.min.js"></script>	
+	<script src="./Tpl/Qyapp/Static/Js/bootstrap/switch/docs/js/highlight.js" type="text/javascript"></script>	
+	<script src="./Tpl/Qyapp/Static/Js/bootstrap/switch/dist/js/bootstrap-switch.min.js" type="text/javascript"></script>
+	<script src="./Tpl/Qyapp/Static/Js/datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>	
+	<script src="./Tpl/Qyapp/Static/Js/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="myModal" class="modal fade" tabindex="-2" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+</div>
+   <section class="vbox">
+        <section class="scrollable  wrapper">
+            <section class="panel panel-default">
+                <div class="panel-body">
+                    <form class="form-horizontal form-validate" method="post" action="">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label must">用户名</label>
+                            <div class="col-sm-3 ">
+                                  <input type="text" value="{lanrain:$data.username}" class="form-control"  data-rule-required="true" name="username"/>
+                            </div>
+                        </div>
+                        <div class="line line-dashed line-lg pull-in"></div>
+					   <div class="form-group">
+                            <label class="col-sm-2 control-label must">密码</label>
+                            <div class="col-sm-3 ">
+                                  <input type="password" class="form-control"  data-rule-required="true" name="password"/>
+                            </div>
+                        </div>
+						  <div class="line line-dashed line-lg pull-in"></div>
+					   <div class="form-group">
+                            <label class="col-sm-2 control-label must">用户版本</label>
+                            <div class="col-sm-3 ">
+								   <select class="form-control" name="type">
+								   <volist name="node" id="no">
+									<option value="{lanrain:$no.id}" <if condition="$data['type'] eq $no['id']"> selected</if>>{lanrain:$no.title}</option>
+									</volist>
+									</select>
+                            </div>
+                        </div>
+						  <div class="line line-dashed line-lg pull-in"></div>
+					   <div class="form-group">
+                            <label class="col-sm-2 control-label must">联系电话</label>
+                            <div class="col-sm-3 ">
+                                  <input type="text" class="form-control"   value="{lanrain:$data.tel}" data-rule-required="true" name="tel"/>
+                            </div>
+                        </div>
+						  <div class="line line-dashed line-lg pull-in"></div>
+					   <div class="form-group">
+                            <label class="col-sm-2 control-label must">企业名称</label>
+                            <div class="col-sm-3 ">
+                                  <input type="text" class="form-control" value="{lanrain:$data.qyname}"  data-rule-required="true" name="qyname"/>
+                            </div>
+                        </div> 
+						 <div class="line line-dashed line-lg pull-in"></div>
+						  <div class="form-group">
+                            <label class="col-sm-2 control-label must">联系人</label>
+                            <div class="col-sm-3 ">
+                                  <input type="text" class="form-control"  value="{lanrain:$data.contact}"  data-rule-required="true" name="contact"/>
+                            </div>
+                        </div> 
+						 
+						<div class="line line-dashed line-lg pull-in"></div>
+						  <div class="form-group">
+                        <label class="col-sm-2 control-label must">到期时间</label>
+                        <div class="col-sm-3">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="endtime" name="endtime" value="<if condition="$data['endtime'] neq ''">{lanrain:$data.endtime|date="Y-m-d",###}</if>"  data-minutestep="5" data-rule-required="true"  readonly="readonly"   data-toggle="datetimepicker" /><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                            </div>
+                        </div>
+					<script type="text/javascript">
+						$("#endtime").datetimepicker({
+							format: 'yyyy-mm-dd hh:ii',
+							language: 'zh-CN',					
+						
+						});
+					</script>						
+                    </div>
+						
+						
+						<input type="hidden" value="{lanrain::$_GET['id']}" name="userid"/>
+                        <div class="line line-dashed line-lg pull-in"></div>
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-2">
+                                <button type="submit" class="btn btn-primary"  data-loading-text="保存中...">保存</button>
+                                <button type="button" class="btn btn-default"  data-toggle="back">取消</button>
+                            </div>
+                        </div>
+                       <!--  <input type="hidden" value="7794" name="hidcid" id="hidcid" /> -->
+                    </form>
+                </div>
+            </section>
+        </section>
+    </section>	
+
+<script type="text/javascript">
+function showDate(obj){
+    //alert('ggg');
+	//obj.daterangepicker(null, function(start, end, label) {
+	//    console.log(start.toISOString(), end.toISOString(), label);
+	//});
+	  obj.daterangepicker({
+		timePicker: true,
+		timePickerIncrement: 30,
+		format: 'MM/DD/YYYY h:mm A'
+	  }, function(start, end, label) {
+		console.log(start.toISOString(), end.toISOString(), label);
+	  });	
+ //   obj.daterangepicker({startDate:"2013-08-01",endDate:today.toString("yyyy-MM-dd")},function(start, end){
+ //        obj.val(start.toString('yyyy-MM-dd') + '~' + end.toString('yyyy-MM-dd'));
+ //   });
+}
+function addDate(){
+	var id = 1;
+	var data = {
+	index: id,
+	};			
+	var html = template('js_excludedata_tem', data);
+	$('#adddate').before(html);
+}
+function delDate(obj){
+	//var len = obj.parent().parent().parent().children('div').length;
+	//if(len > 1){
+		obj.parent().parent().remove();		
+	//}
+}
+</script>	
+<script>
+function openModel(){
+	//alert('rrr');
+	$('#depart').attr("value",'');
+	$('#departId').attr("value",'');
+	//alert('yyyyy');
+	$('#myModal').load("/index.php?g=Qyapp&m=Tree&a=myTree", function(){
+		 $('#myModal').modal();
+	});	
+}
+
+function cancel(){
+	$('#depart').attr("value",'');
+	$('#departId').attr("value",'');
+	$('#myModal').modal('hide');
+	$('#myModal').empty();
+}
+
+function guanbi(){
+	$('#myModal').modal('hide');
+	$('#myModal').empty();
+}
+
+</script>
+</body>
+</html>

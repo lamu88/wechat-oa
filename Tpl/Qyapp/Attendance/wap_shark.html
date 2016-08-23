@@ -1,0 +1,144 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+<title>摇一摇</title>
+</head>
+<script src="./Tpl/Qyapp/Static/Js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<style type="text/css">
+		body{margin:0;padding:0;background:#35aa47; text-align:center}
+		#dd { width:240px; height:60px; margin:0 auto; margin-top:200px}
+		.page { background:url(./Tpl/Qyapp/Attendance/images/iconfont-packs.png) no-repeat center 100px;}
+		#result { font-size:26px; margin-top:400px;}
+	</style>
+<body>
+<audio src="./Tpl/Qyapp/Attendance/images/5018.mp3" id="audio" style="display:none;" controls="controls" ></audio>
+<script>
+var audio ;
+window.onload = function(){
+	initAudio();
+}
+var initAudio = function(){
+	audio = document.getElementById('audio');
+}
+</script>
+<div class="page">
+ <div id = "num2" style="display:none">0</div>
+ <div id = "num" style = "width:300px; text-align:center; color:#fff; margin:0px auto;  font-size:40px; padding-top:40px;" ></div>
+ 
+ <div id="result"><a href="{lanrain::U('wap_index',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}" style="color:#fff;font-size:26px;text-decoration:none;">去签到页</a></div>
+</div>
+</body>
+</html>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+  wx.config({
+      debug: false,
+      appId: '{lanrain:$jsssdk_info.appId}',
+      timestamp: '{lanrain:$jsssdk_info.timestamp}',
+      nonceStr: '{lanrain:$jsssdk_info.nonceStr}',
+      signature: '{lanrain:$jsssdk_info.signature}',
+      jsApiList: [
+        'getLocation',
+		'openLocation'
+      ]
+  });
+</script>
+<script>
+wx.ready(function(){
+
+//wx.openLocation({
+//    latitude: 0, // 纬度，浮点数，范围为90 ~ -90
+//    longitude: 0, // 经度，浮点数，范围为180 ~ -180。
+//   name: '湖北武汉', // 位置名
+//   address: '', // 地址详情说明
+//   scale: 1, // 地图缩放级别,整形值,范围从1~28。默认为最大
+//   infoUrl: '' // 在查看位置界面底部显示的超链接,可点击跳转
+//});
+
+	wx.getLocation({
+		success: function (res) {
+		var longitude = res.longitude; // 纬度，浮点数，范围为90 ~ -90
+		var latitude = res.latitude; // 经度，浮点数，范围为180 ~ -180。
+		var speed = res.speed; // 速度，以米/每秒计
+		var accuracy = res.accuracy; // 位置精度
+		//alert(longitude);
+		//alert(latitude);		
+		}
+	});	
+});
+</script>
+<script type="text/javascript">
+wx.ready(function(){
+if(window.DeviceMotionEvent) {
+    var speed = 10;
+    var x = y = z = lastX = lastY = lastZ = 0;
+    window.addEventListener('devicemotion', function(){
+        var acceleration =event.accelerationIncludingGravity;
+        x = acceleration.x;
+        y = acceleration.y;
+        if(Math.abs(x-lastX) > speed || Math.abs(y-lastY) > speed) {
+		    audio.play();
+			wx.getLocation({
+				success: function (res) {
+				//console.log(res);
+				//alert(res.longitude);
+				//alert(res.latitude);
+					var longitude = res.longitude; // 纬度，浮点数，范围为90 ~ -90
+					var latitude = res.latitude; // 经度，浮点数，范围为180 ~ -180。
+					var speed1 = res.speed1; // 速度，以米/每秒计
+					var accuracy = res.accuracy; // 位置精度
+					$.ajax({
+						type: "post",  
+						url:"{lanrain::U('wap_updata',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}",
+						dataType:'json',
+						data:{'Latitude':latitude,'Longitude':longitude},
+						success:function(json){
+							var status = json.status;
+							if(status==1){
+								//alert('签到成功');
+								$('#num').text('签到成功');
+								//window.location.href="{lanrain::U('wap_index',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}";
+								setTimeout(window.location.href="{lanrain::U('wap_index',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}",5000);
+							}else{
+								//alert('签到地址不在指定范围内');
+								$('#num').html('<p style="color:red;font-size:20px;">签到地址不在指定范围内!</p>');
+								window.location.reload();
+							}
+						}
+					});
+				}
+			});				
+			
+        }
+        lastX = x;
+        lastY = y;
+    }, false);
+}
+});
+</script>
+<!-- <script>
+    var center=new soso.maps.LatLng(39.982163,116.306070);
+    var map=new soso.maps.Map(document.getElementById("container"),{
+        center:center,
+        zoomLevel:16
+    });
+    var path=[
+        new soso.maps.LatLng(39.983633,116.301954),
+        new soso.maps.LatLng(39.979884,116.308992)
+    ];
+    var polyline=new soso.maps.Polyline({
+        map:map,
+        strokeColor:"#f00",
+        strokeWeight:2,
+        path:path
+    });    
+    //setTimeout(function(){
+        var dis=document.getElementsByTagName("p")[0];
+        dis.innerHTML="给出稻香园小区和1+1大厦的坐标，"+
+        "然后计算出两点之间的距离为"+
+        parseInt(map.getDistance(path[0],path[1]))+"米";
+    //},300);
+</script> -->

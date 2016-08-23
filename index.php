@@ -22,7 +22,6 @@ define('APP_PATH','./Lanrain/');
 define("ROOT_PATH", './');
 define('APP_ICON_PATH','./Static/thumb/');
 define('APP_OPEN_PATH',APP_PATH.'Lib/Action/Apps/');
-//define("WAPTPL_PATH", TMPL_PATH.'Apps/Wap/');
 define("WAPTPL_PATH", TMPL_PATH.'Qyapp/Home/tpl/'); 
 
 defined('APP_PATH') 	or define('APP_PATH', dirname($_SERVER['SCRIPT_FILENAME']).'/');

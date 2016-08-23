@@ -126,10 +126,6 @@ $(function(){
                     </a>
                     <ul class="dropdown-menu animated fadeInRight" id="b">
                         <span class="arrow top"></span>
-						
-						 <li>
-                            <a  href="http://bbs.wxopen.cn" target="_self"><i class="iconfont icon-account m-r-xs icon-size20"></i>论坛交流</a>
-                        </li>
                         <li>
                             <a href="<?php echo U('Userinfo/info', array('token' => $token));?>" target="_self"><i class="iconfont icon-account m-r-xs icon-size20"></i>帐号信息</a>
                         </li>

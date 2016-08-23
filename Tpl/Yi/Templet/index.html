@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="./Tpl/Yi/common/images/main.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="./Tpl/Yi/common/images/jquery.js"></script>
+
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<script type="text/javascript">
+$(function(){
+    $('.b').each(function(i){
+    $(this).click(function(){
+	    var url="{lanrain::U('Templet/choose')}";
+		var templet=$('.templet').eq(i).val();
+		var templetnow=$('#templetnow').parent().prev('.templet').val();
+		if(templet==templetnow)return;
+	    url=url+'&templet='+templet;
+		var _this=$(this);
+	    $.ajax({
+		    url:url,
+		    success: function( data ) {
+			    if(data==1){
+					$(".b").html("选择");
+					$(".b").removeClass("a");
+					$(".bb").removeClass("Box_top");
+					_this.html('已选择');
+					_this.addClass("a"); 
+					_this.parent().siblings("div").addClass("Box_top"); 
+				    //alert("选择成功！");
+				}
+				 if(data==0)
+				   alert("已经选择过！");
+		    }
+	    });
+	});
+    
+});
+});
+</script>
+<style>
+	#Box{width:320px; height:180px; float:left;	margin:0 30px 30px 0;}
+	#Box_top{ width:300px; height:130px; -moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px; border:1px solid #eee; padding:10px; }
+	#Box_top:hover{border:1px solid #8eb0d0;background:#f3f8fe;}
+	.Box_top{border:1px solid #8eb0d0 !important;background:#f3f8fe;}
+	#Box_top img{ width:120px; height:130px; float:left; margin-right:10px;}
+	#Box_top strong{ display:block; width:150px; height:25px; line-height:25px; float:left; font-size:14px; color:blue; text-decoration:none;}
+	#Box_top a{ display:block; width:150px; height:auto; line-height:18px; float:left;margin-bottom:5px;}
+	#Box_top span{ display:block; width:170px; height:60px; line-height:20px; float:left;  text-indent:2em;	}
+	.sub{ width:50px; height:25px; line-height:25px; text-align:center; background:#eee; border:1px solid #ccc;margin:0px 10px;}
+	.sub:hover{background:#999; color:#fff; cursor:pointer;}
+	#Select{width:320px; height:30px;line-height:30px; text-align:center;}
+	#Select a{ display:black; padding:3px 5px 3px 5px;width:50px; height:25px; line-height:25px; text-align:center; background:#eee; border:1px solid #ccc;margin:0px 10px;}
+	#Select a:hover{background:#999; color:#fff; }
+	#Select a.a{background:#999; color:#fff; }
+</style>
+</head>
+<body>
+<volist name="list" id="v">
+<div id="Box">
+	<div id="Box_top" <if condition="$v['name'] eq $tpl ">class="bb Box_top"<else/>class="bb"</if> >
+		<img src="{lanrain:$v['tem_logo']}" />
+		<strong>{lanrain:$v['name']}</strong>
+		<a>版本：{lanrain:$v['version']}</a>
+		<a>更新时间：{lanrain:$v['utime']}</a>
+		<span>{lanrain:$v['desc']}</span>
+	</div>
+	<input type="hidden" class="templet" value="{lanrain:$v['name']}"/>
+    <div id="Select">{lanrain:$v["name"]}
+		<if condition="$tpl eq $v['name'] ">
+		<a href="#" class="a b" >已选择 </a>
+		<else /> 
+		<a href="#" class="b" >选择</a>
+		</if>
+	</div>
+</div>
+</volist>
+</body>
+</html>

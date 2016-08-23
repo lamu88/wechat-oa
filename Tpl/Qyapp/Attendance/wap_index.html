@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+<title>签到</title>
+<link href="./Tpl/Qyapp/Attendance/css/kaoqin.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="./Tpl/Qyapp/Attendance/js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body style=" background:url(./Tpl/Qyapp/Attendance/images/522ae53376ca3.jpg);">
+	
+	<div class="bg_s" >
+    <!--头部开始-->
+    	<div class="check-row">
+        	<div class="check-top">
+            	<div class="check-rili">
+                    <div class="check-mouth">{lanrain:$date.month}月</div>
+                    <div class="check-day">{lanrain:$date.day}</div>
+                </div>
+                    <div class="check-record"><!-- 当天记录1条 --></div>
+                    <div class="allrecord"><a href="{lanrain::U('wap_records',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}">所有记录</a></div>
+            </div>
+            
+        </div>
+    <!--头部结束-->
+     
+     
+    <!--中部开始-->  
+     	<div class="check-mid" id="list">
+		    <div id="on">
+		    <if condition="$on">
+             <div class="check-content">
+                <div class="circle">上班</div>
+                <div class="qiandao">
+                    <div class="arrow-left"></div>
+                    <div class="time-address"><!-- 9:04 在广东省广州市海珠区艺苑路 -->签到成功<span class="later">（签到时间{lanrain:$on.worktime}<?php if($on['latime']){echo '迟到'.$on['latime'].'分钟';}?>）</span></div>
+                </div>
+            </div>
+			</if>
+			</div>
+		    <div id="out">			
+		    <if condition="$out">
+             <div class="check-content">
+                <div class="circle">下班</div>
+                <div class="qiandao">
+                    <div class="arrow-left"></div>
+                    <div class="time-address"><!-- 9:04 在广东省广州市海珠区艺苑路 -->签退成功<span class="later">（签退时间{lanrain:$out.outtime}<?php if($eatime){echo '早退'.$eatime.'分钟';}?>）</span></div>
+                </div>
+            </div>
+			</if>
+			</div>			
+        </div> 
+    	<div class="check-btm1" style="height:53px;width: 100%;position: fixed;bottom:0;z-index:100;background:url(Tpl/Qyapp/Attendance/images/btm03.png) repeat-x;">
+        <img src="./Tpl/Qyapp/Attendance/images/btm05.png" height="130px" style="position:absolute;bottom:0;left:30%;z-index:1000;" id="btn">
+		</div>	
+				
+    </div>
+</body>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+  wx.config({
+      debug: false,
+      appId: '{lanrain:$jsssdk_info.appId}',
+      timestamp: '{lanrain:$jsssdk_info.timestamp}',
+      nonceStr: '{lanrain:$jsssdk_info.nonceStr}',
+      signature: '{lanrain:$jsssdk_info.signature}',
+      jsApiList: [
+        'getLocation'
+      ]
+  });
+</script>
+<script>
+function Attendance(){
+wx.ready(function(){
+		wx.getLocation({
+			success: function (res) {
+			var longitude = res.longitude; // 纬度，浮点数，范围为90 ~ -90
+			var latitude = res.latitude; // 经度，浮点数，范围为180 ~ -180。
+			var speed = res.speed; // 速度，以米/每秒计
+			var accuracy = res.accuracy; // 位置精度
+				$.ajax({
+					type: "post",  
+					url:"{lanrain::U('wap_updata',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}",
+					dataType:'json',
+					data:{'Latitude':latitude,'Longitude':longitude},
+					success:function(json){
+						var status = json.status;
+						if(status == 0){  //签到失败
+						    alert('签到失败!');
+						}else if(status==1){  //成功
+							var html = '<div class="check-content"><div class="circle">上班</div><div class="qiandao"><div class="arrow-left"></div><div class="time-address">签到</div></div></div>';			    
+							$('#on').html(html);
+						}else if(status==2){  //迟到 
+						    var chidao = json.chidao;
+							var html = '<div class="check-content"><div class="circle">上班</div><div class="qiandao"><div class="arrow-left"></div><div class="time-address">签到<span class="ot">（迟到'+chidao+'分钟）</span></div></div></div>';
+							$('#on').html(html);							
+						}else if(status==3){  //早退
+						    var zaotui=json.zaotui;
+							var html = '<div class="check-content"><div class="circle">下班</div><div class="qiandao"><div class="arrow-left"></div><div class="time-address">签到<span class="ot">（早退'+zaotui+'分钟）</span></div></div></div>';
+							$('#out').html(html);
+						}else if(status==4){  //签退失败
+						    alert('签退失败!');
+						}else if(status==5){  //签退成功
+						    //alert('签退成功!');
+							var qiantui = json.qiantui;
+							var html = '<div class="check-content"><div class="circle">下班</div><div class="qiandao"><div class="arrow-left"></div><div class="time-address">签退成功<span class="ot">（签退时间'+qiantui+'）</span></div></div></div>';
+							$('#out').html(html);							
+						}else if(status==7){  //签到地址不在指定范围内!
+						    alert('签到地址不在指定范围内!');
+						}else if(status==8){
+						    alert('打卡异常');
+						}else if(status==9){
+						    var shichang=json.shichang;
+							var html = '<div class="check-content"><div class="circle">下班</div><div class="qiandao"><div class="arrow-left"></div><div class="time-address">签到<span class="ot">（你已经工作了'+shichang+'分钟）</span></div></div></div>';
+							$('#out').html(html);
+						}
+					}
+				});
+			
+			}
+		});
+
+});
+}
+</script>
+<script type="text/javascript" src="https://g.alicdn.com/ilw/ding/0.2.7/scripts/dingtalk.js" ></script>
+<script>
+$(document).ready(function(){
+    var latitude;
+	var longitude;
+    $("#btn").mousedown(function(){
+		$("#btn").attr('src','./Tpl/Qyapp/Attendance/images/btm04.png');
+		setTimeout(function(){
+		$("#btn").attr('src','./Tpl/Qyapp/Attendance/images/btm05.png');	
+		},200);	
+        Attendance(); 		
+	});	
+    
+})
+</script>
+<script type="text/javascript">
+dd.config({
+    appId: '', // 必填，微应用ID
+    corpId: '',//企业ID
+    timestamp: , // 必填，生成签名的时间戳
+    nonceStr: '', // 必填，生成签名的随机串
+    signature: ''// 必填，签名
+});
+</script>
+<script>
+function Attendance01(){
+	dd.ready(function(){
+		dd.device.geolocation.get({
+			onSuccess : function(result) {
+				var longitude = result['longitude']; // 纬度，浮点数，范围为90 ~ -90
+				var latitude = result['latitude']; // 经度，浮点数，范围为180 ~ -180。
+				var accuracy = result['accuracy']; // 位置精度
+				
+				$.ajax({
+					type: "post",  
+					url:"{lanrain::U('wap_updata',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}",
+					dataType:'json',
+					data:{'Latitude':latitude,'Longitude':longitude},
+					success:function(json){
+						var status = json.status;
+						if(status == 0){  //签到失败
+						    alert('签到失败!');
+						}else if(status==1){  //成功
+							var html = '<div class="check-content"><div class="circle">上班</div><div class="qiandao"><div class="arrow-left"></div><div class="time-address">签到</div></div></div>';			    
+							$('#on').html(html);
+						}else if(status==2){  //迟到 
+						    var chidao = json.chidao;
+							var html = '<div class="check-content"><div class="circle">上班</div><div class="qiandao"><div class="arrow-left"></div><div class="time-address">签到<span class="ot">（迟到'+chidao+'分钟）</span></div></div></div>';
+							$('#on').html(html);							
+						}else if(status==3){  //早退
+						    var zaotui=json.zaotui;
+							var html = '<div class="check-content"><div class="circle">下班</div><div class="qiandao"><div class="arrow-left"></div><div class="time-address">签到<span class="ot">（早退'+zaotui+'分钟）</span></div></div></div>';
+							$('#out').html(html);
+						}else if(status==4){  //签退失败
+						    alert('签退失败!');
+						}else if(status==5){  //签退成功
+						    //alert('签退成功!');
+							var qiantui = json.qiantui;
+							var html = '<div class="check-content"><div class="circle">下班</div><div class="qiandao"><div class="arrow-left"></div><div class="time-address">签退成功<span class="ot">（签退时间'+qiantui+'）</span></div></div></div>';
+							$('#out').html(html);							
+						}else if(status==7){  //签到地址不在指定范围内!
+						    alert('签到地址不在指定范围内!');
+						}else if(status==8){
+						    alert('打卡异常');
+						}else if(status==9){
+						    var shichang=json.shichang;
+							var html = '<div class="check-content"><div class="circle">下班</div><div class="qiandao"><div class="arrow-left"></div><div class="time-address">签到<span class="ot">（你已经工作了'+shichang+'分钟）</span></div></div></div>';
+							$('#out').html(html);
+						}
+					}
+				});				
+			},
+			onFail : function(err) {}
+		})
+	});
+}	
+</script>
+
+
+</html>

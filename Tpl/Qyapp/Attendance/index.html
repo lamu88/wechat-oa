@@ -1,0 +1,203 @@
+<include file="Common:header" />
+<script>
+$(document).ready(function(){
+	$('.b-light').click(function(){
+		$('.b-light').removeClass('open');	
+		$(this).addClass('open');
+	}); 
+});
+</script>
+<section class="hbox stretch">
+	<aside class="aside-md bg-white b-r" id="subNav">
+	<include file="Attendance:navmenu" />		
+	</aside>
+    <aside>
+        <section class="vbox">
+        <header class="header bg-white b-b b-light">
+            <p>考勤设置</p>
+            <a class="text-muted pull-right m-t pointer" data-toggle="back" title="返回" href="javascript:history.go(-1)"><i class="fa fa-reply"></i></a>
+        </header>
+        <section class="scrollable  wrapper">
+            <section class="panel panel-default">
+                <div class="panel-body">
+                    <form class="form-horizontal form-validate" method="post" action="{lanrain::U('Attendance/index',array('mid'=>$_GET['mid']))}" target="_self">
+                        <input type="hidden" name="cid" value="7794" />
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label must">考勤月度范围</label>
+                            <div class="col-sm-2 ">
+                                 <select class="form-control time1" name="startdate" data-rule-required="true">
+								    <volist name="month" id="vo">
+                                    <option value="{lanrain:$vo}" <if condition="$conf['startdate'] eq $vo">selected='selected'</if> >{lanrain:$vo}</option>
+                              		</volist>
+                                   
+                                 </select>
+                            </div>
+                            <div class="col-sm-1" style="width:50px">
+                               <p class="form-control-static">至</p>
+                            </div>
+                            <div class="col-sm-2 ">
+                                 <select class="form-control" name="end_type" data-rule-required="true">
+                                    <option value="1" <if condition="$conf['end_type'] eq 1">selected='selected'</if>>本月</option>
+                                    <option value="2"  <if condition="$conf['end_type'] eq 2">selected='selected'</if>>次月</option>
+                                 </select>
+                            </div>
+                            <div class="col-sm-2 ">
+                                 <select class="form-control time2" name="end_time" data-rule-required="true">
+								    <volist name="months" id="vo">
+                                    <option value="{lanrain:$vo}" <if condition="$conf['end_time'] eq $vo">selected='selected'</if> >{lanrain:$vo}</option>
+                              		</volist>
+                                 </select>
+                            </div>
+                        </div>
+                        <div class="line line-dashed line-lg pull-in"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">标准工时</label>
+                            <div class="col-sm-1 btn-s-md">
+                               <label class="checkbox-inline"><input type="checkbox" name="mor_o_on" <if condition="$conf['mor_o_on'] eq 1">checked</if> />签到提醒</label>
+                            </div>
+                            <div class="col-sm-2 ">
+                               <p class="form-control-static">提醒时间<span class="m-l">比上班时间</span></p>
+                            </div>
+                            <div class="col-sm-1 btn-s-md">
+                                <select class="form-control" name="mor_o_type">
+                                    <option value="0" <if condition="$conf['mor_o_type'] eq 0">selected='selected'</if>>早</option>
+                                    <option value="1" <if condition="$conf['mor_o_type'] eq 1">selected='selected'</if>>晚</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="input-group">
+                                    <select class="form-control time3" name="mor_o_timehour">
+								    <volist name="day" id="vo">
+                                    <option value="{lanrain:$vo}" <if condition="$conf['mor_o_timehour'] eq $vo">selected='selected'</if> >{lanrain:$vo}</option>
+                              		</volist>
+                                    </select>
+                                    <span class="input-group-addon ">
+                                        小时
+                                    </span>
+                                </div>
+                               
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="input-group">
+                                    <select class=" form-control time4" name="mor_o_timeminute">
+								    <volist name="hour" id="vo">
+                                    <option value="{lanrain:$vo}" <if condition="$conf['mor_o_timeminute'] eq $vo">selected='selected'</if> >{lanrain:$vo}</option>
+                              		</volist>
+                                    </select>
+                                    <span class="input-group-addon ">
+                                    分钟
+                                </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-5 col-sm-offset-2">
+                               <textarea rows="4" class="form-control" name="mor_o_content" placeholder="提醒内容">{lanrain:$conf.mor_o_content}</textarea>
+                            </div>
+                        </div>
+                        <div class="line line-dashed line-lg pull-in"></div>
+                        <div class="form-group">
+                            <div class="col-sm-1 btn-s-md col-sm-offset-2">
+                               <label class="checkbox-inline"><input type="checkbox" name="aft_o_on" <if condition="$conf['aft_o_on'] eq 1">checked</if> />签退提醒</label>
+                            </div>
+                            <div class="col-sm-2 ">
+                               <p class="form-control-static">提醒时间<span class="m-l">比下班时间</span></p>
+                            </div>
+                            <div class="col-sm-1 btn-s-md">
+                                <select class="form-control" name="aft_o_type">
+                                    <option value="0" <if condition="$conf['aft_o_type'] eq 0">selected='selected'</if>>早</option>
+                                    <option value="1" <if condition="$conf['aft_o_type'] eq 1">selected='selected'</if>>晚</option>
+                                </select>
+                            </div>
+                           <div class="col-sm-2">
+                                <div class="input-group">
+                                    <select class="form-control time5" name="aft_o_timehour">
+								    <volist name="day" id="vo">
+                                    <option value="{lanrain:$vo}" <if condition="$conf['aft_o_timehour'] eq $vo">selected='selected'</if> >{lanrain:$vo}</option>
+                              		</volist>
+                                    </select>
+                                    <span class="input-group-addon ">
+                                        小时
+                                    </span>
+                                </div>
+                               
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="input-group">
+                                <select class=" form-control time6" name="aft_o_timeminute">
+								    <volist name="hour" id="vo">
+                                    <option value="{lanrain:$vo}" <if condition="$conf['aft_o_timeminute'] eq $vo">selected='selected'</if> >{lanrain:$vo}</option>
+                              		</volist>
+                                </select>
+                                <span class="input-group-addon ">
+                                    分钟
+                                </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-5 col-sm-offset-2">
+                               <textarea rows="4" class="form-control" name="aft_o_content" placeholder="提醒内容">{lanrain:$conf.aft_o_content}</textarea>
+                            </div>
+                        </div>
+                        <div class="line line-dashed line-lg pull-in"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">弹性工时</label>
+                            <div class="col-sm-1 btn-s-md">
+                               <label class="checkbox-inline"><input type="checkbox" name="aft_t_on" <if condition="$conf['aft_t_on'] eq 1">checked</if> />签退提醒</label>
+                            </div>
+                            <div class="col-sm-2 ">
+                               <p class="form-control-static">提醒时间<span class="m-l">工作时长满</span></p>
+                            </div>
+                           
+                           <div class="col-sm-2">
+                                <div class="input-group">
+                                    <select class="form-control time7" name="aft_t_timehour">
+								    <volist name="days" id="vo">
+                                    <option value="{lanrain:$vo}" <if condition="$conf['aft_t_timehour'] eq $vo">selected='selected'</if> >{lanrain:$vo}</option>
+                              		</volist>
+                                    </select>
+                                    <span class="input-group-addon ">
+                                        小时
+                                    </span>
+                                </div>
+                               
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="input-group">
+                                <select class=" form-control time8" name="aft_t_timeminute">
+								    <volist name="hours" id="vo">
+                                    <option value="{lanrain:$vo}" <if condition="$conf['aft_t_timeminute'] eq $vo">selected='selected'</if> >{lanrain:$vo}</option>
+                              		</volist>										
+                                </select>
+                                <span class="input-group-addon ">
+                                    分钟
+                                </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-5 col-sm-offset-2">
+                               <textarea rows="4" class="form-control" name="aft_t_content" placeholder="提醒内容">{lanrain:$conf.aft_t_content}</textarea>
+                            </div>
+                        </div>
+                       
+                        <div class="line line-dashed line-lg pull-in"></div>
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-2">
+                                <button type="submit" class="btn btn-primary"  data-loading-text="保存中...">保存</button>
+                                <button type="button" class="btn btn-default"  data-toggle="back" onclick="">取消</button>
+                               
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </section>
+    </section>
+        </aside>	
+      <!-- <iframe name="content" id="content" src="{lanrain::U('conf',array('appid'=>$_GET['appid']))}" frameborder="0" width="100%" height="100%" scrolling="no"></iframe> -->
+	  
+</section>
+<div class="msgbox"></div>
+<include file="Common:footer" />

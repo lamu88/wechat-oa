@@ -33,6 +33,12 @@ $(document).ready(function(){
 						alert('解压失败');
 					}else if(status==2){
 						alert('您已经是最高的版本了');
+						
+					}else if(status==7){
+
+						alert('版权归属：深度实业集团网络科技有限公司,授权后可免费升级，授权可到论坛bbs.wxopen.cn做任务。QQ交流群：451493529');	
+						
+						
 					}else{
 						alert('升级失败可能是目录没有权限');
 					}

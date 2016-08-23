@@ -1,0 +1,218 @@
+<include file="Common:header" />
+    <link rel="stylesheet" type="text/css" href="./Tpl/Qyapp/Static/Js/autocomplete/src/jquery.autocomplete.css">	
+	<script src="./Tpl/Qyapp/Static/Js/jquery-1.9.1.min.js" type="text/javascript"></script>
+	<script src="./Tpl/Qyapp/Static/Js/jquery-migrate.min.js" type="text/javascript"></script>
+	<script src="./Tpl/Qyapp/Static/Js/bootstrap/3.1.1/dist/js/bootstrap.min.js"></script>		
+	<script src="./Tpl/Qyapp/Static/Js/artTemplate/dist/template.js" type="text/javascript"></script>
+	<script type="text/javascript" src="./Tpl/Qyapp/Static/Js/autocomplete/src/jquery.autocomplete.js"></script>	
+    <script src="./Tpl/Qyapp/Static/Js/autocomplete/test/test.js"></script>
+    <link href="./Tpl/Qyapp/Static/Js/autocomplete/lib/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="./Tpl/Qyapp/Static/Js/autocomplete/lib/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="./Tpl/Qyapp/Static/Js/autocomplete/lib/google-code-prettify/beautify.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+		    selectAuto();	
+        });
+    </script>
+    <section class="hbox stretch">
+     <aside class="aside-md bg-white b-r" id="subNav">
+<!--         <div class="wrapper b-b header"><b>报销</b></div>
+        <ul class="nav">
+        <li class="b-b b-light open">
+            <a href="{lanrain::U('Applyflow/index',array('id'=>$_GET['id']))}">
+                <i class="fa fa-chevron-right pull-right m-t-xs text-xs icon-muted"></i>配置审核人
+            </a>
+        </li>
+        <li class="b-b b-light ">
+        	<a href="{lanrain::U('Applyflow/applytype',array('id'=>$_GET['id']))}">
+        		<i class="fa fa-chevron-right pull-right m-t-xs text-xs icon-muted"></i>配置报销类型
+        	</a>
+        </li>
+        <li class="b-b b-light">
+            <a href="{lanrain::U('Applyflow/details',array('id'=>$_GET['id']))}">
+                <i class="fa fa-chevron-right pull-right m-t-xs text-xs icon-muted"></i>报销明细
+            </a>
+        </li>		
+		<li class="b-b b-light">
+		    <a href="{lanrain::U('Menu/menu',array('id'=>$_GET['id']))}">
+		    <i class="fa fa-chevron-right pull-right m-t-xs text-xs icon-muted"></i>自定义菜单</a>
+		</li>
+		
+		<li class="b-b b-light">
+			<a href="{lanrain::U('Appmsg/conf',array('id'=>$_GET['id']))}">
+			<i class="fa fa-chevron-right pull-right m-t-xs text-xs icon-muted"></i>应用管理</a>
+		</li>
+            
+        </ul> -->
+				<include file="Applyflow:navmenu" />
+    </aside> 
+          <aside>
+            <section class="vbox">
+                <header class="header bg-white b-b b-light">
+                    <p>配置审核人</p>
+                </header>
+                <section class="scrollable  wrapper">
+                    <section class="panel panel-default">
+                        <div class="panel-body">
+                            <form class="form-horizontal form-validate" target="_self" action="{lanrain::U('Applyflow/index',array('mid'=>$_GET['mid']))}" method="post">                           
+							<div class="entity-panel-body form-horizontal">
+                                    <div id="autoComplete" class="js_audit_div m-t">
+									
+									<div class="form-group" data-num="1">
+										<label class="col-sm-2 control-label">第1级审核人</label>
+										<div class="col-sm-2">
+											 <select class="form-control js_audit_select" data-rule-required="true"  name="level[1][auditname]" data-action="/wAddressList/getMember" onchange="selectAudit($(this))">
+												<option value="0">请选择</option>
+												<option value="1" {{if value.type == 1}}selected{{/if}}>直接上级</option>
+												<option value="3" data-type="assign">指定人员</option>
+											</select>
+										</div>
+									</div>
+
+                                    </div>
+                                   
+									<script type="text/html" id="js_audit_list">
+										{{each list as value i}}
+										<div class="form-group" data-num="{{i+1}}">
+											<label class="col-sm-2 control-label">第{{i+1}}级审核人</label>
+											<div class="col-sm-2">
+												<select class="form-control js_audit_select" id="{{i}}" name="level[{{i}}][auditselect]" onchange="selectAudit($(this))">
+													<option value="">请选择</option>
+													<option value="1" {{if !value}}selected{{/if}}>直接上级</option>
+													<option value="3" {{if value}}selected{{/if}} data-type="assign">指定人员</option>
+												</select>
+											</div>
+											
+											<div class="col-sm-1">
+												<button type="button" class="btn btn-default js_delaudit btn-sm" onclick="delLevel($(this))">删除</button>
+											</div>
+											{{if value}}
+											<div class="col-sm-3">
+												<input type="text" class="form-control js_select_people"  data-toggle="tokeninputtree" value="{{value}}" name="level[{{i}}][auditname]" data-rule-required="true"  placeholder="+请选择相关人"/>	
+											</div>
+											{{/if}}									
+										</div>							
+										{{/each}}
+									</script>
+									<script type="text/html" id="js_audit_tem">
+										<div class="form-group" data-num="{{index}}">
+											<label class="col-sm-2 control-label">第{{index}}级审核人</label>
+											<div class="col-sm-2">
+												<select class="form-control js_audit_select" id="{{index}}" name="level[{{index}}][auditselect]" onchange="selectAudit($(this))">
+													<option value="">请选择</option>
+													<option value="1">直接上级</option>
+													<option value="3" data-type="assign">指定人员</option>
+												</select>
+											</div>
+											
+											<div class="col-sm-1">
+												<button type="button" class="btn btn-default js_delaudit btn-sm" onclick="delLevel($(this))">删除</button>
+											</div>
+										</div>
+									</script>
+									<script type="text/html" id="js_add_select">
+										<div class="col-sm-3">
+										 <input type="text" class="form-control js_select_people"  data-toggle="tokeninputtree" name="level[{{index}}][auditname]" data-rule-required="true"  placeholder="+请选择相关人"/>
+											
+										</div>
+									</script>								   								   
+								   
+                                    <div class="form-group">
+                                        <div class="col-sm-2 col-sm-offset-2">
+                                            <button type="button" class="btn btn-default js_addaudit btn-sm" onclick="addLevel()">增加一级</button>
+                                        </div>
+                                    </div>
+                                    <div class="line line-dashed line-lg pull-in"></div>
+                                    <div class="form-group">
+                                        <div class="col-sm-4 col-sm-offset-2">
+                                            <button type="submit" class="btn btn-primary" data-loading-text="保存中...">保存</button>
+                                            <button type="button" class="btn btn-default" data-toggle="back">取消</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>                        </div>
+                    </section>
+                </section>
+            </section>
+        </aside>
+    </section> 
+
+	<script>
+	var val = $('.js_audit_div').find(':last-child').attr('data-num');
+	var num = parseInt(val);
+	function addLevel(){
+		var id = ++num;
+		var data = {
+		index: id,
+		};			
+		var html = template('js_audit_tem', data);
+		$('.js_audit_div').append(html);
+		selectAuto();
+	}
+	function delLevel(obj){
+	    var len = obj.parent().parent().parent().children('div').length;
+	    if(len > 1){
+		    obj.parent().parent().remove();		
+		}
+	}	
+	function selectAudit(obj){
+		if(obj.parent().parent().find(':last-child').hasClass('col-sm-3')){
+			obj.parent().siblings(':last').remove();
+		}						
+		var id = obj.attr('id');
+		var data = {	
+		index: id,
+		};	
+		var val = obj.find('option:selected').val();							
+		if(val == 3){
+			if(!obj.parent().parent().find(':last-child').hasClass('col-sm-3')){
+				var html = template('js_add_select',data);
+				obj.parent().parent().append(html);								
+			}
+			
+		}	
+        selectAuto();		
+	}
+	
+	function selectAuto(){
+		 $.ajax({
+			type:"POST",
+			url:"index.php?g=Qyapp&m=Common&a=searchUsers",
+			//data:"id="+id,
+			dataType:'json',
+			success:function(json){
+			var status = json.status;
+			  if(status==1)
+			  {
+			    var data = json.data;			  
+				$('#autoComplete div.form-group').each(function(){
+					var Obj = $('#autoComplete div.form-group').find('div.col-sm-3 input');
+					Obj.AutoComplete({
+						'data': data,
+						'width':225,
+						'listStyle': 'custom',
+						'maxHeight': 240,
+						'createItemHandler': function(index, data){
+							var div = $("<div style='height:36px;padding-top:2px'></div>")
+							var cell1 = $("<div style='display:table-cell;vertical-align:top;'></div>").appendTo(div);
+							var cell1_1 = $("<img style='width:32px;height:32px;'></img>").attr('src', data.image).appendTo(cell1);
+							var cell2 = $("<div style='display:table-cell;vertical-align:middle;padding-right:10px'></div>").appendTo(div);
+							var cell2_1 = $("<div></div>").append(data.label).appendTo(cell2);
+							var cell2_2 = $("<div style='vertical-align:top;'></div>").appendTo(cell2);
+							return div;
+						}
+					});
+				});				
+			  }
+			  else
+			  {
+				  alert('删除失败');
+			  }
+			}
+		}); 
+			
+	}	
+	</script>
+	
+<include file="Common:footer" />
